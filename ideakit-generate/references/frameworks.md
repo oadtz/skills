@@ -1,8 +1,11 @@
 # Frameworks: generation lenses + scoring foundations
 
-Two uses. **Generation lenses** (top) help you *produce* ideas in Step 3. **Scoring foundations**
-(bottom) explain the thinking behind the rubric in `scoring.md`. Use them as thinking tools, not
-checklists — run the lenses that fit the frame, not all of them mechanically.
+This file is the **latticework** that gives the skill its *requisite variety* (see the governing
+principle in SKILL.md): a stock of varied lenses so you don't reason through one frame ("to a man
+with a hammer, everything is a nail"). Two uses. **Generation lenses** (top) help you *produce* ideas
+in Step 3. **Scoring foundations** (bottom) explain the thinking behind the rubric in `scoring.md`.
+Use them as thinking tools, not checklists — run the lenses that fit the brief, and reach for a
+different one whenever the set starts to converge.
 
 ## Generation lenses (Step 3)
 
@@ -12,10 +15,17 @@ look for what's *missing* from the present. The things that annoy someone who li
 are seeds of ideas. Prompt yourself: "In this domain, what already works for insiders but is
 absent or broken for everyone else?"
 
-### Jobs-to-be-Done (Clayton Christensen)
+### Jobs-to-be-Done + Forces of Progress (Christensen; Moesta)
 People don't buy products; they *hire* them to do a job. Structure: "When [situation], I want to
 [motivation], so I can [outcome]." Generate ideas by listing jobs people are badly served on, then
 imagining a better-hired solution. Ask: "What does the customer fire to hire this?"
+Then sharpen with the **Forces of Progress** — every switch is a tug-of-war between four forces:
+*Push* (pain with the status quo) + *Attraction* (the draw of the new) vs. *Habit* (inertia of what
+they use now) + *Anxiety* (fear of the new). The best ideas maximize push+attraction *and* actively
+reduce habit+anxiety. Many ideas die not from weak attraction but from unaddressed anxiety/habit —
+design for that. (Note: this JTBD micro-force is the demand-side *attraction* within one switch — it
+is **not** the scoring dimension "Pull" in `scoring.md`, which is the overall strength of demand for
+the idea. Different scope; don't conflate them.)
 
 ### First principles (Elon Musk)
 Strip a problem to physical/economic truths and rebuild, instead of copying how it's done today.
@@ -36,29 +46,68 @@ For a chosen industry ask: "If an AI agent could do 80% of this job end-to-end, 
 (not software) gets rebuilt as AI-native?" Services spend dwarfs software spend, and most services
 are already outsourced — structurally easier to replace. This is where much current opportunity sits.
 
+### The desire / fandom lens (don't only solve problems — feed wants)
+The lenses above hunt for *problems*. This one hunts for *desire*. For a culture, fandom, or
+consumer niche ask: "What do these people love, identify with, and rally around — and what do they
+*wish existed* that they'd pay or give attention for?" Look at what fans already do for free
+(fan-fic, edits, communities, collecting) and where they hit walls. Desire-driven markets
+(BL/Y-series, K-pop, anime, games, fashion, IP, creators) are huge and recurring because the pull is
+identity and belonging, not relief. Output shapes: content/IP, community/platform, merch/commerce,
+creator tooling, fandom infrastructure. Run this lens whenever the domain is consumer/cultural — and
+at least once per run so the set isn't a painkiller monoculture.
+
+### Blue Ocean / ERRC + Category Creation (Kim & Mauborgne; Play Bigger)
+Most lenses above improve on an *existing* market. This one *creates new demand* so you compete with
+no one. Take the standard offering in a space and run **ERRC**: which factors the industry takes for
+granted can you **Eliminate**? **Reduce** well below standard? **Raise** well above standard?
+**Create** that the industry has never offered? The eliminate/reduce moves fund the raise/create
+moves and open uncontested space. Pairs with the diversity axis "what you *create*" (not "who you
+replace"). When the new offering needs a new mental model, you're doing **category creation** — name
+the new category, frame the problem it solves, and become its default. High-risk, high-ceiling;
+especially relevant for desire-driven and net-new ideas.
+
 ## Scoring foundations (Step 4 — detail in scoring.md)
 
-### Pain — urgent, deep, scalable, painful (Paul Graham)
-Good ideas solve problems that are urgent, deep, and genuinely painful. A crowded market is a
-*positive* signal: demand exists and incumbents aren't good enough. Beware "schlep blindness" —
-the most valuable problems are often the boring, annoying ones everyone avoids.
+### Pull — Pain *or* Desire (Paul Graham, expanded)
+Pull has two forms and the rubric scores whichever is stronger. *Painkiller pull:* problems that are
+urgent, deep, and genuinely painful — beware "schlep blindness", the most valuable problems are
+often the boring ones everyone avoids. *Desire pull:* wants that are intense, frequent, and
+identity-driven — entertainment, fandom, status, belonging, beauty, play. A crowded market is a
+*positive* signal in both cases: it proves demand. Do not treat "solves a problem" as the only valid
+shape of a business; "feeds a desire" is the other half, and often the bigger half.
 
 ### Market / Starving Crowd (Alex Hormozi)
 Priority order: **Starving Crowd (market) > Offer strength > Persuasion.** A great market with a
-mediocre product beats a great product in a dead market. A strong market is hyper-specific,
-in real pain, able and willing to pay a premium, reachable, and growing.
+mediocre product beats a great product in a dead market. A strong market is hyper-specific, in real
+pain *or craving*, able and willing to pay a premium (in money *or* sustained attention/time),
+reachable, and growing.
 
 ### Secret (Peter Thiel)
 "What important truth do very few people agree with you on?" The best ideas rest on a secret — a
 true belief most don't yet hold. Build 0→1 (something new), not 1→n (a copy). Win a small specific
 market first, then expand.
 
-### Survivability vs. platforms (current reality)
+### Survivability / Power (current reality; Hamilton Helmer, *7 Powers*)
 The dominant AI platforms (ChatGPT/OpenAI, Claude/Anthropic, Google, Microsoft) ship adjacent
 features fast. For every idea, force the statement: "If [platform] launches this natively tomorrow,
-this still wins because [specific moat]." If you can't write a credible version, the idea is fragile.
+this still wins because [specific power]." Don't settle for "we have a moat" — name *which* of
+Helmer's **Seven Powers** applies: **Scale Economies**, **Network Economies**, **Counter-Positioning**
+(a model the incumbent won't copy because it would cannibalize their own business — often the solo
+founder's best weapon against a giant), **Switching Costs**, **Branding**, **Cornered Resource**
+(exclusive access to IP, data, talent, or supply), **Process Power**. If you can't name the power,
+the idea is fragile. Note: durable power is usually *built over time*, so at idea stage score the
+*credible path* to a power, and pair it with the cheapest early move that starts compounding it.
 
 ### Feasibility & validated learning (Eric Ries)
 Convert each idea to its riskiest assumption and the cheapest test of it (Build–Measure–Learn).
 The output of validation isn't a finished product — it's *validated learning* at minimum cost. Use
 The Mom Test discipline downstream: ask about past behavior and real spending, not opinions on the idea.
+
+### Durability of demand — Painkiller / Vitamin / Candy + Lindy (a separate axis from Pull)
+Pull tells you how strong the demand is; this tells you how long it lasts — judge them separately.
+*Painkiller* = needed; *Vitamin* = good, habitual, recurring; *Candy* = instant but fleeting (the fad
+risk). The **Lindy effect**: demand rooted in enduring human drives (status, belonging, care,
+meaning, health, safety, play) tends to persist; demand that exists only because of a current
+platform moment tends to evaporate. Desire is *not* the same as fad — fandom, pets, and faith are
+desire markets that are intensely Lindy-durable. Used at synthesis (Step 5) to keep the shortlist
+from over-indexing on hype.

@@ -41,6 +41,39 @@ weaknesses this skill is explicitly designed to counter:
 Keep these two facts in mind throughout. The skill's value is novel idea *sourcing*; rigor and
 feasibility come from the downstream steps and the human.
 
+## The governing principle (read first — everything below derives from this)
+
+Every blind spot this skill has ever had — suppressing desire markets, ignoring non-Western signal,
+chasing fads, judging on one criterion — is the *same* failure wearing different clothes: **a fixed
+frame.** A generator reasons through a frame (which sources it scans + which lens it scores with),
+and a frame is simultaneously what lets it see *and* what blinds it. You cannot out-checklist this by
+adding one special-case rule per blind spot; that's an endless patch chase. There is one principle
+instead, with two halves:
+
+1. **Requisite Variety** (Ashby's Law: *only variety absorbs variety*; Munger's *latticework* — "to a
+   man with a hammer, everything is a nail"). The opportunity space is wildly varied, so the
+   generator must hold a matching variety of **inputs, lenses, and judgment criteria**. Insufficient
+   internal variety → guaranteed systematic blind spots.
+2. **Reflexivity** (*the map is not the territory*). The frame is always provisional. So the skill
+   must make its own frame explicit, deliberately scan and generate *against* it, and treat its own
+   scores as estimates, not verdicts.
+
+Everything in this skill is one of these two applied to a stage — not a separate invention:
+
+| Stage | What it is | Which half it serves |
+|---|---|---|
+| Coverage audit (Step 2) | vary your **inputs**; name & counter your source bias | Variety + Reflexivity |
+| Diversity partitions (Step 3) | vary your **generative lenses**; spread, don't cluster | Requisite Variety |
+| Multi-dimension rubric, incl. Pull = pain *or* desire (Step 4) | vary your **judgment criteria**; never score on one axis | Requisite Variety |
+| Portfolio balance + fad check (Step 5) | **synthesize** varied bets; declare the mix; don't monoculture | Variety + Reflexivity |
+| Honest scoring & "human decides" | scores are provisional; the frame can be wrong | Reflexivity |
+
+**The rule that ends the patch chase:** when a *new* blind spot appears, do **not** add a new
+special-case rule. Ask only — *which half was thin?* Was it missing input variety (fix via the
+coverage audit's axes), lens variety (add/rotate a generative lens), judgment variety (was a whole
+criterion absent?), or reflexivity (did we mistake our frame for the territory)? Strengthen the
+*general* mechanism, and the specific blind spot dissolves along with its whole class.
+
 ## The pipeline this skill sits in
 
 ```
@@ -52,8 +85,9 @@ feasibility come from the downstream steps and the human.
 
 ## Workflow
 
-Five steps: **Frame → Scan → Generate → Score → Rank & Hand off.** Do not skip Scan or the
-diversity partition inside Generate — those are what separate this from a generic brainstorm.
+Five steps: **Frame → Scan (+ coverage audit) → Generate → Score → Synthesize & Hand off.** Do not skip
+the coverage audit inside Scan or the diversity partition inside Generate — those two guards are what
+separate this from a generic brainstorm and what keep it from quietly missing whole markets.
 
 ### Step 1 — Frame (gather constraints, not ideas)
 
@@ -80,55 +114,104 @@ patterns. At minimum, run several **parallel** searches across:
   is going.
 - Problem/complaint sources (Reddit, Hacker News, GitHub issues, review sites, niche forums)
   for pain people express in their own words.
+- Culture/desire sources (TikTok, X, Wattpad/Webtoon, streaming & app-store charts, fandom subs,
+  Google Trends) for what people *want, love, and rally around* — the desire-driven markets the
+  first two source types are blind to. Don't skip this; it's how the skill historically missed
+  whole categories like the BL/Y-series boom.
 - The user's specific domain, to ground ideas in their edge.
 
 Capture raw problems and signals verbatim before interpreting. Quantify pain where you can
 ("47 GitHub issues asking for X", "top complaint in r/foo").
 
+**Then run the coverage self-audit before generating.** The source list above still has a horizon —
+any fixed list does. Read `references/coverage-audit.md` and walk the *axes of blindness* (value
+type, geography/culture, who-pays, buyer sophistication, trend trigger, maturity, time horizon):
+locate where your scan is skewed, then deliberately run 1–2 extra searches at the opposite ends most
+relevant to the brief. This is the general mechanism that catches *unknown* unknowns — not just the
+desire/fandom gap we already named, but whatever this particular brief is blind to. Note in one line
+what you additionally scanned (recording "found nothing" is fine — it proves the axis was checked).
+
 ### Step 3 — Generate (with enforced diversity)
 
 **Before generating, partition the idea space.** Read `references/diversity.md` and lay out the
 dimensions you'll vary across (market segment, mechanism, business model, wedge, who-you-replace).
-Then generate **10–20 raw ideas that deliberately spread across those partitions**, applying the
-generation lenses in `references/frameworks.md` (Live-in-the-future, Jobs-to-be-Done,
-First-Principles, SCAMPER, Inversion). Aim for genuine spread — if three ideas are variations on
+Then generate **10–20 raw ideas that deliberately spread across those partitions** (target ~12–15
+across the cells you pick — one or more per cell is fine), applying the
+generation lenses in `references/frameworks.md` (Live-in-the-future, Jobs-to-be-Done + Forces of
+Progress, First-Principles, SCAMPER, Inversion, the Desire/Fandom lens, and Blue Ocean/ERRC +
+Category Creation for net-new demand). Aim for genuine spread — if three ideas are variations on
 one theme, collapse them to one and generate a structurally different one.
 
-Each raw idea is one or two sentences: *who* has *what* pain, and the *shape* of the solution.
-Don't polish yet.
+Each raw idea is one or two sentences: *who* has *what* pain **or want**, and the *shape* of the
+solution. Don't polish yet.
+
+**Spread gate — do not proceed to Step 4 until all are true** (this is the main guard against
+regressing to a B2B/painkiller monoculture; full detail in `references/diversity.md` §5):
+
+- [ ] at least **two different customer types**, AND
+- [ ] at least **two different mechanisms/wedges**, AND
+- [ ] at least one **"works today"** idea and one **"bets on a near-future capability"** idea, AND
+- [ ] at least one **desire/identity-driven** idea (not only painkiller/utility) — *unless* the brief
+  is explicitly a pure-utility domain.
+
+If any box fails, regenerate the missing kind — don't proceed. An all-utility set almost always means
+the culture/desire sources or the coverage audit were skipped; go back to Step 2.
 
 ### Step 4 — Score
 
 Score every idea against the rubric in `references/scoring.md`. The six dimensions:
 
-1. **Pain** (urgent, deep, real?) — Paul Graham
+1. **Pull — Pain *or* Desire** (urgent problem? OR intense, identity-driven want?) — Paul Graham, expanded
 2. **Market / Starving Crowd** (hungry, able to pay, reachable, growing?) — Hormozi
 3. **Secret** (what do you see that others don't yet believe?) — Thiel
 4. **Job** (what is the customer hiring this to do?) — Christensen
-5. **Survivability** (if ChatGPT/Claude ships this natively tomorrow, why do you still win?) — 2026 reality
+5. **Survivability / Power** (if ChatGPT/Claude ships this natively tomorrow, why do you still win?) — name the durable power behind the moat using Helmer's *Seven Powers*
 6. **Feasibility** (riskiest assumption, and how cheaply it can be tested?) — Lean Startup
 
 Be honest on feasibility and survivability especially — that's where LLM-generated ideas tend to
 be over-optimistic. A low score is useful information, not a failure.
 
-### Step 5 — Rank & hand off
+### Step 5 — Synthesize as a portfolio, then rank & hand off
 
-Produce a ranked table of the top 3–5 ideas. Use this exact structure:
+Ranking is *synthesis*, not just sorting — apply the governing principle one last time so the
+shortlist has requisite variety and you stay reflexive about the mix. Before writing the table:
+
+- **Declare the mix.** State the shortlist's spread on two independent axes: **value type**
+  (painkiller ↔ desire) and **durability of demand** (durable ↔ emerging/fad). These are *different*
+  axes — a desire market can be centuries-durable (fandom, pets, faith) and a painkiller can be a
+  fad. Don't conflate "desire" with "risky".
+- **Balance, don't monoculture — but don't force 50/50.** Weight the mix by the *evidence* and the
+  user's *edge*, and justify the weighting in one line. The rule is only: no axis should be all-one
+  unless the brief explicitly demands it. An all-painkiller *or* all-desire shortlist is a frame
+  failure; so is an all-fad one.
+- **Flag fads explicitly (Painkiller / Vitamin / Candy + Lindy).** Tag each idea: *Painkiller*
+  (needed), *Vitamin* (good, habitual, recurring), or *Candy* (instant but fleeting). Candy is the
+  fad risk — keep it only if its demand is rooted in an enduring human drive (status, belonging,
+  care, meaning, health, safety → Lindy-durable), otherwise discount it or pair it with a durability
+  plan. This governs against trend-chasing without suppressing desire.
+
+Produce a ranked table of the top 3–5 ideas. **Produce it in the user's language** — the template
+below is illustrative (shown in Thai). The table is a *summary*; the full six sub-scores and the
+one-line justification per dimension (required by `scoring.md`) live in the per-idea reasoning below
+the table, not in the table itself.
 
 ```
 ## ไอเดียที่คัดมาแล้ว (Ranked shortlist)
 
-| # | ไอเดีย (1 ประโยค) | ตลาด/ฝูงชน | Secret / ทำไมตอนนี้ | คะแนนรวม | สมมติฐานเสี่ยงสุด |
-|---|---|---|---|---|---|
-| 1 | ... | ... | ... | X/30 | ... |
+**สมดุลของพอร์ต:** painkiller:desire = [x:y] · durable:emerging = [x:y] — ถ่วงแบบนี้เพราะ [เหตุผลตาม brief/edge].
+
+| # | ไอเดีย (1 ประโยค) | ชนิด (P/V/C) | ตลาด/ฝูงชน | Secret (ความเชื่อที่คนส่วนใหญ่ยังไม่เห็นด้วย) | คะแนนรวม | สมมติฐานเสี่ยงสุด |
+|---|---|---|---|---|---|---|
+| 1 | ... | P/V/C | ... | ... | X/30 | ... |
 ...
 
-### เหตุผลของอันดับ 1–3
-- **#1 [name]** — why it leads, its main risk, cheapest next test.
+### เหตุผลของอันดับ 1–3 (ต้องมี sub-scores ครบ 6 มิติ)
+- **#1 [name]** — Pull x/5, Market x/5, Secret x/5, Job x/5, Survivability x/5, Feasibility x/5.
+  ทำไมนำ; สมมติฐานเสี่ยงสุด; วิธีเทสต์ที่ถูกที่สุด.
 - ...
 
 ### ตัวที่ตัดทิ้งและเหตุผล
-- [idea] — killed because [reason].
+- [idea] — killed because [reason] (e.g. "Candy — demand was a platform-specific spike, not Lindy-durable").
 ```
 
 Then offer the hand-off explicitly: *"อยากให้ส่งอันดับ 1 (หรือตัวที่คุณเลือก) ต่อให้ `ideakit-validate`
@@ -138,21 +221,41 @@ The human chooses what advances. This skill recommends but never decides go/kill
 
 ## Operating principles
 
-- **Constraints in, ideas out.** If the user already has a specific idea, this is the wrong
-  skill — point them to `ideakit-validate` and stop.
-- **Evidence beats cleverness.** Every idea should trace to a real signal from Step 2, not to a
-  clever-sounding phrase. Cite sources inline where you can.
-- **Diversity is a feature, not noise.** A spread of structurally different ideas is more
-  valuable than five polished variations of the same one.
-- **Honest scoring.** Don't inflate feasibility or survivability to make an idea look good. The
-  downstream steps and the user depend on a truthful read.
-- **Hand off, don't hoard.** The skill's output is a shortlist plus a recommendation to advance —
-  not a finished plan.
+All of these are the governing principle (Requisite Variety + Reflexivity) applied — not a flat list
+of rules to memorize. They're grouped so you can see which half each serves.
+
+**Requisite Variety** — hold enough variety to match a varied world:
+- **Diversity is a feature, not noise.** A spread of structurally different ideas beats five polished
+  variations of one theme.
+- **Vary every stage, not just one.** Variety of inputs (sources), of lenses (generation), and of
+  criteria (scoring) — a single rich stage can't compensate for a narrow one.
+- **Desire ranks with pain; durability is a separate axis.** Score the intensity of the *want*, not
+  only the depth of the *problem*; then ask separately whether that demand is durable or a fad.
+
+**Reflexivity** — never mistake your frame for the territory:
+- **Audit your own blind spots, generically.** Every run, ask what your sources *and* rubric can't
+  see and scan against that bias (`coverage-audit.md`) — catch unknown unknowns, don't re-list known
+  ones.
+- **Don't silently filter by profile.** The user's background is a *preference to surface against*,
+  not a pre-filter. Put options on the table and let the user cut them.
+- **Honest, provisional scoring.** Don't inflate feasibility/survivability; treat totals as a sort
+  key, not a verdict. The human makes the go/kill call.
+
+**Operating constraints** (unchanged):
+- **Constraints in, ideas out.** If the user already has a specific idea, hand off to
+  `ideakit-validate` and stop.
+- **Evidence beats cleverness.** Every idea traces to a real signal from Step 2; cite it.
+- **Hand off, don't hoard.** Output is a shortlist + recommendation to advance, not a finished plan.
 
 ## Reference files
 
-- `references/frameworks.md` — generation lenses and scoring frameworks, with how-to-apply notes.
-- `references/diversity.md` — the partition method that keeps generated ideas from converging
-  (read this every run before Step 3).
-- `references/scoring.md` — the six-dimension scoring rubric with a 0–5 scale per dimension.
-- `references/trend-sources.md` — where to scan and copy-ready search query patterns.
+Each is the governing principle applied to one stage:
+
+- `references/trend-sources.md` — *input variety*: where to scan + copy-ready query patterns.
+- `references/coverage-audit.md` — *reflexivity on inputs*: scan against your own source/rubric bias
+  to catch unknown unknowns (run inside Step 2, every run).
+- `references/diversity.md` — *lens variety*: partition the idea space so ideas don't converge
+  (read every run before Step 3); now includes the value-type axis and portfolio synthesis.
+- `references/frameworks.md` — the actual generation lenses and scoring foundations (the "latticework").
+- `references/scoring.md` — *criteria variety + reflexivity*: the six-dimension rubric (0–5 each) plus
+  the fad/Lindy and balance flags.

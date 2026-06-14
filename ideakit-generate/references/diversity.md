@@ -1,5 +1,9 @@
 # Diversity enforcement — read before Step 3, every run
 
+This is the governing principle (*requisite variety*) applied to **generation**: partition the idea
+space so the lenses you run actually produce structurally different ideas, and synthesize the result
+as a balanced portfolio rather than a monoculture.
+
 ## Why this matters
 
 Research on LLM idea generation (Si, Yang & Hashimoto 2024, and follow-on work on diversity
@@ -16,11 +20,18 @@ The fix is not "try harder to be creative." The fix is **structural**: partition
 ### 1. Pick 2–3 partition axes
 Choose axes along which ideas can differ *structurally* (not cosmetically). Good axes:
 
-- **Market segment** — e.g. enterprise vs. SMB vs. prosumer vs. consumer; or distinct verticals.
-- **Mechanism / wedge** — automation vs. marketplace vs. data/insight vs. tooling vs. service.
-- **Business model** — SaaS subscription vs. usage-based vs. take-rate vs. done-for-you service.
-- **Who you replace** — incumbent software vs. an agency/outsourcer vs. a manual internal process
-  vs. a spreadsheet.
+- **Value type** — *painkiller/utility* (solves a problem) vs. *desire/identity* (entertainment,
+  fandom, status, belonging, beauty, play, IP, community). Most generators cluster entirely in the
+  painkiller corner and never produce a desire-driven idea. Deliberately target both ends.
+- **Market segment** — e.g. enterprise vs. SMB vs. prosumer vs. consumer vs. fandom/community; or
+  distinct verticals.
+- **Mechanism / wedge** — automation vs. marketplace vs. data/insight vs. tooling vs. service vs.
+  **content / IP / media / community** (the mechanism behind most desire-driven businesses).
+- **Business model** — SaaS subscription vs. usage-based vs. take-rate vs. done-for-you service vs.
+  audience/creator monetization (ads, membership, merch, IP licensing).
+- **Who you replace OR what you create** — incumbent software / agency / manual process / spreadsheet
+  to *replace*; OR a brand-new desire, category, community, or cultural product you *create* from
+  nothing (these don't "replace" anything — the displacement frame can't see them).
 - **Time horizon** — works today vs. bets on a capability arriving in 12–18 months.
 
 ### 2. Build a small grid
@@ -42,11 +53,21 @@ customers or mechanism?" If yes, they're too close.
 Before scoring, confirm the shortlist isn't all one theme. You want at least:
 - two different customer types, AND
 - two different mechanisms/wedges, AND
-- at least one "bets on near-future capability" idea and one "works today" idea.
+- at least one "bets on near-future capability" idea and one "works today" idea, AND
+- at least one **desire/identity-driven** idea, not only painkiller/utility ones (unless the user
+  has explicitly constrained the brief to a pure-utility domain).
 
 If the set fails this check, that's the signal to regenerate the missing kinds — not to proceed.
+If every idea is a B2B/utility tool, you have almost certainly skipped the culture/desire sources in
+`trend-sources.md` — go back and scan them.
 
 ## Anti-patterns
 - Asking for "20 ideas" in one breath and taking whatever comes — guarantees clustering.
 - Twenty wrappers on the same LLM feature for twenty industries — that's one idea, not twenty.
 - Diversity of *wording* without diversity of *structure* — rename-only variants don't count.
+- **Painkiller monoculture** — every idea is a B2B tool that "solves a problem." Desire-driven
+  markets (entertainment, fandom, IP, community, lifestyle) are missing entirely. This is the
+  single most common blind spot; the Value-type axis above exists to break it.
+- **Silent profile-filtering** — letting the user's background ("I'm technical", "needs to be
+  fundable") quietly delete whole market classes before generation. Surface the desire/culture
+  options *and let the user cut them*, rather than pre-filtering them away.
