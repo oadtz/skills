@@ -10,8 +10,6 @@ description: >
   narrative and emotional core BEFORE choosing a format, because a beautiful deck with a weak story
   convinces no one. It is the final stage of the ideakit pipeline (after ideakit-validate). It is
   NOT for generating ideas (use ideakit-generate) or validating them (use ideakit-validate).
-metadata:
-  version: "1.0.0"
 ---
 
 # Ideakit — Present (make people act)
@@ -43,6 +41,18 @@ It usually runs on an idea that's been validated (a PRD or a sharp idea statemen
 idea is still vague or unproven, say so and point back to `ideakit-validate` — persuading people of
 something untrue or half-baked backfires. If the user only needs internal sharpening, that's
 `ideakit-explore`.
+
+## Host capability mapping
+
+Use capabilities by intent, not by product-specific tool name:
+
+- **User input**: ask concise plain-text questions unless the host offers a structured input UI.
+- **Artifact creation**: use the host's available file/artifact mechanism for decks, docs, PDFs,
+  HTML, diagrams, or images. If no artifact mechanism exists, produce a complete markdown outline or
+  self-contained HTML in chat and state that no file was created.
+- **Format-specific tools**: prefer the host's native presentation/document/PDF/web/diagram tools
+  when available; otherwise build the closest portable format.
+- **Delivery**: return the artifact using the host's normal path/link format.
 
 ## Workflow
 
@@ -96,8 +106,8 @@ audience gets to live in. Use a real scenario, a real person, a real number.
 ### Step 4 — Vehicle (choose and build the format)
 
 Only now pick the medium, based on audience and context. Read `references/formats.md` for when to
-use each and how to build it (it points to the right output tools — pptx, pdf, HTML/interactive,
-visualize diagrams):
+use each and how to build it with the host's available presentation, document, PDF, HTML, or diagram
+capabilities:
 
 - **Interactive demo / landing page** (HTML) — strongest "show don't tell"; best when the product
   itself is the argument, or for technical/customer audiences.
@@ -117,7 +127,7 @@ questions: Is there one clear core message and one clear ask? Are the stakes rea
 concrete (a real example/number, not abstractions)? Would the *user themselves* lean forward? If
 any answer is "meh," fix the narrative — not the fonts.
 
-Deliver the artifact (use `present_files` for any file produced), and offer a tightening pass.
+Deliver the artifact using the host's normal file/artifact delivery mechanism, and offer a tightening pass.
 
 ## Operating principles
 

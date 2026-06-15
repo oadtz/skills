@@ -1,4 +1,4 @@
-# PRD Template — Claude Code Handoff
+# PRD Template — Implementation Handoff
 
 This is the structure for the final markdown PRD produced in Phase 4. The file should be saved
 as `outputs/<short-slug>-PLAN.md` (or `SPEC.md` if the user asked for a spec).
@@ -6,9 +6,8 @@ as `outputs/<short-slug>-PLAN.md` (or `SPEC.md` if the user asked for a spec).
 There are two variants — one for software mode, one for general mode. Use the template that
 matches the mode selected in Phase 0.
 
-The PRD must be **complete and self-contained**. A future Claude Code session (or a human
-collaborator) should be able to read this file and start work without needing the conversation
-that produced it.
+The PRD must be **complete and self-contained**. A future implementation agent or human collaborator
+should be able to read this file and start work without needing the conversation that produced it.
 
 ---
 
@@ -157,10 +156,10 @@ If the worst case includes "the underlying problem disappears" or "the value eva
 the tech becomes free as a default," fold this into kill criteria as a time-bound condition
 (e.g., "Abandon if [trigger] occurs before [date]").
 
-## 15. Suggested First Steps for Claude Code
+## 15. Suggested First Steps for Implementation
 
-A concrete, ordered list of the first 3–5 things Claude Code should do when handed this PRD.
-This makes the handoff actionable.
+A concrete, ordered list of the first 3–5 things the implementation agent or human owner should do
+when handed this PRD. This makes the handoff actionable.
 
 1. Scaffold project with [stack]
 2. Implement [first feature] following [pattern]

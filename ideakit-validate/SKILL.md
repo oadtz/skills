@@ -9,16 +9,16 @@ description: >
   off a chosen idea (or a scored shortlist) from ideakit-generate and wants it validated and turned into a
   buildable plan. Acts as a thinking partner — expanding the seed, surfacing assumptions, conducting
   deep market and feasibility research, sharpening the concept, and producing a markdown PRD ready for
-  handoff to Claude Code. Adapts to either software products or general projects.
-metadata:
-  version: "0.3.0"
+  handoff to an implementation agent or human collaborator. Adapts to either software products or
+  general projects.
 ---
 
 # Ideakit — Validate (idea → PRD)
 
 Take a raw idea from the user — which may be as small as a few words or a single sentence — and
 craft it into a solid, executable plan through collaborative thinking. Output a markdown PRD that
-can be dropped into a Claude Code repo as `PLAN.md` or `SPEC.md`, or used as a brief for a general project.
+can be handed to an implementation agent as `PLAN.md` or `SPEC.md`, or used as a brief for a general
+project.
 
 The user is starting with a seed. The job of this skill is to help them **think**, **stress-test**,
 and **shape** the seed into something concrete enough to execute. Treat every conversation as
@@ -30,16 +30,16 @@ until all four phases are complete and the user has approved the sharpened idea.
 ## North Star
 
 **Executability.** Every phase, every question, every section of the final PRD should move the
-idea closer to something the user (or Claude Code) can actually start building tomorrow morning.
+idea closer to something the user or an implementation agent can actually start building tomorrow morning.
 If a question, claim, or section doesn't contribute to that, cut it.
 
 ## Pipeline & intake — where this skill sits
 
-This skill is the **end** of a three-step idea pipeline:
+This skill is the validation/planning stage of a four-skill idea pipeline:
 
 ```
-ideakit-generate        →   ideakit-explore   →   ideakit-validate (THIS)
-generate ideas         expand + challenge          validate + PRD
+ideakit-generate        →   ideakit-explore   →   ideakit-validate (THIS)   →   ideakit-present
+generate ideas         expand + challenge          validate + PRD              make people act
 ```
 
 How the user arrives changes how you start:
@@ -70,6 +70,19 @@ to `ideakit-generate` and stop.
 - **Stay in plain language.** Do not expose phase names, internal structure, or implementation details
   unless the user asks. Frame the conversation as a natural collaboration.
 
+## Host capability mapping
+
+Use capabilities by intent, not by product-specific tool name:
+
+- **User input**: ask one concise question at a time. If the host supports structured choices, use
+  them for mode selection; otherwise ask in plain text.
+- **Research**: use the host's web/search/browser capability, connected knowledge bases, local files,
+  or user-provided sources. Batch or parallelize searches when supported.
+- **No live research available**: ask the user for sources or produce a clearly labeled
+  "non-current validation draft"; mark market, pricing, platform, and roadmap claims as assumptions.
+- **File output**: create a file/artifact when the host supports it. If not, provide the complete PRD
+  in chat and explicitly say no file was written.
+
 ## Phase 0 — Seed Expansion & Mode Selection
 
 The user is likely starting with very little — sometimes just a phrase. Before anything else,
@@ -89,9 +102,9 @@ If the user's seed is already specific (e.g., "a CLI tool that converts Postman 
 curl commands"), skip the interpretations and just confirm in one line.
 
 **Step 0b — Mode selection.** Once the rough direction is clear, determine which mode applies.
-Use the AskUserQuestion tool with two options if it isn't obvious:
+Ask with two options if it isn't obvious:
 
-- **Software product or feature** — anything you'd hand to engineers / Claude Code to build (apps,
+- **Software product or feature** — anything you'd hand to engineers or an implementation agent to build (apps,
   tools, automations, internal systems, APIs, scripts, websites)
 - **General project or initiative** — campaigns, content series, business initiatives, operational
   changes, research projects, events
@@ -171,16 +184,16 @@ Read `references/validation-playbook.md` for the full methodology. Summary of wh
    needs structural reframing before any build starts.**
 8. **Risks & assumptions** — What has to be true for this to work? What kills it?
 
-**Tools to use, in priority order:**
+**Research capabilities to use, in priority order:**
 
-1. **WebSearch** — primary tool for market, competitor, and demand research.
-2. **Connected enterprise tools** (if available) — `enterprise-search` skill, Slack, Notion,
+1. **External research** — the host's web/search/browser capability for market, competitor, and demand research.
+2. **Connected enterprise knowledge** (if available) — enterprise search, Slack, Notion,
    Confluence, Drive, etc. Check whether prior internal work, customer feedback, or related
    discussions exist.
 3. **Sales/CRM connectors** (if available) — Common Room, Apollo, etc., for ICP-style validation
    when the idea targets a market segment.
-4. **mcp-registry** (`search_mcp_registry`) — if the idea names a specific platform or tool
-   category, check if there's a connector that would surface relevant data.
+4. **Connector/plugin registry** (if available) — if the idea names a specific platform or tool
+   category, check if there is a connector that would surface relevant data.
 
 Run searches in parallel where possible. Use multiple distinct queries per topic — don't rely on
 a single search.
@@ -288,14 +301,15 @@ here — do not rewrite the PRD multiple times.
 
 ## Phase 4 — Generate Handoff PRD
 
-**Goal**: Produce the final markdown PRD and save it to `outputs/`.
+**Goal**: Produce the final markdown PRD and save it through the host's file/artifact mechanism when
+available.
 
 Read `references/prd-template.md` for the full template. The template differs slightly between
 software and general modes. Fill every section using the data gathered in phases 1–3.
 
 **File naming**:
 
-- Default: `outputs/<short-slug>-PLAN.md` (e.g., `outputs/expense-tracker-PLAN.md`)
+- Default when local files are available: `outputs/<short-slug>-PLAN.md` (e.g., `outputs/expense-tracker-PLAN.md`)
 - Use `SPEC.md` instead of `PLAN.md` if the user explicitly asks for a spec.
 - Slug should be 2–4 words, kebab-case, derived from the idea name.
 
@@ -307,10 +321,10 @@ software and general modes. Fill every section using the data gathered in phases
 - Success metrics include both leading and lagging indicators
 - Tech considerations (software mode) name actual technology choices with rationale, not generic advice
 
-After writing the file, present the link using the `computer://` URL format and a 2–3 sentence
-summary. Suggest next steps:
+After writing the file or artifact, present it using the host's normal link/path format and a 2–3
+sentence summary. Suggest next steps:
 
-- For software mode: "Drop this into a Claude Code session to scaffold the project."
+- For software mode: "Hand this to your implementation agent to scaffold the project."
 - For general mode: "Use this as the brief for kicking off the work or sharing with collaborators."
 - To pitch it: "Hand this to `ideakit-present` to turn it into a deck, demo, or one-pager that wins
   over customers, investors, or teammates."
@@ -323,7 +337,8 @@ interview and research unless they want to extend either).
 
 ## What Not to Do
 
-- Do not produce the PRD in the chat — always write to a file.
+- Prefer writing the PRD to a file/artifact. If the host cannot create files or artifacts, provide
+  the complete PRD in chat and say no file was written.
 - Do not skip the research phase even if the user is impatient. Offer a "light" version
   (3–5 quick searches) only if the user explicitly opts out of deep research.
 - Do not invent market data, competitor names, or statistics. If you can't find a source, say so.

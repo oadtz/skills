@@ -3,8 +3,8 @@
 Use this playbook in Phase 2 of the ideakit-validate skill. Goal: build an evidence-backed picture of
 whether the idea is real, viable, and worth doing — before producing a PRD.
 
-Run searches in **parallel batches** where possible (multiple WebSearch calls in one turn). Use
-multiple distinct query phrasings per topic. Cite every claim.
+Run searches in **parallel batches** where the host supports it. Use multiple distinct query
+phrasings per topic. Cite every claim.
 
 ## What "Deep" Means Here
 
@@ -17,14 +17,14 @@ stated feasibility and novelty as a hypothesis, not a finding. Machine-generated
 over-rate their own feasibility — so weight real demand evidence (complaints, spend, behavior)
 above plausible narrative, and put extra rigor into investigations 5, 6, and 7 below.
 
-## The Six Investigations
+## The Eight Investigations
 
 ### 1. Existing Solutions / Direct Competitors
 
 **Goal**: Identify the top 3–7 alternatives that solve the same or adjacent problem.
 
 **Queries to run** (adapt to the idea):
-- `"[problem statement]" tools` / `best [category]` / `top [category] 2025`
+- `"[problem statement]" tools` / `best [category]` / `top [category] [current year]`
 - `[idea description] alternative` / `vs [obvious competitor]`
 - `open source [category]` / `free [category]`
 - Reddit, Hacker News, Product Hunt searches: `[category] site:reddit.com`, `site:news.ycombinator.com [category]`
@@ -99,8 +99,8 @@ This shapes the v1 monetization assumptions in the PRD.
 **This investigation was added in v0.2 after a real-world miss. Skipping it can kill an idea
 6 months into the build.**
 
-The biggest threat to a software product in 2026+ is not a direct competitor — it's a major
-platform launching the same capability as a built-in feature, plugin, or skill. Apple, Google,
+The biggest threat to a software product in the current AI platform era is not a direct competitor —
+it's a major platform launching the same capability as a built-in feature, plugin, or skill. Apple, Google,
 Microsoft, Meta, OpenAI, Anthropic, and large vertical SaaS vendors are all racing to absorb
 features into their platforms.
 
@@ -192,12 +192,12 @@ to "will this market still want this in 18-24 months, given how the world is mov
 
 **Searches to run:**
 
-- `"[category]" funding rounds 2026 venture capital`
-- `"[category]" Gartner OR Forrester OR Bain OR Deloitte 2026 prediction`
-- `"[category]" roadmap OR future 2027 2028`
+- `"[category]" funding rounds [current year] venture capital`
+- `"[category]" Gartner OR Forrester OR Bain OR Deloitte [current year] prediction`
+- `"[category]" roadmap OR future [current year + 1] [current year + 2]`
 - `"[adjacent tech]" timeline maturity [category] disruption`
-- `"a16z" OR "Bessemer" OR "Sequoia" "state of [category]" 2026`
-- `[regulatory body] [category] regulation draft 2026 2027`
+- `"a16z" OR "Bessemer" OR "Sequoia" "state of [category]" [current year]`
+- `[regulatory body] [category] regulation draft [current year] [current year + 1]`
 - Check job postings for "Head of [emerging role]" — leading indicator of what big companies bet on
 
 **Output: Future Trajectory Table**
@@ -241,16 +241,16 @@ Synthesize from the above:
 - **Time horizon risks** — Carry over from investigation #7; include time-bound kill criteria.
 - **Regulatory / structural risks** — Compliance, platform dependency, etc.
 
-## Connected Tools — Use Them If Present
+## Connected Capabilities — Use Them If Present
 
 Before relying solely on web search, check what's connected:
 
-- **enterprise-search** skill — search across user's connected sources for prior internal work,
+- **Enterprise or workplace search** — search across user's connected sources for prior internal work,
   customer feedback, related discussions. Use this if the idea touches their company or industry.
 - **Slack, Notion, Confluence, Drive** connectors — same as above.
 - **Common Room, Apollo** — for ICP-style validation when the idea targets a specific market segment.
-- **search_mcp_registry** (`mcp__mcp-registry__search_mcp_registry`) — if the idea names a specific
-  platform, check if there's an MCP connector that would surface relevant data.
+- **Connector/plugin registry** — if the idea names a specific platform, check whether the host can
+  discover connectors that would surface relevant data.
 
 If you discover relevant connectors that aren't installed, surface them to the user — don't try
 to work around them silently.
@@ -258,7 +258,7 @@ to work around them silently.
 ## Output Format
 
 Produce the **research brief** as specified in SKILL.md Phase 2. Cite sources inline using
-markdown links. Group findings by the seven investigation areas. Pause for user reaction before
+markdown links. Group findings by the eight investigation areas. Pause for user reaction before
 moving to synthesis.
 
 ## What Counts as Insufficient Research

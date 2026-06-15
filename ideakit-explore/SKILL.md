@@ -21,12 +21,12 @@ Your job is not to generate deliverables. Your job is to think alongside the use
 
 ## Where this sits in the idea pipeline
 
-This skill is the **middle** of a three-step flow. It assumes the user already has *something* to think about — a direction, a shortlist, a rough idea — and helps sharpen it. Hand off in either direction when appropriate:
+This skill is the **middle exploration stage** of a four-skill idea flow. It assumes the user already has *something* to think about — a direction, a shortlist, a rough idea — and helps sharpen it. Hand off in either direction when appropriate:
 
 ```
-ideakit-generate            →   ideakit-explore (THIS)   →   ideakit-validate
-generate ideas             expand + challenge                 validate + PRD
-(user has nothing yet)     (user has a direction)             (user has a chosen idea)
+ideakit-generate            →   ideakit-explore (THIS)   →   ideakit-validate   →   ideakit-present
+generate ideas             expand + challenge                 validate + PRD         make people act
+(user has nothing yet)     (user has a direction)             (chosen idea)          (validated idea)
 ```
 
 - If the user arrives with **no idea at all** ("just give me ideas"), this is the wrong tool — point them to `ideakit-generate`, which sources ideas from trends and real problems.

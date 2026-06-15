@@ -1,16 +1,17 @@
-# Ideakit — a 3-skill idea pipeline
+# Ideakit — a 4-skill idea pipeline
 
-A loosely-coupled set of skills that take you from "I have no idea" to "buildable plan."
+A loosely-coupled set of skills that take you from "I have no idea" to "buildable plan" to
+"people act on it."
 They share the `ideakit-` prefix so they're easy to spot as a family, but each works standalone
 and triggers on its own intent — they're connected by handoffs, not merged into one monolith.
 
-## The three skills
+## The four skills
 
 | Order | Skill | Use it when… | Output |
 |---|---|---|---|
 | 1 | **ideakit-generate** | you have *no* idea yet — only constraints (industry, skills, budget) | ranked shortlist of raw ideas |
 | 2 | **ideakit-explore** | you have a direction and want to expand / stress-test it | sharpened options + key unknowns |
-| 3 | **ideakit-validate** | you have a chosen idea and want it validated + turned into a plan | a PRD / PLAN.md ready for Claude Code |
+| 3 | **ideakit-validate** | you have a chosen idea and want it validated + turned into a plan | a PRD / PLAN.md ready for an implementation agent |
 | 4 | **ideakit-present** | you need to win customers, investors, or teammates over | persuasive deck / demo / one-pager / memo |
 
 ```
@@ -34,6 +35,9 @@ ideakit-generate  →  ideakit-explore  →  ideakit-validate  →  ideakit-pres
 - **Evidence-driven.** `ideakit-generate` sources ideas from real trends and complaints;
   `ideakit-validate` pressure-tests the two things AI-generated ideas over-rate (feasibility and
   platform survivability). The human always makes the go/kill call.
+- **Runtime-agnostic.** Skills name capabilities by intent — research, user input, file/artifact
+  output, deck/document creation — instead of hard-coding a single agent's tool names. Host-specific
+  tools are adapters, not the core workflow.
 - **Persuasion is story-first.** `ideakit-present` builds the narrative and emotional core before
   choosing a format (deck/demo/one-pager), because a polished deck around a weak story convinces
   no one. It only sells what validation made true — never hype past the substance.
@@ -44,4 +48,4 @@ ideakit-generate  →  ideakit-explore  →  ideakit-validate  →  ideakit-pres
 ## Optional next step
 
 If you want a single "run the whole pipeline" entry point, add a thin orchestrator command
-(e.g. `/idea-to-prd`) that calls the three in sequence — without merging them.
+(e.g. `/idea-to-prd`) that calls the four stages in sequence — without merging them.

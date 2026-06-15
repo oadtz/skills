@@ -12,8 +12,6 @@ description: >
   ranked table of raw ideas. It is NOT for refining an idea you already have (hand off to
   ideakit-validate for that) and NOT for general product-feature brainstorming on an existing product
   (use ideakit-explore).
-metadata:
-  version: "1.0.0"
 ---
 
 # Ideakit — Generate (idea sourcing)
@@ -77,11 +75,24 @@ criterion absent?), or reflexivity (did we mistake our frame for the territory)?
 ## The pipeline this skill sits in
 
 ```
-[user: constraints]  →  ideakit-generate (THIS)  →  ideakit-explore  →  ideakit-validate  →  build
+[user: constraints]  →  ideakit-generate (THIS)  →  ideakit-explore  →  ideakit-validate  →  ideakit-present/build
                          generate + rank        expand + challenge        validate + PRD
 ```
 
 `ideakit-generate` is the front of the line. Its job ends when it hands a ranked shortlist forward.
+
+## Host capability mapping
+
+Use capabilities by intent, not by product-specific tool name:
+
+- **User input**: ask one concise question; if the host supports structured question UI, use it,
+  otherwise ask in plain text.
+- **Research**: use the host's available web/search/browser/connected-knowledge capability. Batch or
+  parallelize searches when the host supports it.
+- **No live research available**: ask the user for sources or continue only as a clearly labeled
+  "non-current draft"; mark market, trend, and platform claims as assumptions.
+- **Output**: return the ranked shortlist in chat; if the host supports artifacts/files, use them only
+  for optional supporting notes, not as a substitute for the summary.
 
 ## Workflow
 
@@ -91,8 +102,8 @@ separate this from a generic brainstorm and what keep it from quietly missing wh
 
 ### Step 1 — Frame (gather constraints, not ideas)
 
-Use the `AskUserQuestion` tool (or plain questions if the user is mid-conversation) to pin down
-direction. Ask only what's missing; infer the rest from context. Cover:
+Ask one concise question at a time to pin down direction. Use the host's structured question UI if
+available; otherwise ask in plain text. Ask only what's missing; infer the rest from context. Cover:
 
 - **Domain / industry** the user knows or cares about (their "edge" — where they live closer to
   the future than most people).
@@ -106,9 +117,10 @@ in one line, and proceed — don't stall. You can widen later.
 
 ### Step 2 — Scan (build raw signal)
 
-Generate ideas *from evidence*, not from thin air. Pull current signal with `WebSearch` and any
-connected tools. See `references/trend-sources.md` for the source list and ready-made query
-patterns. At minimum, run several **parallel** searches across:
+Generate ideas *from evidence*, not from thin air. Pull current signal with the host's available
+research capability: web/search/browser, connected knowledge bases, local files, or user-provided
+sources. See `references/trend-sources.md` for the source list and ready-made query patterns. At
+minimum, run several batched/parallel searches when the host supports it across:
 
 - Trend/authority sources (YC Requests for Startups, a16z Big Ideas, etc.) for where the puck
   is going.
@@ -120,8 +132,9 @@ patterns. At minimum, run several **parallel** searches across:
   whole categories like the BL/Y-series boom.
 - The user's specific domain, to ground ideas in their edge.
 
-Capture raw problems and signals verbatim before interpreting. Quantify pain where you can
-("47 GitHub issues asking for X", "top complaint in r/foo").
+Capture raw problems and signals verbatim before interpreting. Quantify pain or desire where you can
+("47 GitHub issues asking for X", "top complaint in r/foo", "12k fan works around Y"). Keep source
+links beside each signal.
 
 **Then run the coverage self-audit before generating.** The source list above still has a horizon —
 any fixed list does. Read `references/coverage-audit.md` and walk the *axes of blindness* (value
@@ -200,14 +213,14 @@ the table, not in the table itself.
 
 **สมดุลของพอร์ต:** painkiller:desire = [x:y] · durable:emerging = [x:y] — ถ่วงแบบนี้เพราะ [เหตุผลตาม brief/edge].
 
-| # | ไอเดีย (1 ประโยค) | ชนิด (P/V/C) | ตลาด/ฝูงชน | Secret (ความเชื่อที่คนส่วนใหญ่ยังไม่เห็นด้วย) | คะแนนรวม | สมมติฐานเสี่ยงสุด |
+| # | ไอเดีย (1 ประโยค) | ชนิด (P/V/C) | ตลาด/ฝูงชน | Evidence signal + source | คะแนนรวม | สมมติฐานเสี่ยงสุด |
 |---|---|---|---|---|---|---|
-| 1 | ... | P/V/C | ... | ... | X/30 | ... |
+| 1 | ... | P/V/C | ... | [signal](url) | X/30 | ... |
 ...
 
 ### เหตุผลของอันดับ 1–3 (ต้องมี sub-scores ครบ 6 มิติ)
 - **#1 [name]** — Pull x/5, Market x/5, Secret x/5, Job x/5, Survivability x/5, Feasibility x/5.
-  ทำไมนำ; สมมติฐานเสี่ยงสุด; วิธีเทสต์ที่ถูกที่สุด.
+  ทำไมนำ; source หลัก; สมมติฐานเสี่ยงสุด; วิธีเทสต์ที่ถูกที่สุด.
 - ...
 
 ### ตัวที่ตัดทิ้งและเหตุผล

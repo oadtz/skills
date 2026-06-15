@@ -52,7 +52,7 @@ Is there a clear job the customer is hiring this to do, and does it beat what th
 - 2–3: plausible job, unclear it's better than the status quo.
 - 4–5: crisp job, clearly better than what it replaces, on a dimension the customer cares about.
 
-### 5. Survivability / Power (2026 reality)
+### 5. Survivability / Power (current platform reality)
 If a dominant AI platform ships this natively tomorrow, why does this still win? Don't accept a vague
 "we have a moat" — **name the durable power** using Hamilton Helmer's *Seven Powers*: Scale
 Economies, Network Economies, Counter-Positioning (a model the incumbent won't copy because it would

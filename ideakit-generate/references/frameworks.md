@@ -41,7 +41,7 @@ diversity partition quickly with structurally different shots.
 Ask "how would we make this problem far worse?" then reverse each answer. People spot what's wrong
 more easily than they imagine what's right — this unlocks ideas when generation stalls.
 
-### The "AI eats this service" lens (2025–2026)
+### The "AI eats this service" lens (current AI platform cycle)
 For a chosen industry ask: "If an AI agent could do 80% of this job end-to-end, which *service*
 (not software) gets rebuilt as AI-native?" Services spend dwarfs software spend, and most services
 are already outsourced — structurally easier to replace. This is where much current opportunity sits.
@@ -87,7 +87,7 @@ reachable, and growing.
 true belief most don't yet hold. Build 0→1 (something new), not 1→n (a copy). Win a small specific
 market first, then expand.
 
-### Survivability / Power (current reality; Hamilton Helmer, *7 Powers*)
+### Survivability / Power (current platform reality; Hamilton Helmer, *7 Powers*)
 The dominant AI platforms (ChatGPT/OpenAI, Claude/Anthropic, Google, Microsoft) ship adjacent
 features fast. For every idea, force the statement: "If [platform] launches this natively tomorrow,
 this still wins because [specific power]." Don't settle for "we have a moat" — name *which* of

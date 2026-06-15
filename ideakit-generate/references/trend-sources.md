@@ -1,10 +1,11 @@
 # Trend & problem sources — Step 2
 
-Generate ideas from real signal. Run several searches **in parallel**, mixing three kinds of source:
-*authority/trend* sources (where the puck is going), *problem/complaint* sources (pain in people's
-own words), and *culture/desire* sources (what people *want, love, and rally around*). Then ground
-all three in the user's specific domain. Skipping the third kind is the classic blind spot — it is
-what makes a generator see only B2B pain and miss huge desire-driven markets.
+Generate ideas from real signal. Use the host's available research capability and run several
+searches **in parallel or batches when supported**, mixing three kinds of source: *authority/trend*
+sources (where the puck is going), *problem/complaint* sources (pain in people's own words), and
+*culture/desire* sources (what people *want, love, and rally around*). Then ground all three in the
+user's specific domain. Skipping the third kind is the classic blind spot — it is what makes a
+generator see only B2B pain and miss huge desire-driven markets.
 
 ## Authority / trend sources
 - **Y Combinator — Requests for Startups** (`ycombinator.com/rfs`): what top investors actively
@@ -51,8 +52,8 @@ sales-call notes, internal docs, analytics. First-party signal beats public sign
 user can already see and verify.
 
 ## Ready-made query patterns
-Swap `[domain]` for the user's industry/segment:
-- `[domain] biggest pain points 2026`
+Swap `[domain]` for the user's industry/segment and `[current year]` for the host's current year:
+- `[domain] biggest pain points [current year]`
 - `site:reddit.com [domain] "i hate" OR "i wish there was"`
 - `[domain] software "switched from" OR "looking for alternative"`
 - `[domain] manual process spreadsheet time-consuming`
@@ -62,7 +63,7 @@ Swap `[domain]` for the user's industry/segment:
 
 Desire / culture patterns (swap `[fandom/niche]`):
 - `[fandom/niche] merch OR "where can i buy" OR "shut up and take my money"`
-- `[fandom/niche] trending TikTok OR "going viral" 2026`
+- `[fandom/niche] trending TikTok OR "going viral" [current year]`
 - `site:reddit.com [fandom/niche] "i would pay for" OR "why is there no"`
 - `[genre/IP] fans "waiting for" OR "need more" platform OR app`
 - `Kickstarter OR Patreon [niche] most funded`
