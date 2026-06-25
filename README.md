@@ -26,6 +26,31 @@ standalone and hands off to the next. Full details in **[ideakit-README.md](idea
 | `ideakit-validate` | deep-validate a chosen idea → produce a PRD / PLAN.md |
 | `ideakit-present` | turn a validated idea into a persuasive deck / demo / one-pager |
 
+### `forge-*` — PRD → product pipeline (a related set)
+
+A 4-stage, loosely-coupled pipeline that turns a validated PRD into a running, production-worthy
+product: architect → design → build → ship. Full details in **[forge-README.md](forge-README.md)**.
+
+| Skill | Role |
+|---|---|
+| `forge-architect` | turn a PRD into a sound technical foundation (stack, data model, ADRs, scaffold) |
+| `forge-design` | build a real design system + core user flows, not generic "AI slop" |
+| `forge-build` | write the product skeleton-first then slice-by-slice, with verified tests |
+| `forge-ship` | harden + release: CI guardrails, security/eval gates, deploy with rollback |
+
+### `solo-*` — solopreneur business pipeline (a related set)
+
+A 4-stage, loosely-coupled pipeline that turns a validated idea into a one-person business that makes
+money and lasts: model → fund → distribute → sustain. It's the *commercial* sibling of ideakit/forge
+and runs alongside the forge build track. Full details in **[solo-README.md](solo-README.md)**.
+
+| Skill | Role |
+|---|---|
+| `solo-model` | decide how a solo business makes money + set starting price |
+| `solo-fund` | fund the build with minimal dilution (bootstrap → pre-sale → RBF → SEAL → grants) |
+| `solo-distribute` | get the first customers via one deep channel + an audience motion |
+| `solo-sustain` | run it solo long-term: automation/systems, calm-company defaults, anti-burnout guardrails |
+
 ### Other skills
 
 _(Add new, unrelated skills here as their own entries — one row or short section each.)_
