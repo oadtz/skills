@@ -70,6 +70,12 @@ there is — circle back to `solo-fund` to pre-sell to it.)
   hypothesis to test with a small real experiment.
 - **File output**: write the GTM plan to a file/artifact if supported; else deliver it in chat.
 
+**Grounding:** before stating any external fact (where the buyer gathers, channel/conversion
+benchmarks, "what's working now" tactics, tool/platform facts), follow `../solo-grounding.md` if
+present — source-or-tag every claim, re-fetch dated stats, and treat channel-fit and
+willingness-to-pay as behavior-backed hypotheses (Mom Test), not stated intent. It does not make you
+less decisive about the one channel you pick.
+
 ## Workflow
 
 Four steps: **Pin the buyer & where they are → Pick ONE channel → Design the audience + first-
@@ -139,6 +145,9 @@ All of these are the governing principle applied — not a flat checklist.
 
 ## Reference files
 
+- `../solo-grounding.md` — the `solo-*` family's shared anti-hallucination guard: **read before
+  stating any channel/market stat or "what works now" tactic**. Source-or-tag every claim, re-fetch
+  dated numbers, treat channel-fit as a behavior-backed hypothesis, stay decisive.
 - `references/channel-playbook.md` — the solo-viable channels (build-in-public, SEO/content,
   community, direct outreach/sales, marketplaces/launches, paid, partnerships), what each suits,
   founder-strength fit, time-to-traction, and the "first 100 customers" plays.

@@ -68,6 +68,11 @@ Use capabilities by intent, not by product-specific tool name:
 - **File output**: write the model decision to a file/artifact if supported; otherwise deliver it in
   chat and say no file was written.
 
+**Grounding:** before stating any external fact (price benchmarks, market rates, who-pays norms),
+follow `../solo-grounding.md` if present — source-or-tag every such claim and re-fetch time-sensitive
+numbers. It strengthens the honesty guards already here; it does not make you less decisive about the
+price you set.
+
 ## Workflow
 
 Four steps: **Intake → Choose the model → Set the starting price → Name the trade-offs.**
@@ -154,6 +159,9 @@ All of these are the governing principle applied — not a flat checklist.
 
 ## Reference files
 
+- `../solo-grounding.md` — the `solo-*` family's shared anti-hallucination guard: **read before
+  stating any external fact**. Source-or-tag every claim, re-fetch time-sensitive numbers, stay
+  decisive. Strengthens honesty without adding hedging.
 - `references/business-models.md` — the solo-viable revenue models, their economics, time-to-cash,
   operational load, and the Stairstep paths between them.
 - `references/pricing-playbook.md` — value-based pricing for solo founders, common underpricing

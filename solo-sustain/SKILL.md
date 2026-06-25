@@ -89,6 +89,11 @@ This skill touches the founder's wellbeing. Hold these always:
   as "verify it still fits / is current."
 - **File output**: write the operating plan to a file/artifact if supported; else deliver it in chat.
 
+**Grounding:** before stating any external fact (what a specific tool/automation can do, its pricing
+or limits, burnout/market statistics), follow `../solo-grounding.md` if present — source-or-tag every
+claim and re-fetch tool capabilities and dated figures, never recall them as current. It does not
+soften the duty-of-care guidance above, which always takes precedence.
+
 ## Workflow
 
 Four steps: **Map where the time goes → Buy leverage (systems before headcount) → Set calm-company
@@ -175,6 +180,9 @@ All of these are the governing principle applied — not a flat checklist.
 
 ## Reference files
 
+- `../solo-grounding.md` — the `solo-*` family's shared anti-hallucination guard: **read before
+  stating any tool capability, pricing, or burnout/market statistic**. Source-or-tag every claim,
+  re-fetch tool facts and dated figures, stay decisive. Duty-of-care guidance always takes precedence.
 - `references/automation-and-burnout.md` — the leverage ladder in detail (eliminate → self-serve →
   automate → template → delegate → hire), AI/no-code leverage patterns for solo ops, calm-company
   defaults, and concrete, humane anti-burnout guardrails.

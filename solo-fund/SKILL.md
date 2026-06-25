@@ -72,6 +72,12 @@ solo-model (model + price)  →  solo-fund (THIS)  →  solo-distribute  →  so
   user to verify current terms and availability before acting.
 - **File output**: write the funding plan to a file/artifact if supported; else deliver it in chat.
 
+**Grounding:** before stating any funding term, rate, equity stake, or program (RBF %, SEAL cap,
+accelerator equity, grant eligibility, whether a named program still exists), follow
+`../solo-grounding.md` if present — source-or-tag every claim and re-fetch these constantly-changing
+facts, never assert a remembered term as current. It generalizes the "verify current terms" rule this
+skill already holds; it does not make you less decisive about the primary path you recommend.
+
 ## Workflow
 
 Four steps: **Assess the need → Map options to the model → Recommend a primary path → State the cost
@@ -153,5 +159,8 @@ All of these are the governing principle applied — not a flat checklist.
 
 ## Reference files
 
+- `../solo-grounding.md` — the `solo-*` family's shared anti-hallucination guard: **read before
+  stating any funding term, rate, or program**. Source-or-tag every claim, re-fetch
+  constantly-changing terms, stay decisive. This is general information, not financial/legal advice.
 - `references/funding-options.md` — the funding cost ladder for solo founders: each instrument, what
   it costs, what it requires, which revenue models it fits, and the watch-outs.

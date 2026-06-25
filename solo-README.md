@@ -62,6 +62,10 @@ anchor the whole track: **distribution — not product — is the #1 reason solo
   practice (Stairstep, bootstrapper funding instruments, distribution-as-#1-problem, burnout as the
   top failure predictor) and the human always makes the call. Funding terms and named programs change
   constantly, so `solo-fund` tells you to verify current terms rather than trusting a remembered fact.
+- **Shared anti-hallucination guard.** All four skills read **[solo-grounding.md](solo-grounding.md)**
+  before stating any external fact (prices, funding terms, channel/market stats, tool facts):
+  source-or-tag every claim, re-fetch time-sensitive numbers, stay decisive. It's the family's own
+  guard — self-contained, not shared across other skillsets — so `solo-*` stays standalone.
 - **Runtime-agnostic.** Skills name capabilities by intent — user input, research, file/artifact
   output, connector/registry lookups — not one agent's tool names. Host-specific tools are adapters.
 - **Care for the person.** `solo-sustain` treats founder wellbeing as a first-class operational

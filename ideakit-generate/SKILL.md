@@ -75,11 +75,24 @@ criterion absent?), or reflexivity (did we mistake our frame for the territory)?
 ## The pipeline this skill sits in
 
 ```
-[user: constraints]  →  ideakit-generate (THIS)  →  ideakit-explore  →  ideakit-validate  →  ideakit-present/build
-                         generate + rank        expand + challenge        validate + PRD
+ideakit-discover  →  [user: constraints]  →  ideakit-generate (THIS)  →  ideakit-explore  →  ideakit-validate  →  ideakit-present/build
+(blank slate → edge map)                      generate + rank        expand + challenge        validate + PRD
 ```
 
-`ideakit-generate` is the front of the line. Its job ends when it hands a ranked shortlist forward.
+`ideakit-generate` turns *constraints* into ranked ideas. Its job ends when it hands a ranked
+shortlist forward.
+
+**Intake — make sure the user actually has constraints to work from:**
+
+- If the user **has any direction at all** — a domain, a skill to lean on, an audience, a business
+  model preference — proceed; that's all this skill needs.
+- If the user is at a **true blank slate** ("I don't even know what I want to do", no domain, no
+  skill named), don't just default-frame and produce generic market ideas. Point them to
+  `ideakit-discover` first — it excavates the person and returns an **edge map** that makes the ideas
+  here personal instead of generic.
+- If the user **arrives with an edge map** from `ideakit-discover`, use it directly as the Step 1
+  frame: its candidate directions become your diversity partitions (Step 3) and its no-gos become
+  hard filters. Don't re-interview what discover already established.
 
 ## Host capability mapping
 
@@ -102,8 +115,12 @@ separate this from a generic brainstorm and what keep it from quietly missing wh
 
 ### Step 1 — Frame (gather constraints, not ideas)
 
-Ask one concise question at a time to pin down direction. Use the host's structured question UI if
-available; otherwise ask in plain text. Ask only what's missing; infer the rest from context. Cover:
+**If an `ideakit-discover` edge map is in hand, the frame is already built** — adopt it: the edge map's
+"who you are" and no-gos fill the fields below, and its candidate directions seed Step 3's partitions.
+Confirm it in a line and move to Step 2 rather than re-interviewing.
+
+Otherwise, ask one concise question at a time to pin down direction. Use the host's structured question
+UI if available; otherwise ask in plain text. Ask only what's missing; infer the rest from context. Cover:
 
 - **Domain / industry** the user knows or cares about (their "edge" — where they live closer to
   the future than most people).
@@ -112,8 +129,10 @@ available; otherwise ask in plain text. Ask only what's missing; infer the rest 
 - **Resource envelope**: rough budget, time, solo vs. team, technical or not.
 - **Constraints / no-gos**: things they will not do (industries, models, geographies).
 
-If the user gives almost nothing ("just give me ideas"), pick a sensible default frame, state it
-in one line, and proceed — don't stall. You can widen later.
+If the user gives almost nothing ("just give me ideas") but *does* have a domain or skill, pick a
+sensible default frame, state it in one line, and proceed — don't stall. You can widen later. But if
+the user is at a true blank slate with no domain, skill, or direction to name, that's the signal to
+route them to `ideakit-discover` first (see Intake above) rather than default-framing into generic ideas.
 
 ### Step 2 — Scan (build raw signal)
 

@@ -16,11 +16,12 @@ necessarily related** — each is independent unless it explicitly belongs to a 
 
 ### `ideakit-*` — business idea pipeline (a related set)
 
-A 4-stage, loosely-coupled pipeline: generate → explore → validate → present. Each stage works
-standalone and hands off to the next. Full details in **[ideakit-README.md](ideakit-README.md)**.
+A 5-stage, loosely-coupled pipeline: discover → generate → explore → validate → present. Each stage
+works standalone and hands off to the next. Full details in **[ideakit-README.md](ideakit-README.md)**.
 
 | Skill | Role |
 |---|---|
+| `ideakit-discover` | blank slate (no idea, no domain) → excavate what *you* want → an edge map |
 | `ideakit-generate` | source new business/startup ideas from trends + real problems |
 | `ideakit-explore` | brainstorm / stress-test a direction as a thinking partner |
 | `ideakit-validate` | deep-validate a chosen idea → produce a PRD / PLAN.md |
