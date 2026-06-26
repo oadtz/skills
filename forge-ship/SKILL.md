@@ -144,6 +144,15 @@ Read `references/ci-deploy.md`. Ship on the lightest infra that fits:
 Then confirm the release and the rollback path, and report what's gated, what's monitored, and what
 was deliberately deferred. The user makes the final ship/no-ship call.
 
+Shipping is the end of the *build* track, not the journey — point to the **commercial track** next:
+
+> The product is live. Want me to hand this to the `solo-*` track to make it earn? — `solo-distribute`
+> to get attention, `solo-sell` to close the first paying customers, or `solo-sustain` to keep a live
+> product runnable solo without burning out. (If the revenue model isn't settled yet, start at
+> `solo-model`.)
+
+A shipped product that nobody finds or buys isn't done — name the next move toward revenue.
+
 ## Operating principles
 
 **Gates are blocking, in CI:**
@@ -161,6 +170,14 @@ was deliberately deferred. The user makes the final ship/no-ship call.
 
 **Honesty:** report the residual risk plainly — what's covered, what's deferred, and what the user is
 choosing to accept by shipping. Never present an unreviewed build as production-ready.
+
+## Execution
+
+**Don't stop at a checklist — configure it.** Actually set up the CI gates, security/eval checks, and
+deploy/rollback configuration as real files, and run the scanners/tests for real. **Hard stop:**
+deploying to production, merging/releasing, provisioning paid infra, and destructive ops are the user's
+call — stage them and hand over the final deploy/merge step with the rollback path. Full contract:
+`../forge-execution.md`.
 
 ## Reference files
 

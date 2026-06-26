@@ -192,6 +192,13 @@ When the slices that make up v1 are built and green, offer the handoff:
   reuse stdlib/native/existing deps, or one line — before reaching for the minimum that works.
 - **Small batches.** Many small reviewable changes, not one heroic merge.
 
+## Execution
+
+**Don't stop at a slice list — write the code.** Actually write the code and the tests and **run them**;
+build skeleton-first then slice by slice, verifying each externally with real output. The deliverable is
+working, tested software. Stage anything that pushes to shared branches, merges, or runs destructive ops
+for the user's approval. Full contract: `../forge-execution.md`.
+
 ## Reference files
 
 - `references/build-loop.md` — *thin slice + verify*: walking skeleton, vertical-slice decomposition,

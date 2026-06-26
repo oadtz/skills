@@ -41,15 +41,17 @@ product: architect → design → build → ship. Full details in **[forge-READM
 
 ### `solo-*` — solopreneur business pipeline (a related set)
 
-A 4-stage, loosely-coupled pipeline that turns a validated idea into a one-person business that makes
-money and lasts: model → fund → distribute → sustain. It's the *commercial* sibling of ideakit/forge
-and runs alongside the forge build track. Full details in **[solo-README.md](solo-README.md)**.
+A 6-stage, loosely-coupled pipeline that turns a validated idea into a one-person business that makes
+money and lasts: model → fund → distribute → sell → grow → sustain. It's the *commercial* sibling of
+ideakit/forge and runs alongside the forge build track. Full details in **[solo-README.md](solo-README.md)**.
 
 | Skill | Role |
 |---|---|
-| `solo-model` | decide how a solo business makes money + set starting price |
+| `solo-model` | decide how a solo business makes money + design the offer + set starting price |
 | `solo-fund` | fund the build with minimal dilution (bootstrap → pre-sale → RBF → SEAL → grants) |
-| `solo-distribute` | get the first customers via one deep channel + an audience motion |
+| `solo-distribute` | get attention via one deep channel + an audience motion (organic) |
+| `solo-sell` | close the first paying customers by hand via founder-led sales + a repeatable playbook |
+| `solo-grow` | scale acquisition automatically: growth loop + self-serve funnel + unit economics (CAC/LTV) |
 | `solo-sustain` | run it solo long-term: automation/systems, calm-company defaults, anti-burnout guardrails |
 
 ### Other skills

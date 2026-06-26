@@ -178,6 +178,13 @@ All of these are the governing principle applied — not a flat checklist.
   may be to shrink scope, raise prices to serve fewer customers, or rethink the model, not to grind
   harder.
 
+## Execution
+
+**Don't stop at the plan — execute it.** Build the real deliverables with the right tool (write the
+actual runbooks, SOPs, templates, and automation scripts that remove the recurring work) instead of
+handing back a list of what to automate. Stage anything that spends money, acts from the founder's
+accounts, or is irreversible for their one-click approval. Full contract: `../solo-execution.md`.
+
 ## Reference files
 
 - `../solo-grounding.md` — the `solo-*` family's shared anti-hallucination guard: **read before

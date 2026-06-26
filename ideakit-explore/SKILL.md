@@ -293,6 +293,13 @@ When the user has a clear front-runner, offer the natural next step: hand it to 
 - **Do not anchor on the first idea.** If the user leads with a solution, acknowledge it, then ask "What else could solve this?"
 - **Do not confuse brainstorming with decision-making.** The brainstorm generates options. The decision comes later with more data.
 
+## Execution
+
+**Don't stop at talk — capture the output.** A brainstorm with no capture never happened. Once the
+session converges, write the real artifact (the options, assumptions to test, the front-runner, and the
+next experiments) as a file, and draw the tree/diagram when it helps. Keep the thinking collaborative;
+just don't let the value evaporate in chat. Full contract: `../ideakit-execution.md`.
+
 ## Common Brainstorming Anti-Patterns
 
 **Solutioning before framing**: The user jumps to "we should build X" before defining the problem. Slow them down. Ask what user problem X solves and how we know.

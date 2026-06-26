@@ -165,6 +165,13 @@ Then present the design system and offer the handoff:
 **Honesty:** AI provides speed and execution; the human provides taste and the constraints. Don't
 ship a generic screen and call it done — name where it still looks AI-generated and fix the brief.
 
+## Execution
+
+**Don't stop at a spec — build it.** Produce the real design tokens, component specs, and flow
+definitions (machine-readable where the pipeline expects it) with the right tool, not a written
+description of a design system. Build the actual assets the brief calls for. Full contract:
+`../forge-execution.md`.
+
 ## Reference files
 
 - `references/anti-slop-brief.md` — *constrain before you generate*: the reusable brief (negative

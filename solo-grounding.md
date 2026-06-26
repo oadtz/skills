@@ -1,7 +1,8 @@
 # Solo — Grounding & anti-hallucination contract
 
-Read this before stating any external fact in `solo-model`, `solo-fund`, `solo-distribute`, or
-`solo-sustain`. It is the family-level guard that keeps the commercial advice honest: the `solo-*`
+Read this before stating any external fact in `solo-model`, `solo-fund`, `solo-distribute`,
+`solo-sell`, `solo-grow`, or `solo-sustain`. It is the family-level guard that keeps the commercial
+advice honest: the `solo-*`
 skills hand founders **numbers that move money** — prices, funding terms, channel benchmarks, tool
 features, program eligibility — and those are exactly the claims a model is most likely to invent or
 to remember as stale. This file is self-contained on purpose; the `solo-*` family carries its own

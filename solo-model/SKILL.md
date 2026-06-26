@@ -44,8 +44,8 @@ Everything below is this principle applied to one decision.
 ## Where this sits in the pipeline
 
 ```
-ideakit-validate (PRD/PLAN.md)  →  solo-model (THIS)  →  solo-fund  →  solo-distribute  →  solo-sustain
-                                   how it makes money     fund it       get customers       run it solo
+ideakit-validate (PRD/PLAN.md)  →  solo-model (THIS)  →  solo-fund  →  solo-distribute  →  solo-sell  →  solo-sustain
+                                   how it makes money     fund it       get attention       close deals    run it solo
 ```
 
 The `solo-*` family is the **commercial track** — it runs alongside the `forge-*` build track, not
@@ -110,10 +110,13 @@ name the Stairstep path out of it. The main solo-viable models:
 soonest and operates with the least founder-touch. Explicitly recommend the Stairstep when the
 dream model (usually SaaS) is too slow to first revenue — start at a faster-paying step and climb.
 
-### Step 3 — Set the starting price
+### Step 3 — Design the offer & set the starting price
 
-Read `references/pricing-playbook.md`. Set a concrete starting price, not a range to "figure out
-later." Rules:
+Read `references/pricing-playbook.md` — it now covers **offer design** (Hormozi's Value Equation +
+Grand Slam Offer — raise perceived value and reverse risk so the same deliverable commands more),
+**value-based price research** (Van Westendorp PSM to find the range, Gabor-Granger to set the tier),
+and **growing price over time**. Price is judged *inside an offer*, so shape the offer first, then set a
+concrete starting price — not a range to "figure out later." Rules:
 
 - **Price on value and on who pays, not on cost.** Cost-plus is the classic solo mistake — your
   marginal cost is ~zero, so cost-plus underprices drastically.
@@ -136,8 +139,9 @@ present the decision:
 > **Stairstep**: [step 1 now → step 2 later → step 3 dream], if applicable
 > **Trade-offs**: time-to-cash [x], operational load [low/med/high], scales-with-time [yes/no], main risk [y]
 >
-> Want me to hand this to **solo-fund** (figure out how to fund the build with minimal dilution) or
-> **solo-distribute** (get the first paying customers)?
+> Want me to hand this to **solo-fund** (fund the build with minimal dilution), **solo-distribute**
+> (build the channel that gets attention), or **solo-sell** (turn that attention into closed,
+> paying deals)?
 
 The user picks the model and approves the trade-offs before moving on.
 
@@ -156,6 +160,14 @@ All of these are the governing principle applied — not a flat checklist.
   changes. Headcount is the most expensive and least reversible "feature" — see `solo-sustain`.
 - **Honesty:** if the only viable model is operationally heavy or slow to pay, say so plainly — don't
   dress a hard model as an easy one. Flag willingness-to-pay as an assumption until real money proves it.
+
+## Execution
+
+**Don't stop at the plan — execute it.** Once the founder has made the decisions this skill is built
+around, build the real deliverables with the right tool (write the actual copy/spec/script/doc/asset,
+run the analysis, do the research) instead of handing back advice. Stage anything that spends money,
+acts from the founder's accounts, or is irreversible for their one-click approval. Full contract:
+`../solo-execution.md`.
 
 ## Reference files
 

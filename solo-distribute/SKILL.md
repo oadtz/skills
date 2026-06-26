@@ -120,8 +120,9 @@ for months, because compounding only pays if you don't quit. Then present the pl
 > **First-customers play**: [manual play for first 10–100]
 > **Weekly cadence**: [concrete, sustainable] · **Second channel (later)**: [name]
 >
-> Want me to hand this to **solo-sustain** to make this cadence (and the rest of the business)
-> runnable long-term without burning out — or back to **solo-fund** to pre-sell to the audience you build?
+> Want me to hand this to **solo-sell** to convert the attention into closed, paying deals
+> (founder-led sales), to **solo-sustain** to make this cadence runnable long-term without burning out,
+> or back to **solo-fund** to pre-sell to the audience you build?
 
 The user commits to the channel and cadence before moving on.
 
@@ -142,6 +143,14 @@ All of these are the governing principle applied — not a flat checklist.
 - **Honesty:** if the chosen channel doesn't actually reach the buyer, or the cadence isn't realistic
   for one person's hours, say so — a plausible-sounding plan the founder can't sustain is worse than a
   smaller one they can. Treat channel-fit as a hypothesis until a small real test confirms it.
+
+## Execution
+
+**Don't stop at the plan — execute it.** Once the founder has made the decisions this skill is built
+around, build the real deliverables with the right tool (draft the actual content calendar, posts, SEO
+outlines, and outreach messages ready to use) instead of handing back advice. Stage anything that posts
+publicly, acts from the founder's accounts, or spends money for their one-click approval. Full contract:
+`../solo-execution.md`.
 
 ## Reference files
 

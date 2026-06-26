@@ -7,8 +7,10 @@ description: >
   specific idea in hand — triggers include "what should I build", "give me startup ideas",
   "help me find a business idea", "I want to start a company but don't know what", "ideas for
   [industry/market]", "what business could I start with [skill/budget]", "where are the
-  opportunities in [space]", or any request for idea generation, opportunity discovery, or
-  "what's worth building right now". This is the UPSTREAM idea-sourcing skill: it produces a
+  opportunities in [space]", "give me ideas where the money is", "most lucrative ideas",
+  "follow the money", "where's the money in [space]", or any request for idea generation,
+  opportunity discovery, or "what's worth building right now". This is the UPSTREAM idea-sourcing
+  skill: it produces a
   ranked table of raw ideas. It is NOT for refining an idea you already have (hand off to
   ideakit-validate for that) and NOT for general product-feature brainstorming on an existing product
   (use ideakit-explore).
@@ -112,6 +114,15 @@ Use capabilities by intent, not by product-specific tool name:
 Five steps: **Frame → Scan (+ coverage audit) → Generate → Score → Synthesize & Hand off.** Do not skip
 the coverage audit inside Scan or the diversity partition inside Generate — those two guards are what
 separate this from a generic brainstorm and what keep it from quietly missing whole markets.
+
+**Money-first framing (optional).** If the user asks for "ideas where the money is" (most lucrative /
+follow the money), read `references/money-first.md` first. It doesn't change the five steps — it
+re-points Scan toward money evidence (funding flows, budgets, pricing, WTP), re-weights scoring toward
+Market/Starving Crowd + solo-reachability, and binds you to one hard rule: **every "the money is here"
+claim must cite real evidence fetched this run — never vibes; if you can't source it, it's a hypothesis,
+not a fact.** It rests on named principles (Hormozi's Starving Crowd, Profit Pools, Value Migration,
+painkiller-vs-vitamin) and carries the solo correction: money is *reachable, fast-paying* buyers, not
+the biggest TAM.
 
 ### Step 1 — Frame (gather constraints, not ideas)
 
@@ -279,11 +290,22 @@ of rules to memorize. They're grouped so you can see which half each serves.
 - **Evidence beats cleverness.** Every idea traces to a real signal from Step 2; cite it.
 - **Hand off, don't hoard.** Output is a shortlist + recommendation to advance, not a finished plan.
 
+## Execution
+
+**Don't stop at advice — produce the deliverable.** Actually *run* the searches (don't describe the
+scan), then build the ranked shortlist with cited evidence as a real file/table. Do the research for
+real under the grounding rule (cite or mark as assumption; never invent market data). Full contract:
+`../ideakit-execution.md`.
+
 ## Reference files
 
 Each is the governing principle applied to one stage:
 
 - `references/trend-sources.md` — *input variety*: where to scan + copy-ready query patterns.
+- `references/money-first.md` — *optional "where the money is" framing*: re-points Scan/Score toward
+  cited money evidence (Starving Crowd, Profit Pools, Value Migration), with the hard no-fabrication
+  rule and the solo correction (reachable fast-paying buyers, not biggest TAM). Read when the user
+  asks for the most lucrative ideas / to follow the money.
 - `references/coverage-audit.md` — *reflexivity on inputs*: scan against your own source/rubric bias
   to catch unknown unknowns (run inside Step 2, every run).
 - `references/diversity.md` — *lens variety*: partition the idea space so ideas don't converge

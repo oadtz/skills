@@ -105,17 +105,27 @@ only the options that *fit the model and stage*:
 - **Bootstrapping** (founder runway + reinvested revenue) — cheapest, zero strings; the default.
 - **Pre-sales / crowdfunding** (presell, lifetime deals, Kickstarter) — funding + validation at once,
   no dilution; best when there's something concrete to promise. Often the smartest first "raise."
-- **Grants / competitions** (gov, foundation, platform funds; in Thailand e.g. depa, NIA, NSTDA) —
-  non-dilutive cash, but slow and paperwork-heavy with eligibility strings.
+- **Grants / competitions + platform/AI credits** (gov, foundation, platform funds; in Thailand e.g.
+  depa, NIA, NSTDA; US SBIR/STTR) — non-dilutive cash; and **stack free AI/cloud credits** (AWS/Google/
+  Azure/NVIDIA) for runway, which in an AI-heavy build can beat a small raise.
+- **Invoice financing / factoring** — borrow against unpaid B2B invoices; non-dilutive cashflow bridge
+  for slow-paying (enterprise/gov) clients. Not growth capital.
 - **Revenue-based financing (RBF)** — capital repaid as a % of revenue; no equity. Needs *existing,
   fairly steady* revenue, so it's an accelerant, not a starter. Mismatched to one-off products.
+- **MRR/ARR-backed credit facilities & venture debt** — borrow against recurring revenue at scale
+  (cheaper than RBF, more institutional); needs steady MRR. Debt, not equity (venture debt adds warrants).
 - **Shared-earnings (SEAL, e.g. Earnest-Capital-style)** — investor capital repaid from profit before
   founder pay, with a capped buy-back; designed for bootstrappers who don't plan a classic exit.
 - **Bootstrapper accelerators (TinySeed-style)** — modest capital for a small permanent equity stake,
   built for SaaS aiming at 7–8 figures (not lifestyle-scale businesses).
+- **Equity crowdfunding (Reg CF / Reg A+)** — sell equity to the crowd via a platform (WeFunder/
+  StartEngine); dilutive but no single VC gatekeeper. Needs a consumer-relatable story + an audience.
 - **Priced equity (angel/VC)** — most expensive in control and expectations; imports a growth/exit
   mandate. Rarely the right fit for a true solo/lifestyle business; appropriate only when the plan is
   genuinely venture-scale and the founder wants that path.
+
+(See `references/funding-options.md` for the full 0–9 ladder with costs, requirements, and watch-outs,
+including the niche web3/RetroPGF route.)
 
 ### Step 3 — Recommend a primary path (+ a backup)
 
@@ -156,6 +166,14 @@ All of these are the governing principle applied — not a flat checklist.
 - **Honesty:** terms, eligibility, and even the existence of specific programs change constantly —
   verify current details, never present a remembered term as a current fact, and don't dress a costly
   instrument as "free money." Flag clearly that this is general information, not tailored advice.
+
+## Execution
+
+**Don't stop at the plan — execute it.** Once the founder has made the decisions this skill is built
+around, build the real deliverables with the right tool (write the actual copy/spec/script/doc/asset,
+run the analysis, do the research) instead of handing back advice. Stage anything that spends money,
+acts from the founder's accounts, or is irreversible for their one-click approval. Full contract:
+`../solo-execution.md`.
 
 ## Reference files
 

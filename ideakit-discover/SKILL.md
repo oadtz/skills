@@ -225,6 +225,13 @@ flat checklist.
 - **The person owns it.** Recommend directions with conviction, but they choose. "I don't know yet" is
   a legitimate place to pause, not a failure to fix.
 
+## Execution
+
+**Don't stop at advice — produce the deliverable.** Once the user has steered the thinking, build the
+real artifact this skill is for (here, the **edge map** as a file) with the right tool, and run any
+react-to-concretes research for real (cited, never invented). Stage anything that publishes or acts from
+the user's identity for their approval. Full contract: `../ideakit-execution.md`.
+
 ## Reference files
 
 - `references/elicitation-techniques.md` — the named methods this skill runs on: Mom Test (turned

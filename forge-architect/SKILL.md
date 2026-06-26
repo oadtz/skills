@@ -173,6 +173,13 @@ All of these are the governing principle applied — not a flat checklist.
 **Honesty:** flag where the stack is unproven for the host's model, where scale assumptions are
 guesses, and where a decision is reversible vs not. Don't present a guess as a finding.
 
+## Execution
+
+**Don't stop at a spec — build it.** Write the actual ADRs, schema/contract files, and **scaffold the
+repo** with the right tool, not a description of the stack. Keep the user's sign-off on the
+stack/data-store and any irreversible call; execute fully once decided. Stage anything that provisions
+paid infra or pushes to shared branches for their approval. Full contract: `../forge-execution.md`.
+
 ## Reference files
 
 Each is the governing principle applied to one decision:

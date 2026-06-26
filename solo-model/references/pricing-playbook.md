@@ -43,8 +43,56 @@ price on the value delivered and the buyer's budget — never on your cost.*
 - **Hourly creep.** Billing time re-caps your income at your hours and punishes you for getting
   faster — the opposite of leverage.
 
+## Design the offer, not just the price (Hormozi's Value Equation)
+
+Price is judged *inside an offer*, not in isolation — so raising perceived value beats cutting price.
+Alex Hormozi's **Value Equation** is the useful lens:
+
+```
+            Dream Outcome  ×  Perceived Likelihood of Success
+Value  =  ───────────────────────────────────────────────────
+                 Time Delay  ×  Effort & Sacrifice
+```
+
+Increase the top (a bigger, more believable outcome — proof, guarantees, case studies) and shrink the
+bottom (make it faster and easier for the buyer) and the *same* deliverable justifies a far higher
+price. A **"Grand Slam Offer"** stacks four things: a strong value proposition, a **starving crowd**
+(the market matters more than the offer), **premium pricing** that itself signals value, and a
+**risk-reversal guarantee** that removes the buyer's downside. For a solo founder this is leverage: a
+better-constructed offer raises price without adding operational load. When a deal stalls on price,
+reach for the Value Equation (raise value / reverse risk) before discounting.
+
+## Setting a value-based price with real research
+
+To move beyond a gut number, two named methods are cheap enough for a solo founder and well-suited to
+new products with no obvious comparable:
+
+- **Van Westendorp Price Sensitivity Meter (PSM).** Ask four questions — at what price is it *too
+  cheap* (doubt quality), *a bargain*, *getting expensive*, *too expensive* — to a sample of target
+  buyers. The answers map an **acceptable price range** and the bounds. Best for genuinely new offers
+  with no reference price (its original use case).
+- **Gabor-Granger.** Ask willingness-to-buy at specific price points to estimate the demand/revenue
+  curve and **optimize a chosen tier's price**. Use it to fine-tune within the range PSM found.
+
+Combine them: PSM to find the range, Gabor-Granger to set the tier — most successful value-pricing
+uses *multiple* methods, not one. These are *survey* signals (stated, not revealed), so treat them as a
+starting hypothesis and confirm with real money (below), not as the final word.
+
+## Grow the price over time (revenue isn't set once)
+
+Pricing is a lever you keep pulling, not a one-time decision:
+
+- **Raise prices on new customers** as you add proof and value — early underpricing is normal; staying
+  there is the mistake. New cohorts can pay more than your first customers did.
+- **Expansion over acquisition.** It's cheaper to grow revenue from existing happy customers (a higher
+  tier, more seats/usage, an add-on) than to win new ones — design a path *up*.
+- **Protect against churn** with annual plans and by serving fewer, better-fit customers (a low-touch,
+  well-matched base is the solo founder's friend; see `solo-sustain`).
+
 ## How to actually test price
 
-Don't theorize past this skill — route the test to `solo-distribute`: pre-sell at the intended price,
-or put up a pricing page and watch real conversion. Treat every pre-stated willingness-to-pay as an
-assumption until money changes hands (people overstate what they'd pay; weight what they *do*).
+Don't theorize past this skill — route the real test to **`solo-sell`** (pre-sell at the intended price
+and watch whether money actually moves) or `solo-distribute` (a pricing page + real conversion). The
+PSM/Gabor-Granger surveys above set the hypothesis; **pre-selling confirms it.** Treat every pre-stated
+willingness-to-pay as an assumption until money changes hands — people overstate what they'd pay, so
+weight what they *do* over what they *say* (the Mom Test discipline `solo-sell` runs on).

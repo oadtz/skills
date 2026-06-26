@@ -322,12 +322,27 @@ software and general modes. Fill every section using the data gathered in phases
 - Tech considerations (software mode) name actual technology choices with rationale, not generic advice
 
 After writing the file or artifact, present it using the host's normal link/path format and a 2–3
-sentence summary. Suggest next steps:
+sentence summary. The PRD is the hinge: it feeds the **build track** and the **commercial track** at
+once. Suggest next steps explicitly so the user knows where to go:
 
-- For software mode: "Hand this to your implementation agent to scaffold the project."
-- For general mode: "Use this as the brief for kicking off the work or sharing with collaborators."
-- To pitch it: "Hand this to `ideakit-present` to turn it into a deck, demo, or one-pager that wins
+- **To build it (software mode):** "Hand this PRD to `forge-architect` to turn it into a technical
+  foundation (stack, data model, ADRs, scaffold), then forge-design → build → ship." (Or to a generic
+  implementation agent if they're not using the forge family.)
+- **To make money from it:** "Hand this PRD to `solo-model` to decide the revenue model + price — the
+  commercial track (`solo-*`) runs *alongside* the build, not after it."
+- **For general mode:** "Use this as the brief for kicking off the work or sharing with collaborators."
+- **To pitch it:** "Hand this to `ideakit-present` to turn it into a deck, demo, or one-pager that wins
   over customers, investors, or teammates."
+
+Most validated ideas should go to **both** `forge-architect` (build) and `solo-model` (monetize) in
+parallel — say so rather than implying it's one or the other.
+
+## Execution
+
+**Don't stop at advice — produce the deliverable.** This skill's whole point is a *written* plan: do
+the research for real (search + fetch, cited, never invented) and actually **write the PRD file**
+(`outputs/<slug>-PLAN.md`) — don't deliver it as verbal summary. Keep the user's confirmation gates
+(snapshot, sharpened idea); execute fully once they approve. Full contract: `../ideakit-execution.md`.
 
 ## Re-running the Skill
 

@@ -1,8 +1,8 @@
-# Solo — a 4-skill solopreneur business pipeline
+# Solo — a 6-skill solopreneur business pipeline
 
 A loosely-coupled set of skills that take a validated idea and turn it into a **one-person business
 that makes money and lasts** — by deciding how it earns, funding it with minimal dilution, getting
-the first customers, and running it solo without burning out.
+attention, closing paying customers, automating growth, and running it solo without burning out.
 
 Solo is the **commercial sibling** of [ideakit](ideakit-README.md) and [forge](forge-README.md).
 Where ideakit decides *what* to build and forge builds it *well*, solo answers the business
@@ -13,27 +13,35 @@ it — you figure out the model and start distribution while the product is stil
 ```
 ideakit-generate → explore → validate → │ → forge-architect → design → build → ship   (build the product)
                                          │
-                              PRD/PLAN.md │ → solo-model → solo-fund → solo-distribute → solo-sustain
-                                         │     how it       fund it      get             run it
-                                         │     earns        (min         customers       solo,
-                                         │                  dilution)                    long-term
+                              PRD/PLAN.md │ → solo-model → solo-fund → solo-distribute → solo-sell → solo-grow → solo-sustain
+                                         │     how it       fund it      get             close       automate    run it
+                                         │     earns        (min         attention       deals       + scale     solo,
+                                         │                  dilution)                                             long-term
 ```
 
-## The four skills
+## The six skills
 
 | Order | Skill | Use it when… | Output |
 |---|---|---|---|
-| 1 | **solo-model** | you have a validated idea and need to decide how it makes money | revenue model + starting price + first-revenue path |
+| 1 | **solo-model** | you have a validated idea and need to decide how it makes money | revenue model + offer + starting price + first-revenue path |
 | 2 | **solo-fund** | you need to pay to build it and want to give up as little as possible | a funding plan on the cheapest justified rung |
-| 3 | **solo-distribute** | you need the first paying customers and a repeatable channel | one-channel go-to-market + audience motion + weekly cadence |
-| 4 | **solo-sustain** | running it alone is becoming (or will become) unsustainable | operating plan: leverage list, calm-company defaults, guardrails |
+| 3 | **solo-distribute** | you need attention and a repeatable channel to be found | one-channel go-to-market + audience motion + weekly cadence |
+| 4 | **solo-sell** | people see it but don't buy — you need to close the first paying deals by hand | founder-led sales motion + objection answers + a repeatable playbook |
+| 5 | **solo-grow** | you want acquisition to scale automatically, without selling each customer | a growth engine: loop + self-serve funnel + unit economics |
+| 6 | **solo-sustain** | running it alone is becoming (or will become) unsustainable | operating plan: leverage list, calm-company defaults, guardrails |
 
 ## How to use
 
 - **Full journey**: hand a PRD from `ideakit-validate` to `solo-model`, then climb model → fund →
-  distribute → sustain. Each skill states where it sits and points to its neighbors.
-- **Jump in anywhere**: already know the model and just need money? go to `solo-fund`. Built it but no
-  one's buying? go to `solo-distribute`. Drowning in support/ops? go to `solo-sustain`.
+  distribute → sell → grow → sustain. Each skill states where it sits and points to its neighbors.
+- **Jump in anywhere**: already know the model and just need money? go to `solo-fund`. No one's finding
+  it? `solo-distribute`. People look but don't buy? `solo-sell`. Want acquisition to run itself?
+  `solo-grow`. Drowning in support/ops? `solo-sustain`.
+- **The three acquisition lanes** (distribute / sell / grow): `solo-distribute` gets the right people to
+  *find* you (organic channel/audience); `solo-sell` *converts* them *by hand* (founder-led sales, for
+  high-touch deals); `solo-grow` makes acquisition *automatic and scalable* (self-serve funnel, growth
+  loop, unit economics, for low-touch/high-volume). Do things that don't scale first (sell), then
+  systematize what repeats into an engine (grow).
 - **Loop, don't just flow**: `solo-sustain` is a maintenance loop you return to, and several
   sustainability or fundability problems are really *model* problems — so the track loops back to
   `solo-model` on purpose.
@@ -51,6 +59,8 @@ anchor the whole track: **distribution — not product — is the #1 reason solo
 | solo-model | building something that's slow to pay or impossible to run solo | *Pick the model that pays the soonest with the least to build and operate.* |
 | solo-fund | giving up control/cash you didn't need to, for money you didn't need | *Keep the cap table and obligations as empty as the business allows.* |
 | solo-distribute | a great product no one ever finds | *Distribution is the product's twin; one channel deep beats five shallow.* |
+| solo-sell | attention that never converts to paying customers | *Selling is learning sold one conversation at a time; chase repeatability, not one-off revenue.* |
+| solo-grow | pouring acquisition into a leaky bucket / buying growth you can't afford | *Retention before acquisition; loops compound where funnels don't; paid only when LTV > CAC pays back fast.* |
 | solo-sustain | the founder burning out and taking the business with them | *The founder is the single point of failure — protect the asset; systems before headcount.* |
 
 ## Design notes

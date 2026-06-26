@@ -129,6 +129,16 @@ any answer is "meh," fix the narrative — not the fonts.
 
 Deliver the artifact using the host's normal file/artifact delivery mechanism, and offer a tightening pass.
 
+Then point to the next step based on *who the pitch was for*:
+
+- **Pitched to customers?** Hand to `solo-sell` to actually run the founder-led sales motion and close
+  them (or `solo-distribute` if you still need to reach them).
+- **Pitched to investors?** Hand to `solo-fund` to match the raise to the right instrument and the
+  lowest justified rung.
+- **Ready to build what you just pitched?** Hand the PRD to `forge-architect` to start the build.
+
+A deck is a means, not the finish line — name the action it's meant to unlock.
+
 ## Operating principles
 
 - **Truthful persuasion only.** Make people feel the real stakes and the real upside — never
@@ -139,6 +149,13 @@ Deliver the artifact using the host's normal file/artifact delivery mechanism, a
   water management" bounces off.
 - **Emotion is earned with concreteness, not adjectives.** Show the moment, don't claim the feeling.
 - **The user is the first audience.** If it doesn't make *them* lean in, it won't move anyone else.
+
+## Execution
+
+**Don't stop at advice — produce the deliverable.** Actually **build the deck / one-pager / demo** as a
+real file (use the document skills where polish matters), not an outline of one. Stage anything that
+publishes the pitch or sends it from the user's identity (to investors/customers) for their approval.
+Full contract: `../ideakit-execution.md`.
 
 ## Reference files
 
