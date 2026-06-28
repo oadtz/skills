@@ -61,15 +61,15 @@ Each skill is one application of that idea to a stage:
 - **Runtime-agnostic.** Skills name capabilities by intent — research, user input, file/artifact
   output, *code-writing / build orchestration* — instead of hard-coding one agent's tool names.
   Host-specific tools (Claude Code, Cursor, a CI provider, a PaaS) are adapters, not the workflow.
-- **Evidence-driven and skeptical.** Every default is justified by 2024–2026 practice and flags hype
-  (e.g. "prompt-to-production" is a myth; ~45% of AI code carries an OWASP Top 10 issue; ~1 in 5
-  AI-suggested packages don't exist). The human always makes the ship/no-ship call.
-- **Composes with skills in your environment.** When the `frontend-design`, `tailwind-design-system`,
-  and `web-design-guidelines` plugin skills are installed, forge-design drives them rather than
-  re-deriving UI guidance (forge-ship does the same with `security-review` / `code-review` / `verify` /
-  `run`). These are installed plugin skills, not files in this repo — forge references them by name and
-  degrades gracefully if they're absent. forge-build can also hand heavy execution to an external
-  agent system (e.g. GSD) if the user prefers.
+- **Evidence-driven and skeptical.** Defaults are grounded in current practice and the reference files
+  carry point-in-time evidence; re-check dated security/package claims before quoting numbers. The human
+  always makes the ship/no-ship call.
+- **Composes with capabilities in your environment.** When UI design, design-system, accessibility,
+  security-review, code-review, or app-verification capabilities are installed, forge drives them rather
+  than re-deriving their guidance. Named skills such as `frontend-design`, `tailwind-design-system`,
+  `web-design-guidelines`, `security-review`, `code-review`, `verify`, or `run` are examples, not hard
+  dependencies; degrade gracefully if they're absent. forge-build can also hand heavy execution to an
+  external agent system (e.g. GSD) if the user prefers.
 
 ## Recommended companion: ponytail
 

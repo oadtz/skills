@@ -50,9 +50,10 @@ ideakit-generate → explore → validate → │ → forge-architect → design
 
 **For a solo founder the binding constraint is not ideas or even capital — it is the founder's own
 finite time, leverage, and stamina.** So every solo decision is chosen to maximize leverage per
-founder-hour and to avoid irreversible commitments (dilution, headcount, burnout). The two facts that
-anchor the whole track: **distribution — not product — is the #1 reason solo products fail**, and
-**burnout is the #1 predictor of solo-founder failure.** Each skill is one application of that idea:
+founder-hour and to avoid irreversible commitments (dilution, headcount, burnout). Two recurring
+failure modes anchor the whole track: **a product nobody finds or buys**, and **a founder whose
+operating load becomes unsustainable**. Re-fetch current survey figures before quoting them. Each skill
+is one application of that idea:
 
 | Stage | The failure it guards against | The governing principle |
 |---|---|---|
@@ -69,10 +70,11 @@ anchor the whole track: **distribution — not product — is the #1 reason solo
   `SKILL.md` is the connective tissue. Same design DNA as ideakit and forge — each stays under the
   ~500-line norm and is iterable independently.
 - **Evidence-driven and skeptical.** Defaults are grounded in documented solopreneur/indie-hacker
-  practice (Stairstep, bootstrapper funding instruments, distribution-as-#1-problem, burnout as the
-  top failure predictor) and the human always makes the call. Funding terms and named programs change
-  constantly, so `solo-fund` tells you to verify current terms rather than trusting a remembered fact.
-- **Shared anti-hallucination guard.** All four skills read **[solo-grounding.md](solo-grounding.md)**
+  practice (Stairstep, bootstrapper funding instruments, distribution as a recurring failure mode,
+  burnout as an operating risk) and the human always makes the call. Funding terms and named programs
+  change constantly, so `solo-fund` tells you to verify current terms rather than trusting a remembered
+  fact.
+- **Shared anti-hallucination guard.** All six skills read **[solo-grounding.md](solo-grounding.md)**
   before stating any external fact (prices, funding terms, channel/market stats, tool facts):
   source-or-tag every claim, re-fetch time-sensitive numbers, stay decisive. It's the family's own
   guard — self-contained, not shared across other skillsets — so `solo-*` stays standalone.
@@ -86,4 +88,4 @@ anchor the whole track: **distribution — not product — is the #1 reason solo
 ## Optional next step
 
 If you want a single "validated idea → running solo business" entry point, add a thin orchestrator
-command (e.g. `/idea-to-solo-business`) that calls the four stages in sequence — without merging them.
+command (e.g. `/idea-to-solo-business`) that calls the six stages in sequence — without merging them.

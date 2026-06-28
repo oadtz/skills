@@ -25,6 +25,7 @@ works standalone and hands off to the next. Full details in **[ideakit-README.md
 | `ideakit-generate` | source new business/startup ideas from trends + real problems |
 | `ideakit-explore` | brainstorm / stress-test a direction as a thinking partner |
 | `ideakit-validate` | deep-validate a chosen idea → produce a PRD / PLAN.md |
+| `ideakit-name` | generate brand/product names + screen availability (domain, trademark, handles) |
 | `ideakit-present` | turn a validated idea into a persuasive deck / demo / one-pager |
 
 ### `forge-*` — PRD → product pipeline (a related set)

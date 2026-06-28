@@ -24,10 +24,10 @@ deployed product — and the gates that keep it that way.
 **The human is overconfident and the agent grades itself generously — so the gates must be blocking
 and external.**
 
-The evidence is consistent and uncomfortable: ~45% of AI-generated code carries an OWASP Top 10 issue
-(and newer/bigger models are *not* safer); developers who use an AI assistant write less secure code
-*and believe it's more secure* (Stanford); ~80% trust AI security while ~10% actually scan AI code.
-You cannot close this gap with discretion — a reviewer who is overconfident won't choose to check. So:
+The evidence is consistent and uncomfortable: AI-generated and AI-assisted code repeatedly shows
+security, dependency, and overconfidence failure modes. Re-check the current figures in
+`references/security-gates.md` before quoting numbers. You cannot close this gap with discretion — a
+reviewer who is overconfident won't choose to check. So:
 
 1. **Gates are blocking, in CI.** Lint, type-check, test, secret-scan, SAST, and dependency checks run
    on every change and *block merge* — not "we'll review it." Branch protection on the main branch is
@@ -52,12 +52,13 @@ decide the system   design the UX    build it       harden + ship
 
 ## Compose, don't re-derive
 
-Review skills are likely available in your environment (installed plugins) — if present, use them as
-the engine:
+Review/verification capabilities may be available in the host. If present, use them as the engine:
 
-- **`security-review`** / `code-review` — run these as the review gate, not a hand-rolled checklist.
-- **`web-design-guidelines`** — accessibility/UX review gate for the UI.
-- **`verify`** / `run` — drive the real app to confirm behavior before release.
+- **Security/code review capability** (for example `security-review` / `code-review`) — run it as the
+  review gate, not a hand-rolled checklist.
+- **Accessibility/UX review capability** (for example `web-design-guidelines`) — use it as the UI gate.
+- **App-verification capability** (for example `verify` / `run`) — drive the real app to confirm
+  behavior before release.
 
 ## Host capability mapping
 
@@ -100,11 +101,11 @@ Read `references/security-gates.md`. Add the security net (all free/low-cost tie
   fake names repeat* — so attackers pre-register them. Never auto-install AI-suggested packages;
   verify each exists + check publisher and registration date; enforce lockfiles + hash pinning;
   enable automated dependency updates (e.g. Dependabot).
-- **Security review gate**: run the `security-review` skill on changes touching auth, data access,
-  input handling, or external calls. Map against **OWASP Top 10:2021 + ASVS Level 1** as the MVP
-  floor — with **input validation / output encoding first** (the single most-omitted control and the
-  highest-frequency AI failure). Prioritize broken access control (e.g. confirm row-level security is
-  actually on — ~88% of audited vibe-coded apps had it disabled).
+- **Security review gate**: run the available security/code review capability (for example
+  `security-review`) on changes touching auth, data access, input handling, or external calls. Map
+  against **OWASP Top 10:2021 + ASVS Level 1** as the MVP floor — with **input validation / output
+  encoding first**. Prioritize broken access control (e.g. confirm row-level security is actually on);
+  re-check current incident/audit figures before quoting them.
 
 ### Step 3 — Evals for AI features (only if the product itself uses an LLM)
 

@@ -35,7 +35,7 @@ The bar is: *be just as decisive as before, and now also honest about which part
 
 Anything a founder could act on and be wrong about:
 
-- **Prices / benchmarks** — "comparable tools charge $29–$199/mo", "B2B tolerates higher", market rates.
+- **Prices / benchmarks** — "comparable tools charge $X–$Y/mo", "B2B tolerates higher", market rates.
 - **Funding terms / programs** — RBF revenue-share %, SEAL caps, accelerator equity, grant eligibility,
   whether a named program (depa, NIA, NSTDA, TinySeed, a specific RBF provider) still exists and is open.
 - **Channel / distribution stats** — "distribution is the #1 cited failure", typical conversion or

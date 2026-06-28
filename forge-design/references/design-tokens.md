@@ -44,8 +44,8 @@ https://www.designtokens.org/tr/2025.10/format/
 
 - Wire tokens into the Tailwind config / CSS variables so `forge-build` inherits them automatically and
   every generated component references them.
-- Pair with the **`tailwind-design-system`** skill (if installed in your environment) for token/
-  component scaffolding rather than building the pipeline from scratch.
+- Pair with an available design-system/Tailwind capability (for example `tailwind-design-system`, if
+  installed) for token/component scaffolding rather than building the pipeline from scratch.
 - Keep the primitive palette small and the semantic layer expressive — most screens should touch only
   a handful of semantic tokens.
 

@@ -3,15 +3,12 @@ name: solo-fund
 description: >
   Decide HOW to fund building an idea as a solo founder while giving up as little ownership and as
   few obligations as possible — compare bootstrapping, pre-sales/crowdfunding, revenue-based
-  financing, bootstrapper-friendly investors (SEAL / shared-earnings, TinySeed-style accelerators),
-  and grants, then produce a concrete funding plan. Use this skill when a solopreneur, indie hacker,
-  or bootstrapper asks "how do I fund this", "how do I raise money without giving up control", "should
-  I bootstrap or raise", "how do I pay to build this with no team", "what funding options exist for a
-  solo founder", "is my idea fundable", or hands off a chosen business model from solo-model. It is
-  the funding stage of the solo build-a-business pipeline. It is NOT for choosing the revenue model
-  (use solo-model), NOT for getting customers (use solo-distribute), and NOT for operations
-  (use solo-sustain). It gives information and trade-offs to inform the founder's own decision — it
-  does not give individualized financial or legal advice.
+  financing, bootstrapper-friendly investors, accelerators, and grants, then produce a concrete funding
+  plan. Use when a solopreneur asks "how do I fund this", "raise without giving up control", "bootstrap
+  or raise", "how do I pay to build this", "what funding options exist", "is my idea fundable", or
+  hands off a chosen model from `solo-model`. It is NOT for choosing the revenue model (use
+  `solo-model`), acquisition/sales/growth (use `solo-distribute`, `solo-sell`, or `solo-grow`), or
+  operations (use `solo-sustain`). It gives general information, not financial/legal advice.
 ---
 
 # Solo — Fund (how to pay to build it, with minimal dilution)
@@ -52,8 +49,8 @@ Everything below is this principle applied to one decision.
 ## Where this sits in the pipeline
 
 ```
-solo-model (model + price)  →  solo-fund (THIS)  →  solo-distribute  →  solo-sustain
-                               how to fund it        get customers       run it solo
+solo-model (model + price)  →  solo-fund (THIS)  →  solo-distribute  →  solo-sell  →  solo-grow  →  solo-sustain
+                               how to fund it        get attention       close deals   automate     run it solo
 ```
 
 - If the user hasn't chosen a **revenue model** yet, send them to `solo-model` first — the model

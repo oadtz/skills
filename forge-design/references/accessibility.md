@@ -35,9 +35,9 @@ https://www.w3.org/TR/WCAG22/
 
 - **In the brief:** "WCAG 2.2 AA; 24px minimum targets; visible focus; AA contrast; accessible
   primitives only." Add it to the reusable anti-slop brief so it rides along every generation.
-- **In review:** run the **`web-design-guidelines`** skill (if installed in your environment) as the
-  accessibility/UX gate (it reviews UI code against Web Interface Guidelines). Treat its findings as
-  blocking for HITL slices, the same way `forge-ship` treats security findings.
+- **In review:** run an available accessibility/UX review capability (for example
+  `web-design-guidelines`, if installed) as the gate. Treat its findings as blocking for HITL slices,
+  the same way `forge-ship` treats security findings.
 - **Lean on the foundation:** prefer Radix/shadcn primitives over hand-rolled controls precisely
   because they ship the hard parts (focus, ARIA, keyboard) correctly.
 

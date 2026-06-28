@@ -9,7 +9,8 @@ description: >
   charge for", or hands off a validated idea / PRD from ideakit-validate and now needs a commercial
   model. It is the FIRST stage of the solo build-a-business pipeline. It is NOT for generating or
   validating the idea itself (use the ideakit skills), NOT for raising capital (use solo-fund), NOT
-  for getting customers (use solo-distribute), and NOT for long-term operations (use solo-sustain).
+  for customer acquisition/sales/growth (use solo-distribute, solo-sell, or solo-grow), and NOT for
+  long-term operations (use solo-sustain).
 ---
 
 # Solo — Model (idea → how it makes money)
@@ -31,10 +32,9 @@ and the shortest gap to cash. Three consequences, all the same principle:
 1. **Cashflow before scale.** A service that bills next week beats a SaaS that *might* recur in a
    year. You can always climb from service → product → recurring later (that's the Stairstep idea) —
    but you cannot climb if you run out of runway first.
-2. **Size to a reachable audience, not a TAM slide.** ~1,000 paying fans at the right price is a
-   real solo business; "1% of a $10B market" is a fantasy a single person can't capture. Default
-   target: a niche of ~10k–100k reachable buyers willing to pay ~$29–$199/mo (the documented solo
-   sweet spot), or a smaller number paying much more.
+2. **Size to a reachable audience, not a TAM slide.** A small number of reachable buyers at a price
+   supported by comparable products is a real solo business; "1% of a $10B market" is a fantasy a
+   single person can't capture. Cite current comps before quoting buyer-count or price benchmarks.
 3. **Every operational burden is paid in founder-hours.** Support, fulfillment, onboarding, refunds,
    and churn all land on one desk. A model that's 20% more lucrative but doubles operational load is
    usually the wrong solo model. Favor high-margin, low-touch, asynchronous revenue.
@@ -44,8 +44,8 @@ Everything below is this principle applied to one decision.
 ## Where this sits in the pipeline
 
 ```
-ideakit-validate (PRD/PLAN.md)  →  solo-model (THIS)  →  solo-fund  →  solo-distribute  →  solo-sell  →  solo-sustain
-                                   how it makes money     fund it       get attention       close deals    run it solo
+ideakit-validate (PRD/PLAN.md)  →  solo-model (THIS)  →  solo-fund  →  solo-distribute  →  solo-sell  →  solo-grow  →  solo-sustain
+                                   how it makes money     fund it       get attention       close deals    automate     run it solo
 ```
 
 The `solo-*` family is the **commercial track** — it runs alongside the `forge-*` build track, not

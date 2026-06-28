@@ -4,14 +4,12 @@ description: >
   Make a one-person business runnable for the long haul without burning out the one person who runs
   it — build leverage through automation and systems instead of headcount, set calm-company operating
   defaults, and put guardrails around the founder's time, energy, and finances. Use this skill when a
-  solopreneur, indie hacker, or bootstrapper asks "how do I run this without burning out", "how do I
-  do this solo long-term", "I'm drowning in support/ops", "should I hire someone", "how do I automate
-  my business", "how do I avoid burnout", "how do I set boundaries / sustainable hours", or has a
-  working business (from solo-model / solo-fund / solo-distribute) that's becoming unsustainable to
-  operate alone. It is the operations/longevity stage of the solo build-a-business pipeline. It is NOT
-  for choosing the model (use solo-model), funding (use solo-fund), or getting customers
-  (use solo-distribute). It supports the founder's wellbeing and never encourages self-destructive
-  overwork.
+  solopreneur asks "run this without burning out", "do this solo long-term", "drowning in support/ops",
+  "should I hire", "automate my business", "avoid burnout", "set boundaries", or has a working business
+  from `solo-model` / `solo-fund` / `solo-distribute` / `solo-sell` / `solo-grow` that is becoming
+  unsustainable. It is NOT for model choice (use `solo-model`), funding (use `solo-fund`), or
+  acquisition/sales/growth (use `solo-distribute`, `solo-sell`, or `solo-grow`). It protects founder
+  wellbeing and never encourages self-destructive overwork.
 ---
 
 # Solo — Sustain (run it solo, for the long haul)
@@ -27,10 +25,9 @@ finances — so the business compounds instead of collapsing.
 leverage through systems before headcount.**
 
 In a one-person business, the founder is simultaneously the product team, support, sales, ops, and
-finance — and the *only* irreplaceable component. Research on solo founders is blunt about it: the
-strongest predictor of failure is not strategy but **burnout** (recent surveys put burnout rates
-above half and anxiety far higher). So longevity isn't a soft topic — it's the core operational risk.
-Three consequences, all the same principle:
+finance — and the *only* irreplaceable component. Founder burnout is a major documented failure mode;
+re-fetch current survey figures before quoting rates. So longevity isn't a soft topic — it's the core
+operational risk. Three consequences, all the same principle:
 
 1. **Leverage beats effort; systems beat headcount.** The solo way to scale output is automation,
    templates, self-serve, and tooling (now hugely amplified by AI) — *not* working more hours and
@@ -51,8 +48,8 @@ Everything below is this principle applied to one decision.
 ## Where this sits in the pipeline
 
 ```
-solo-model → solo-fund → solo-distribute → solo-sustain (THIS)
-                                            run it solo, long-term
+solo-model → solo-fund → solo-distribute → solo-sell → solo-grow → solo-sustain (THIS)
+                                            close      automate    run it solo, long-term
 ```
 
 This is the stage you return to whenever operating the business starts to outpace the one person

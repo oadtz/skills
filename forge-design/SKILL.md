@@ -52,15 +52,17 @@ decide the system   design the experience   build it       harden + ship
 
 ## Compose, don't re-derive
 
-Several UI skills are likely available in your environment (installed plugins). If present, use them
-as the engine and let forge-design orchestrate them for the *product* context:
+UI/design capabilities may be available in the host. If present, use them as the engine and let
+forge-design orchestrate them for the *product* context:
 
-- **`frontend-design`** — distinctive, anti-slop UI craft. Invoke it for the visual direction.
-- **`tailwind-design-system`** — design tokens, component libraries, responsive patterns.
-- **`web-design-guidelines`** — review UI for accessibility / Web Interface Guidelines compliance.
+- **Visual-direction capability** (for example `frontend-design`) — distinctive, anti-slop UI craft.
+- **Design-system capability** (for example `tailwind-design-system`) — design tokens, component
+  libraries, responsive patterns.
+- **Accessibility/UX review capability** (for example `web-design-guidelines`) — review UI for
+  accessibility / Web Interface Guidelines compliance.
 
-forge-design's job is to set the *constraints and system* for the specific product, then drive those
-skills — not to duplicate their content.
+forge-design's job is to set the *constraints and system* for the specific product, then drive any
+available capability — not to duplicate its content or require one host's exact skill names.
 
 ## Host capability mapping
 
@@ -138,7 +140,8 @@ Read `references/accessibility.md`. Bake WCAG 2.2 AA in as a generation constrai
 front and expensive to remediate later: 24×24px minimum target sizes, visible focus indicators,
 sufficient contrast, full keyboard operability, semantic landmarks/labels. The Radix/shadcn foundation
 gives most of this for free; the brief must still demand it because AI tools default to tiny icon
-buttons and miss contrast unless told. Run the `web-design-guidelines` skill as the check.
+buttons and miss contrast unless told. Run the available accessibility/UX review capability as the
+check (for example `web-design-guidelines` if installed).
 
 Then present the design system and offer the handoff:
 

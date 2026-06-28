@@ -4,14 +4,12 @@ description: >
   Win the first paying customers for a one-person business by selling personally — turn attention into
   closed deals through founder-led sales, the right offer, the pricing conversation, and a repeatable
   motion. Use this skill when a solopreneur, indie hacker, or bootstrapper asks "how do I actually
-  close customers", "how do I sell this", "people look but don't buy", "how do I do sales as a
-  founder", "how do I get my first paying customer", "how do I run a sales call / demo", "how do I
-  handle 'it's too expensive'", "how do I pre-sell", "should I do pilots / design partners", or hands
-  off a go-to-market plan from solo-distribute and now needs to convert. It is the conversion stage of
-  the solo build-a-business pipeline — it CLOSES the buyers that solo-distribute attracts. It is NOT
-  for choosing the revenue model or designing the offer/price (use solo-model), NOT for building the
-  channel/audience (use solo-distribute), NOT for funding (use solo-fund), and NOT for long-term
-  operations (use solo-sustain).
+  close customers", "how do I sell this", "people look but don't buy", "sales as a founder", "first
+  paying customer", "sales call / demo", "it's too expensive", "pre-sell", "pilots / design partners",
+  or hands off a GTM plan from `solo-distribute`. It CLOSES the buyers distribution attracts. It is NOT
+  for revenue model or offer/price design (use `solo-model`), channel/audience building (use
+  `solo-distribute`), automatic growth loops (use `solo-grow`), funding (use `solo-fund`), or long-term
+  operations (use `solo-sustain`).
 ---
 
 # Solo — Sell (founder-led, first paying customers)
@@ -46,8 +44,8 @@ Everything below is these two applied to one motion.
 ## Where this sits in the pipeline
 
 ```
-solo-model → solo-fund → solo-distribute → solo-sell (THIS) → solo-sustain
-            offer+price      get attention      close the deal      run it solo
+solo-model → solo-fund → solo-distribute → solo-sell (THIS) → solo-grow → solo-sustain
+            offer+price      get attention      close the deal      automate    run it solo
 ```
 
 `solo-sell` is the **conversion** step — it closes the buyers `solo-distribute` attracts using the

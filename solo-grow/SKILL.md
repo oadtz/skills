@@ -3,15 +3,12 @@ name: solo-grow
 description: >
   Build an automatic, scalable customer-acquisition + growth engine for a one-person business — a
   self-serve funnel, activation/onboarding, retention, a growth loop, lifecycle automation, and paid
-  acquisition governed by unit economics — so growth compounds *without* the founder selling each
-  customer by hand. Use this skill when a solopreneur, indie hacker, or bootstrapper asks "how do I
-  get customers automatically", "how do I scale acquisition", "how do I grow without doing manual
-  sales", "should I run ads", "what's my CAC / LTV", "how do I build a growth loop", "self-serve /
-  product-led growth", "how do I automate my marketing", "my growth is stuck / plateaued", or has a
-  low-price, high-volume, self-serve product. It is the automatic/scalable growth stage of the solo
-  pipeline. It is NOT organic channel/audience building done by the founder (use `solo-distribute`),
-  NOT manual founder-led sales (use `solo-sell`), NOT the revenue model or price (use `solo-model`),
-  and NOT long-term operations (use `solo-sustain`).
+  acquisition governed by unit economics — so growth compounds without the founder selling each
+  customer by hand. Use for "get customers automatically", "scale acquisition", "grow without manual
+  sales", "should I run ads", "CAC / LTV", "growth loop", "self-serve / product-led growth",
+  "automate marketing", or "growth is stuck". It is NOT organic channel/audience building (use
+  `solo-distribute`), manual founder-led sales (use `solo-sell`), revenue model/price (use
+  `solo-model`), or long-term operations (use `solo-sustain`).
 ---
 
 # Solo — Grow (the automatic, scalable growth engine)
@@ -47,8 +44,9 @@ the engine once, not sells once per customer.
 
 ## Is this even your lane? (route honestly)
 
-`solo-grow` assumes a **low-touch, self-serve, repeatable** motion. That fits low-to-mid-price,
-high-volume products (a $9–$199/mo app, a self-serve API, a digital product). It does **not** fit
+`solo-grow` assumes a **low-touch, self-serve, repeatable** motion. That fits products where customers
+can discover, activate, and pay without a founder-led call (a self-serve app, API, or digital product).
+It does **not** fit
 high-touch, high-ACV deals — those are won by hand, so route to `solo-sell` and don't try to automate
 a sales motion that needs a human. Many solo businesses run **both**: `solo-sell` for the few big
 deals, `solo-grow` for the self-serve long tail. If the product has no self-serve path at all, this is

@@ -70,8 +70,9 @@ https://konvu.com/compare/semgrep-vs-codeql
 
 ## The security review gate
 
-Run the **`security-review`** skill (if installed in your environment) on any change touching auth,
-data access, input handling, or external calls — don't hand-roll a checklist. Map findings against:
+Run an available security/code review capability (for example `security-review`, if installed) on any
+change touching auth, data access, input handling, or external calls — don't hand-roll a checklist. Map
+findings against:
 
 - **OWASP Top 10:2021 + OWASP ASVS Level 1** as the MVP floor. The honest minimum is "L1 auth + access
   control + input validation" (add L2 controls if handling personal data) — not 100% of L1.
@@ -81,7 +82,7 @@ data access, input handling, or external calls — don't hand-roll a checklist. 
   client-embedded DB key (Supabase/Firebase-style), **confirm row-level security is actually on**:
   ~88% of audited vibe-coded apps had it disabled, and that's exactly the class behind real CVEs.
 
-Note: the `security-review` tooling is not hardened against prompt injection — only run it on **trusted**
+Note: security-review tooling may not be hardened against prompt injection — only run it on **trusted**
 PRs.
 
 Sources: https://owasp.org/Top10/2021/ , https://github.com/OWASP/ASVS ,
@@ -93,7 +94,7 @@ https://securityboulevard.com/2025/10/methodology-how-we-discovered-over-2k-high
 1. Gitleaks pre-commit + push protection (secrets).
 2. Semgrep per-PR + CodeQL scheduled (SAST).
 3. Dependabot + lockfiles/hash-pinning (deps & slopsquatting).
-4. `security-review` + behavior verification on PRs touching sensitive code, mapped to OWASP Top 10 +
-   ASVS L1.
+4. Security/code review capability + behavior verification on PRs touching sensitive code, mapped to
+   OWASP Top 10 + ASVS L1.
 
 All blocking. All run by the pipeline, not at the reviewer's discretion.

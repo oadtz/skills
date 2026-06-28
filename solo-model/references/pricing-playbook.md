@@ -15,9 +15,9 @@ price on the value delivered and the buyer's budget — never on your cost.*
 3. **Decouple revenue from your hours.** Prefer flat / tiered / per-seat / usage pricing over pure
    hourly, so income isn't hard-capped by one calendar. Even a productized service should be priced
    per *outcome/package*, not per hour.
-4. **Let the buyer type set the floor.** B2B tolerates far higher prices than B2C — a $200/mo tool is
-   an easy business expense; a $200/mo consumer app is a hard sell. If you can serve a business buyer,
-   the same effort earns multiples more. Documented solo SaaS sweet spot: ~$29–$199/mo for SMB/B2B.
+4. **Let the buyer type set the floor.** B2B usually tolerates higher prices than B2C because the buyer
+   can anchor spend to business value. If you can serve a business buyer, the same effort often earns
+   multiples more. Verify current comparable-product pricing before quoting a price band.
 5. **Make the tiers do the selling.** A simple good/better/best with an obvious "most pick this"
    middle tier outperforms a single price. Anchor with a high tier; don't bury your best plan.
 
@@ -25,8 +25,8 @@ price on the value delivered and the buyer's budget — never on your cost.*
 
 - **Productized service:** price per package at the value of the outcome; start at the high end of
   comparable freelancer/agency quotes, since "fixed scope, fast, predictable" is worth a premium.
-- **MicroSaaS:** anchor to what the buyer pays for the tool/process you replace; default to monthly
-  tiers in the ~$29–$199/mo SMB band; offer annual (discounted) to improve cashflow and cut churn.
+- **MicroSaaS:** anchor to what the buyer pays for the tool/process you replace; use current comparable
+  SMB pricing to set monthly tiers; offer annual (discounted) to improve cashflow and cut churn.
 - **Digital product:** price by transformation, not page count — a focused template/course that saves
   a pro real hours can command far more than "ebook" pricing; bundle for a higher anchor.
 - **Usage/API:** a free or cheap entry tier to drive self-serve adoption, then meter the value metric

@@ -83,8 +83,8 @@ Escalating rigor (use what the host supports):
    isn't self-issued. For HITL slices, a human reviews the **test diffs**, not just the green check.
 
 **Verify behavior, not claims:** for UI/feature slices, require observable evidence — a screenshot, a
-real request/response, a running process. Use the **`verify`** / `run` skills (if installed in your
-environment) to drive the real app.
+real request/response, a running process. Use an available app-verification capability (for example
+`verify` / `run`, if installed) to drive the real app.
 
 **Triage rule:** is the expected value derivable from code the agent can read, or from a spec it never
 saw? Tests grounded only in the agent's own code can pass while the product is wrong. Anchor critical

@@ -8,8 +8,9 @@ description: >
   product exists", "what channel should I use", "how do I do build-in-public", "how do I get my first
   10 (or 100) users", "how do I launch", or hands off a chosen model from solo-model or a funding plan
   from solo-fund. It is the go-to-market stage of the solo build-a-business pipeline. It is NOT for
-  choosing the revenue model (use solo-model), NOT for funding (use solo-fund), and NOT for long-term
-  operations or burnout (use solo-sustain).
+  choosing the revenue model (use solo-model), NOT for funding (use solo-fund), NOT for closing
+  customers by hand (use solo-sell), NOT for automatic/scalable growth loops (use solo-grow), and NOT
+  for long-term operations or burnout (use solo-sustain).
 ---
 
 # Solo — Distribute (get the first customers, build a channel)
@@ -24,11 +25,11 @@ weekly cadence one person can keep.
 **Distribution is the product's twin, not its afterthought — and one channel done deeply beats five
 done shallowly.**
 
-The single most common reason solo products fail is not a bad product — it's that **no one finds
-it**. Surveys of indie founders put distribution, not building, as the #1 problem (the large majority
-cite it as the deciding factor). AI has made *building* cheap, which only makes distribution the
-*more* scarce advantage. For a one-person team with finite hours, that means three things, all the
-same principle:
+The single most common reason solo products fail is often not a bad product — it's that **no one finds
+it**. Indie-founder surveys repeatedly flag distribution as a primary failure mode; re-fetch current
+figures before quoting them. AI has made *building* cheap, which only makes distribution the *more*
+scarce advantage. For a one-person team with finite hours, that means three things, all the same
+principle:
 
 1. **Start distribution before launch, not after.** Build an audience in parallel with the product
    (build-in-public, an email list, presence in the community where buyers already are) so launch day
@@ -46,8 +47,8 @@ Everything below is this principle applied to one decision.
 ## Where this sits in the pipeline
 
 ```
-solo-model → solo-fund → solo-distribute (THIS) → solo-sustain
-                          get customers, build a channel    run it solo
+solo-model → solo-fund → solo-distribute (THIS) → solo-sell → solo-grow → solo-sustain
+                          get attention             close      automate    run it solo
 ```
 
 The `solo-*` track runs alongside the `forge-*` build track — so this skill usually runs **in
@@ -121,8 +122,9 @@ for months, because compounding only pays if you don't quit. Then present the pl
 > **Weekly cadence**: [concrete, sustainable] · **Second channel (later)**: [name]
 >
 > Want me to hand this to **solo-sell** to convert the attention into closed, paying deals
-> (founder-led sales), to **solo-sustain** to make this cadence runnable long-term without burning out,
-> or back to **solo-fund** to pre-sell to the audience you build?
+> (founder-led sales), **solo-grow** once a self-serve motion is repeating, **solo-sustain** to make
+> the cadence runnable long-term without burning out, or back to **solo-fund** to pre-sell to the
+> audience you build?
 
 The user commits to the channel and cadence before moving on.
 
