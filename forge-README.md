@@ -64,6 +64,11 @@ Each skill is one application of that idea to a stage:
 - **Evidence-driven and skeptical.** Defaults are grounded in current practice and the reference files
   carry point-in-time evidence; re-check dated security/package claims before quoting numbers. The human
   always makes the ship/no-ship call.
+- **Design quality = functional quality (a first-class gate).** Look-and-feel and UX *feel* matter as
+  much as the product working, so design is enforced, not just briefed: `forge-design` sets the
+  anti-slop brief + visual-craft bar, `forge-build` checks design fidelity + anti-slop per slice, and
+  `forge-ship` runs a blocking Design/UX quality gate. "Looks/feels like generic AI slop" is a defect
+  that fails the build, exactly like a failing test (see `forge-design/references/visual-craft.md`).
 - **Composes with capabilities in your environment.** When UI design, design-system, accessibility,
   security-review, code-review, or app-verification capabilities are installed, forge drives them rather
   than re-deriving their guidance. Named skills such as `frontend-design`, `tailwind-design-system`,

@@ -145,8 +145,14 @@ map for orientation, ADRs linked for the *why*, and clearing context / starting 
 After implementing a slice, close the loop with a check the building agent **does not own**:
 
 - Run the full gate: tests + type-check + lint + build, and capture the **actual output**.
-- For UI slices, verify behavior with observable evidence (a screenshot, a real request/response, a
-  running process) — not the agent's assertion that it works.
+- **For UI slices, design quality is part of the gate — equal to functional tests.** Verify behavior
+  with observable evidence (a screenshot across breakpoints, a real request/response, a running
+  process), then run the **look-and-feel + anti-slop checklist** in `forge-design/references/visual-craft.md`
+  against that screenshot: design-system fidelity, hierarchy/spacing, all states (empty/loading/error),
+  interaction feel, responsive, accessibility, and **none of the AI-slop tells** (purple/cyan gradients,
+  Inter default, stock-shadcn look, glassmorphism, gradient text, generic SaaS copy…). "Looks/feels like
+  generic AI output" is a **defect** that fails the slice, exactly like a failing test — fix it before
+  the slice is accepted. Design must not silently erode during the build.
 - Where the host supports it, use a **separate verifier subagent** with fresh context to try to
   *refute* the result, and have a human review the *test diffs* (not just that tests are green) for
   HITL slices.

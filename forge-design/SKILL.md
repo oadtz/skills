@@ -38,6 +38,13 @@ it's a tighter brief and a system defined up front:
    state — and must handle the unglamorous 90% (empty, loading, error states) from the start, not just
    the happy-path mock.
 
+**Look-and-feel is a first-class quality bar, equal to functionality — and it's *enforced*, not just
+briefed.** The visual craft and the *feel* (interaction polish, motion, the UX heuristics) matter as
+much as the product working, and "looks/feels like generic AI slop" is a **defect, not a taste
+preference.** The brief you set here is verified downstream as a blocking gate — `forge-build` checks
+design fidelity + anti-slop per slice, and `forge-ship` runs a Design/UX quality gate before release,
+equal to the test/security gates (see `references/visual-craft.md`).
+
 ## Where this sits in the pipeline
 
 ```
@@ -179,6 +186,10 @@ description of a design system. Build the actual assets the brief calls for. Ful
 
 - `references/anti-slop-brief.md` — *constrain before you generate*: the reusable brief (negative
   constraints + described references + persona priming) and why negation works.
+- `references/visual-craft.md` — *the look-and-feel quality bar*: the craft principles (Refactoring UI
+  hierarchy/spacing/scales, Nielsen heuristics, motion/micro-interactions, responsive), the current
+  **AI-slop tells to auto-flag**, the "commit to one point of view" fix, and **the gate checklist** that
+  forge-build and forge-ship enforce. Read every run.
 - `references/design-tokens.md` — *define the system first*: the three-tier token system, ordering,
   and tokens as the design↔code contract.
 - `references/ux-flows.md` — *derive from jobs*: IA, core-flow-first, JTBD screen inventory, and

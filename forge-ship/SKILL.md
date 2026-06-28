@@ -56,7 +56,10 @@ Review/verification capabilities may be available in the host. If present, use t
 
 - **Security/code review capability** (for example `security-review` / `code-review`) — run it as the
   review gate, not a hand-rolled checklist.
-- **Accessibility/UX review capability** (for example `web-design-guidelines`) — use it as the UI gate.
+- **Accessibility/UX review capability** (for example `web-design-guidelines`) — one input to the
+  **Design/UX quality gate** (Step 1), alongside the look-and-feel + anti-slop checklist in
+  `forge-design/references/visual-craft.md`. The UI gate is design quality *and* accessibility, not
+  accessibility alone.
 - **App-verification capability** (for example `verify` / `run`) — drive the real app to confirm
   behavior before release.
 
@@ -73,20 +76,31 @@ Review/verification capabilities may be available in the host. If present, use t
 
 ## Workflow
 
-Five steps: **Quality gates → Security & dependency gates → Evals (if AI) → Observability → Deploy.**
-The first two make the existing checks *blocking*; the rest make it operable and out the door.
+Five steps: **Quality gates (functional *and* Design/UX) → Security & dependency gates → Evals (if AI)
+→ Observability → Deploy.** The first two make the existing checks *blocking*; the rest make it operable
+and out the door.
 
-### Step 1 — Make quality gates blocking (CI)
+### Step 1 — Make quality gates blocking (CI) — functional *and* design
 
 Read `references/security-gates.md`. Stand up the CI pipeline and turn discretion into enforcement:
 
 - On every PR: **lint → type-check → test → build**; on merge: deploy. Pin CI actions to a commit SHA,
   use OIDC not long-lived credentials, least-privilege permissions.
+- **Design/UX quality gate (blocking, equal to the test gate).** For any product with a UI, a release
+  is **not shippable if it looks/feels like generic AI slop or breaks the design system** — this gates
+  the same way a failing test does. On the preview deploy, drive the real UI and screenshot across
+  breakpoints, then run the **look-and-feel + anti-slop checklist** in
+  `forge-design/references/visual-craft.md`: system fidelity, hierarchy/spacing, all states, interaction
+  feel (Nielsen heuristics), responsive, accessibility (WCAG 2.2 AA), and **none of the AI-slop tells**
+  (purple/cyan gradients, Inter default, stock-shadcn look, glassmorphism, gradient text, generic SaaS
+  copy). Use the available accessibility/UX review capability (e.g. `web-design-guidelines`) as part of
+  this gate. A fail blocks release until fixed.
 - **Branch protection on main** — every change (including every agent change) goes through review +
   passing checks. This is the highest-leverage single control.
-- **Preview/PR deployments** so reviewers check *behavior*, not just diffs.
+- **Preview/PR deployments** so reviewers check *behavior and look-and-feel*, not just diffs.
 - A **Definition of Done** that counteracts AI's biases: tests pass in CI, lint/type clean, no new
-  duplicated blocks, change small enough to review in one sitting, behavior verified on a preview,
+  duplicated blocks, **the Design/UX gate passes (looks/feels intentional, not AI slop; all states
+  built; accessible)**, change small enough to review in one sitting, behavior verified on a preview,
   errors instrumented. A human reviews every AI diff.
 
 ### Step 2 — Security & dependency-integrity gates
