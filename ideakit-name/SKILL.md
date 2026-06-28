@@ -94,9 +94,13 @@ The trap: a model defaults to the **centroid** — the average startup name ever
    autopilot, and Get/Try/i-/[X]AI gimmicks listed in `anti-cliche.md`.
 3. **Use real technique to get distinctiveness** — empty-vessel real words used as unexpected metaphors
    (Stripe/Slack/Nest), the random-word trigger, deliberate category-*tension* (a name slightly "wrong"
-   for the space), unexpected sources (archaic/foreign/jargon), and sound symbolism. Favor concrete,
-   short, sayable words over clever abstract ones.
-4. **Still mix name types** — Descriptive, Suggestive/Metaphorical, Coined/Neologism, Compound/Hybrid,
+   for the space), **borrowing a simple word from another language** (Volvo, Audi), and sound symbolism.
+4. **Stay globally legible (overrides the rest).** The audience is global and mostly second-language
+   English — bias hard toward names a non-native speaker can **read, say, and spell after hearing once**.
+   Distinctiveness should come from the *unexpected use of a simple word*, NOT from a harder/obscure or
+   archaic word. Simple-but-surprising beats clever-but-obscure. If a borrowed word is used, plan to run
+   the linguistic check in Step 4.
+5. **Still mix name types** — Descriptive, Suggestive/Metaphorical, Coined/Neologism, Compound/Hybrid,
    Lexical-tweak. Variety is where the gettable winner hides (descriptive `.com`s are all taken anyway).
 
 Apply the smell test to every candidate: *"Would 50 other AI generators also output this?"* If yes, cut
@@ -125,6 +129,10 @@ For each surviving name, **actually run** the checks and record evidence:
 - **Social handles** — the required platforms: free or taken?
 - **Market/web collision** — does an existing company/product already use this name (especially in an
   adjacent space)?
+- **Linguistic / cross-language** — is it pronounceable for non-native speakers, and does it carry no
+  odd/offensive meaning in the major target-market languages? (A web search per language usually
+  suffices for a solo; see `references/anti-cliche.md`.) Flag anything off; mark unchecked languages
+  "not verified."
 
 Produce a table — **name × domain × trademark × handles × collision** — with each cell backed by a
 check (or marked "not yet verified"). A name failing the **hard** gates (required domain taken, clear TM

@@ -36,9 +36,23 @@ If a candidate has any of these, cut it unless there's a genuinely strong reason
 > A fast smell test: *"Would 50 other AI name generators also output this for this brief?"* If yes, it's
 > the centroid — cut it.
 
+## Stay globally legible (read this before the techniques)
+
+Escaping cliché must **not** swing the other way into obscure, hard, "thesaurus" English. The audience is
+global, and most users are second-language English speakers. So bias hard toward names that a
+non-native speaker can **read, say, and spell after hearing once**:
+
+- Favor **simple, common, concrete** words and easy syllables over rare/archaic/literary vocabulary.
+- Avoid silent letters, tricky consonant clusters, and spellings whose pronunciation is ambiguous.
+- "Distinctive" comes from *unexpected use of a simple word* (Stripe, Slack, Nest, Square), **not** from
+  a harder word. Simple-but-surprising beats clever-but-obscure every time.
+
+This overrides everything below: if a candidate is distinctive but hard to read/say globally, cut it.
+
 ## Techniques that produce distinctive, human names
 
-Use these deliberately *after* discarding the obvious batch:
+Use these deliberately *after* discarding the obvious batch (and always inside the global-legibility
+rule above):
 
 1. **Empty-vessel / arbitrary real word** — a real, concrete word whose literal meaning doesn't describe
    the product but carries the right *feeling*, used as an unexpected metaphor (Stripe, Slack, Nest,
@@ -49,14 +63,37 @@ Use these deliberately *after* discarding the obvious batch:
    ([random-word technique](https://www.selfstorming.com/tools/libraries/naming-techniques/inventive-names)).
 3. **Tension / category-wrongness** — deliberately choose a word that feels slightly off for the space;
    the friction is what makes it memorable.
-4. **Unexpected sources** — archaic/obsolete English, a foreign language tied to the brand's story, a
-   place, an object, a person, a piece of jargon from an *unrelated* field. Mythology/Latin only if
-   unobvious and meaningful.
-5. **Sound symbolism / coinage with roots** — invent a word using phonetics that *feel* like the brand
+4. **Borrow from another language** — a simple, evocative word from another language whose meaning fits
+   the brand. Done well it's memorable, concise, and crosses markets: **Volvo** (Latin *volvere*, "to
+   roll"), **Audi** (Latin *audi*, "listen" — a translation of founder Horch's name). Prefer words that
+   are *short and easy for anyone to pronounce*, not just meaningful. **Always then run the linguistic
+   check** (next section): a borrowed word can mean something odd or offensive in another major
+   language. Latin/Romance/short Japanese-style sounds travel well; obscure or hard-to-say borrowings
+   don't.
+5. **Unexpected sources** — a place, an object, a person, or jargon from an *unrelated* field. (Archaic
+   English and on-the-nose mythology mostly fight global legibility — use only if the word is still
+   genuinely easy to say.)
+6. **Sound symbolism / coinage with roots** — invent a word using phonetics that *feel* like the brand
    (plosives feel sharp/fast; soft sounds feel calm), or fuse meaningful roots — but avoid the
-   slop-suffix coinages above.
-6. **Concrete over abstract, short over long, sayable over clever** — favor words you can picture, spell
+   slop-suffix coinages above, and keep it easy to say.
+7. **Concrete over abstract, short over long, sayable over clever** — favor words you can picture, spell
    after hearing once, and say out loud without thinking.
+
+## Linguistic check (cross-language) — part of the gauntlet
+
+Professional naming includes **linguistic screening**: confirming a name is pronounceable and carries no
+unintended/offensive meaning across the major languages and markets it will live in. Famous launches have
+been derailed by a name that meant something embarrassing in another language. So for every shortlisted
+name, check (a web search per major target language usually suffices for a solo):
+
+- **Pronounceable** for non-native speakers in the target markets? (no tricky clusters/silent letters)
+- **No bad/odd meaning** in major languages (English, Spanish, French, German, Mandarin/pinyin, Japanese
+  romaji, Hindi, Arabic transliteration — weight toward the actual target markets).
+- **Cultural fit** — no unfortunate associations in the regions you'll sell to.
+
+This is *screening*, not a full professional linguistic audit — flag it, and recommend a proper check
+before a global launch. (Grounding rule still applies: don't claim a name is "clean in all languages"
+unless you actually checked; mark unchecked languages as not verified.)
 
 ## Wire it into the workflow
 
