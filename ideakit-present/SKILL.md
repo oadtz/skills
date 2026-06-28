@@ -33,8 +33,8 @@ that matters.
 ## Where this sits in the pipeline
 
 ```
-ideakit-generate  →  ideakit-explore  →  ideakit-validate  →  ideakit-present (THIS)
-generate ideas       expand + challenge    validate + PRD        make people act
+ideakit-discover  →  ideakit-generate  →  ideakit-explore  →  ideakit-validate  →  ideakit-present (THIS)
+blank slate          generate ideas       expand + challenge    validate + PRD       make people act
 ```
 
 It usually runs on an idea that's been validated (a PRD or a sharp idea statement exists). If the

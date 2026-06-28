@@ -35,11 +35,11 @@ If a question, claim, or section doesn't contribute to that, cut it.
 
 ## Pipeline & intake — where this skill sits
 
-This skill is the validation/planning stage of a four-skill idea pipeline:
+This skill is the validation/planning stage of the five-skill idea pipeline:
 
 ```
-ideakit-generate        →   ideakit-explore   →   ideakit-validate (THIS)   →   ideakit-present
-generate ideas         expand + challenge          validate + PRD              make people act
+ideakit-discover  →  ideakit-generate  →  ideakit-explore  →  ideakit-validate (THIS)  →  ideakit-present
+blank slate          generate ideas       expand + challenge    validate + PRD             make people act
 ```
 
 How the user arrives changes how you start:
@@ -173,13 +173,13 @@ Read `references/validation-playbook.md` for the full methodology. Summary of wh
    blockers, required skills, build-vs-buy options.
 6. **⚠️ Platform & ecosystem replication risk** — Could this be absorbed by a major platform
    (Claude/Anthropic, ChatGPT/OpenAI, Cursor, Microsoft, Google, Notion, Slack, etc.) as a
-   plugin, skill, or native feature? Search the platform's last-6-months announcements and
-   roadmap. **Skipping this is the #1 reason ideas die after 6 months of build.** Produce a
-   Platform Replication Risk Table and survivability statement.
+   plugin, skill, or native feature? Search the platform's last-6-months announcements and roadmap.
+   Skipping this is a common reason AI-adjacent ideas lose their wedge after months of build. Produce
+   a Platform Replication Risk Table and survivability statement.
 7. **⏱️ Future trajectory (3–24 months)** — Will this still matter in 18–24 months given how
-   the world is moving? Research tech maturity curves, protocol adoption (e.g., MCP at 97M
-   monthly downloads up from 2M), funding flows, regulatory shifts, demographic changes, and
-   adjacent disruption. Produce a Future Trajectory Table and three scenario statements
+   the world is moving? Research tech maturity curves, protocol adoption (e.g., MCP momentum),
+   funding flows, regulatory shifts, demographic changes, and adjacent disruption. Produce a Future
+   Trajectory Table and three scenario statements
    (best / middle / worst case at 18 months). **An idea that wins today but loses in 18 months
    needs structural reframing before any build starts.**
 8. **Risks & assumptions** — What has to be true for this to work? What kills it?

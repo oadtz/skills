@@ -4,16 +4,12 @@ description: >
   Generate new business and startup ideas from scratch by scanning trends and mining real
   problems, then rank them with proven evaluation criteria. Use this skill whenever the user
   wants to FIND, GENERATE, or BRAINSTORM business or startup ideas but does NOT yet have a
-  specific idea in hand — triggers include "what should I build", "give me startup ideas",
-  "help me find a business idea", "I want to start a company but don't know what", "ideas for
-  [industry/market]", "what business could I start with [skill/budget]", "where are the
-  opportunities in [space]", "give me ideas where the money is", "most lucrative ideas",
-  "follow the money", "where's the money in [space]", or any request for idea generation,
-  opportunity discovery, or "what's worth building right now". This is the UPSTREAM idea-sourcing
-  skill: it produces a
-  ranked table of raw ideas. It is NOT for refining an idea you already have (hand off to
-  ideakit-validate for that) and NOT for general product-feature brainstorming on an existing product
-  (use ideakit-explore).
+  specific idea in hand — e.g. "what should I build", "give me startup ideas", "ideas for
+  [industry/market]", "what business could I start with [skill/budget]", "where are the opportunities",
+  "give me ideas where the money is", or "what's worth building right now". This is the upstream
+  idea-sourcing skill: it produces a ranked table of raw ideas. It is NOT for refining an idea already
+  in hand (use `ideakit-validate`) and NOT for feature brainstorming on an existing product (use
+  `ideakit-explore`).
 ---
 
 # Ideakit — Generate (idea sourcing)
@@ -106,8 +102,10 @@ Use capabilities by intent, not by product-specific tool name:
   parallelize searches when the host supports it.
 - **No live research available**: ask the user for sources or continue only as a clearly labeled
   "non-current draft"; mark market, trend, and platform claims as assumptions.
-- **Output**: return the ranked shortlist in chat; if the host supports artifacts/files, use them only
-  for optional supporting notes, not as a substitute for the summary.
+- **Output**: return a concise ranked shortlist in chat and, if the host supports artifacts/files, also
+  write the durable shortlist with full scores, reasoning, sources, and killed ideas as a real
+  file/table. If no file/artifact mechanism exists, include the complete table in chat and say no file
+  was written.
 
 ## Workflow
 

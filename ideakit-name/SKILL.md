@@ -80,12 +80,27 @@ missing): the product/what it does, the brand values/personality, the target aud
 should *evoke*, any name-type preference, and the **hard requirements** (which TLD matters — `.com`?
 `.ai`? — and which handles are non-negotiable). Note any words/associations to avoid.
 
-### Step 2 — Generate across name types
+### Step 2 — Generate across name types (and *escape the AI centroid*)
 
-Read `references/naming-and-clearance.md`. Generate a wide set (aim ~15–30) deliberately **mixing name
-types** — Descriptive, Suggestive/Metaphorical, Coined/Neologism, Compound/Hybrid, Lexical-tweak,
-(occasionally) Acronym/Place/Person. Don't cluster on one type; variety is where the gettable winner
-usually hides (the descriptive `.com`s are all taken, so coined/compound names clear more often).
+Read `references/naming-and-clearance.md` **and `references/anti-cliche.md`** — the second is what keeps
+output from reading as generic AI slop, which is the #1 complaint about machine-generated names.
+
+The trap: a model defaults to the **centroid** — the average startup name every AI tool also produces
+(Nexus, Vertex, -ly/-ify suffixes, Cloud+X mash-ups, Apollo/Atlas, Spark/Forge/Pulse…). So:
+
+1. **Generate the obvious batch first — then throw it away.** The first ~10–15 names are the warm-up,
+   not the answer. State that you're discarding them as the centroid and move on.
+2. **Ban the tells.** Reject the slop suffixes, "epic" abstract words, buzzword mash-ups, god-names-on-
+   autopilot, and Get/Try/i-/[X]AI gimmicks listed in `anti-cliche.md`.
+3. **Use real technique to get distinctiveness** — empty-vessel real words used as unexpected metaphors
+   (Stripe/Slack/Nest), the random-word trigger, deliberate category-*tension* (a name slightly "wrong"
+   for the space), unexpected sources (archaic/foreign/jargon), and sound symbolism. Favor concrete,
+   short, sayable words over clever abstract ones.
+4. **Still mix name types** — Descriptive, Suggestive/Metaphorical, Coined/Neologism, Compound/Hybrid,
+   Lexical-tweak. Variety is where the gettable winner hides (descriptive `.com`s are all taken anyway).
+
+Apply the smell test to every candidate: *"Would 50 other AI generators also output this?"* If yes, cut
+it before it reaches the shortlist. Aim ~15–30 *after* discarding the centroid batch.
 
 ### Step 3 — Filter with SMILE / SCRATCH
 
@@ -96,7 +111,8 @@ Score candidates with Alexandra Watkins' test (detail in the reference):
   Hard-to-pronounce.
 
 Cut the SCRATCH failures and the dead ones; carry the strongest ~8–12 into the gauntlet (checking all 30
-is wasteful).
+is wasteful). **Treat any leftover centroid/AI-slop name as an automatic SCRATCH** (it fails Tame and
+usually Copycat) — if a name would make a sharp human namer shrug, it doesn't advance.
 
 ### Step 4 — The availability gauntlet (the real work — check, don't assume)
 
@@ -163,3 +179,7 @@ handle, or filing a trademark* spends money / is a legal act — stage it and ha
 - `references/naming-and-clearance.md` — the name types + the Naming Matrix, the full SMILE/SCRATCH
   rubric, and the availability toolkit (RDAP vs WHOIS vs DNS; WIPO Global Brand Database / USPTO
   Trademark Search / EUIPO TMview; Namechk/KnowEm; web collision) with the screening-not-clearance line.
+- `references/anti-cliche.md` — **how to escape the AI naming centroid**: the banned tells (slop
+  suffixes, epic abstract words, buzzword mash-ups, god-names, gimmick prefixes), the distinctive-naming
+  techniques (empty-vessel, random-word trigger, category-tension, unexpected sources, sound symbolism),
+  and the "would 50 other AI tools output this?" smell test. Read every run before generating.

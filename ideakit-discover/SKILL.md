@@ -2,17 +2,13 @@
 name: ideakit-discover
 description: >
   Help a person discover what they actually want to build when they have NO idea and NO direction
-  yet — not even an industry, a skill to lean on, or a seed. Use this skill when the user wants to
-  start *something* but is staring at a blank slate and wants to be interviewed and excavated rather
-  than handed generic market ideas — triggers include "I want to build something but have no idea
-  what", "help me figure out what to do", "I don't know what I want to make", "I want to start a
-  business/be a solopreneur but don't know in what", "help me find my direction", "what should I do
-  with my skills", "I'm stuck at zero", or any blank-slate, pre-idea moment. It is the FRONT of the
-  idea pipeline: it elicits the person's edge, interests, frustrations, constraints, and what a good
-  outcome means to *them*, then outputs a personal "edge map" that becomes the frame for
-  `ideakit-generate`. It is NOT for users who already know their domain/skills and just want idea
-  options (go straight to `ideakit-generate`), NOT for expanding a direction they already have (use
-  `ideakit-explore`), and NOT for validating a chosen idea (use `ideakit-validate`).
+  yet — not even an industry, skill, audience, or seed. Use for blank-slate prompts like "I want to
+  build something but have no idea", "help me find my direction", "what should I do with my skills",
+  or "I want to start a business but don't know in what". It elicits the person's edge, interests,
+  frustrations, constraints, and desired life shape, then outputs an edge map for `ideakit-generate`.
+  It is NOT for users who already know their domain/skills and just want idea options (use
+  `ideakit-generate`), NOT for expanding a direction (use `ideakit-explore`), and NOT for validating a
+  chosen idea (use `ideakit-validate`).
 ---
 
 # Ideakit — Discover (blank slate → a direction that fits you)
