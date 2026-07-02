@@ -58,6 +58,7 @@ Everything in this skill is one of these two applied to a stage — not a separa
 
 | Stage | What it is | Which half it serves |
 |---|---|---|
+| Force classification + ripple map (Step 1) | vary your **causal depth**; the trigger is not the territory — map its consequences | Variety + Reflexivity |
 | Coverage audit (Step 2) | vary your **inputs**; name & counter your source bias | Variety + Reflexivity |
 | Diversity partitions (Step 3) | vary your **generative lenses**; spread, don't cluster | Requisite Variety |
 | Multi-dimension rubric, incl. Pull = pain *or* desire (Step 4) | vary your **judgment criteria**; never score on one axis | Requisite Variety |
@@ -110,8 +111,9 @@ Use capabilities by intent, not by product-specific tool name:
 ## Workflow
 
 Five steps: **Frame → Scan (+ coverage audit) → Generate → Score → Synthesize & Hand off.** Do not skip
-the coverage audit inside Scan or the diversity partition inside Generate — those two guards are what
-separate this from a generic brainstorm and what keep it from quietly missing whole markets.
+the force-brief ripple map inside Frame, the coverage audit inside Scan, or the diversity partition
+inside Generate — those guards are what separate this from a generic brainstorm and what keep it from
+quietly missing whole markets.
 
 **Money-first framing (optional).** If the user asks for "ideas where the money is" (most lucrative /
 follow the money), read `references/money-first.md` first. It doesn't change the five steps — it
@@ -138,6 +140,25 @@ UI if available; otherwise ask in plain text. Ask only what's missing; infer the
 - **Resource envelope**: rough budget, time, solo vs. team, technical or not.
 - **Constraints / no-gos**: things they will not do (industries, models, geographies).
 
+**Classify the brief: domain or force.** A *domain* brief names an industry, skill, or audience
+("fintech", "my Python skills") — proceed as below. A *force* brief names an event, shock, or trend
+acting ON the world (a heatwave, a new regulation, a new model capability, a demographic shift). A
+brief can be both ("fintech after the EU AI Act") — if any force is present, treat it as a force.
+**When unsure, treat it as a force too**: the cost of an unneeded map is one quick sketch, while
+misreading a force as a domain silently caps the whole run at ring 1.
+
+For a force brief, do NOT treat the force as a domain to scan "solutions for" — that traps every
+idea at ring 1 (direct mitigation). Instead, before Step 2, sketch a quick **ripple map** (the
+ripple lens in `references/frameworks.md`): ring 1 = direct effects/mitigation, ring 2 = behaviors
+people change because of the force, ring 3 = structures that rearrange once behaviors shift — swept
+across life domains (work, home, health & body, food, leisure & social ritual, consumption,
+environment, migration, politics & regulation — an open list: name whichever domains this force
+actually touches, not only tech/business). While mapping, name the **critical uncertainty fork** the
+consequences hinge on (the scenario-robustness sharpener in the ripple lens); Step 5 uses it to mark
+which shortlisted ideas survive both branches. The rings become Step 2 scan targets and a required
+Step 3 partition axis, so depth and breadth arrive in the first pass instead of after the user
+pushes back.
+
 If the user gives almost nothing ("just give me ideas") but *does* have a domain or skill, pick a
 sensible default frame, state it in one line, and proceed — don't stall. You can widen later. But if
 the user is at a true blank slate with no domain, skill, or direction to name, that's the signal to
@@ -159,6 +180,8 @@ minimum, run several batched/parallel searches when the host supports it across:
   first two source types are blind to. Don't skip this; it's how the skill historically missed
   whole categories like the BL/Y-series boom.
 - The user's specific domain, to ground ideas in their edge.
+- For a **force brief**: the ripple map's ring-2/3 consequences (the changed behaviors and the
+  rearranging structures), searched as topics in their own right — not only the force itself.
 
 Capture raw problems and signals verbatim before interpreting. Quantify pain or desire where you can
 ("47 GitHub issues asking for X", "top complaint in r/foo", "12k fan works around Y"). Keep source
@@ -166,7 +189,8 @@ links beside each signal.
 
 **Then run the coverage self-audit before generating.** The source list above still has a horizon —
 any fixed list does. Read `references/coverage-audit.md` and walk the *axes of blindness* (value
-type, geography/culture, who-pays, buyer sophistication, trend trigger, maturity, time horizon):
+type, geography/culture, who-pays, buyer sophistication, trend trigger, maturity, time horizon,
+causal depth):
 locate where your scan is skewed, then deliberately run 1–2 extra searches at the opposite ends most
 relevant to the brief. This is the general mechanism that catches *unknown* unknowns — not just the
 desire/fandom gap we already named, but whatever this particular brief is blind to. Note in one line
@@ -175,7 +199,8 @@ what you additionally scanned (recording "found nothing" is fine — it proves t
 ### Step 3 — Generate (with enforced diversity)
 
 **Before generating, partition the idea space.** Read `references/diversity.md` and lay out the
-dimensions you'll vary across (market segment, mechanism, business model, wedge, who-you-replace).
+dimensions you'll vary across (market segment, mechanism, business model, wedge, who-you-replace —
+plus the order-of-effect ring for force briefs).
 Then generate **10–20 raw ideas that deliberately spread across those partitions** (target ~12–15
 across the cells you pick — one or more per cell is fine), applying the
 generation lenses in `references/frameworks.md` (Live-in-the-future, Jobs-to-be-Done + Forces of
@@ -193,7 +218,9 @@ regressing to a B2B/painkiller monoculture; full detail in `references/diversity
 - [ ] at least **two different mechanisms/wedges**, AND
 - [ ] at least one **"works today"** idea and one **"bets on a near-future capability"** idea, AND
 - [ ] at least one **desire/identity-driven** idea (not only painkiller/utility) — *unless* the brief
-  is explicitly a pure-utility domain.
+  is explicitly a pure-utility domain, AND
+- [ ] **for force/event briefs only:** at least one **ring-2** and one **ring-3** idea (the
+  order-of-effect axis in `references/diversity.md`) — not only direct mitigation of the force.
 
 If any box fails, regenerate the missing kind — don't proceed. An all-utility set almost always means
 the culture/desire sources or the coverage audit were skipped; go back to Step 2.
@@ -220,7 +247,12 @@ shortlist has requisite variety and you stay reflexive about the mix. Before wri
 - **Declare the mix.** State the shortlist's spread on two independent axes: **value type**
   (painkiller ↔ desire) and **durability of demand** (durable ↔ emerging/fad). These are *different*
   axes — a desire market can be centuries-durable (fandom, pets, faith) and a painkiller can be a
-  fad. Don't conflate "desire" with "risky".
+  fad. Don't conflate "desire" with "risky". For a **force brief**, also declare the **ring spread**
+  (direct mitigation ↔ changed behaviors ↔ rearranged structures): ring-2/3 ideas naturally score
+  lower on Feasibility, so an all-ring-1 shortlist after a diverse generation is a *synthesis
+  failure*, not a scoring verdict — keep at least one ring-2/3 idea on the table with its longer
+  clock stated honestly. If a critical-uncertainty fork was named on the ripple map, mark the ideas
+  that survive both branches as *robust* — robustness breaks ties.
 - **Balance, don't monoculture — but don't force 50/50.** Weight the mix by the *evidence* and the
   user's *edge*, and justify the weighting in one line. The rule is only: no axis should be all-one
   unless the brief explicitly demands it. An all-painkiller *or* all-desire shortlist is a frame
@@ -307,7 +339,9 @@ Each is the governing principle applied to one stage:
 - `references/coverage-audit.md` — *reflexivity on inputs*: scan against your own source/rubric bias
   to catch unknown unknowns (run inside Step 2, every run).
 - `references/diversity.md` — *lens variety*: partition the idea space so ideas don't converge
-  (read every run before Step 3); now includes the value-type axis and portfolio synthesis.
-- `references/frameworks.md` — the actual generation lenses and scoring foundations (the "latticework").
+  (read every run before Step 3); now includes the value-type and order-of-effect axes and portfolio
+  synthesis.
+- `references/frameworks.md` — the actual generation lenses and scoring foundations (the
+  "latticework"), including the ripple lens for force briefs.
 - `references/scoring.md` — *criteria variety + reflexivity*: the six-dimension rubric (0–5 each) plus
   the fad/Lindy and balance flags.

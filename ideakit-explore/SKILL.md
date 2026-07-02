@@ -106,7 +106,9 @@ Use when the user is thinking about direction, positioning, or big bets — not 
 **What to do:**
 - Map the playing field: what are the possible strategic moves, not just the obvious one
 - Think in terms of bets: what are we betting on, what are the odds, what is the payoff
-- Consider second-order effects: "If we do X, what does that enable or foreclose?"
+- Consider second-order effects — of your own move ("If we do X, what does that enable or
+  foreclose?") and of the trend itself ("If the world keeps doing X, which behaviors change, and
+  then which structures rearrange?")
 - Bring in competitive dynamics: "If we do this, how do competitors respond?"
 - Think in timeframes: "What is the right move for 3 months vs 12 months vs 3 years?"
 

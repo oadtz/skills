@@ -66,6 +66,23 @@ replace"). When the new offering needs a new mental model, you're doing **catego
 the new category, frame the problem it solves, and become its default. High-risk, high-ceiling;
 especially relevant for desire-driven and net-new ideas.
 
+### The ripple lens — Futures Wheel + second-level thinking (Glenn; Marks)
+Use whenever the brief is a *force* (an event, shock, or trend acting on the world), not a domain —
+and at least once whenever a big external trigger is in play. Place the force at the center and ask
+"and then what?" at least three times (Marks' second-level thinking): **ring 1** = direct effects and
+mitigation; **ring 2** = behaviors people change under the force; **ring 3** = structures that
+rearrange once behaviors shift. Sweep each ring across life domains (PESTLE-style: work, home,
+health & body, food, leisure & social ritual, consumption, environment, migration, politics &
+regulation) so the wheel doesn't stay tech/business-only. The list is a set of prompts,
+not a fence — a force that touches a domain not named here still owes it a ring; business-legible
+domains will volunteer themselves, so spend the sweep on the ones that don't. Two sharpeners:
+1. **Historical analogy** — when a force this size arrived before (electricity, cars, air
+   conditioning → the Sun Belt), the biggest money landed at rings 2–3, not ring 1. Ask: "where are
+   this force's *suburbs*?"
+2. **Scenario robustness** — name the critical uncertainty fork the consequences hinge on (e.g.
+   "society adapts by engineering vs. by lifestyle change"), and mark ideas that survive both
+   branches as *robust*; prefer them at synthesis (Step 5).
+
 ## Scoring foundations (Step 4 — detail in scoring.md)
 
 ### Pull — Pain *or* Desire (Paul Graham, expanded)

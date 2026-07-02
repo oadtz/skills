@@ -38,6 +38,9 @@ Run each as "where am I sitting → what's the opposite I haven't scanned?"
 - **Maturity / where value is moving** — commoditizing components ↔ newly-possible ones (see Wardley
   lens below). Opportunity clusters at the boundary where something just became cheap/standard.
 - **Time horizon** — works today ↔ bets on a capability arriving in 12–18 months.
+- **Causal depth** — direct effects of the trigger ↔ knock-on effects ("and then what?" — behaviors
+  that change, then structures that rearrange). A scan pointed only at the trigger itself sees
+  products, not consequences; the consequences are usually the bigger market.
 
 You will not scan every opposite every time. Pick the axes where your scan is most lopsided for
 *this* brief, and cover at least two opposite-ends you'd otherwise have skipped.

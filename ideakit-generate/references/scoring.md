@@ -99,6 +99,8 @@ are deeply Lindy-durable; and painkillers can be fads too.
 
 Scoring ranks individual ideas; the shortlist as a *set* must still have requisite variety. Before
 finalizing, declare the mix on two independent axes — **value type** (painkiller↔desire) and
-**durability** (durable↔emerging) — and justify the weighting against the brief and the user's edge.
+**durability** (durable↔emerging) — plus, for force briefs, the **order-of-effect ring spread**
+(ring-2/3 ideas score lower on Feasibility by nature; don't let the sort silently purge them) — and
+justify the weighting against the brief and the user's edge.
 No axis should be all-one unless the brief demands it: an all-painkiller, all-desire, or all-fad
 shortlist is a frame failure, not a result.
