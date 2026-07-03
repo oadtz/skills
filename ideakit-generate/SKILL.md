@@ -58,7 +58,7 @@ Everything in this skill is one of these two applied to a stage — not a separa
 
 | Stage | What it is | Which half it serves |
 |---|---|---|
-| Force classification + ripple map (Step 1) | vary your **causal depth**; the trigger is not the territory — map its consequences | Variety + Reflexivity |
+| Force classification + consequence map (Step 1) | vary your **causal depth**; the trigger is not the territory — map its consequences | Variety + Reflexivity |
 | Coverage audit (Step 2) | vary your **inputs**; name & counter your source bias | Variety + Reflexivity |
 | Diversity partitions (Step 3) | vary your **generative lenses**; spread, don't cluster | Requisite Variety |
 | Multi-dimension rubric, incl. Pull = pain *or* desire (Step 4) | vary your **judgment criteria**; never score on one axis | Requisite Variety |
@@ -111,7 +111,7 @@ Use capabilities by intent, not by product-specific tool name:
 ## Workflow
 
 Five steps: **Frame → Scan (+ coverage audit) → Generate → Score → Synthesize & Hand off.** Do not skip
-the force-brief ripple map inside Frame, the coverage audit inside Scan, or the diversity partition
+the force-brief consequence map inside Frame, the coverage audit inside Scan, or the diversity partition
 inside Generate — those guards are what separate this from a generic brainstorm and what keep it from
 quietly missing whole markets.
 
@@ -148,16 +148,34 @@ brief can be both ("fintech after the EU AI Act") — if any force is present, t
 misreading a force as a domain silently caps the whole run at ring 1.
 
 For a force brief, do NOT treat the force as a domain to scan "solutions for" — that traps every
-idea at ring 1 (direct mitigation). Instead, before Step 2, sketch a quick **ripple map** (the
-ripple lens in `references/frameworks.md`): ring 1 = direct effects/mitigation, ring 2 = behaviors
-people change because of the force, ring 3 = structures that rearrange once behaviors shift — swept
-across life domains (work, home, health & body, food, leisure & social ritual, consumption,
-environment, migration, politics & regulation — an open list: name whichever domains this force
-actually touches, not only tech/business). While mapping, name the **critical uncertainty fork** the
-consequences hinge on (the scenario-robustness sharpener in the ripple lens); Step 5 uses it to mark
-which shortlisted ideas survive both branches. The rings become Step 2 scan targets and a required
-Step 3 partition axis, so depth and breadth arrive in the first pass instead of after the user
-pushes back.
+idea at ring 1 (direct mitigation). The required move is **Force -> Consequence -> Opportunity**:
+translate the force into changed behaviors, new constraints, rearranged structures, and changed
+spending/jobs before ideating. A heatwave is not "the cooling market"; it is a world where water use,
+sleep, work hours, food, care, insurance, retail foot traffic, city operations, and home routines may
+all shift.
+
+Before Step 2, produce a compact **consequence map** using the ripple lens in
+`references/frameworks.md`. It is a working artifact, not optional scratch:
+
+| Ring | Domain | Consequence | Who changes behavior? | What changes? | New spend / unmet job |
+|---|---|---|---|---|---|
+| 1 Direct | [domain] | [direct effect] | [actor] | [behavior/constraint] | [spend/job] |
+| 2 Behavior | [domain] | [knock-on behavior] | [actor] | [behavior/constraint] | [spend/job] |
+| 3 Structural | [domain] | [structure rearranges] | [actor] | [behavior/constraint] | [spend/job] |
+
+Ring 1 = direct effects/mitigation, ring 2 = behaviors people change because of the force, ring 3 =
+structures that rearrange once behaviors shift. Sweep the rings across life domains (work, home,
+health & body, food, water, energy, mobility, leisure & social ritual, retail/consumption, pets &
+elderly care, education, insurance, real estate, local government, agriculture, environment,
+migration, politics & regulation — an open list: name whichever domains this force actually touches,
+not only tech/business). Minimum for a force brief: **8-12 consequences across at least 6 domains,
+including at least 3 ring-2/3 consequences**. If the map stays literal ("heat -> cooling" only),
+stop and widen it before scanning.
+
+While mapping, name the **critical uncertainty fork** the consequences hinge on (the
+scenario-robustness sharpener in the ripple lens); Step 5 uses it to mark which shortlisted ideas
+survive both branches. The consequence map becomes Step 2 scan targets and Step 3 partition inputs, so
+depth and breadth arrive in the first pass instead of after the user pushes back.
 
 If the user gives almost nothing ("just give me ideas") but *does* have a domain or skill, pick a
 sensible default frame, state it in one line, and proceed — don't stall. You can widen later. But if
@@ -180,8 +198,11 @@ minimum, run several batched/parallel searches when the host supports it across:
   first two source types are blind to. Don't skip this; it's how the skill historically missed
   whole categories like the BL/Y-series boom.
 - The user's specific domain, to ground ideas in their edge.
-- For a **force brief**: the ripple map's ring-2/3 consequences (the changed behaviors and the
-  rearranging structures), searched as topics in their own right — not only the force itself.
+- For a **force brief**: the consequence map's ring-2/3 consequences (the changed behaviors and the
+  rearranging structures), searched as topics in their own right — not only the force itself. Search
+  changed spending and substitute behavior too: "who now spends more / less / differently because of
+  this force?", "what job became harder?", "what routine moved to a different time/place/channel?",
+  and "which institution now has a new obligation?"
 
 Capture raw problems and signals verbatim before interpreting. Quantify pain or desire where you can
 ("47 GitHub issues asking for X", "top complaint in r/foo", "12k fan works around Y"). Keep source
@@ -199,8 +220,11 @@ what you additionally scanned (recording "found nothing" is fine — it proves t
 ### Step 3 — Generate (with enforced diversity)
 
 **Before generating, partition the idea space.** Read `references/diversity.md` and lay out the
-dimensions you'll vary across (market segment, mechanism, business model, wedge, who-you-replace —
-plus the order-of-effect ring for force briefs).
+dimensions you'll vary across (market segment, mechanism, business model, route-to-market archetype,
+wedge, who-you-replace — plus the order-of-effect ring and domain for force briefs). For a force
+brief, target cells from the consequence map, not from the literal force word. At least half the raw
+ideas should originate from ring-2/3 consequences or changed-spending jobs, even if ring-1 ideas look
+easier.
 Then generate **10–20 raw ideas that deliberately spread across those partitions** (target ~12–15
 across the cells you pick — one or more per cell is fine), applying the
 generation lenses in `references/frameworks.md` (Live-in-the-future, Jobs-to-be-Done + Forces of
@@ -216,14 +240,31 @@ regressing to a B2B/painkiller monoculture; full detail in `references/diversity
 
 - [ ] at least **two different customer types**, AND
 - [ ] at least **two different mechanisms/wedges**, AND
+- [ ] at least **three different route-to-market archetypes** across the raw set (e.g. B2B SaaS,
+  consumer/DTC, prosumer/creator, community/media/IP, marketplace, public/NGO/grant, services), AND
+- [ ] if the prompt is broad or asks for "big" / "million-scale" ideas, at least **one non-B2B idea**
+  must stay in the scored set even if it is riskier — otherwise B2B budget logic will silently
+  monoculture the portfolio, AND
 - [ ] at least one **"works today"** idea and one **"bets on a near-future capability"** idea, AND
 - [ ] at least one **desire/identity-driven** idea (not only painkiller/utility) — *unless* the brief
   is explicitly a pure-utility domain, AND
 - [ ] **for force/event briefs only:** at least one **ring-2** and one **ring-3** idea (the
-  order-of-effect axis in `references/diversity.md`) — not only direct mitigation of the force.
+  order-of-effect axis in `references/diversity.md`) — not only direct mitigation of the force, AND
+- [ ] **for force/event briefs only:** at least **two ideas that do not name the literal force or
+  direct mitigation in the idea sentence** (e.g. heatwave-adjacent ideas about water allocation,
+  shifted work hours, sleep, insurance, care, food, retail, or city operations), AND
+- [ ] **for force/event briefs only:** at least **three domains** from the consequence map are
+  represented, AND
+- [ ] **for force/event briefs only:** at least **one idea follows changed spending or a newly
+  created job**, not just a newly painful condition.
 
-If any box fails, regenerate the missing kind — don't proceed. An all-utility set almost always means
-the culture/desire sources or the coverage audit were skipped; go back to Step 2.
+If any box fails, regenerate the missing kind — don't proceed. A set can pass customer/mechanism
+diversity and still fail if every route to market is B2B SaaS or enterprise sales; in that case,
+regenerate from consumer, community/media, marketplace, prosumer, public/NGO, or service-first cells.
+For force briefs, a literal/direct set almost always means the consequence map was too shallow or Step
+2 searched the force itself instead of its consequences; go back to the map/scan and widen before
+scoring. An all-utility set almost always means the culture/desire sources or the coverage audit were
+skipped; go back to Step 2.
 
 ### Step 4 — Score
 
@@ -244,15 +285,18 @@ be over-optimistic. A low score is useful information, not a failure.
 Ranking is *synthesis*, not just sorting — apply the governing principle one last time so the
 shortlist has requisite variety and you stay reflexive about the mix. Before writing the table:
 
-- **Declare the mix.** State the shortlist's spread on two independent axes: **value type**
-  (painkiller ↔ desire) and **durability of demand** (durable ↔ emerging/fad). These are *different*
-  axes — a desire market can be centuries-durable (fandom, pets, faith) and a painkiller can be a
-  fad. Don't conflate "desire" with "risky". For a **force brief**, also declare the **ring spread**
-  (direct mitigation ↔ changed behaviors ↔ rearranged structures): ring-2/3 ideas naturally score
-  lower on Feasibility, so an all-ring-1 shortlist after a diverse generation is a *synthesis
-  failure*, not a scoring verdict — keep at least one ring-2/3 idea on the table with its longer
-  clock stated honestly. If a critical-uncertainty fork was named on the ripple map, mark the ideas
-  that survive both branches as *robust* — robustness breaks ties.
+- **Declare the mix.** State the shortlist's spread on three independent axes: **value type**
+  (painkiller ↔ desire), **durability of demand** (durable ↔ emerging/fad), and
+  **route-to-market archetype** (B2B, consumer/DTC, prosumer/creator, community/media/IP, marketplace,
+  public/NGO/grant, services). These are *different* axes — a desire market can be
+  centuries-durable (fandom, pets, faith) and a painkiller can be a fad. Don't conflate "desire" with
+  "risky", and don't let "money-first" collapse the set into enterprise/B2B only. For a **force
+  brief**, also declare the **ring spread** (direct mitigation ↔ changed behaviors ↔ rearranged
+  structures), **domain spread**, and **literal-vs-adjacent spread**. Ring-2/3 ideas naturally score
+  lower on Feasibility, so an all-ring-1 or all-literal shortlist after a diverse generation is a
+  *synthesis failure*, not a scoring verdict — keep at least one ring-2/3 adjacent idea on the table
+  with its longer clock stated honestly. If a critical-uncertainty fork was named on the consequence
+  map, mark the ideas that survive both branches as *robust* — robustness breaks ties.
 - **Balance, don't monoculture — but don't force 50/50.** Weight the mix by the *evidence* and the
   user's *edge*, and justify the weighting in one line. The rule is only: no axis should be all-one
   unless the brief explicitly demands it. An all-painkiller *or* all-desire shortlist is a frame

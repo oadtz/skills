@@ -98,9 +98,11 @@ are deeply Lindy-durable; and painkillers can be fads too.
 ## Portfolio balance — reflexivity at synthesis (Step 5)
 
 Scoring ranks individual ideas; the shortlist as a *set* must still have requisite variety. Before
-finalizing, declare the mix on two independent axes — **value type** (painkiller↔desire) and
-**durability** (durable↔emerging) — plus, for force briefs, the **order-of-effect ring spread**
-(ring-2/3 ideas score lower on Feasibility by nature; don't let the sort silently purge them) — and
-justify the weighting against the brief and the user's edge.
-No axis should be all-one unless the brief demands it: an all-painkiller, all-desire, or all-fad
-shortlist is a frame failure, not a result.
+finalizing, declare the mix on three independent axes — **value type** (painkiller↔desire),
+**durability** (durable↔emerging), and **route-to-market archetype** (B2B, consumer/DTC,
+prosumer/creator, community/media/IP, marketplace, public/NGO/grant, services). For force briefs,
+also declare the **order-of-effect ring spread** (ring-2/3 ideas score lower on Feasibility by
+nature; don't let the sort silently purge them), the **domain spread**, and the
+**literal-vs-adjacent spread**. Justify the weighting against the brief and the user's edge.
+No axis should be all-one unless the brief demands it: an all-painkiller, all-desire, all-fad,
+all-B2B, all-ring-1, or all-literal shortlist is a frame failure, not a result.

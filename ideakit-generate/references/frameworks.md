@@ -83,6 +83,20 @@ domains will volunteer themselves, so spend the sweep on the ones that don't. Tw
    "society adapts by engineering vs. by lifestyle change"), and mark ideas that survive both
    branches as *robust*; prefer them at synthesis (Step 5).
 
+The required output of this lens in `SKILL.md` is the **consequence map**:
+
+| Ring | Domain | Consequence | Who changes behavior? | What changes? | New spend / unmet job |
+|---|---|---|---|---|---|
+| 1 Direct | [domain] | [direct effect] | [actor] | [behavior/constraint] | [spend/job] |
+| 2 Behavior | [domain] | [knock-on behavior] | [actor] | [behavior/constraint] | [spend/job] |
+| 3 Structural | [domain] | [structure rearranges] | [actor] | [behavior/constraint] | [spend/job] |
+
+Do not generate from the center word until the map exists. The center word is just the trigger; the
+opportunities usually live in the columns to the right. A heatwave run that only creates cooling,
+shade, and heat-alert ideas has stayed inside the trigger. A stronger run follows consequences into
+water allocation, sleep, shifted work hours, food choices, elderly/pet care, insurance risk, city
+operations, retail patterns, and housing preferences.
+
 ## Scoring foundations (Step 4 — detail in scoring.md)
 
 ### Pull — Pain *or* Desire (Paul Graham, expanded)
