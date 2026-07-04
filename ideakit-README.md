@@ -10,7 +10,7 @@ and triggers on its own intent — they're connected by handoffs, not merged int
 | Order | Skill | Use it when… | Output |
 |---|---|---|---|
 | 0 | **ideakit-discover** | you have *no flag at all* — not even a domain or skill — and want to find what's yours | an evidence-backed **edge map** (a frame) |
-| 1 | **ideakit-generate** | you have constraints (industry, skills, budget) and want idea options | ranked shortlist of raw ideas |
+| 1 | **ideakit-generate** | you have constraints (industry, skills, budget) and want idea options | ranked shortlist + storage prompt |
 | 2 | **ideakit-explore** | you have a direction and want to expand / stress-test it | sharpened options + key unknowns |
 | 3 | **ideakit-validate** | you have a chosen idea and want it validated + turned into a plan | a PRD / PLAN.md ready for an implementation agent |
 | 4 | **ideakit-present** | you need to win customers, investors, or teammates over | persuasive deck / demo / one-pager / memo |

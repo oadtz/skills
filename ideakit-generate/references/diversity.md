@@ -4,6 +4,12 @@ This is the governing principle (*requisite variety*) applied to **generation**:
 space so the lenses you run actually produce structurally different ideas, and synthesize the result
 as a balanced portfolio rather than a monoculture.
 
+## Contents
+
+- Why this matters
+- The method
+- Anti-patterns
+
 ## Why this matters
 
 Research on LLM idea generation (Si, Yang & Hashimoto 2024, and follow-on work on diversity

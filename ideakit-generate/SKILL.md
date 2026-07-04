@@ -7,9 +7,11 @@ description: >
   specific idea in hand — e.g. "what should I build", "give me startup ideas", "ideas for
   [industry/market]", "what business could I start with [skill/budget]", "where are the opportunities",
   "give me ideas where the money is", or "what's worth building right now". This is the upstream
-  idea-sourcing skill: it produces a ranked table of raw ideas. It is NOT for refining an idea already
-  in hand (use `ideakit-validate`) and NOT for feature brainstorming on an existing product (use
-  `ideakit-explore`).
+  idea-sourcing skill: it produces a ranked table of raw ideas and asks where to store/capture them.
+  Also use it for the immediate follow-up when the user answers that storage prompt and wants the
+  generated shortlist saved, merged into an ideas repo, or captured in an external notes vault. It is
+  NOT for refining an idea already in hand (use `ideakit-validate`) and NOT for feature brainstorming
+  on an existing product (use `ideakit-explore`).
 ---
 
 # Ideakit — Generate (idea sourcing)
@@ -63,6 +65,7 @@ Everything in this skill is one of these two applied to a stage — not a separa
 | Diversity partitions (Step 3) | vary your **generative lenses**; spread, don't cluster | Requisite Variety |
 | Multi-dimension rubric, incl. Pull = pain *or* desire (Step 4) | vary your **judgment criteria**; never score on one axis | Requisite Variety |
 | Portfolio balance + fad check (Step 5) | **synthesize** varied bets; declare the mix; don't monoculture | Variety + Reflexivity |
+| Storage prompt + idea memory (Step 6) | capture the output where it can be found, merged, and revisited | Reflexivity |
 | Honest scoring & "human decides" | scores are provisional; the frame can be wrong | Reflexivity |
 
 **The rule that ends the patch chase:** when a *new* blind spot appears, do **not** add a new
@@ -78,8 +81,8 @@ ideakit-discover  →  [user: constraints]  →  ideakit-generate (THIS)  →  i
 (blank slate → edge map)                      generate + rank        expand + challenge        validate + PRD
 ```
 
-`ideakit-generate` turns *constraints* into ranked ideas. Its job ends when it hands a ranked
-shortlist forward.
+`ideakit-generate` turns *constraints* into ranked ideas. Its job ends when it produces the saved
+shortlist and asks or handles where that idea set should live next.
 
 **Intake — make sure the user actually has constraints to work from:**
 
@@ -105,18 +108,19 @@ Use capabilities by intent, not by product-specific tool name:
   "non-current draft"; mark market, trend, and platform claims as assumptions.
 - **Output**: return a concise ranked shortlist in chat and, if the host supports artifacts/files, also
   write the durable shortlist with full scores, reasoning, sources, and killed ideas as a real
-  file/table. If no file/artifact mechanism exists, include the complete table in chat and say no file
-  was written.
+  file/table. If no file/artifact mechanism exists, include the complete table in chat, say no durable
+  file could be written, and do not pretend Step 6 captured it anywhere.
 
 ## Workflow
 
-Five steps: **Frame → Scan (+ coverage audit) → Generate → Score → Synthesize & Hand off.** Do not skip
-the force-brief consequence map inside Frame, the coverage audit inside Scan, or the diversity partition
-inside Generate — those guards are what separate this from a generic brainstorm and what keep it from
-quietly missing whole markets.
+Six steps: **Frame → Scan (+ coverage audit) → Generate → Score → Synthesize & Hand off → Storage
+prompt.** Do not skip the force-brief consequence map inside Frame, the coverage audit inside Scan, the
+diversity partition inside Generate, or the storage prompt at the end — those guards are what separate
+this from a generic brainstorm and what keep it from quietly missing whole markets or losing useful
+ideas in chat history.
 
 **Money-first framing (optional).** If the user asks for "ideas where the money is" (most lucrative /
-follow the money), read `references/money-first.md` first. It doesn't change the five steps — it
+follow the money), read `references/money-first.md` first. It doesn't change the core generation steps — it
 re-points Scan toward money evidence (funding flows, budgets, pricing, WTP), re-weights scoring toward
 Market/Starving Crowd + solo-reachability, and binds you to one hard rule: **every "the money is here"
 claim must cite real evidence fetched this run — never vibes; if you can't source it, it's a hypothesis,
@@ -336,6 +340,21 @@ Then offer the hand-off explicitly: *"อยากให้ส่งอันด
 
 The human chooses what advances. This skill recommends but never decides go/kill.
 
+### Step 6 — Ask where to store the ideas
+
+After producing the shortlist artifact and chat summary, ask one concise storage question before
+ending the run. Read `references/storage.md` for choices, formats, and external-repo merge rules.
+
+Default wording:
+
+> อยากให้เก็บชุดไอเดียนี้ไว้ที่ไหนต่อ? เลือกได้ เช่น `ideas/` ใน repo นี้, repo/vault อื่น,
+> path ที่คุณระบุ, หรือเก็บขั้นต่ำไว้ที่ `outputs/`
+
+The storage question is mandatory. When the host can write files/artifacts, the run must leave a saved
+artifact somewhere; do not offer a "don't save" option. If the user chooses a destination, write/update
+the files for real. If the user names an external repo/vault/path, inspect it first and merge into its
+existing convention when one is visible. Ask only one follow-up if the destination is ambiguous.
+
 ## Operating principles
 
 All of these are the governing principle (Requisite Variety + Reflexivity) applied — not a flat list
@@ -363,6 +382,8 @@ of rules to memorize. They're grouped so you can see which half each serves.
   `ideakit-validate` and stop.
 - **Evidence beats cleverness.** Every idea traces to a real signal from Step 2; cite it.
 - **Hand off, don't hoard.** Output is a shortlist + recommendation to advance, not a finished plan.
+- **Capture before the trail goes cold.** End every run by asking where the generated idea set should
+  live next; a shortlist that cannot be found later has not really entered the pipeline.
 
 ## Execution
 
@@ -389,3 +410,6 @@ Each is the governing principle applied to one stage:
   "latticework"), including the ripple lens for force briefs.
 - `references/scoring.md` — *criteria variety + reflexivity*: the six-dimension rubric (0–5 each) plus
   the fad/Lindy and balance flags.
+- `references/storage.md` — *idea memory*: the end-of-run storage prompt, default portfolio folders,
+  idea-card fields, index rows, and decision/evidence capture rules. Read at Step 6 when the user wants
+  generated ideas stored beyond the shortlist artifact.

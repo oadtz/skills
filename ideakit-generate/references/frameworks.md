@@ -7,6 +7,13 @@ in Step 3. **Scoring foundations** (bottom) explain the thinking behind the rubr
 Use them as thinking tools, not checklists — run the lenses that fit the brief, and reach for a
 different one whenever the set starts to converge.
 
+## Contents
+
+- Generation lenses
+- The ripple lens
+- Scoring foundations
+- Durability of demand
+
 ## Generation lenses (Step 3)
 
 ### Live in the future (Paul Graham)

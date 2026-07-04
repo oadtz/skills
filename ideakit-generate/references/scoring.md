@@ -11,6 +11,14 @@ not a failure of the skill.
 Give a one-line justification per dimension, not just a number. The number orders the shortlist;
 the justification is what the user actually reasons with.
 
+## Contents
+
+- The six dimensions
+- Output of scoring
+- Reading the totals
+- Fad vs. durable
+- Portfolio balance
+
 ## The six dimensions
 
 ### 1. Pull — Pain *or* Desire (Graham, expanded)

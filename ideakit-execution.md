@@ -15,7 +15,8 @@ deliverable real with the appropriate tool** and hand it over, rather than offer
 - **ideakit-discover** → actually write the **edge map** as a file the user can carry forward (and run
   the react-to-concretes research live, fetching real examples to react to).
 - **ideakit-generate** → actually **run the searches** (don't describe the scan), then produce the
-  ranked shortlist with cited evidence — as a file/table, not a verbal summary.
+  ranked shortlist with cited evidence — as a file/table, not a verbal summary — and ask where the
+  generated idea set should be stored or captured.
 - **ideakit-explore** → capture the session's output (options, assumptions, the front-runner, next
   experiments) as a real artifact, not just talk; draw the tree/diagram when it helps.
 - **ideakit-validate** → actually **do the research** (search + fetch) and **write the PRD file**
