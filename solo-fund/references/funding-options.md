@@ -8,6 +8,14 @@ climb only when a specific need justifies the next rung.
 > current details from the source before acting. Nothing here is financial, investment, tax, or legal
 > advice — for a specific deal, read the actual agreement and consult a qualified professional.
 
+## Contents
+
+- Rungs 0-2: bootstrapping, pre-sales, grants, and credits
+- Rungs 3-6: financing, credit, and shared-earnings options
+- Rungs 7-9: accelerators, crowdfunding, angels, and VC
+- Market context
+- Choosing
+
 ## Rung 0 — Bootstrapping (default)
 Founder's savings + reinvested revenue.
 - **Cost:** lowest possible — no equity, no repayment, no strings. **Requires:** personal runway and a

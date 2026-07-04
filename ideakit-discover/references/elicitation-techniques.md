@@ -5,6 +5,16 @@ zero cannot answer "what do you want to build?" directly, and will confabulate i
 the answer from evidence and reaction, never from a poll.** Use them as tools, not a script; follow the
 energy and drill where it lights up.
 
+## Contents
+
+- 1. The Mom Test, turned inward
+- 2. Laddering (means-end)
+- 3. Projective prompts
+- 4. React-to-concretes
+- 5. Critical Incident probing
+- 6. Energy audit
+- Putting it together
+
 ## 1. The Mom Test, turned inward
 
 Rob Fitzpatrick's *Mom Test*: never ask people for opinions about the future ("would you use this?",

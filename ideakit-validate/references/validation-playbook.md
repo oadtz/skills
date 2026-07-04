@@ -17,6 +17,14 @@ stated feasibility and novelty as a hypothesis, not a finding. Machine-generated
 over-rate their own feasibility — so weight real demand evidence (complaints, spend, behavior)
 above plausible narrative, and put extra rigor into investigations 5, 6, and 7 below.
 
+## Contents
+
+- What "Deep" means here
+- The eight investigations
+- Connected capabilities
+- Output format
+- What counts as insufficient research
+
 ## The Eight Investigations
 
 ### 1. Existing Solutions / Direct Competitors

@@ -5,6 +5,15 @@ token, so it gravitates to the **centroid** — the average startup name that ev
 produces. The result *feels* like a brand but is generic, forgettable, and instantly "AI." This file
 exists to push generation off the centroid, toward names a thoughtful human namer would land on.
 
+## Contents
+
+- Why it happens
+- The banned tells
+- Stay globally legible
+- Techniques that produce distinctive, human names
+- Linguistic check
+- Wire it into the workflow
+
 ## Why it happens (and the one mental move that fixes it)
 
 The first 10–15 names a model produces for any brief are the centroid: the obvious, safe, average ones.

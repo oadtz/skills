@@ -12,9 +12,9 @@ and triggers on its own intent — they're connected by handoffs, not merged int
 | 0 | **ideakit-discover** | you have *no flag at all* — not even a domain or skill — and want to find what's yours | an evidence-backed **edge map** (a frame) |
 | 1 | **ideakit-generate** | you have constraints (industry, skills, budget) and want idea options | ranked shortlist + storage prompt |
 | 2 | **ideakit-explore** | you have a direction and want to expand / stress-test it | sharpened options + key unknowns |
-| 3 | **ideakit-validate** | you have a chosen idea and want it validated + turned into a plan | a PRD / PLAN.md ready for an implementation agent |
-| 4 | **ideakit-present** | you need to win customers, investors, or teammates over | persuasive deck / demo / one-pager / memo |
-| — | **ideakit-name** *(utility)* | you need to name the product/brand and check it's actually usable | a shortlist of names that clear domain / trademark / handle screening |
+| 3 | **ideakit-validate** | you have a chosen idea and want it validated + turned into a plan | a PRD / PLAN.md + idea-memory update |
+| 4 | **ideakit-present** | you need to win customers, investors, or teammates over | persuasive deck / demo / one-pager / memo + idea-memory update |
+| — | **ideakit-name** *(utility)* | you need to name the product/brand and check it's actually usable | a screened name shortlist + idea-memory update |
 
 ```
 ideakit-discover  →  ideakit-generate  →  ideakit-explore  →  ideakit-validate  →  ideakit-present
@@ -50,6 +50,9 @@ ideakit-discover  →  ideakit-generate  →  ideakit-explore  →  ideakit-vali
 - **Runtime-agnostic.** Skills name capabilities by intent — research, user input, file/artifact
   output, deck/document creation — instead of hard-coding a single agent's tool names. Host-specific
   tools are adapters, not the core workflow.
+- **Idea memory is shared, not copied.** Once `ideakit-generate` stores an idea set, later skills use
+  `ideakit-memory.md` to update the same idea location with exploration notes, validation outcomes,
+  naming decisions, pitch artifacts, and next actions.
 - **Persuasion is story-first.** `ideakit-present` builds the narrative and emotional core before
   choosing a format (deck/demo/one-pager), because a polished deck around a weak story convinces
   no one. It only sells what validation made true — never hype past the substance.

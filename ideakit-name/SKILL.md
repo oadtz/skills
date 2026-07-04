@@ -10,7 +10,9 @@ description: >
   mixed name types + SMILE/SCRATCH with a real availability gauntlet: RDAP/WHOIS domains, WIPO/USPTO/
   TMview trademarks, social handles, and web collision. It usually runs after `ideakit-validate` and
   feeds `ideakit-present` / `forge-*` / `solo-*`. It is NOT idea generation (use `ideakit-generate`)
-  and does NOT give legal clearance — it screens and flags; a trademark attorney clears.
+  and does NOT give legal clearance — it screens and flags; a trademark attorney clears. When naming a
+  stored ideakit idea, update that idea memory with the naming artifact, shortlist, top pick, and
+  availability watch-outs.
 ---
 
 # Ideakit — Name (brand/product naming + availability screening)
@@ -180,7 +182,9 @@ All of these are the governing principle applied.
 (RDAP/WHOIS/DNS), search the trademark databases, check the handles, and run the web-collision search,
 then write the shortlist + evidence table to a file. **Hard boundary:** *registering a domain, buying a
 handle, or filing a trademark* spends money / is a legal act — stage it and hand the founder the final
-"buy / file" step. Full contract: `../ideakit-execution.md`.
+"buy / file" step. If this names a stored idea or the user names an idea location, read
+`../ideakit-memory.md` and update the matching idea memory with the naming artifact link, shortlist,
+top pick, and unresolved availability/legal watch-outs. Full contract: `../ideakit-execution.md`.
 
 ## Reference files
 

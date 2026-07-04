@@ -9,7 +9,9 @@ description: >
   "this needs to land", or "make it exciting". This skill is persuasion-first: it builds the
   narrative and emotional core BEFORE choosing a format, because a beautiful deck with a weak story
   convinces no one. It is the final stage of the ideakit pipeline (after ideakit-validate). It is
-  NOT for generating ideas (use ideakit-generate) or validating them (use ideakit-validate).
+  NOT for generating ideas (use ideakit-generate) or validating them (use ideakit-validate). When the
+  idea is stored in an ideakit memory location, update that idea with the pitch artifact, audience,
+  core message, ask, and next action.
 ---
 
 # Ideakit — Present (make people act)
@@ -155,7 +157,9 @@ A deck is a means, not the finish line — name the action it's meant to unlock.
 **Don't stop at advice — produce the deliverable.** Actually **build the deck / one-pager / demo** as a
 real file (use the document skills where polish matters), not an outline of one. Stage anything that
 publishes the pitch or sends it from the user's identity (to investors/customers) for their approval.
-Full contract: `../ideakit-execution.md`.
+If this presentation is for a stored idea or the user names an idea location, read
+`../ideakit-memory.md` and update the matching idea memory with the artifact link, audience, core
+message, ask, and next commercial/build action. Full contract: `../ideakit-execution.md`.
 
 ## Reference files
 

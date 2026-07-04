@@ -10,7 +10,9 @@ description: >
   any moment a product manager or founder needs a sparring partner rather than a deliverable.
   Use it to EXPAND and CHALLENGE a direction the user already has in mind. It is NOT for
   generating brand-new business ideas from scratch when the user has nothing yet (use ideakit-generate
-  for that) and NOT for deep validation or producing a PRD (use ideakit-validate for that).
+  for that) and NOT for deep validation or producing a PRD (use ideakit-validate for that). When the
+  direction came from a stored ideakit idea, maintain that idea memory location with exploration notes,
+  variants, assumptions, and next experiments.
 ---
 
 # Ideakit — Explore (thinking partner)
@@ -300,7 +302,9 @@ When the user has a clear front-runner, offer the natural next step: hand it to 
 **Don't stop at talk — capture the output.** A brainstorm with no capture never happened. Once the
 session converges, write the real artifact (the options, assumptions to test, the front-runner, and the
 next experiments) as a file, and draw the tree/diagram when it helps. Keep the thinking collaborative;
-just don't let the value evaporate in chat. Full contract: `../ideakit-execution.md`.
+just don't let the value evaporate in chat. If the session is attached to a stored idea or the user
+names an idea location, read `../ideakit-memory.md` and update the matching idea card/index/decision
+trail after writing the exploration artifact. Full contract: `../ideakit-execution.md`.
 
 ## Common Brainstorming Anti-Patterns
 

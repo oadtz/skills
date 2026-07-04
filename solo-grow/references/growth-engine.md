@@ -4,6 +4,16 @@ The "how" behind `solo-grow`. Spine: **retention before acquisition; loops over 
 when the unit economics clear.** Everything here rests on named, established frameworks — don't invent
 benchmarks or assert "this channel works" without evidence (see `../solo-grounding.md`).
 
+## Contents
+
+- AARRR / Pirate Metrics
+- Activation and the Aha moment
+- Retention
+- Growth loops vs funnels
+- Unit economics
+- Self-serve funnel and lifecycle automation
+- How to iterate
+
 ## AARRR / Pirate Metrics (the map)
 
 Dave McClure's framework (500 Startups, 2007): the five metrics a product-led business tracks —

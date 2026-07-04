@@ -8,6 +8,17 @@ features, program eligibility — and those are exactly the claims a model is mo
 to remember as stale. This file is self-contained on purpose; the `solo-*` family carries its own
 guard and does not depend on any other skillset.
 
+## Contents
+
+- The one rule
+- Grounding is not hedging
+- What counts as a claim that must be grounded
+- How to ground each claim
+- Freshness
+- When live research is unavailable
+- Verification gate
+- Not advice
+
 ## The one rule
 
 **Every external factual claim is either backed by a source you fetched this run, or it is visibly

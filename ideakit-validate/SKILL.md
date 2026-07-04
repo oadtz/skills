@@ -10,7 +10,8 @@ description: >
   buildable plan. Acts as a thinking partner — expanding the seed, surfacing assumptions, conducting
   deep market and feasibility research, sharpening the concept, and producing a markdown PRD ready for
   handoff to an implementation agent or human collaborator. Adapts to either software products or
-  general projects.
+  general projects. When the idea came from a stored ideakit location, update that idea memory with the
+  PRD link, evidence, validation outcome, stage, and decision notes.
 ---
 
 # Ideakit — Validate (idea → PRD)
@@ -336,6 +337,11 @@ once. Suggest next steps explicitly so the user knows where to go:
 
 Most validated ideas should go to **both** `forge-architect` (build) and `solo-model` (monetize) in
 parallel — say so rather than implying it's one or the other.
+
+If the input came from a stored idea, an idea card, or a user-named idea location, read
+`../ideakit-memory.md` and update the matching idea memory after the PRD is written. Record the PRD
+link, key evidence, top assumptions, kill criteria, recommendation, and stage (`validated`, `parked`,
+or `killed`). If no idea location is known, ask one concise storage question after delivering the PRD.
 
 ## Execution
 

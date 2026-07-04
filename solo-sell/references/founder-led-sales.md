@@ -4,6 +4,17 @@ This is the "how" behind `solo-sell`. The spine: **early sales is learning sold 
 time, and the goal is a *repeatable motion*, not a revenue number.** None of this is a script to read
 at people — it's a way to run real conversations that simultaneously close deals and sharpen the offer.
 
+## Contents
+
+- When this motion applies
+- ICP and target list
+- Outreach as hypothesis tests
+- Discovery calls
+- Close or pre-sell
+- Price objections
+- Common objections
+- Repeatability
+
 ## When this motion applies (and when it doesn't)
 
 Founder-led, conversation-based selling is right when **B2B (or high-consideration B2C), deal value

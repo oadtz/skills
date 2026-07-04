@@ -18,11 +18,14 @@ deliverable real with the appropriate tool** and hand it over, rather than offer
   ranked shortlist with cited evidence — as a file/table, not a verbal summary — and ask where the
   generated idea set should be stored or captured.
 - **ideakit-explore** → capture the session's output (options, assumptions, the front-runner, next
-  experiments) as a real artifact, not just talk; draw the tree/diagram when it helps.
+  experiments) as a real artifact, not just talk; draw the tree/diagram when it helps; update idea
+  memory when a stored idea/location is in play.
 - **ideakit-validate** → actually **do the research** (search + fetch) and **write the PRD file**
-  (`outputs/<slug>-PLAN.md`) — the skill's whole point is a written, buildable plan, not a verbal one.
+  (`outputs/<slug>-PLAN.md`) — the skill's whole point is a written, buildable plan, not a verbal one;
+  update the matching idea memory with the PRD link and validation outcome when available.
 - **ideakit-present** → actually **build the deck / one-pager / demo** as a file (using the document
-  skills where polish matters), not an outline of one.
+  skills where polish matters), not an outline of one; update idea memory with the pitch artifact when
+  available.
 
 ## Pick the right tool for the job
 

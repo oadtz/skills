@@ -9,6 +9,11 @@ matches the mode selected in Phase 0.
 The PRD must be **complete and self-contained**. A future implementation agent or human collaborator
 should be able to read this file and start work without needing the conversation that produced it.
 
+## Contents
+
+- Variant A: Software Product / Feature
+- Variant B: General Project / Initiative
+
 ---
 
 ## Variant A — Software Product / Feature
