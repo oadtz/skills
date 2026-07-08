@@ -43,8 +43,6 @@ operational risk. Three consequences, all the same principle:
    profit and the founder's life, not vanity growth. This is a deliberate stance against the
    hyper-scale defaults that don't fit a solo business.
 
-Everything below is this principle applied to one decision.
-
 ## Where this sits in the pipeline
 
 ```
@@ -158,8 +156,6 @@ Then present the plan:
 The user commits to the operating plan and guardrails before finishing.
 
 ## Operating principles
-
-All of these are the governing principle applied — not a flat checklist.
 
 - **Leverage over hours.** The answer to "too much work" is almost never "more hours" — it's
   eliminate → self-serve → automate → template → delegate, in that order.

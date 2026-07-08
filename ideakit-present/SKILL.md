@@ -159,7 +159,8 @@ real file (use the document skills where polish matters), not an outline of one.
 publishes the pitch or sends it from the user's identity (to investors/customers) for their approval.
 If this presentation is for a stored idea or the user names an idea location, read
 `../ideakit-memory.md` and update the matching idea memory with the artifact link, audience, core
-message, ask, and next commercial/build action. Full contract: `../ideakit-execution.md`.
+message, ask, and next commercial/build action. Full contract: `../ideakit-execution.md`. Craft bar
+for every line of copy (no sentence the audience has read in a hundred decks): `../ideakit-craft.md`.
 
 ## Reference files
 

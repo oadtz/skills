@@ -1,17 +1,14 @@
 ---
 name: ideakit-validate
 description: >
-  This skill should be used when the user wants to take a raw idea — even just a few words or a vague
-  seed — and craft it into an executable plan through collaborative thinking. Triggers on phrases like
-  "craft idea: X", "new idea: X", "I have an idea", "let's think through this", "help me develop this",
-  "shape this idea", "I'm thinking about building X", "turn this into a spec", or any time the user
-  shares a brief, undeveloped concept and wants to think it out loud. Also triggers when the user hands
-  off a chosen idea (or a scored shortlist) from ideakit-generate and wants it validated and turned into a
-  buildable plan. Acts as a thinking partner — expanding the seed, surfacing assumptions, conducting
-  deep market and feasibility research, sharpening the concept, and producing a markdown PRD ready for
-  handoff to an implementation agent or human collaborator. Adapts to either software products or
-  general projects. When the idea came from a stored ideakit location, update that idea memory with the
-  PRD link, evidence, validation outcome, stage, and decision notes.
+  Validate and shape a raw idea into an executable plan and markdown PRD. Use when the user says
+  "craft idea: X", "new idea: X", "I have an idea", "help me develop this", "shape this idea",
+  "I'm thinking about building X", "turn this into a spec", or hands off a chosen idea/shortlist
+  from ideakit-generate for validation. Acts as a thinking partner: expand the seed, surface
+  assumptions, do market and feasibility research, sharpen the concept, and produce a PRD ready for
+  an implementation agent or human collaborator. Adapts to software products or general projects.
+  If the idea came from a stored ideakit location, update that idea memory with the PRD link,
+  evidence, validation outcome, stage, and decision notes.
 ---
 
 # Ideakit — Validate (idea → PRD)
@@ -253,7 +250,11 @@ Plus 3 scenarios at 18 months:
 ```
 
 Cite sources inline. If you couldn't find data on a particular point, say so explicitly — don't
-fabricate. Pause for user reaction before continuing.
+fabricate. **The brief must state at least one disconfirming finding plainly, up front** — the thing
+the research surfaced that argues *against* the idea — not buried in a risk table
+(`../ideakit-craft.md`). A research brief that only confirms is a research brief that wasn't looking;
+if genuinely nothing disconfirming turned up after actively looking, say that explicitly rather than
+manufacturing a weak negative. Pause for user reaction before continuing.
 
 ## Phase 3 — Synthesis & Sharpening
 
@@ -349,6 +350,7 @@ or `killed`). If no idea location is known, ask one concise storage question aft
 the research for real (search + fetch, cited, never invented) and actually **write the PRD file**
 (`outputs/<slug>-PLAN.md`) — don't deliver it as verbal summary. Keep the user's confirmation gates
 (snapshot, sharpened idea); execute fully once they approve. Full contract: `../ideakit-execution.md`.
+Quality bar for the PRD's prose: `../ideakit-craft.md`.
 
 ## Re-running the Skill
 

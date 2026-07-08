@@ -39,8 +39,6 @@ and the shortest gap to cash. Three consequences, all the same principle:
    and churn all land on one desk. A model that's 20% more lucrative but doubles operational load is
    usually the wrong solo model. Favor high-margin, low-touch, asynchronous revenue.
 
-Everything below is this principle applied to one decision.
-
 ## Where this sits in the pipeline
 
 ```
@@ -147,8 +145,6 @@ The user picks the model and approves the trade-offs before moving on.
 
 ## Operating principles
 
-All of these are the governing principle applied — not a flat checklist.
-
 - **Cashflow is oxygen.** Bias every tie toward the option that bills sooner. A profitable small thing
   beats an unprofitable big thing for a solo founder, always.
 - **Charge from day one.** "Free until it's perfect" is how solo products die — free users don't
@@ -167,7 +163,8 @@ All of these are the governing principle applied — not a flat checklist.
 around, build the real deliverables with the right tool (write the actual copy/spec/script/doc/asset,
 run the analysis, do the research) instead of handing back advice. Stage anything that spends money,
 acts from the founder's accounts, or is irreversible for their one-click approval. Full contract:
-`../solo-execution.md`.
+`../solo-execution.md`. Craft bar for the offer's wording (buyer-world outcomes, not category
+language): `../solo-craft.md`.
 
 ## Reference files
 

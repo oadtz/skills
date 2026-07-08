@@ -42,8 +42,6 @@ principle:
    *Then* turn the motion that worked into a repeatable cadence. Don't automate before you have a
    working motion to automate.
 
-Everything below is this principle applied to one decision.
-
 ## Where this sits in the pipeline
 
 ```
@@ -130,8 +128,6 @@ The user commits to the channel and cadence before moving on.
 
 ## Operating principles
 
-All of these are the governing principle applied — not a flat checklist.
-
 - **Distribution is a first-class workstream, equal to building.** Schedule it; don't treat it as
   what's left over after the code. AI making the build cheap raises distribution's relative value.
 - **One channel, deep.** Mastery of one beats dabbling in five. Add a second only once the first is
@@ -150,7 +146,9 @@ All of these are the governing principle applied — not a flat checklist.
 
 **Don't stop at the plan — execute it.** Once the founder has made the decisions this skill is built
 around, build the real deliverables with the right tool (draft the actual content calendar, posts, SEO
-outlines, and outreach messages ready to use) instead of handing back advice. Stage anything that posts
+outlines, and outreach messages ready to use) instead of handing back advice. Every post and message a
+prospect will read passes the craft bar in `../solo-craft.md` — no cold-email centroid, no
+engagement-bait formats, the founder's actual voice. Stage anything that posts
 publicly, acts from the founder's accounts, or spends money for their one-click approval. Full contract:
 `../solo-execution.md`.
 

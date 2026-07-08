@@ -39,8 +39,7 @@ principle:
    short enough that your cash survives**. A solo usually can't float a long payback, so default to
    product/content/referral loops; switch on paid only after the math is proven (see `references/growth-engine.md`).
 
-Everything below is this principle applied. The point of "automatic" is leverage — the founder builds
-the engine once, not sells once per customer.
+The point of "automatic" is leverage — the founder builds the engine once, not sells once per customer.
 
 ## Is this even your lane? (route honestly)
 
@@ -156,8 +155,6 @@ The founder owns the calls; this skill builds and instruments the engine.
 
 ## Operating principles
 
-All of these are the governing principle applied — not a flat checklist.
-
 - **Retention is the foundation.** Acquisition into a leaky bucket is malpractice. Fix the curve first;
   a solo cannot out-acquire churn by hand.
 - **Loops over funnels.** Build something that compounds (each cohort brings the next), not a linear
@@ -177,7 +174,9 @@ All of these are the governing principle applied — not a flat checklist.
 
 **Don't stop at the plan — execute it.** Build the real deliverables with the right tool (write the
 funnel/landing copy, the lifecycle/onboarding email sequences, and a CAC/LTV/retention tracking spec or
-a script to compute it from the founder's data) instead of handing back advice. Stage anything that
+a script to compute it from the founder's data) instead of handing back advice. All landing and
+lifecycle copy passes `../solo-craft.md` — no marketing-tell centroid; emails read like a helpful human
+wrote them once, not like a drip tool generated them forever. Stage anything that
 runs/pays for ads, sends from the founder's accounts, or spends money for their one-click approval.
 Full contract: `../solo-execution.md`.
 

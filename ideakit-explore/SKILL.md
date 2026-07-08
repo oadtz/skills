@@ -2,17 +2,13 @@
 name: ideakit-explore
 description: >
   Sharp thinking partner for exploring problem spaces, generating solution options, and
-  stress-testing ideas before they become a spec. Use this skill whenever the user wants to
-  brainstorm, think out loud, explore an opportunity, generate multiple approaches to a product
-  or business problem, pressure-test a direction, or play devil's advocate — triggers include
-  "help me brainstorm", "let's think through this", "what are some ways to...", "poke holes in
-  this idea", "I'm stuck on...", "how might we...", "stress-test this", "what am I missing", or
-  any moment a product manager or founder needs a sparring partner rather than a deliverable.
-  Use it to EXPAND and CHALLENGE a direction the user already has in mind. It is NOT for
-  generating brand-new business ideas from scratch when the user has nothing yet (use ideakit-generate
-  for that) and NOT for deep validation or producing a PRD (use ideakit-validate for that). When the
-  direction came from a stored ideakit idea, maintain that idea memory location with exploration notes,
-  variants, assumptions, and next experiments.
+  stress-testing ideas before they become a spec. Use when the user wants to brainstorm, think
+  out loud, explore an opportunity, generate multiple approaches, pressure-test a direction, play
+  devil's advocate, or asks "what are some ways to...", "how might we...", "poke holes in this",
+  "what am I missing", or "I'm stuck on...". It EXPANDS and CHALLENGES a direction the user already
+  has; it is NOT for blank-slate business idea generation (use ideakit-generate) or deep validation/
+  PRD creation (use ideakit-validate). If the direction came from a stored ideakit idea, maintain
+  that idea memory with exploration notes, variants, assumptions, and next experiments.
 ---
 
 # Ideakit — Explore (thinking partner)
@@ -189,23 +185,6 @@ Systematic ideation using seven lenses on an existing product or process:
 - **Eliminate**: What if we removed this entirely? Would anyone notice?
 - **Reverse**: What if we did the opposite? Flipped the sequence? Inverted the default?
 
-### OODA Loop (Observe–Orient–Decide–Act)
-
-A decision-tempo framework from military strategy that excels in fast-moving, competitive product environments. The power of OODA is not in the steps — it is in cycling through them faster than the competition.
-
-1. **Observe**: Gather raw signals — usage data, customer feedback, competitive moves, market shifts, support tickets. Do not filter yet. Cast wide.
-2. **Orient**: Make sense of what you observed. This is the critical step. Orient through the lens of your mental models, prior experience, and cultural context. Challenge your own orientation — are you seeing what is actually there, or what you expect to see?
-3. **Decide**: Choose a direction. Not a final commitment — a hypothesis to test. The decision should be proportional to what you know. Small bets when uncertain, bigger moves when the signal is clear.
-4. **Act**: Execute the decision. Ship something. Run the experiment. Make the change. Then immediately return to Observe with new data.
-
-**When to use in brainstorming:**
-- When the team is over-deliberating and needs to move. OODA favors tempo over perfection.
-- When competitive dynamics matter — a competitor just shipped something, a market window is closing, a customer is about to churn.
-- When the brainstorm keeps circling without converging. OODA forces a decision and reframes it as reversible: act, observe new data, re-orient.
-- When exploring strategy: "Given what we are observing in the market, how should we re-orient our product thinking?"
-
-**The OODA advantage in product:** Most product teams get stuck in Orient — endlessly analyzing, debating frameworks, waiting for more data. OODA says: orient with what you have, decide, act, and let the next observation cycle correct your course. The team that cycles fastest learns fastest.
-
 ### Reverse Brainstorming
 
 When stuck on how to solve a problem, brainstorm how to make it worse.
@@ -246,7 +225,10 @@ Generate many ideas. No judgment. Quantity enables quality.
 
 ### 3. Provoke
 
-Challenge and extend thinking. This is where the sparring partner role matters most.
+Challenge and extend thinking. This is where the sparring partner role matters most. The session's
+success bar: **at least one option or reframe should make the user say "I hadn't thought of that"**
+(the surprise test in `../ideakit-craft.md`) — if everything on the table is something the user could
+have listed alone, the partner hasn't shown up yet.
 
 - "What is the strongest argument against this?"
 - "Who would hate this and why?"
@@ -304,7 +286,8 @@ session converges, write the real artifact (the options, assumptions to test, th
 next experiments) as a file, and draw the tree/diagram when it helps. Keep the thinking collaborative;
 just don't let the value evaporate in chat. If the session is attached to a stored idea or the user
 names an idea location, read `../ideakit-memory.md` and update the matching idea card/index/decision
-trail after writing the exploration artifact. Full contract: `../ideakit-execution.md`.
+trail after writing the exploration artifact. Full contract: `../ideakit-execution.md`. Quality bar
+for the captured output: `../ideakit-craft.md`.
 
 ## Common Brainstorming Anti-Patterns
 

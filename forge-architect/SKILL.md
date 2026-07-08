@@ -43,8 +43,6 @@ does three things, and they are all this one principle:
    decisions across sessions. This is the carve-out to YAGNI: defer features freely, but never defer
    a hard-to-reverse decision.
 
-Everything below is this principle applied to one artifact.
-
 ## Where this sits in the pipeline
 
 ```
@@ -151,8 +149,6 @@ The user approves the foundation before any building begins.
 
 ## Operating principles
 
-All of these are the governing principle applied — not a flat checklist.
-
 **Decide explicitly:**
 - **Specify boundaries and contracts, not exhaustive detail.** Over-specification revives waterfall.
 - **No choice by omission.** If you didn't decide it, the model's default decided it for you.
@@ -181,8 +177,6 @@ stack/data-store and any irreversible call; execute fully once decided. Stage an
 paid infra or pushes to shared branches for their approval. Full contract: `../forge-execution.md`.
 
 ## Reference files
-
-Each is the governing principle applied to one decision:
 
 - `references/stack-selection.md` — *default boring*: criteria for choosing a stack when AI writes
   most of the code; the innovation-token rule; library-vs-model fit.

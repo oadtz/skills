@@ -39,8 +39,6 @@ to people with the problem. Two truths shape everything here, and they're two ha
    number — is the sign it's working and the moment a playbook exists. Only then is anything worth
    automating or (much later) handing to someone else.
 
-Everything below is these two applied to one motion.
-
 ## Where this sits in the pipeline
 
 ```
@@ -144,8 +142,6 @@ The user owns the relationships and the calls; this skill arms them and keeps th
 
 ## Operating principles
 
-All of these are the governing principle (selling is learning · repeatability over revenue) applied.
-
 - **Sell by listening.** Talk less than half the time; the founder who understands the pain best wins
   the deal. Pitching at people is the amateur move.
 - **Behavior over words (Mom Test).** A pre-payment, a signed pilot, a calendar hold beat any amount of
@@ -167,7 +163,10 @@ All of these are the governing principle (selling is learning · repeatability o
 
 **Don't stop at the plan — execute it.** Build the real deliverables with the right tool (draft the
 actual outreach emails, call agenda, objection-response doc, and pre-sell offer in the founder's voice)
-instead of handing back advice. Stage anything that *sends* from the founder's accounts or commits them
+instead of handing back advice. Every outreach draft passes `../solo-craft.md`: no cold-email centroid
+("Quick question", fake personalization, the reflexive 15-minute-call ask), each message anchored to a
+real prospect detail, and the read-aloud test — if the founder wouldn't say it to the prospect's face,
+cut it. Stage anything that *sends* from the founder's accounts or commits them
 for their one-click approval — you draft, they hit send. Full contract: `../solo-execution.md`.
 
 ## Reference files

@@ -44,8 +44,6 @@ hyper-scale. Three consequences, all the same principle:
    a one-off product can't. A SaaS with growth potential fits TinySeed; a calm lifestyle business
    doesn't. The right instrument depends on what `solo-model` chose — don't force a mismatch.
 
-Everything below is this principle applied to one decision.
-
 ## Where this sits in the pipeline
 
 ```
@@ -146,8 +144,6 @@ Spell out what the path actually costs and when the *next* rung becomes justifie
 The user approves the funding path before moving on.
 
 ## Operating principles
-
-All of these are the governing principle applied — not a flat checklist.
 
 - **Bootstrapping is the default, not the fallback.** It's the cheapest capital and the only kind with
   no strings; treat raising as the exception that must be justified.

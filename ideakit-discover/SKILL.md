@@ -194,9 +194,6 @@ never decides what they should do.
 
 ## Operating principles
 
-All of these are the governing principle (excavate, don't poll · person before market) applied — not a
-flat checklist.
-
 **Excavate, don't poll:**
 - **Evidence over hypotheticals.** Trust what they've *done* over what they *say* they want. When you
   must ask about the future, anchor it in the past ("you spent two years on X — what about it held you?").
@@ -226,7 +223,9 @@ flat checklist.
 **Don't stop at advice — produce the deliverable.** Once the user has steered the thinking, build the
 real artifact this skill is for (here, the **edge map** as a file) with the right tool, and run any
 react-to-concretes research for real (cited, never invented). Stage anything that publishes or acts from
-the user's identity for their approval. Full contract: `../ideakit-execution.md`.
+the user's identity for their approval. Full contract: `../ideakit-execution.md`. Quality bar for the
+edge map itself (its surprise: naming at least one edge the person waved off as ordinary):
+`../ideakit-craft.md`.
 
 ## Reference files
 

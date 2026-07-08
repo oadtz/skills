@@ -39,40 +39,25 @@ weaknesses this skill is explicitly designed to counter:
 Keep these two facts in mind throughout. The skill's value is novel idea *sourcing*; rigor and
 feasibility come from the downstream steps and the human.
 
-## The governing principle (read first — everything below derives from this)
+## The governing principle (read first)
 
 Every blind spot this skill has ever had — suppressing desire markets, ignoring non-Western signal,
-chasing fads, judging on one criterion — is the *same* failure wearing different clothes: **a fixed
-frame.** A generator reasons through a frame (which sources it scans + which lens it scores with),
-and a frame is simultaneously what lets it see *and* what blinds it. You cannot out-checklist this by
-adding one special-case rule per blind spot; that's an endless patch chase. There is one principle
-instead, with two halves:
+chasing fads, judging on one criterion — is the same failure: **a fixed frame**. Two counters, applied
+at every stage:
 
-1. **Requisite Variety** (Ashby's Law: *only variety absorbs variety*; Munger's *latticework* — "to a
-   man with a hammer, everything is a nail"). The opportunity space is wildly varied, so the
-   generator must hold a matching variety of **inputs, lenses, and judgment criteria**. Insufficient
-   internal variety → guaranteed systematic blind spots.
-2. **Reflexivity** (*the map is not the territory*). The frame is always provisional. So the skill
-   must make its own frame explicit, deliberately scan and generate *against* it, and treat its own
-   scores as estimates, not verdicts.
+1. **Variety** — vary your inputs (sources), lenses (generation), and criteria (scoring). A generator
+   with less internal variety than the opportunity space has guaranteed blind spots. ("To a man with
+   a hammer, everything is a nail.")
+2. **Reflexivity** — the frame is always provisional. Make it explicit, deliberately scan *against*
+   it, and treat your own scores as estimates, not verdicts.
 
-Everything in this skill is one of these two applied to a stage — not a separate invention:
+**When a new blind spot appears, don't add a special-case rule** — ask which of the two was thin
+(input variety? lens variety? a missing criterion? mistook the frame for the territory?) and
+strengthen that general mechanism instead. That ends the patch chase.
 
-| Stage | What it is | Which half it serves |
-|---|---|---|
-| Force classification + consequence map (Step 1) | vary your **causal depth**; the trigger is not the territory — map its consequences | Variety + Reflexivity |
-| Coverage audit (Step 2) | vary your **inputs**; name & counter your source bias | Variety + Reflexivity |
-| Diversity partitions (Step 3) | vary your **generative lenses**; spread, don't cluster | Requisite Variety |
-| Multi-dimension rubric, incl. Pull = pain *or* desire (Step 4) | vary your **judgment criteria**; never score on one axis | Requisite Variety |
-| Portfolio balance + fad check (Step 5) | **synthesize** varied bets; declare the mix; don't monoculture | Variety + Reflexivity |
-| Storage prompt + idea memory (Step 6) | capture the output where it can be found, merged, and revisited | Reflexivity |
-| Honest scoring & "human decides" | scores are provisional; the frame can be wrong | Reflexivity |
-
-**The rule that ends the patch chase:** when a *new* blind spot appears, do **not** add a new
-special-case rule. Ask only — *which half was thin?* Was it missing input variety (fix via the
-coverage audit's axes), lens variety (add/rotate a generative lens), judgment variety (was a whole
-criterion absent?), or reflexivity (did we mistake our frame for the territory)? Strengthen the
-*general* mechanism, and the specific blind spot dissolves along with its whole class.
+And one warning the two counters don't cover: process guards prevent *narrow* output, not *bad*
+output. The deliverable itself must clear the bar in `../ideakit-craft.md` — surprise, specificity,
+no centroid, no quota-filling.
 
 ## The pipeline this skill sits in
 
@@ -237,7 +222,16 @@ Category Creation for net-new demand). Aim for genuine spread — if three ideas
 one theme, collapse them to one and generate a structurally different one.
 
 Each raw idea is one or two sentences: *who* has *what* pain **or want**, and the *shape* of the
-solution. Don't polish yet.
+solution. Don't polish yet — but do make it *specific* from the start; vagueness at this stage is
+what turns into interchangeable slop at Step 5. The bar:
+
+- Slop: *"An AI platform that helps restaurants optimize operations."* (no who, no evidence, any
+  generator produces this)
+- Sharp: *"Bangkok street-food vendors lose their best hours to raw-ingredient runs — a pooled
+  dawn-delivery co-op app, seeded from the 3 wholesale LINE groups found in the scan."* (a who, a
+  found signal, a mechanism)
+
+An idea sentence that cites nothing from Step 2 is a guess wearing an idea's clothes.
 
 **Spread gate — do not proceed to Step 4 until all are true** (this is the main guard against
 regressing to a B2B/painkiller monoculture; full detail in `references/diversity.md` §5):
@@ -252,15 +246,10 @@ regressing to a B2B/painkiller monoculture; full detail in `references/diversity
 - [ ] at least one **"works today"** idea and one **"bets on a near-future capability"** idea, AND
 - [ ] at least one **desire/identity-driven** idea (not only painkiller/utility) — *unless* the brief
   is explicitly a pure-utility domain, AND
-- [ ] **for force/event briefs only:** at least one **ring-2** and one **ring-3** idea (the
-  order-of-effect axis in `references/diversity.md`) — not only direct mitigation of the force, AND
-- [ ] **for force/event briefs only:** at least **two ideas that do not name the literal force or
-  direct mitigation in the idea sentence** (e.g. heatwave-adjacent ideas about water allocation,
-  shifted work hours, sleep, insurance, care, food, retail, or city operations), AND
-- [ ] **for force/event briefs only:** at least **three domains** from the consequence map are
-  represented, AND
-- [ ] **for force/event briefs only:** at least **one idea follows changed spending or a newly
-  created job**, not just a newly painful condition.
+- [ ] **for force/event briefs only:** the set escapes the literal force — at least one **ring-2**
+  and one **ring-3** idea, at least **two ideas that don't name the force or its direct mitigation
+  in the sentence**, at least **three consequence-map domains** represented, and at least **one idea
+  that follows changed spending or a newly created job** rather than a newly painful condition.
 
 If any box fails, regenerate the missing kind — don't proceed. A set can pass customer/mechanism
 diversity and still fail if every route to market is B2B SaaS or enterprise sales; in that case,
@@ -269,6 +258,11 @@ For force briefs, a literal/direct set almost always means the consequence map w
 2 searched the force itself instead of its consequences; go back to the map/scan and widen before
 scoring. An all-utility set almost always means the culture/desire sources or the coverage audit were
 skipped; go back to Step 2.
+
+**But the gate guarantees spread, not quality.** An idea generated only to tick a box — "one consumer
+idea because the checklist demands it" — is exactly as dead as a converged one. Regenerate until the
+filler cell holds an idea you'd defend on its own merits (see `../ideakit-craft.md`, "Quota-filling is
+still slop"); if its best candidate stays weak after honest effort, say so instead of dressing it up.
 
 ### Step 4 — Score
 
@@ -311,8 +305,15 @@ shortlist has requisite variety and you stay reflexive about the mix. Before wri
   care, meaning, health, safety → Lindy-durable), otherwise discount it or pair it with a durability
   plan. This governs against trend-chasing without suppressing desire.
 
+- **Run the craft bar (`../ideakit-craft.md`) on the shortlist itself.** The #1 idea must pass the
+  surprise test (contain something the user couldn't have written before the run). Find the
+  most-expected idea in the set — the one 50 other AI runs on this brief would also produce — and
+  either cut it or defend it in one line. Every idea sentence passes the specificity test (a who +
+  a found signal), and the write-up leads with the run's most surprising finding, not with the table.
+
 Produce a ranked table of the top 3–5 ideas. **Produce it in the user's language** — the template
-below is illustrative (shown in Thai). The table is a *summary*; the full six sub-scores and the
+below is illustrative (shown in Thai). The template is a floor, not a mold: keep the fields, don't
+clone the shape. The table is a *summary*; the full six sub-scores and the
 one-line justification per dimension (required by `scoring.md`) live in the per-idea reasoning below
 the table, not in the table itself.
 
@@ -357,9 +358,6 @@ existing convention when one is visible. Ask only one follow-up if the destinati
 
 ## Operating principles
 
-All of these are the governing principle (Requisite Variety + Reflexivity) applied — not a flat list
-of rules to memorize. They're grouped so you can see which half each serves.
-
 **Requisite Variety** — hold enough variety to match a varied world:
 - **Diversity is a feature, not noise.** A spread of structurally different ideas beats five polished
   variations of one theme.
@@ -390,11 +388,9 @@ of rules to memorize. They're grouped so you can see which half each serves.
 **Don't stop at advice — produce the deliverable.** Actually *run* the searches (don't describe the
 scan), then build the ranked shortlist with cited evidence as a real file/table. Do the research for
 real under the grounding rule (cite or mark as assumption; never invent market data). Full contract:
-`../ideakit-execution.md`.
+`../ideakit-execution.md`. Quality bar for the deliverable itself: `../ideakit-craft.md`.
 
 ## Reference files
-
-Each is the governing principle applied to one stage:
 
 - `references/trend-sources.md` — *input variety*: where to scan + copy-ready query patterns.
 - `references/money-first.md` — *optional "where the money is" framing*: re-points Scan/Score toward

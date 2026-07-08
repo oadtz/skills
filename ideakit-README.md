@@ -53,6 +53,10 @@ ideakit-discover  →  ideakit-generate  →  ideakit-explore  →  ideakit-vali
 - **Idea memory is shared, not copied.** Once `ideakit-generate` stores an idea set, later skills use
   `ideakit-memory.md` to update the same idea location with exploration notes, validation outcomes,
   naming decisions, pitch artifacts, and next actions.
+- **Process guards ≠ output quality.** Diversity gates and coverage audits prevent *narrow* output,
+  not *bad* output — a run can pass every checklist and still deliver interchangeable, generic slop.
+  `ideakit-craft.md` is the family-level bar for the deliverable itself (surprise test, centroid cut,
+  specificity test, voice test, no quota-filling); every skill runs it before handing anything over.
 - **Persuasion is story-first.** `ideakit-present` builds the narrative and emotional core before
   choosing a format (deck/demo/one-pager), because a polished deck around a weak story convinces
   no one. It only sells what validation made true — never hype past the substance.

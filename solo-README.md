@@ -78,6 +78,11 @@ is one application of that idea:
   before stating any external fact (prices, funding terms, channel/market stats, tool facts):
   source-or-tag every claim, re-fetch time-sensitive numbers, stay decisive. It's the family's own
   guard — self-contained, not shared across other skillsets — so `solo-*` stays standalone.
+- **Shared craft bar for customer-facing words.** Grounding keeps the facts honest;
+  **[solo-craft.md](solo-craft.md)** keeps the words human. The skills that draft copy a prospect
+  will read (`solo-model`'s offer, `solo-distribute`'s posts, `solo-sell`'s outreach, `solo-grow`'s
+  funnel/lifecycle emails) run it before delivering: no cold-email or marketing-copy centroid, real
+  personalization or none, and the read-aloud test — copy the founder would actually say out loud.
 - **Runtime-agnostic.** Skills name capabilities by intent — user input, research, file/artifact
   output, connector/registry lookups — not one agent's tool names. Host-specific tools are adapters.
 - **Care for the person.** `solo-sustain` treats founder wellbeing as a first-class operational

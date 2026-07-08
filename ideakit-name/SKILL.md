@@ -2,17 +2,14 @@
 name: ideakit-name
 description: >
   Generate strong product / brand / company names AND screen them for availability — so a name isn't
-  just catchy but actually usable (the domain is gettable, no obvious trademark conflict, the social
-  handles are free, and nobody in the market already owns it). Use this skill whenever the user wants
-  to "name a product / brand / company", "come up with names for", "brainstorm names", "help me name
-  this", "find an available name", "is [name] taken", "check if [name] is available", "check the
-  domain / trademark / handles for [name]", or needs naming for something they're building. It pairs
-  mixed name types + SMILE/SCRATCH with a real availability gauntlet: RDAP/WHOIS domains, WIPO/USPTO/
-  TMview trademarks, social handles, and web collision. It usually runs after `ideakit-validate` and
-  feeds `ideakit-present` / `forge-*` / `solo-*`. It is NOT idea generation (use `ideakit-generate`)
-  and does NOT give legal clearance — it screens and flags; a trademark attorney clears. When naming a
-  stored ideakit idea, update that idea memory with the naming artifact, shortlist, top pick, and
-  availability watch-outs.
+  just catchy but usable. Use when the user wants to name a product, brand, company, or project;
+  asks to "come up with names", "brainstorm names", "help me name this", "find an available name",
+  "is [name] taken", or "check the domain / trademark / handles". It pairs mixed name types and
+  SMILE/SCRATCH with an availability gauntlet: RDAP/WHOIS domains, WIPO/USPTO/TMview trademarks,
+  social handles, and web collision. It usually runs after ideakit-validate and feeds
+  ideakit-present / forge-* / solo-*. It is NOT idea generation and does NOT give legal clearance.
+  When naming a stored ideakit idea, update that idea memory with the naming artifact, shortlist,
+  top pick, and availability watch-outs.
 ---
 
 # Ideakit — Name (brand/product naming + availability screening)
@@ -37,8 +34,6 @@ claim a name is free without actually checking.** Two halves:
    availability is the exact place this skill would hallucinate and waste the founder's money/time. If
    a check couldn't be run, label it **"not yet verified"** — never present an unchecked name as clear.
    And availability screening is **not legal clearance** (see the boundary below).
-
-Everything below is these two applied.
 
 ## Where this sits in the pipeline
 
@@ -163,8 +158,6 @@ The user picks the name and performs the real-money/legal actions; this skill na
 
 ## Operating principles
 
-All of these are the governing principle applied.
-
 - **Availability is a hard gate, not a tiebreaker.** A brilliant name you can't own is not a candidate.
   Screen before anyone falls in love.
 - **Check, never assume.** No "this is probably available" — run the check or write "not yet verified."
@@ -185,6 +178,7 @@ handle, or filing a trademark* spends money / is a legal act — stage it and ha
 "buy / file" step. If this names a stored idea or the user names an idea location, read
 `../ideakit-memory.md` and update the matching idea memory with the naming artifact link, shortlist,
 top pick, and unresolved availability/legal watch-outs. Full contract: `../ideakit-execution.md`.
+(`references/anti-cliche.md` is the family craft bar — `../ideakit-craft.md` — specialized for names.)
 
 ## Reference files
 
