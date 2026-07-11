@@ -28,6 +28,12 @@ Read `../ideakit-craft.md` before the session. When venture invention is central
 Do not let “I have an idea” automatically trigger validation. First test maturity. If multiple
 structurally different interpretations remain plausible, explore them here.
 
+When the direction arrived from a force/event brief, inherit its **source consequence, causal ring,
+domain, literal-force distance, and horizon**. Do not strip that provenance while reframing the
+venture. If exploration drifts back toward the literal force or direct mitigation, return to the
+upstream consequence map and run a query escape in the independent language of the changed behavior
+or institution.
+
 ## Session contract
 
 Keep four lanes visibly separate:
@@ -94,6 +100,9 @@ Create enough alternatives to escape anchoring, but do not optimize for count. C
 For each option, record which observation/inference it uses. Mark pure provocations `Imagined`.
 Collapse options with the same actor + job + mechanism + architecture.
 
+For a force-derived direction, also record whether an option preserves, deepens, or abandons the
+source causal chain. A different business model around the same direct consequence is not a reframe.
+
 ### 3. Provoke
 
 Seek one or more **defensible surprises**, not random weirdness:
@@ -121,6 +130,10 @@ when it offers asymmetric learning. For each direction capture:
 - wedge and first-10 path;
 - critical uncertainty and cheapest learning test;
 - why it advances or is parked.
+
+For force-derived directions, retain source consequence, causal ring, domain, distance, and horizon
+beside each surviving direction so `ideakit-validate` can test the same thesis rather than a flattened
+product description.
 
 If no option is strong, say what is missing instead of manufacturing a winner.
 

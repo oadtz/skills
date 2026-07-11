@@ -100,6 +100,18 @@ Five steps: **Set the frame → Excavate from evidence → Ladder to values & co
 concretes → Synthesize the edge map & hand off.** It's a conversation; move at the person's pace and
 don't machine-gun the questions.
 
+### Use the shortest path that resolves the direction
+
+Default to a **minimum viable edge map**, not a full interview. After 3–5 useful questions, stop and
+synthesize when the conversation has already surfaced: one behavioral trail, one energizing pattern,
+the desired game, an affordable-loss boundary, and at least two meaningfully different playing fields.
+Mark missing fields as open hypotheses rather than continuing only to complete the template.
+
+Use the deeper laddering and react-to-concretes sequence when signals conflict, the person keeps
+answering with identity claims instead of behavior, or every candidate field produces indifference.
+Tell the user why another question is worth asking. A partial but honest map that creates a useful
+next decision is better than an exhaustive dossier that drains the person.
+
 ### Step 1 — Set the frame (name the blank slate, lower the pressure)
 
 Confirm they're starting from zero, and *take the pressure off the impossible question*. Say plainly
@@ -204,8 +216,10 @@ discover opportunity theses and venture architectures in *these* playing fields�
 yours, not generic?
 Or sit with one direction in `ideakit-explore` first?"*
 
-The person confirms the edge map before anything advances. This skill discovers and recommends; it
-never decides what they should do.
+The person confirms or corrects the edge map before it is treated as settled. If they already asked
+to continue through the pipeline, present the map and proceed using it as provisional context rather
+than forcing an extra confirmation turn. This skill discovers and recommends; it never decides what
+they should do.
 
 ## Operating principles
 

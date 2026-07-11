@@ -10,6 +10,11 @@ claim; write the inference bridge yourself; make bets falsifiable. Search for co
 failed attempts, not only confirmation. Current behavior, spend, workarounds, and commitments outweigh
 hypothetical enthusiasm.
 
+Use an evidence ladder: **E0 thesis/desk signal → E1 observed behavior → E2 costly commitment → E3
+transaction or sustained real use → E4 repeated independent transactions/behavior**. Report the
+highest level earned for each critical dependency. A concept does not become “validated” merely
+because competitor research and market statistics look favorable.
+
 Search depth follows uncertainty and stakes. A narrow low-cost experiment may need 3–5 targeted
 searches; a capital-intensive, regulated, or dependency-heavy venture may need 15–30 plus first-party
 interviews or data. Search count is not a quality metric.
@@ -76,6 +81,7 @@ Return:
 5. go/reframe/park/kill recommendation;
 6. critical assumptions and affordable-loss tests;
 7. research gaps that remain material.
+8. evidence level earned and the next costly signal required.
 
 Insufficient validation includes unsupported pricing/demand claims, no meaningful counter-search,
 generic distribution, ignored critical dependencies, or a recommendation that does not change when

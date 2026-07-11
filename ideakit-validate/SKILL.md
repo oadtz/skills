@@ -18,6 +18,9 @@ that every idea passes; it should strengthen, reframe, park, or kill the venture
 Read `../ideakit-craft.md` first. Preserve the distinction between **Observed**, **Inferred**, and
 **Bet** throughout the research and PRD.
 
+Validation is a level of evidence, not the name of this workflow. Desk research can justify a next
+test, reframe, or decision to stop; it cannot by itself prove willingness to switch or pay.
+
 ## Maturity gate
 
 Before starting validation, confirm that the concept has:
@@ -116,8 +119,22 @@ Rules:
 - if no direct demand evidence exists, say whether this is non-consumption, a new category, or simply
   an unsupported bet.
 
-Return a concise research brief organized around the chosen dimensions, not a fixed template. Pause
-for the user's reaction before synthesis.
+Assign the concept an **evidence level** based on the strongest relevant proof actually obtained:
+
+| Level | Evidence | Permitted conclusion |
+|---|---|---|
+| E0 Thesis | coherent reasoning or desk signals only | worth researching / unsupported |
+| E1 Behavior | observed workaround, spend, switching attempt, or repeated past behavior | problem/desired progress exists |
+| E2 Commitment | buyer shares data, time, access, LOI, deposit, or another costly signal | testable demand with named conditions |
+| E3 Transaction | paid pilot, preorder, signed contract, or sustained real use | locally validated wedge |
+| E4 Repeatability | multiple independent buyers repeat the behavior or transaction | early repeatability, not market certainty |
+
+Do not upgrade indirect market statistics, complaints, interviews, or survey enthusiasm into E2/E3.
+State which dependency remains unvalidated even when another dimension reaches a higher level.
+
+Return a concise research brief organized around the chosen dimensions, not a fixed template. Ask for
+reaction before synthesis only when the evidence creates a directional choice the user has not already
+authorized. Otherwise continue and flag the choice in the recommendation.
 
 ### 4. Sharpen, reframe, park, or kill
 
@@ -141,11 +158,13 @@ Observed: [...]
 Inferred: [...]
 Bet: [...] — wrong if [...]
 Recommendation: go / reframe / park / kill
+Evidence level: E0 / E1 / E2 / E3 / E4 — [what earned it]
 ```
 
 Define 3–5 critical assumptions with confidence and tests. Kill criteria must be specific to the
 venture; include platform replication only when platform dependency is real. Get explicit approval
-before writing the final plan.
+before writing the final plan only when the sharpened direction materially changes the actor, promise,
+business model, cost, or risk the user authorized. Otherwise write the plan and make the change visible.
 
 ### 5. Write the executable plan
 
@@ -158,6 +177,7 @@ Read `references/prd-template.md`. Adapt the template to software or general-pro
 - business/distribution hypothesis when this is a venture;
 - acceptance criteria or measurable outcomes;
 - critical assumptions, learning plan, and kill criteria;
+- current evidence level and the next costly signal required to advance it;
 - dependencies, risks, open questions, and evidence links;
 - expansion path as a hypothesis, not committed scope.
 

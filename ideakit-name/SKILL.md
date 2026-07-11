@@ -66,6 +66,19 @@ someone just needs a name checked.
   "not yet verified" and tell the user exactly what to check where — never fabricate a result.
 - **File output**: write the shortlist + availability table to a file/artifact when supported.
 
+Use exact screening statuses rather than a green check that hides uncertainty:
+
+- **unregistered at [timestamp]** — no registration record found by the authoritative lookup used;
+- **registered** — registration record found; note whether active, parked, or offered aftermarket;
+- **premium/reserved** — registry or seller makes it obtainable only under special pricing/terms;
+- **no identical mark found** — exact-match screen only, never “trademark clear”;
+- **possible similar conflict** — related name/class needs professional review;
+- **unknown / check blocked** — the source could not be queried reliably;
+- **handle appears unused** — page/search observation only, not proof it can be claimed.
+
+Record source, method, target market/class, and check time. A DNS miss alone never earns
+“unregistered,” and a missing public profile never earns “handle available.”
+
 ## Workflow
 
 Five steps: **Brief → Generate (mixed types) → Filter (SMILE/SCRATCH) → Availability gauntlet → Shortlist.**
@@ -136,22 +149,26 @@ For each surviving name, **actually run** the checks and record evidence:
   "not verified."
 
 Produce a table — **name × domain × trademark × handles × collision** — with each cell backed by a
-check (or marked "not yet verified"). A name failing the **hard** gates (required domain taken, clear TM
-conflict in the same class) is out, regardless of SMILE score.
+check (or marked unknown). A name failing the **hard** gates (required domain registered and
+unobtainable, or a likely similar mark conflict in a related class) is out, regardless of SMILE score.
+When any required gate is unknown, carry the candidate only as **provisional**; do not say it cleared
+the gauntlet.
 
 ### Step 5 — Shortlist + honest verdict
 
-Present the top 3–5 that clear the gauntlet:
+Present the top 3–5 that clear the gauntlet. If no candidate has every required check, present a
+**provisional shortlist** ordered by naming quality and unresolved risk instead of manufacturing a
+winner:
 
 ```
 ## Name shortlist
 
-| Name | Type | SMILE | .com / [TLD] | Trademark (class) | Handles | Market collision |
+| Name | Type | SMILE | .com / [TLD] | Trademark (class) | Handles | Market collision | Checked at / sources |
 |---|---|---|---|---|---|---|
-| ... | coined | strong | ✅ available | no identical (cls 42) ⚠️ verify similar | @x free | none found |
+| ... | coined | strong | unregistered at [time] via RDAP | no identical found (cls 42); similar search pending | appears unused; claimability unknown | none found in scoped search | [time + sources] |
 | ... | ... | ... | ... | ... | ... | ... |
 
-**Top pick:** [name] — [why it wins on brand + availability].
+**Top pick / provisional lead:** [name] — [why it wins on brand + screening status].
 **Watch-outs:** [the ⚠️ items still to verify].
 **Before you commit:** screening ≠ legal clearance — have a trademark attorney run a full clearance in
 your filing class(es) before filing or investing in the brand. Then register the domain/handles
@@ -162,8 +179,8 @@ The user picks the name and performs the real-money/legal actions; this skill na
 
 ## Operating principles
 
-- **Availability is a hard gate, not a tiebreaker.** A brilliant name you can't own is not a candidate.
-  Screen before anyone falls in love.
+- **Availability is a hard gate, not a tiebreaker.** A brilliant name you cannot obtain is not a final
+  candidate; a name with blocked checks remains provisional. Screen before anyone falls in love.
 - **Check, never assume.** No "this is probably available" — run the check or write "not yet verified."
   This is the one place the skill must not hallucinate.
 - **Mix name types to win the gauntlet.** Coined/compound names clear domains and trademarks far more

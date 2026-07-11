@@ -57,6 +57,8 @@ Cut every SCRATCH failure; rank survivors by SMILE before spending checks on the
 - **APIs** (if a key is available): WhoisJSON, WhoisFreaks, WhoisXML — bulk + multi-TLD.
 - Best practice: **DNS fast-check → RDAP/WHOIS confirm.** Flag premium/parked/aftermarket domains (an
   "available" name can still cost five figures).
+- Report **unregistered at [timestamp] via [source]**, not “available.” Registration status can change
+  immediately, and registry-reserved or premium terms may still apply.
 
 ### 2. Trademark (search several — no single source is complete)
 
@@ -73,6 +75,8 @@ Cut every SCRATCH failure; rank survivors by SMILE before spending checks on the
 
 - Check the platforms that matter for the audience. Tools: **Namechk** (36 domains + 100+ platforms),
   **KnowEm** (500+ networks; also checks the USPTO trademark DB) — via the browser if no clean API.
+- Public-page absence is weak evidence because platforms rate-limit, reserve names, and hide accounts.
+  Use “appears unused; claimability unknown” unless an authoritative claim flow confirms otherwise.
 
 ### 4. Market / web collision
 
@@ -86,6 +90,8 @@ confusion* (similar marks, related goods, the specific class) — not just exact
 pass can still hide a real conflict. So:
 
 - Present results as "passed screening," never "legally safe to use."
+- If any required lookup is blocked or incomplete, label the entire shortlist **provisional** and list
+  the unresolved gate, source attempted, and timestamp.
 - Always recommend a **full clearance by a trademark attorney** in the intended filing class(es) before
   filing the mark or spending heavily on the brand.
 - And per the execution boundary: **registering the domain/handles and filing the trademark are the

@@ -18,6 +18,7 @@ Observed / Inferred / Bet distinctions visible where they affect decisions.
 - Inferred:
 - Bet — wrong if:
 - Recommendation:
+- Evidence level: E0 / E1 / E2 / E3 / E4 — evidence that earned it
 
 ## Alternatives and differentiation
 What users do today, why switching may happen, and the specific mechanism that differs.
@@ -44,6 +45,9 @@ handoff. Defer architecture decisions that belong in forge-architect.
 ## Critical assumptions, tests, and kill criteria
 | Assumption | Confidence | Cheapest informative test | Kill/reframe signal |
 
+State the next costly signal needed to advance the evidence level. Do not call desk-supported demand
+validated.
+
 ## Selected dependency and trajectory risks
 Include platform replication only when a platform controls the wedge. Include only forces that can
 change the decision.
@@ -66,6 +70,7 @@ change the decision.
 - Initial pilot:
 - Observed / Inferred / Bet:
 - Recommendation:
+- Evidence level: E0 / E1 / E2 / E3 / E4 — evidence that earned it
 
 ## Current behavior and alternatives
 
