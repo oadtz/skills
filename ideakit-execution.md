@@ -6,8 +6,8 @@ is the family-level execution guard; it's self-contained so `ideakit-*` stays st
 
 ## The principle
 
-**Produce, don't propose.** Each ideakit stage has a concrete deliverable — an edge map, a ranked idea
-table, a sharpened direction, a PRD, a pitch. Once the user has steered the thinking, **make that
+**Produce, don't propose.** Each ideakit stage has a concrete deliverable — an edge map, a venture
+portfolio, a sharpened direction, a PRD, a pitch. Once the user has steered the thinking, **make that
 deliverable real with the appropriate tool** and hand it over, rather than offering to do it.
 
 ## What "executing" looks like per skill

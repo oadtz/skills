@@ -213,7 +213,9 @@ Lead with the most important tension or opportunity—not “I ran six steps.”
 
 - one-sentence concept with actor, trigger, and mechanism;
 - Observed / Inferred / Bet chain with citations near observations;
-- for a force brief: causal ring, source consequence, domain, literal-force distance, and horizon;
+- for a force brief: causal ring, source consequence, domain, literal-force distance, and horizon —
+  written as explicit labeled lines (`Source consequence:`, `Causal ring:`, `Domain:`,
+  `Time horizon:`) so the eval scorer and downstream skills can locate them;
 - why now and founder fit;
 - wedge, first buyer, and first-10 distribution;
 - expansion and possible compounding power;

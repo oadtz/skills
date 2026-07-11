@@ -15,6 +15,10 @@ Never upgrade an inference or bet into a fact. Never invent a number, quote, per
 or customer result to make prose feel concrete. Use `[needs evidence]` or an explicit assumption when
 support is missing.
 
+In non-English artifacts, keep the labels themselves — `Observed`, `Inferred`, `Bet`, `E0`–`E4` — in
+English as terms of art (the surrounding prose stays in the user's language) so the eval scorer and
+downstream skills can locate them.
+
 ## Gate 1 — reasoning integrity
 
 For every consequential recommendation, concept, or claim:
