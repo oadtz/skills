@@ -47,3 +47,19 @@ For each proposed addition ask:
 4. Is it more informative than deepening an existing thesis?
 
 If not, leave the cell empty.
+
+## Force-brief causal diversity
+
+Business-model variety is not enough when every concept comes from the same direct consequence. Tag
+each opening and finalist with:
+
+- source consequence;
+- ring 1 direct / ring 2 behavioral / ring 3 structural;
+- domain;
+- distance from the literal force (names it / adjacent / independent vocabulary);
+- immediate / emerging / long-horizon timing.
+
+If the portfolio clusters in one causal source, return to the consequence map and query escape before
+inventing more architectures. Preserve a defensible long-horizon thesis even when its current buyer is
+unclear; judge reachability after the landscape has been explored. Do not manufacture a ring-3 filler
+without a causal chain.

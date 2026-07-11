@@ -55,7 +55,7 @@ def main() -> int:
                 failures.append(f"{name}: broken local reference {raw_ref!r}")
 
     require(texts.get("discover", ""), ["provisional", "contrarian", "desired game", "none of these", "contradictions"], "discover", failures)
-    require(texts.get("generate", ""), ["observed", "inferred", "bet", "opportunity theses", "venture architectures", "affordable loss", "do not sort by one total score"], "generate", failures)
+    require(texts.get("generate", ""), ["observed", "inferred", "bet", "opportunity theses", "venture architectures", "affordable loss", "do not sort by one total score", "causal consequence map", "query-escape", "opportunity landscape", "source consequence", "causal ring"], "generate", failures)
     require(texts.get("explore", ""), ["known", "inferred", "imagined", "maturity", "venture architecture", "counter-case"], "explore", failures)
     require(texts.get("validate", ""), ["maturity gate", "selected", "go / reframe / park / kill", "do not insert generic claude/chatgpt/mcp/quantum tables"], "validate", failures)
     require(texts.get("name", ""), ["random simple noun", "negative baseline", "contextually"], "name", failures)
@@ -66,7 +66,7 @@ def main() -> int:
     forbid(texts.get("name", ""), [r"first ~?10.?15 names.*discard", r"throw it away"], "name", failures)
 
     craft = (ROOT / "ideakit-craft.md").read_text(encoding="utf-8")
-    require(craft, ["reasoning integrity", "venture originality", "editorial anti-slop", "never invent"], "craft", failures)
+    require(craft, ["reasoning integrity", "venture originality", "editorial anti-slop", "never invent", "force/event brief", "institutional/economic/cultural rearrangement"], "craft", failures)
 
     cases = json.loads((ROOT / "evals/ideakit/cases.json").read_text(encoding="utf-8"))
     rubric = json.loads((ROOT / "evals/ideakit/pairwise-rubric.json").read_text(encoding="utf-8"))
@@ -74,8 +74,8 @@ def main() -> int:
     covered = {case["expected_skill"] for case in cases}
     if expected - covered:
         failures.append(f"cases: missing routing coverage for {sorted(expected - covered)}")
-    if len(rubric.get("dimensions", [])) < 8 or not rubric.get("hard_failures"):
-        failures.append("pairwise rubric: expected at least 8 dimensions and explicit hard failures")
+    if len(rubric.get("dimensions", [])) < 12 or not rubric.get("hard_failures"):
+        failures.append("pairwise rubric: expected at least 12 dimensions and explicit hard failures")
 
     if failures:
         print(json.dumps({"passed": False, "failures": failures}, indent=2))

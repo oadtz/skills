@@ -74,11 +74,25 @@ provisional evidence rather than a personality verdict.
 
 Classify whether the brief contains a **force**: a technology, regulation, cost curve, demographic
 shift, event, or cultural change acting on the world. For a force, do not ideate “solutions for X”.
-Trace how it changes behavior, bottlenecks, power, spend, rituals, and what becomes newly possible.
+Before research, build a causal consequence map:
+
+| Ring | Domain | Consequence | Actor behavior | Institution/market change | New scarcity, spend, or job | Horizon |
+|---|---|---|---|---|---|---|
+| 1 Direct | ... | physical/immediate effect | ... | ... | ... | now |
+| 2 Behavioral | ... | adaptation or substitution | ... | ... | ... | ... |
+| 3 Structural | ... | geography, market, institution, power, or culture rearranges | ... | ... | ... | ... |
+
+The map is mandatory for a force brief, but domain counts are not. Do not advance until at least one
+defensible chain reaches behavioral change and one reaches structural rearrangement. Ask “and then
+what?” until the actor, changed behavior, institutional response, and economic consequence are clear.
+Weak speculative branches may be labeled and retained as bets; do not invent certainty to fill rings.
 
 ### 2. Gather change signals
 
-Search for a useful mix selected for this brief—not a fixed quota:
+Search for a useful mix selected for this brief—not a fixed quota. For a force brief, search the
+consequences as independent domains. Deliberately run queries that do **not** contain the force word:
+use the language of the changed behavior, institution, geography, substitute, or new bottleneck. If
+most queries still repeat the force term, stop: the scan is anchored at the center.
 
 - behavior and transactions: what people do, buy, abandon, or repeatedly improvise;
 - workarounds: spreadsheets, chat coordination, agencies, manual expert work, hacks, waiting;
@@ -97,6 +111,8 @@ Uncertainty or counter-signal: ...
 ```
 
 Quotes and numbers must be fetched and cited. Do not write fictional “sharp” examples.
+For force briefs, record a short query-escape note: which ring-2/3 consequences were researched without
+the force vocabulary, what surfaced, and which branches found no support.
 
 ### 3. Synthesize entrepreneurial openings
 
@@ -112,7 +128,12 @@ Do not jump from search results to products. Cluster signals and look for:
 - founder-specific access or taste that changes what is reachable.
 
 Write 3–7 **openings**, each as a causal observation rather than a solution. Include the strongest
-counter-signal. A large source count does not substitute for a sharp tension.
+counter-signal. For a force brief, tag each opening with source consequence, causal ring, domain, and
+horizon. A large source count does not substitute for a sharp tension.
+
+First build an **opportunity landscape** without requiring a visible buyer today. Preserve credible
+ring-3 openings as long-horizon or contrarian theses when the causal chain is strong. Only after the
+landscape is visible should the entrepreneur pass judge which openings are currently reachable.
 
 ### 4. Form opportunity theses and invent venture architectures
 
@@ -177,6 +198,12 @@ Use qualitative judgments or dimension scores, but do not sum them. Select 3–5
 role only where a candidate earns it: asymmetric, contrarian, fast-cash, compounding, wildcard. Leave a
 role empty rather than quota-fill. Explain why a riskier concept advances over a safer one.
 
+For a force brief, attach **causal ring, source consequence, domain, distance from the literal force,
+and time horizon** to every finalist. If all finalists come from direct mitigation, one consequence,
+or one domain, treat it as an exploration failure unless the user's edge or evidence clearly justifies
+the concentration. Different buyers or business models do not count as thesis diversity when the
+causal source is the same.
+
 Run `../ideakit-craft.md` on **every finalist**. If the nouns can be swapped into another brief, return
 to the thesis or mechanism.
 
@@ -186,6 +213,7 @@ Lead with the most important tension or opportunity—not “I ran six steps.”
 
 - one-sentence concept with actor, trigger, and mechanism;
 - Observed / Inferred / Bet chain with citations near observations;
+- for a force brief: causal ring, source consequence, domain, literal-force distance, and horizon;
 - why now and founder fit;
 - wedge, first buyer, and first-10 distribution;
 - expansion and possible compounding power;

@@ -19,7 +19,7 @@ MODE_MARKERS = {
     "generate": {
         "epistemic_chain": [r"observed", r"inferred", r"\bbet\b"],
         "venture_mechanics": [r"wedge", r"first[- ]?10|first (users|customers)", r"distribution", r"compound|power"],
-        "entrepreneurial_judgment": [r"counter[- ]?case|wrong if|disconfirm", r"affordable loss|cheapest.*test"],
+        "entrepreneurial_judgment": [r"counter[- ]?case|wrong if|disconfirm", r"affordable[- ]loss|cheapest.*test"],
     },
     "explore": {
         "epistemic_lanes": [r"known", r"inferred", r"imagined"],
@@ -46,10 +46,17 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("mode", choices=sorted(MODE_MARKERS))
     parser.add_argument("artifact", type=Path)
+    parser.add_argument("--force", action="store_true", help="Apply force-brief causal-depth gates")
     args = parser.parse_args()
 
     text = args.artifact.read_text(encoding="utf-8")
     groups = {name: group_passes(text, patterns) for name, patterns in MODE_MARKERS[args.mode].items()}
+    if args.force:
+        groups.update({
+            "causal_map": group_passes(text, [r"ring 1|1 direct", r"ring 2|2 behavioral", r"ring 3|3 structural"]),
+            "causal_provenance": group_passes(text, [r"source consequence", r"causal ring", r"domain", r"time horizon|horizon"]),
+            "query_escape": group_passes(text, [r"query[- ]escape|without (?:the )?force (?:word|vocabulary)|independent domain language"]),
+        })
     slop_hits = [term for term in SLOP if term.lower() in text.lower()]
     unsupported_precision = len(re.findall(r"\b\d+(?:\.\d+)?%\b|\b\d{2,}\+? (?:users|customers|complaints|people)\b", text, re.IGNORECASE))
     cited_links = len(re.findall(r"\[[^\]]+\]\(https?://[^)]+\)", text))
@@ -65,10 +72,21 @@ def main() -> int:
     if not labeled_observations and args.mode in {"generate", "validate"}:
         integrity = 0
         warnings.append("no Observed labels found")
+    if args.force:
+        finalist_rings = set(re.findall(r"causal ring\s*[:|]\s*(?:ring\s*)?([123])", text, re.IGNORECASE))
+        source_consequences = set(re.findall(r"source consequence\s*[:|]\s*([^\n|]+)", text, re.IGNORECASE))
+        domains = set(re.findall(r"^\s*domain\s*:\s*([^\n]+)", text, re.IGNORECASE | re.MULTILINE))
+        if not ({"2", "3"} & finalist_rings):
+            warnings.append("force portfolio has no finalist tagged ring 2 or ring 3")
+        if len(source_consequences) < 2:
+            warnings.append("force portfolio finalists do not show multiple source consequences")
+        if len(domains) < 2:
+            warnings.append("force portfolio finalists do not show domain breadth")
 
     score = round(structural + editorial + integrity, 1)
     result = {
         "mode": args.mode,
+        "force_brief": args.force,
         "score_100": score,
         "contract_groups": groups,
         "slop_hits": slop_hits,

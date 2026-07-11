@@ -15,7 +15,7 @@
     "id": "force-brief",
     "prompt": "What new businesses become possible as high-quality translation becomes nearly free?",
     "expected_skill": "ideakit-generate",
-    "quality_focus": ["second-order effects", "new bottleneck", "non-consumption", "contrarian bet"]
+    "quality_focus": ["mandatory causal map", "query escape", "ring 2 and ring 3", "new bottleneck", "non-consumption", "contrarian bet"]
   },
   {
     "id": "rough-seed",

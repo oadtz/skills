@@ -90,19 +90,24 @@ domains will volunteer themselves, so spend the sweep on the ones that don't. Tw
    "society adapts by engineering vs. by lifestyle change"), and mark ideas that survive both
    branches as *robust*; prefer them at synthesis (Step 5).
 
-A useful optional output is the **consequence map**:
+A **force brief requires** a consequence map before research or invention:
 
-| Ring | Domain | Consequence | Who changes behavior? | What changes? | New spend / unmet job |
-|---|---|---|---|---|---|
-| 1 Direct | [domain] | [direct effect] | [actor] | [behavior/constraint] | [spend/job] |
-| 2 Behavior | [domain] | [knock-on behavior] | [actor] | [behavior/constraint] | [spend/job] |
-| 3 Structural | [domain] | [structure rearranges] | [actor] | [behavior/constraint] | [spend/job] |
+| Ring | Domain | Consequence | Actor behavior | Institution/market change | New scarcity, spend, or job | Horizon |
+|---|---|---|---|---|---|---|
+| 1 Direct | [domain] | [physical/immediate effect] | [actor response] | [response] | [scarcity/spend/job] | now |
+| 2 Behavioral | [domain] | [adaptation/substitution] | [changed routine] | [response] | [scarcity/spend/job] | [time] |
+| 3 Structural | [domain] | [geography/market/institution/culture rearranges] | [behavior] | [new structure] | [scarcity/spend/job] | [time] |
 
-Do not generate from the center word before tracing meaningful consequences. The center word is just the trigger; the
-opportunities usually live in the columns to the right. A heatwave run that only creates cooling,
+Do not research or generate from the center word before tracing meaningful consequences. The center
+word is just the trigger; opportunities usually live in the columns to the right. Search ring-2/3
+branches in their own domain language without repeating the force word. A heatwave run that only creates cooling,
 shade, and heat-alert ideas has stayed inside the trigger. A stronger run follows consequences into
 water allocation, sleep, shifted work hours, food choices, elderly/pet care, insurance risk, city
 operations, retail patterns, and housing preferences.
+
+The map passes when at least one causal chain reaches changed behavior and one reaches structural
+rearrangement with identifiable actors and economic implications. This is a depth gate, not a demand
+for an arbitrary number of domains. Leave weak branches speculative rather than fabricating support.
 
 ## Judgment foundations (use selectively with `scoring.md`)
 

@@ -33,6 +33,22 @@
     {
       "name": "actionable_learning",
       "question": "Does the output enable a concrete directional choice or cheap informative test without pretending certainty?"
+    },
+    {
+      "name": "causal_depth",
+      "question": "For a force brief, does reasoning reach changed behavior and structural rearrangement rather than stopping at direct mitigation?"
+    },
+    {
+      "name": "thesis_diversity",
+      "question": "Do finalists originate from different source consequences and causal mechanisms, not merely different buyers or business models?"
+    },
+    {
+      "name": "query_escape",
+      "question": "Did research use the independent language of ring-2/3 domains instead of repeating the force vocabulary in most queries?"
+    },
+    {
+      "name": "centroid_distance",
+      "question": "Does the portfolio move beyond the first direct categories most generators would associate with the force while keeping a defensible causal chain?"
     }
   ],
   "hard_failures": [
@@ -40,6 +56,9 @@
     "unlabeled speculation presented as observed fact",
     "interchangeable AI-platform concept",
     "generic distribution such as do marketing, content, partnerships, or go viral",
-    "portfolio filler included only to satisfy a framework"
+    "portfolio filler included only to satisfy a framework",
+    "force-brief finalists all come from direct mitigation or one source consequence",
+    "business-model variety presented as causal thesis diversity",
+    "ring-3 speculation with no actor-to-institution causal chain"
   ]
 }

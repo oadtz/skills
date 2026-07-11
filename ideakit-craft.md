@@ -36,6 +36,12 @@ Reject a concept when any of these is true:
 - it was created only to fill a portfolio cell or satisfy a framework;
 - a competent generic generator would produce the same thesis and mechanism from the brief.
 
+For a force/event brief, also reject a portfolio that merely changes buyers or business models around
+the same direct effect. Require traceable causal distance: physical effect → changed behavior →
+institutional/economic/cultural rearrangement. At least one serious thesis must reach beyond direct
+mitigation unless evidence or the user's edge explicitly warrants concentration. Strange ring-3
+speculation without a defensible chain is not originality.
+
 For every finalist, answer: **what changed, what do we see, what is the bet, why this mechanism, why
 this founder, why now, how does it start, and what compounds if it works?** If those answers are
 interchangeable across finalists, return to invention rather than polishing.
