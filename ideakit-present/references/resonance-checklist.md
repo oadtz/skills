@@ -1,23 +1,22 @@
-# Heart-race check — the gut test before delivering
+# Decision-response check — the credibility test before delivering
 
-Read this in Step 5. The goal of this skill is communication that makes people (and the user
-themselves) lean forward. Run this check before delivering. If something fails, fix the
-**narrative** — almost never the fonts.
+Read this in Step 5. The goal is communication that lets an audience understand, trust, remember, and
+act on a consequential claim. If something fails, fix the argument or narrative before the fonts.
 
 ## The core questions (all must be "yes")
 
 1. **One core message.** If the audience remembers a single sentence, is it clear what it is — and
    is it concrete and consequential (not a category description)?
 2. **One ask.** Is there exactly one action you want the audience to take, and is it unmistakable?
-3. **Real, felt stakes.** Is there genuine tension — something at risk, a wave to catch, a pain that
-   bites — and does it land before the resolution?
+3. **Decision-relevant stakes.** Is the consequence specific to this audience, supported, and tied to
+   a real horizon rather than a generic wave or fear cue?
 4. **Concrete, not abstract.** Is there at least one real person, real number, or real scene? Could
    a skeptic picture it?
-5. **Future they want.** Does the audience get to stand inside a desirable after-state for a moment?
-6. **Audience is the hero (for customers) / the world-shift leads (for investors).** Is the spotlight
-   on them and their world, not on you and your company?
-7. **The user leans in.** Read it as the user. Do *they* feel something? If the creator is bored, the
-   audience is gone.
+5. **Inspectable future.** Is the after-state concrete, desirable, and clearly separated from what has
+   already been proved?
+6. **Audience decision leads.** Is the spotlight on their job, risk, ambition, and choice—not the
+   company's self-description or a mandatory world shift?
+7. **The user can defend it.** Can they answer a skeptic without retreating from the artifact's claims?
 8. **The epistemics are honest.** Can a skeptical audience distinguish observed fact, inference, and
    ambition? Is urgency earned rather than manufactured?
 
@@ -35,7 +34,8 @@ that deflates most pitches.
   that help the hero win.
 - **Abstraction.** "Revolutionize / streamline / optimize / leverage" — words that assert importance
   without producing a picture. Replace with a specific scene or number.
-- **No tension.** Jumping to the solution before the audience feels the problem. Hold the loop open.
+- **No consequence.** Jumping to the solution before showing why the decision matters. Make the
+  consequence concrete without manufacturing suspense.
 - **Hype outrunning substance.** Claims the validated facts don't support. This destroys trust fast;
   dial the claim back to what's true and let the real stakes do the work.
 - **Many asks.** Three CTAs = zero CTAs. Cut to one.

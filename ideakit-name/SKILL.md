@@ -21,8 +21,8 @@ matter how clever — so this skill *checks*, it doesn't just brainstorm.
 
 ## The governing principle (read first)
 
-**A name is only as good as it is *available* — so generate freely, then screen ruthlessly, and never
-claim a name is free without actually checking.** Two halves:
+**A name is only as good as it is *obtainable* — so generate freely, then screen ruthlessly, and never
+claim a name can be obtained without actually checking.** Two halves:
 
 1. **Good *and* gettable, in that order of effort but not of importance.** Brainstorm widely across
    name types first (cleverness is cheap), but treat **availability as a hard gate**, not a footnote.
@@ -164,7 +164,7 @@ winner:
 ## Name shortlist
 
 | Name | Type | SMILE | .com / [TLD] | Trademark (class) | Handles | Market collision | Checked at / sources |
-|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|
 | ... | coined | strong | unregistered at [time] via RDAP | no identical found (cls 42); similar search pending | appears unused; claimability unknown | none found in scoped search | [time + sources] |
 | ... | ... | ... | ... | ... | ... | ... |
 

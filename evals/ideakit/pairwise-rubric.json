@@ -51,6 +51,44 @@
       "question": "Does the portfolio move beyond the first direct categories most generators would associate with the force while keeping a defensible causal chain?"
     }
   ],
+  "mode_dimensions": {
+    "discover": [
+      "behavioral evidence rather than flattering identity claims",
+      "provisional edge hypotheses with contradictions",
+      "minimum viable interview and user energy",
+      "structurally different playing fields with disconfirmers"
+    ],
+    "generate": [
+      "opportunity thesis originality",
+      "causal depth and query escape for force briefs",
+      "venture mechanics and first-user reachability",
+      "portfolio-level thesis diversity"
+    ],
+    "explore": [
+      "Known/Inferred/Imagined separation",
+      "defensible reframes rather than feature variants",
+      "causal provenance retention for force-derived ideas",
+      "critical uncertainty and cheapest learning test"
+    ],
+    "validate": [
+      "selected decision-changing research",
+      "counter-evidence and failed alternatives",
+      "evidence level E0-E4 without upgrading desk signals",
+      "venture-specific recommendation and kill criteria"
+    ],
+    "name": [
+      "venture-specific point of view and centroid distance",
+      "sayability and cultural fit in target markets",
+      "timestamped domain/trademark/handle/collision screening",
+      "provisional status whenever a required check is unknown"
+    ],
+    "present": [
+      "one audience decision and one ask",
+      "fact/inference/ambition separation",
+      "specific consequence and evidence-backed mechanism",
+      "memorability and emotion without inevitability or startup theater"
+    ]
+  },
   "hard_failures": [
     "invented number, quote, customer, source, or result",
     "unlabeled speculation presented as observed fact",
@@ -59,6 +97,10 @@
     "portfolio filler included only to satisfy a framework",
     "force-brief finalists all come from direct mitigation or one source consequence",
     "business-model variety presented as causal thesis diversity",
-    "ring-3 speculation with no actor-to-institution causal chain"
+    "ring-3 speculation with no actor-to-institution causal chain",
+    "desk research described as validated demand",
+    "name described as available or trademark-clear without a timestamped authoritative check",
+    "pitch uses inevitability, FOMO, winners/losers, or a promised land without decision-relevant evidence",
+    "founder identity claim presented as settled from a short discovery interview"
   ]
 }

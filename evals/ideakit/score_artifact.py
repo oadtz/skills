@@ -16,6 +16,13 @@ SLOP = [
 ]
 
 MODE_MARKERS = {
+    "discover": {
+        "behavioral_evidence": [r"behavioral trail|past behavior|actually (did|spent|built)", r"energy|lights you up|drains"],
+        "provisional_identity": [r"provisional", r"contradiction"],
+        "decision_frame": [r"desired game", r"affordable loss|risk & resources|risk and resources"],
+        "recognition": [r"reaction|react[- ]to[- ]concretes|attraction|recoil", r"none of these|what is missing|combine"],
+        "handoff": [r"candidate playing fields", r"wrong if|riskiest hypotheses"],
+    },
     "generate": {
         "epistemic_chain": [r"observed", r"inferred", r"\bbet\b"],
         "venture_mechanics": [r"wedge", r"first[- ]?10|first (users|customers)", r"distribution", r"compound|power"],
@@ -30,10 +37,20 @@ MODE_MARKERS = {
         "decision": [r"go|reframe|park|kill", r"recommend"],
         "evidence": [r"observed", r"inferred", r"\bbet\b", r"source|evidence"],
         "execution": [r"wedge|pilot|v1", r"kill criteria|kill signal|reframe signal"],
+        "evidence_level": [r"evidence level", r"\bE[0-4]\b", r"next costly signal|next commitment|next transaction"],
+    },
+    "name": {
+        "brief": [r"audience", r"evoke|personality|point of view", r"\.com|tld|domain"],
+        "centroid_escape": [r"baseline|centroid|generic", r"venture[- ]specific|point of view|category tension"],
+        "screening": [r"rdap|whois", r"trademark|wipo|uspto|tmview", r"handle", r"collision"],
+        "honest_status": [r"unregistered at|registered|premium|reserved|unknown", r"provisional|passed screening", r"screening.*legal clearance|not legal clearance"],
+        "recommendation": [r"top pick|provisional lead|shortlist", r"watch[- ]outs|unresolved"],
     },
     "present": {
         "epistemics": [r"fact", r"inference", r"ambition"],
-        "persuasion": [r"audience", r"ask|action", r"uncertainty|reason not to|counter"],
+        "decision": [r"audience", r"ask|action", r"belief shift|decision"],
+        "argument": [r"observation|evidence", r"consequence|stakes", r"mechanism|response"],
+        "credibility": [r"uncertainty|reason not to|counter", r"source|evidence"],
     },
 }
 
@@ -75,6 +92,21 @@ def main() -> int:
     if not labeled_observations and args.mode in {"generate", "validate"}:
         integrity = 0
         warnings.append("no Observed labels found")
+    if args.mode == "validate":
+        levels = {int(x) for x in re.findall(r"\bE([0-4])\b", text)}
+        recommends_go = bool(re.search(r"recommend(?:ation)?\s*[:|]\s*go\b", text, re.IGNORECASE))
+        if recommends_go and levels and max(levels) == 0:
+            warnings.append("validate artifact recommends go on E0 desk/thesis evidence only")
+    if args.mode == "name":
+        required_unknown = bool(re.search(r"(?:domain|trademark|handle)[^\n|]*(?:unknown|not yet verified|blocked)", text, re.IGNORECASE))
+        if required_unknown and not re.search(r"provisional", text, re.IGNORECASE):
+            warnings.append("name artifact has an unknown required check but is not labeled provisional")
+        if re.search(r"trademark[- ]clear|legally safe", text, re.IGNORECASE):
+            warnings.append("name artifact overclaims legal clearance")
+    if args.mode == "present":
+        theater = re.findall(r"inevitable wave|promised land|winners and losers|\bFOMO\b", editorial_text, re.IGNORECASE)
+        if theater:
+            warnings.append("present artifact contains startup-theater framing: " + ", ".join(sorted(set(x.lower() for x in theater))))
     if args.force:
         label_prefix = r"(?:\*\*)?"
         label_suffix = r"(?:\*\*)?"
@@ -95,16 +127,21 @@ def main() -> int:
         ))
         if not ({"2", "3"} & finalist_rings):
             warnings.append("force portfolio has no finalist tagged ring 2 or ring 3")
-        if len(source_consequences) < 2:
+        if args.mode == "generate" and len(source_consequences) < 2:
             warnings.append("force portfolio finalists do not show multiple source consequences")
-        if len(domains) < 2:
+        if args.mode == "generate" and len(domains) < 2:
             warnings.append("force portfolio finalists do not show domain breadth")
 
-    score = round(structural + editorial + integrity, 1)
+    structural_score = round(structural + editorial + integrity, 1)
+    # Warnings are hard gates, so a structurally complete artifact must not display a passing
+    # headline score while failing for overclaiming, causal collapse, or theater.
+    score = min(structural_score, 79.0) if warnings else structural_score
     result = {
         "mode": args.mode,
         "force_brief": args.force,
         "score_100": score,
+        "structural_score_100": structural_score,
+        "passed": score >= 80 and not warnings,
         "contract_groups": groups,
         "slop_hits": slop_hits,
         "cited_links": cited_links,

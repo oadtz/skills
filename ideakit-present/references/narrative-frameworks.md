@@ -5,29 +5,33 @@ because it leads with you, not with the audience's world. Choose a structure del
 
 ## Choosing quickly
 
-- Persuading **investors** or rallying a **team** → **Strategic narrative** (stakes-first).
+- Persuading **investors** or rallying a **team** → **Decision narrative** or evidence-backed strategic
+  narrative.
 - Persuading a **customer** → **StoryBrand** (customer-as-hero).
 - Short / async / any audience → **Before–After–Bridge**.
 - When the pain is under-felt → **Problem–Agitate–Solve**.
 
-You can nest them — e.g., a strategic narrative whose "promised land" section uses a single
-customer's before/after story as the concrete proof.
+You can nest them—for example, a decision narrative can use a single customer's before/after story
+as concrete evidence of the consequence and response.
 
-## Strategic narrative (Andy Raskin style) — highest power for vision
+## Decision narrative — default for consequential asks
 
-The structure that makes investors and recruits lean forward. Order matters:
+Use this when the audience must decide under uncertainty:
 
-1. **Name the big, undeniable shift** in the world — something already happening that the audience
-   can't argue with. ("Environmental claims are moving from trust-us to prove-it.")
-2. **Show the stakes — winners and losers.** As this shift plays out, those who adapt win; those who
-   don't get left behind. This creates urgency without hype.
-3. **Paint the promised land** — a specific, desirable future state for those who get it right.
-   Sell this *before* your product. The audience should want to live there.
-4. **Position your idea as the bridge** to the promised land — and frame features as "magic gifts"
-   that help them cross, not a spec sheet.
+1. **Observation or contradiction** — what changed or what current behavior reveals.
+2. **Consequence** — whose decision, budget, risk, or desired progress is affected.
+3. **Response** — why this mechanism fits better than the live alternatives.
+4. **Evidence and uncertainty** — what is known, inferred, and still a bet.
+5. **Ask** — the decision requested, what it buys, and the next observable milestone.
 
-Why it works: it leads with the audience's world and a wave bigger than you, so your idea feels
-inevitable rather than optional.
+This structure can still carry ambition, but it does not require a fabricated wave or inevitability.
+
+## Strategic narrative — use only when a real structural shift is evidenced
+
+When a sourced change genuinely rearranges behavior or markets, show the shift, the specific stakes,
+the reachable future state, and the venture's path. Label the future as ambition and include the
+conditions under which it does not materialize. Do not force winners/losers, a promised land, or
+category destiny into every investor story.
 
 ## StoryBrand (customer-as-hero) — highest power for customers
 
@@ -63,8 +67,8 @@ Use when the audience under-rates a problem they actually have.
   water markets" evaporates.
 - **Tension before resolution.** Open a loop (a stake, a question, a threat) and hold it before you
   resolve it. No tension, no attention.
-- **Paint the future.** Let the audience stand inside the after-state for a moment — sensory and
-  specific.
+- **Make the future inspectable.** Describe the after-state concretely and state which parts are
+  observed, inferred, or ambition.
 - **One idea per beat.** Each slide/section/paragraph carries a single point.
 - **Earn the emotion.** Show the moment that produces the feeling; don't assert the feeling.
 - **End on the action**, not a summary. The last thing they see is what you want them to do.

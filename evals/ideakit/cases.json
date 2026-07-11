@@ -3,7 +3,7 @@
     "id": "blank-slate",
     "prompt": "I want to build a business but have no idea, domain, or useful skill in mind.",
     "expected_skill": "ideakit-discover",
-    "quality_focus": ["provisional edge hypotheses", "contradictions", "desired game", "non-leading choices"]
+    "quality_focus": ["provisional edge hypotheses", "contradictions", "desired game", "non-leading choices", "minimum viable edge map"]
   },
   {
     "id": "domain-opportunities",
@@ -21,13 +21,13 @@
     "id": "rough-seed",
     "prompt": "I am thinking about a community product for people caring for aging parents. What could it become?",
     "expected_skill": "ideakit-explore",
-    "quality_focus": ["known inferred imagined", "multiple architectures", "reframe", "counter-case"]
+    "quality_focus": ["known inferred imagined", "multiple architectures", "reframe", "counter-case", "retain force provenance when supplied"]
   },
   {
     "id": "mature-concept",
     "prompt": "Validate a service-first concierge for Bangkok clinic owners that takes over late-night LINE scheduling, starting with five clinics.",
     "expected_skill": "ideakit-validate",
-    "quality_focus": ["maturity gate", "selected risks", "distribution", "go reframe park kill"]
+    "quality_focus": ["maturity gate", "selected risks", "distribution", "go reframe park kill", "E0-E4 evidence level"]
   },
   {
     "id": "general-project",
@@ -39,12 +39,12 @@
     "id": "name-venture",
     "prompt": "Name this validated service without generic startup names or random disconnected nouns.",
     "expected_skill": "ideakit-name",
-    "quality_focus": ["venture point of view", "contextual warnings", "availability", "linguistic fit"]
+    "quality_focus": ["venture point of view", "contextual warnings", "timestamped screening statuses", "provisional when unknown", "linguistic fit"]
   },
   {
     "id": "truthful-pitch",
     "prompt": "Turn the validated concept into an investor narrative without fake urgency or startup theater.",
     "expected_skill": "ideakit-present",
-    "quality_focus": ["fact inference ambition", "earned urgency", "counter-case", "specific ask"]
+    "quality_focus": ["fact inference ambition", "decision-relevant stakes", "no inevitability theater", "counter-case", "specific ask"]
   }
 ]

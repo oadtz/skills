@@ -1,7 +1,7 @@
 # Audience playbooks — what makes each one act
 
-Read this in Step 1. You cannot make everyone's heart race with one message — pick the primary
-audience and tune to what actually moves them. The three core audiences want fundamentally
+Read this in Step 1. One averaged message rarely helps several audiences decide — pick the primary
+audience and tune to its actual decision. The three core audiences want fundamentally
 different things.
 
 ## Customer — "this is for me, and it ends my pain"
@@ -20,25 +20,25 @@ have that better life").
 
 What deflates it: talking about your company, your tech stack, your funding. They don't care yet.
 
-## Investor — "this is an inevitable wave, and this team will ride it"
+## Investor — “the upside is large, the wedge is credible, and this team learns efficiently”
 
-What they feel before acting: FOMO + conviction. They're not buying a product; they're buying a
-slice of a future and the team's ability to reach it.
+What they need before acting: a credible view of upside, evidence that the team can reach an initial
+wedge, and clarity about what remains uncertain. They are underwriting a sequence of learning and
+execution, not purchasing certainty.
 
-- **Open with the shift in the world**, not your product. A change that's already happening,
-  undeniable, with a clear before/after. This creates the "why now."
-- **Stakes: winners and losers.** Make clear that as this shift plays out, some win big and some get
-  left behind. Tension drives attention and urgency.
-- **Paint the promised land** — the large, specific future where your idea won — *before* explaining
-  how you get there. Sell the destination, then the vehicle.
-- **Why now / why inevitable / why you.** The three questions every investor silently asks. Answer
-  the tailwind (why now), the structural reason this wins (why inevitable), and the unfair advantage
-  (why this team).
+- **Open with the strongest decision-relevant observation or contradiction.** Use a world shift only
+  when current evidence shows one; a sharp customer behavior can be stronger.
+- **Show consequence, not theatrical winners and losers.** Name who changes behavior, budget, or risk,
+  and over what horizon.
+- **Connect wedge to upside.** Show the specific future the venture could create, then the sequence of
+  commitments and capabilities required to reach it.
+- **Why now / why this mechanism / why this team.** Separate observed tailwinds, inferred advantage,
+  and the bet investors are actually being asked to underwrite.
 - **Asymmetric upside, honest risk.** Show the size of the prize and that you know the real risks —
   naming risks builds credibility, hiding them destroys it.
 
-What deflates it: feature tours, a TAM slide with no narrative, "we have no competitors,"
-sandbagged or fantasy numbers.
+What deflates it: feature tours, a TAM slide with no reachable wedge, inevitability language,
+“we have no competitors,” and unsupported numbers.
 
 ## Teammate / recruit — "a mission that matters and is winnable, with a real role for me"
 

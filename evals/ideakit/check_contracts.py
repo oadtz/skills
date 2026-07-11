@@ -54,12 +54,12 @@ def main() -> int:
             if not target.exists():
                 failures.append(f"{name}: broken local reference {raw_ref!r}")
 
-    require(texts.get("discover", ""), ["provisional", "contrarian", "desired game", "none of these", "contradictions"], "discover", failures)
+    require(texts.get("discover", ""), ["provisional", "contrarian", "desired game", "none of these", "contradictions", "minimum viable edge map", "3–5 useful questions"], "discover", failures)
     require(texts.get("generate", ""), ["observed", "inferred", "bet", "opportunity theses", "venture architectures", "affordable loss", "do not sort by one total score", "causal consequence map", "query-escape", "opportunity landscape", "source consequence", "causal ring"], "generate", failures)
-    require(texts.get("explore", ""), ["known", "inferred", "imagined", "maturity", "venture architecture", "counter-case"], "explore", failures)
-    require(texts.get("validate", ""), ["maturity gate", "selected", "go / reframe / park / kill", "do not insert generic claude/chatgpt/mcp/quantum tables"], "validate", failures)
-    require(texts.get("name", ""), ["random simple noun", "negative baseline", "contextually"], "name", failures)
-    require(texts.get("present", ""), ["fact", "inference", "ambition", "no startup theater"], "present", failures)
+    require(texts.get("explore", ""), ["known", "inferred", "imagined", "maturity", "venture architecture", "counter-case", "source consequence", "causal ring"], "explore", failures)
+    require(texts.get("validate", ""), ["maturity gate", "selected", "go / reframe / park / kill", "do not insert generic claude/chatgpt/mcp/quantum tables", "evidence level", "e0 thesis", "e4 repeatability"], "validate", failures)
+    require(texts.get("name", ""), ["random simple noun", "negative baseline", "contextually", "unregistered at", "provisional shortlist", "handle appears unused"], "name", failures)
+    require(texts.get("present", ""), ["fact", "inference", "ambition", "no startup theater", "decision-response check", "never use fomo"], "present", failures)
 
     forbid(texts.get("generate", ""), [r"score every idea.*six dimensions", r"spread gate.*do not proceed"], "generate", failures)
     forbid(texts.get("validate", ""), [r"platform replication risk.*mandatory", r"future trajectory.*mandatory"], "validate", failures)
@@ -76,11 +76,13 @@ def main() -> int:
         failures.append(f"cases: missing routing coverage for {sorted(expected - covered)}")
     if len(rubric.get("dimensions", [])) < 12 or not rubric.get("hard_failures"):
         failures.append("pairwise rubric: expected at least 12 dimensions and explicit hard failures")
+    if set(rubric.get("mode_dimensions", {})) != set(SKILLS):
+        failures.append("pairwise rubric: expected mode-specific dimensions for every skill")
 
     if failures:
         print(json.dumps({"passed": False, "failures": failures}, indent=2))
         return 1
-    print(json.dumps({"passed": True, "skills": len(SKILLS), "routing_cases": len(cases), "rubric_dimensions": len(rubric["dimensions"]), "failures": []}, indent=2))
+    print(json.dumps({"passed": True, "skills": len(SKILLS), "routing_case_coverage": len(cases), "routing_predictions_tested": 0, "rubric_dimensions": len(rubric["dimensions"]), "mode_rubrics": len(rubric["mode_dimensions"]), "failures": []}, indent=2))
     return 0
 
 

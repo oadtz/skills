@@ -16,17 +16,17 @@ description: >
 
 # Ideakit — Present (make people act)
 
-Take a developed idea and turn it into communication that creates **conviction and emotion** in a
-specific audience — so they do something: buy, fund, or join. The test of success is not "looks
-polished." It's: **does it make the audience (and the user themselves) lean in?**
+Take a developed idea and turn it into communication that helps a specific audience make a consequential
+decision — buy, fund, join, approve, or test. The test is not “looks polished” or “sounds exciting.” It
+is: **does the audience understand the claim, trust the evidence, remember the distinction, and know
+what to do next?**
 
 ## The one principle that governs everything here
 
-**Point of view before format. Earn emotion from truth.** People rarely act because they understood a
-feature list; they act when a consequential belief becomes concrete. A gorgeous deck wrapped around a flat story persuades no one; a
-sharp story told on a napkin can move money and people. So this skill spends its effort on the
-*message* first, and treats the deck / demo / one-pager as a vehicle for a message that already
-works.
+**Audience decision before format. Earn trust before emotion.** People act when a consequential claim
+becomes concrete, credible, and relevant to a decision they already face. A polished deck wrapped
+around a flat or inflated story persuades no one. Spend effort on the decision, evidence, and point of
+view first; treat the deck, demo, or one-pager as a vehicle.
 
 If you ever catch yourself jumping straight to "let's make slides," stop — you've skipped the part
 that matters.
@@ -57,7 +57,7 @@ Use capabilities by intent, not by product-specific tool name:
 
 ## Workflow
 
-Five steps: **Aim → Core message → Narrative → Vehicle → Heart-race check.** The first three are
+Five steps: **Aim → Core message → Narrative → Vehicle → Decision-response check.** The first three are
 where the work is. Don't skip to the vehicle.
 
 ### Step 1 — Aim (who, and what should change in them)
@@ -66,14 +66,15 @@ Pin down three things before writing a word. Ask the user if not already clear:
 
 - **Audience**: customer, investor, teammate (or a specific named person/segment). Each is moved by
   different things — read `references/audience-playbooks.md`. If the audience is mixed, pick the
-  primary one; you cannot make everyone's heart race with one message.
+  primary one; one averaged message rarely helps several audiences decide.
 - **The single action** you want them to take after experiencing this (sign up / take a meeting /
   wire money / quit their job and join). One action. If you can't name it, the message has no job.
 - **The belief shift**: what do they believe now, and what must they believe to take that action?
   Persuasion is moving someone from belief A to belief B — name both.
 
-Also name the **emotional target**: relief, ambition, belonging, confidence, urgency. Use FOMO or
-time pressure only when validated, time-bound evidence earns it.
+Also name the likely **human response**: relief, ambition, belonging, confidence, curiosity, or
+urgency. Treat it as an effect to earn, not a tone to manufacture. Never use FOMO, inevitability, or
+time pressure unless a specific observed deadline or scarcity makes it decision-relevant.
 
 ### Step 2 — Core message (the one thing)
 
@@ -92,9 +93,9 @@ Pick the narrative structure that fits the audience and goal — don't default t
 team, ask." Read `references/narrative-frameworks.md` and choose deliberately. Common high-power
 choices:
 
-- **Strategic narrative** (best for investors and rallying a team): name an undeniable shift in the
-  world → there will be winners and losers → paint the promised land → position the idea as the
-  bridge to it. Stakes first, product later.
+- **Decision narrative** (often useful for investors and teams): establish the observed change or
+  contradiction → show its specific consequence → explain the venture's response and evidence → make
+  the decision and ask explicit. Do not force a world-changing wave onto a local or timeless problem.
 - **StoryBrand / hero's journey** (best for customers): the *customer* is the hero with a problem;
   the product is the guide that gives them a plan and a win. Never make your company the hero.
 - **Before → After → Bridge**: the painful now, the better future, and your idea as the crossing.
@@ -122,12 +123,12 @@ Build the chosen vehicle so the *narrative* drives the structure — slides/sect
 from Step 3, not a generic template. Keep one idea per unit. Cut anything that doesn't serve the
 core message.
 
-### Step 5 — Heart-race check (the gut test)
+### Step 5 — Decision-response check
 
-Before delivering, run the resonance check in `references/resonance-checklist.md`. The core
-questions: Is there one clear core message and one clear ask? Are the stakes real and felt? Is it
-concrete (a real example/number, not abstractions)? Would the *user themselves* lean forward? If
-any answer is "meh," fix the narrative — not the fonts.
+Before delivering, run `references/resonance-checklist.md`. Ask: Is there one falsifiable core claim
+and one clear ask? Does the evidence support the requested decision? Are stakes specific rather than
+grand? Can a skeptic tell fact from inference and ambition? Is the distinction memorable without
+hype? Fix the argument before the fonts.
 
 Label consequential material in the working draft as **Fact**, **Inference**, or **Ambition**. Remove
 the labels from the final artifact only when the distinction remains unmistakable. Include one honest
@@ -147,7 +148,7 @@ A deck is a means, not the finish line — name the action it's meant to unlock.
 
 ## Operating principles
 
-- **Truthful persuasion only.** Make people feel the real stakes and the real upside — never
+- **Truthful persuasion only.** Make the real stakes and upside legible — never
   manufacture urgency or inflate claims. Hype that outruns the substance destroys trust, and the
   validation step exists precisely so you don't have to.
 - **One audience, one action, one message.** Splitting focus dilutes everything.
@@ -156,7 +157,8 @@ A deck is a means, not the finish line — name the action it's meant to unlock.
 - **Emotion is earned with concreteness, not adjectives.** Show the moment, don't claim the feeling.
 - **No startup theater.** Do not manufacture a world shift, promised land, urgency, or inevitable
   winner/loser frame. Use those structures only when observed facts support them.
-- **The user is the first audience.** If it doesn't make *them* lean in, it won't move anyone else.
+- **The user is the first skeptic.** If they cannot defend each consequential claim and the ask, the
+  artifact is not ready for another audience.
 
 ## Execution
 
@@ -173,4 +175,4 @@ for every line of copy (no sentence the audience has read in a hundred decks): `
 - `references/audience-playbooks.md` — what makes customers vs investors vs teammates act; read this first in Step 1.
 - `references/narrative-frameworks.md` — the story structures and how to choose; Step 3.
 - `references/formats.md` — choosing and building the vehicle (deck/demo/one-pager/memo/diagram); Step 4.
-- `references/resonance-checklist.md` — the heart-race gut check and common message-deflating mistakes; Step 5.
+- `references/resonance-checklist.md` — the decision-response and credibility check; Step 5.
