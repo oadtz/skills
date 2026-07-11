@@ -57,7 +57,10 @@ def main() -> int:
             "causal_provenance": group_passes(text, [r"source consequence", r"causal ring", r"domain", r"time horizon|horizon"]),
             "query_escape": group_passes(text, [r"query[- ]escape|without (?:the )?force (?:word|vocabulary)|independent domain language"]),
         })
-    slop_hits = [term for term in SLOP if term.lower() in text.lower()]
+    # Editorial checks should inspect prose, not citation destinations. A source URL may
+    # legitimately contain terms such as "unlocking" without the author using generator dialect.
+    editorial_text = re.sub(r"\]\(https?://[^)]+\)", "]", text)
+    slop_hits = [term for term in SLOP if term.lower() in editorial_text.lower()]
     unsupported_precision = len(re.findall(r"\b\d+(?:\.\d+)?%\b|\b\d{2,}\+? (?:users|customers|complaints|people)\b", text, re.IGNORECASE))
     cited_links = len(re.findall(r"\[[^\]]+\]\(https?://[^)]+\)", text))
     labeled_observations = len(re.findall(r"\bObserved\b", text, re.IGNORECASE))
@@ -73,9 +76,23 @@ def main() -> int:
         integrity = 0
         warnings.append("no Observed labels found")
     if args.force:
-        finalist_rings = set(re.findall(r"causal ring\s*[:|]\s*(?:ring\s*)?([123])", text, re.IGNORECASE))
-        source_consequences = set(re.findall(r"source consequence\s*[:|]\s*([^\n|]+)", text, re.IGNORECASE))
-        domains = set(re.findall(r"^\s*domain\s*:\s*([^\n]+)", text, re.IGNORECASE | re.MULTILINE))
+        label_prefix = r"(?:\*\*)?"
+        label_suffix = r"(?:\*\*)?"
+        finalist_rings = set(re.findall(
+            label_prefix + r"causal ring\s*[:|]" + label_suffix + r"\s*(?:ring\s*)?([123])",
+            text,
+            re.IGNORECASE,
+        ))
+        source_consequences = set(re.findall(
+            label_prefix + r"source consequence\s*[:|]" + label_suffix + r"\s*([^\n|]+)",
+            text,
+            re.IGNORECASE,
+        ))
+        domains = set(re.findall(
+            r"^\s*" + label_prefix + r"domain\s*:" + label_suffix + r"\s*([^\n]+)",
+            text,
+            re.IGNORECASE | re.MULTILINE,
+        ))
         if not ({"2", "3"} & finalist_rings):
             warnings.append("force portfolio has no finalist tagged ring 2 or ring 3")
         if len(source_consequences) < 2:
