@@ -1,64 +1,67 @@
-# Ideakit — Craft bar (make the *output* creative, not just the process)
+# Ideakit — craft contract
 
-Read this before delivering in every `ideakit-*` skill. The process guards (diversity partitions,
-coverage audits, spread gates) prevent *narrow* output — they do not produce *good* output. A run can
-follow every step and still deliver slop: a table of plausible, interchangeable ideas in consultant
-language that any generator would emit for the same brief. The tell is never a rule violation; it's
-that nothing in the deliverable could only have come from **this run, for this user**.
+Read this before delivering from every `ideakit-*` skill. The family exists to produce work that
+could only have come from this user, this moment, and this line of reasoning. Novelty without a causal
+story is random; evidence without invention is a market report; polish without either is slop.
 
-## The four tests (apply to the deliverable, right before handing it over)
+## Keep three epistemic labels separate
 
-1. **Surprise test.** The deliverable must contain at least one thing the user could not have written
-   themselves before the run: a specific found fact, a non-obvious connection between two signals, or
-   a reframe that changes what the question is. If it merely re-arranges what the user already said,
-   it isn't done — go back to the scan/thinking, not to the formatting.
+- **Observed** — directly supported by a source, user behavior, transaction, quote, or artifact.
+- **Inferred** — a reasoned connection between observations. Show the bridge; do not cite the source as
+  if it stated the inference.
+- **Bet** — a falsifiable belief about what could become true. Name what would make it wrong.
 
-2. **Centroid cut.** (ideakit-name's discard-the-obvious-batch move, generalized.) Find the item a
-   competent generic generator would also produce for this brief — the most expected idea, name, slide,
-   or direction — and either cut it or state in one line why it earns its place anyway. Smell test:
-   *"would 50 other AI runs on this brief produce this exact line?"*
+Never upgrade an inference or bet into a fact. Never invent a number, quote, person, complaint count,
+or customer result to make prose feel concrete. Use `[needs evidence]` or an explicit assumption when
+support is missing.
 
-3. **Specificity test.** Concrete beats categorical everywhere, not only in pitches. Every key claim
-   gets a named actor, a number, a scene, or a verbatim quote.
-   - Slop: *"AI-powered platform helping SMEs streamline operations with actionable insights."*
-   - Sharp: *"Thai clinic owners still take LINE bookings by hand at 11pm — 40+ complaints across two
-     Facebook owner groups this quarter; a LINE-native scheduler that eats the paper notebook."*
-   The difference is not polish — the sharp one contains a *who* and *evidence*. If a line can't be
-   made specific, that usually means the scan never found support for it; treat it as a gap, not a
-   wording problem.
+## Gate 1 — reasoning integrity
 
-4. **Voice test.** Deliverables are written for the user, in the user's language, without generator
-   dialect. In deliverables, ban: *unlock, unleash, empower, elevate, seamless, delve, game-changing,
-   revolutionize, in today's fast-paced world*; the "this isn't just X — it's Y" reflex; rhetorical
-   triads on autopilot ("faster, smarter, better"); and a bolded-header listicle where a paragraph of
-   actual thinking is what the moment needs. Thai deliverables have their own centroid — ban the same
-   moves, not just the same words (e.g. "ปลดล็อกศักยภาพ", "ยกระดับ...อย่างไร้รอยต่อ").
+For every consequential recommendation, concept, or claim:
 
-## Templates are floors, not molds
+1. Trace it to an observation, an inference chain, or a labeled bet.
+2. Name the actor, situation, changed behavior, and mechanism—not merely an industry and technology.
+3. Include the strongest disconfirming signal or unresolved contradiction.
+4. Keep research as input, not a veto on invention: an original bet may have little direct demand
+   evidence, but it must have a coherent why-now and a cheap way to learn.
 
-Each skill's output template defines the *minimum fields*, not the shape of the prose. Lead with the
-insight — the surprising thing this run found and what it changes — then show the table. Two runs of
-the same skill for two different users should not read like the same document with the nouns swapped.
+## Gate 2 — venture originality
 
-## Quota-filling is still slop
+Reject a concept when any of these is true:
 
-When a spread gate or checklist demands a missing kind of idea (a consumer idea, a ring-3 idea, a
-desire idea), the gate guarantees the *cell is filled* — not that its content is any good. An idea
-generated only to satisfy a checkbox is exactly as dead as a converged one. Regenerate until the
-filler cell contains an idea you would defend on its own merits; if after honest effort the cell's
-best candidate is still weak, say so explicitly rather than dressing it up.
+- the industry nouns can be swapped and the concept still reads the same;
+- it is an existing category with “AI-powered,” “platform,” or “marketplace” pasted on;
+- its novelty is a strange name or feature rather than a different value mechanism;
+- it has no wedge, first-user path, or route from initial use to a durable business;
+- it was created only to fill a portfolio cell or satisfy a framework;
+- a competent generic generator would produce the same thesis and mechanism from the brief.
 
-## Where this bites, per skill
+For every finalist, answer: **what changed, what do we see, what is the bet, why this mechanism, why
+this founder, why now, how does it start, and what compounds if it works?** If those answers are
+interchangeable across finalists, return to invention rather than polishing.
 
-- **generate** — the #1 ranked idea must pass the surprise test; the most-expected idea in the
-  shortlist gets the centroid cut (kill or defend in one line).
-- **explore** — at least one option per session should make the user say "I hadn't thought of that";
-  the unexpected angle is the job, not decoration.
-- **validate** — the research brief must state at least one *disconfirming* finding plainly, in the
-  user's face, not buried in a risk table — or state explicitly that none was found after actively
-  looking (never manufacture a weak negative to fill the slot).
-- **present** — no line the audience has already read in a hundred decks; every beat passes the
-  specificity test.
-- **name** — `ideakit-name/references/anti-cliche.md` is this file's specialization; it already governs.
-- **discover** — reflect back at least one edge the person waved off as ordinary; that mirror moment
-  is the deliverable's surprise.
+## Gate 3 — editorial anti-slop
+
+- Lead with the sharpest insight or tension, not a process recap or template heading.
+- Prefer concrete verbs and scenes to category language.
+- Write in the user's language and cadence; preserve useful phrases they actually used.
+- Cut generator dialect: *unlock, unleash, empower, elevate, seamless, delve, game-changing,
+  revolutionize, in today's fast-paced world*; automatic rhetorical triads; “not just X—Y”; and Thai
+  equivalents such as “ปลดล็อกศักยภาพ”, “ยกระดับอย่างไร้รอยต่อ”, or “ครบ จบ ในที่เดียว”.
+- Vary the shape of the deliverable when the thinking calls for it. Templates define required
+  information, not mandatory prose order.
+
+## Stage-specific finish lines
+
+- **discover** — produce provisional edge/obsession hypotheses with evidence and contradictions, not a
+  flattering personality verdict.
+- **generate** — every finalist carries an Observed → Inferred → Bet → Venture chain and differs by
+  causal mechanism, not wording.
+- **explore** — separate what is known, inferred, and imagined; deliver at least one defensible reframe
+  or escape route, not performative weirdness.
+- **validate** — state disconfirming evidence prominently and test the idea's actual dependencies,
+  selected for its mode rather than copied from a generic risk template.
+- **name** — distinctiveness must connect to the venture's point of view; a random concrete noun is not
+  automatically a brand.
+- **present** — mark fact, inference, and ambition; earn emotion from evidence instead of manufacturing
+  urgency.

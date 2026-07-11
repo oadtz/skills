@@ -22,7 +22,7 @@ works standalone and hands off to the next. Full details in **[ideakit-README.md
 | Skill | Role |
 |---|---|
 | `ideakit-discover` | blank slate (no idea, no domain) → excavate what *you* want → an edge map |
-| `ideakit-generate` | source new business/startup ideas from trends + real problems |
+| `ideakit-generate` | turn change signals and founder edge into opportunity theses + venture portfolios |
 | `ideakit-explore` | brainstorm / stress-test a direction as a thinking partner |
 | `ideakit-validate` | deep-validate a chosen idea → produce a PRD / PLAN.md |
 | `ideakit-name` | generate brand/product names + screen availability (domain, trademark, handles) |

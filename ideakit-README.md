@@ -10,7 +10,7 @@ and triggers on its own intent — they're connected by handoffs, not merged int
 | Order | Skill | Use it when… | Output |
 |---|---|---|---|
 | 0 | **ideakit-discover** | you have *no flag at all* — not even a domain or skill — and want to find what's yours | an evidence-backed **edge map** (a frame) |
-| 1 | **ideakit-generate** | you have constraints (industry, skills, budget) and want idea options | ranked shortlist + storage prompt |
+| 1 | **ideakit-generate** | you have constraints/edge/change signals and want venture opportunities | opportunity theses + venture portfolio + storage prompt |
 | 2 | **ideakit-explore** | you have a direction and want to expand / stress-test it | sharpened options + key unknowns |
 | 3 | **ideakit-validate** | you have a chosen idea and want it validated + turned into a plan | a PRD / PLAN.md + idea-memory update |
 | 4 | **ideakit-present** | you need to win customers, investors, or teammates over | persuasive deck / demo / one-pager / memo + idea-memory update |
@@ -40,10 +40,10 @@ ideakit-discover  →  ideakit-generate  →  ideakit-explore  →  ideakit-vali
 - **Single responsibility + loose coupling.** Each skill does one job well; the handoff text in
   each `SKILL.md` is the connective tissue. This keeps every skill under the ~500-line best-practice
   limit and lets you iterate/evaluate them independently.
-- **Evidence-driven.** `ideakit-discover` excavates the person from real behavior (not "what do you
-  want?" polling, which produces confabulation); `ideakit-generate` sources ideas from real trends and
-  complaints; `ideakit-validate` pressure-tests the two things AI-generated ideas over-rate
-  (feasibility and platform survivability). The human always makes the go/kill call.
+- **Venture discovery, not idea vending.** `ideakit-discover` excavates provisional founder-edge
+  hypotheses from behavior; `ideakit-generate` turns change signals and contradictions into opportunity
+  theses, venture architectures, wedges, and learning tests; `ideakit-explore` expands unresolved
+  theses; `ideakit-validate` tests only mature concepts. The human owns every directional decision.
 - **Person before market.** `ideakit-discover` exists because a market idea that doesn't fit the
   founder's edge, energy, and constraints gets abandoned. It discovers founder–direction fit first and
   hands generate an edge map, so sourced ideas are personalized rather than generic.
@@ -53,10 +53,10 @@ ideakit-discover  →  ideakit-generate  →  ideakit-explore  →  ideakit-vali
 - **Idea memory is shared, not copied.** Once `ideakit-generate` stores an idea set, later skills use
   `ideakit-memory.md` to update the same idea location with exploration notes, validation outcomes,
   naming decisions, pitch artifacts, and next actions.
-- **Process guards ≠ output quality.** Diversity gates and coverage audits prevent *narrow* output,
-  not *bad* output — a run can pass every checklist and still deliver interchangeable, generic slop.
-  `ideakit-craft.md` is the family-level bar for the deliverable itself (surprise test, centroid cut,
-  specificity test, voice test, no quota-filling); every skill runs it before handing anything over.
+- **Invention freedom, evidence discipline.** Research claims are strict (Observed / Inferred / Bet;
+  never fabricate), while the invention phase uses selected lenses rather than a mandatory framework
+  march. `ideakit-craft.md` rejects interchangeable concepts, unsupported novelty, quota-filling, and
+  generator prose at every stage.
 - **Persuasion is story-first.** `ideakit-present` builds the narrative and emotional core before
   choosing a format (deck/demo/one-pager), because a polished deck around a weak story convinces
   no one. It only sells what validation made true — never hype past the substance.

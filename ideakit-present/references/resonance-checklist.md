@@ -18,6 +18,8 @@ themselves) lean forward. Run this check before delivering. If something fails, 
    on them and their world, not on you and your company?
 7. **The user leans in.** Read it as the user. Do *they* feel something? If the creator is bored, the
    audience is gone.
+8. **The epistemics are honest.** Can a skeptical audience distinguish observed fact, inference, and
+   ambition? Is urgency earned rather than manufactured?
 
 ## The "so what?" pass
 
@@ -39,6 +41,8 @@ that deflates most pitches.
 - **Many asks.** Three CTAs = zero CTAs. Cut to one.
 - **Bullet overload.** Walls of text on a slide. Strip to the load-bearing words.
 - **Bland averaging for mixed audiences.** A message tuned to "everyone" moves no one. Pick a primary.
+- **Startup theater.** “The world is changing,” inevitable winners/losers, promised lands, and FOMO
+  without time-bound evidence. Replace the theater with the actual change, contradiction, or scene.
 
 ## If it still doesn't move
 

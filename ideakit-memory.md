@@ -45,10 +45,12 @@ Never overwrite or delete existing idea memory to fit a new structure.
 
 ## Update by stage
 
-- **ideakit-explore**: append exploration notes, variants considered, assumptions, open questions,
-  front-runner, and cheapest next experiments. Keep stage `shaped` unless the user parks/kills it.
+- **ideakit-explore**: append known/inferred/imagined lanes, theses and venture architectures
+  considered, assumptions, front-runner, counter-case, and learning tests. Keep stage `shaped` unless
+  the user parks/kills it.
 - **ideakit-validate**: append PRD/PLAN link, research summary, evidence links, top assumptions, kill
-  criteria, go/kill recommendation, and stage update (`validated`, `parked`, or `killed`).
+  criteria, go/reframe/park/kill recommendation, and stage update (`validated`, `reframed`, `parked`,
+  or `killed`).
 - **ideakit-name**: append naming artifact link, shortlist, top pick, availability watch-outs, and
   legal-clearance reminder. Do not mark a name as final unless the user chooses it.
 - **ideakit-present**: append pitch/deck/demo/one-pager link, audience, core message, ask, and next

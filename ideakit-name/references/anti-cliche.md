@@ -16,16 +16,15 @@ exists to push generation off the centroid, toward names a thoughtful human name
 
 ## Why it happens (and the one mental move that fixes it)
 
-The first 10–15 names a model produces for any brief are the centroid: the obvious, safe, average ones.
-**They are the warm-up, not the answer — discard them on principle.** The good names live *after* you've
-exhausted the obvious. The core move: **generate the obvious batch, throw it away, then deliberately
-generate names that are unexpected for the category.** Distinctiveness comes from *tension* (a name
-slightly "wrong" for the space — "Slack" for work software, "Stripe" for payments, "Nest" for
-thermostats), not from describing the product more cleverly.
+Early names often reveal the centroid: obvious, safe category language. Generate that baseline so the
+pattern becomes visible, but judge rather than discard by position. A strong name can appear early;
+an arbitrary noun generated late can still be slop. Distinctiveness comes from venture-specific
+tension and memory, not merely distance from category vocabulary.
 
 ## The banned tells (auto-reject — these read as AI/generic)
 
-If a candidate has any of these, cut it unless there's a genuinely strong reason:
+If a candidate has any of these, flag it and cut it unless the naming brief supplies a genuinely
+strong, venture-specific reason:
 
 - **Slop suffixes:** `-ly`, `-ify`, `-io`, `-er`, `-it`, `-able`, `-hub`, `-base`, `-flow`, `-stack`,
   `-labs`, `-ai`, `-ware`, `-sense`, `-genix`/`-genics`. (Most-overused suffixes are `-er`, `-ly`, `-it`
@@ -42,8 +41,8 @@ If a candidate has any of these, cut it unless there's a genuinely strong reason
 - **ccTLD-as-the-name gimmick:** bending `.ly`/`.io`/`.ai` to spell the name (Parse.ly-style) — dated.
 - **Dropped-vowel respellings:** Flickr/Mndfl-style — now reads as ~2010s, not fresh.
 
-> A fast smell test: *"Would 50 other AI name generators also output this for this brief?"* If yes, it's
-> the centroid — cut it.
+> Use two smell tests: *“Would 50 other generators output this for this brief?”* and *“Could this
+> arbitrary word name 50 unrelated ventures?”* Either failure needs an exceptional rationale.
 
 ## Stay globally legible (read this before the techniques)
 
@@ -56,7 +55,8 @@ non-native speaker can **read, say, and spell after hearing once**:
 - "Distinctive" comes from *unexpected use of a simple word* (Stripe, Slack, Nest, Square), **not** from
   a harder word. Simple-but-surprising beats clever-but-obscure every time.
 
-This overrides everything below: if a candidate is distinctive but hard to read/say globally, cut it.
+Weight this to actual target markets. “Global” is not a synonym for English-only familiarity; if a
+candidate is distinctive but hard for its intended audiences to read or say, cut it.
 
 ## Techniques that produce distinctive, human names
 
@@ -77,8 +77,7 @@ rule above):
    roll"), **Audi** (Latin *audi*, "listen" — a translation of founder Horch's name). Prefer words that
    are *short and easy for anyone to pronounce*, not just meaningful. **Always then run the linguistic
    check** (next section): a borrowed word can mean something odd or offensive in another major
-   language. Latin/Romance/short Japanese-style sounds travel well; obscure or hard-to-say borrowings
-   don't.
+   language. Do not imitate the sound of a language without a real linguistic and cultural connection.
 5. **Unexpected sources** — a place, an object, a person, or jargon from an *unrelated* field. (Archaic
    English and on-the-nose mythology mostly fight global legibility — use only if the word is still
    genuinely easy to say.)
@@ -106,8 +105,8 @@ unless you actually checked; mark unchecked languages as not verified.)
 
 ## Wire it into the workflow
 
-In Step 2 (Generate): produce a quick obvious batch, **explicitly discard it as the centroid**, then
-generate the real set using techniques 1–6, banning every tell above. In Step 3 (SMILE/SCRATCH): treat
+In Step 2 (Generate): produce a quick obvious batch as a negative baseline, then generate the serious
+set using techniques 1–6 and contextual warning flags. In Step 3 (SMILE/SCRATCH): treat
 any surviving centroid name as an automatic **SCRATCH** ("Tame"/"Copycat") and cut it. The goal is a
 shortlist where each name would make a sharp human namer nod — not one a generator spat out.
 

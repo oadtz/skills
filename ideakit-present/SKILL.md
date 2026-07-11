@@ -7,7 +7,7 @@ description: >
   landing page, or narrative; or says things like "how do I present this", "make this compelling",
   "pitch to investors", "explain this to customers", "get my team excited", "make people care",
   "this needs to land", or "make it exciting". This skill is persuasion-first: it builds the
-  narrative and emotional core BEFORE choosing a format, because a beautiful deck with a weak story
+  evidence-aware narrative and point of view BEFORE choosing a format, because a beautiful deck with a weak story
   convinces no one. It is the final stage of the ideakit pipeline (after ideakit-validate). It is
   NOT for generating ideas (use ideakit-generate) or validating them (use ideakit-validate). When the
   idea is stored in an ideakit memory location, update that idea with the pitch artifact, audience,
@@ -22,9 +22,8 @@ polished." It's: **does it make the audience (and the user themselves) lean in?*
 
 ## The one principle that governs everything here
 
-**Story before format. Emotion before information.** People don't act because they understood your
-feature list — they act because they *felt* something: a pain they recognize, a future they want,
-a wave they're afraid to miss. A gorgeous deck wrapped around a flat story persuades no one; a
+**Point of view before format. Earn emotion from truth.** People rarely act because they understood a
+feature list; they act when a consequential belief becomes concrete. A gorgeous deck wrapped around a flat story persuades no one; a
 sharp story told on a napkin can move money and people. So this skill spends its effort on the
 *message* first, and treats the deck / demo / one-pager as a vehicle for a message that already
 works.
@@ -73,8 +72,8 @@ Pin down three things before writing a word. Ask the user if not already clear:
 - **The belief shift**: what do they believe now, and what must they believe to take that action?
   Persuasion is moving someone from belief A to belief B — name both.
 
-Also name the **emotional target**: relief? ambition? FOMO? belonging? The feeling you're aiming
-for shapes every later choice.
+Also name the **emotional target**: relief, ambition, belonging, confidence, urgency. Use FOMO or
+time pressure only when validated, time-bound evidence earns it.
 
 ### Step 2 — Core message (the one thing)
 
@@ -101,8 +100,9 @@ choices:
 - **Before → After → Bridge**: the painful now, the better future, and your idea as the crossing.
 - **Problem → Agitate → Solve**: make the pain vivid and felt before relieving it.
 
-Whatever you pick: **make it concrete** (one vivid, specific example beats ten abstractions),
-**create tension before resolution** (no tension, no attention), and **paint the future** the
+Whatever you pick, avoid framework autopilot. A contradiction, observed scene, customer phrase, or
+honest counter-case may be a stronger opening than “the world is changing.” **Make it concrete**,
+**create earned tension before resolution**, and **paint the future** the
 audience gets to live in. Use a real scenario, a real person, a real number.
 
 ### Step 4 — Vehicle (choose and build the format)
@@ -129,6 +129,10 @@ questions: Is there one clear core message and one clear ask? Are the stakes rea
 concrete (a real example/number, not abstractions)? Would the *user themselves* lean forward? If
 any answer is "meh," fix the narrative — not the fonts.
 
+Label consequential material in the working draft as **Fact**, **Inference**, or **Ambition**. Remove
+the labels from the final artifact only when the distinction remains unmistakable. Include one honest
+reason not to act or one unresolved uncertainty when it is decision-relevant; credibility persuades.
+
 Deliver the artifact using the host's normal file/artifact delivery mechanism, and offer a tightening pass.
 
 Then point to the next step based on *who the pitch was for*:
@@ -150,6 +154,8 @@ A deck is a means, not the finish line — name the action it's meant to unlock.
 - **Specific beats grand.** "Saves a 200-well district 3 weeks per trade" lands; "revolutionizes
   water management" bounces off.
 - **Emotion is earned with concreteness, not adjectives.** Show the moment, don't claim the feeling.
+- **No startup theater.** Do not manufacture a world shift, promised land, urgency, or inevitable
+  winner/loser frame. Use those structures only when observed facts support them.
 - **The user is the first audience.** If it doesn't make *them* lean in, it won't move anyone else.
 
 ## Execution

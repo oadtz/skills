@@ -1,0 +1,50 @@
+[
+  {
+    "id": "blank-slate",
+    "prompt": "I want to build a business but have no idea, domain, or useful skill in mind.",
+    "expected_skill": "ideakit-discover",
+    "quality_focus": ["provisional edge hypotheses", "contradictions", "desired game", "non-leading choices"]
+  },
+  {
+    "id": "domain-opportunities",
+    "prompt": "I know independent restaurants well. Find unconventional businesses I could start with $5k.",
+    "expected_skill": "ideakit-generate",
+    "quality_focus": ["change signals", "opportunity theses", "venture architectures", "affordable loss"]
+  },
+  {
+    "id": "force-brief",
+    "prompt": "What new businesses become possible as high-quality translation becomes nearly free?",
+    "expected_skill": "ideakit-generate",
+    "quality_focus": ["second-order effects", "new bottleneck", "non-consumption", "contrarian bet"]
+  },
+  {
+    "id": "rough-seed",
+    "prompt": "I am thinking about a community product for people caring for aging parents. What could it become?",
+    "expected_skill": "ideakit-explore",
+    "quality_focus": ["known inferred imagined", "multiple architectures", "reframe", "counter-case"]
+  },
+  {
+    "id": "mature-concept",
+    "prompt": "Validate a service-first concierge for Bangkok clinic owners that takes over late-night LINE scheduling, starting with five clinics.",
+    "expected_skill": "ideakit-validate",
+    "quality_focus": ["maturity gate", "selected risks", "distribution", "go reframe park kill"]
+  },
+  {
+    "id": "general-project",
+    "prompt": "Validate a traveling repair festival that teaches teenagers to fix household appliances.",
+    "expected_skill": "ideakit-validate",
+    "quality_focus": ["general dependencies", "stakeholders", "pilot", "no generic AI platform table"]
+  },
+  {
+    "id": "name-venture",
+    "prompt": "Name this validated service without generic startup names or random disconnected nouns.",
+    "expected_skill": "ideakit-name",
+    "quality_focus": ["venture point of view", "contextual warnings", "availability", "linguistic fit"]
+  },
+  {
+    "id": "truthful-pitch",
+    "prompt": "Turn the validated concept into an investor narrative without fake urgency or startup theater.",
+    "expected_skill": "ideakit-present",
+    "quality_focus": ["fact inference ambition", "earned urgency", "counter-case", "specific ask"]
+  }
+]

@@ -1,411 +1,224 @@
 ---
 name: ideakit-generate
 description: >
-  Generate new business and startup ideas from scratch by scanning trends and mining real
-  problems, then rank them with proven evaluation criteria. Use this skill whenever the user
-  wants to FIND, GENERATE, or BRAINSTORM business or startup ideas but does NOT yet have a
-  specific idea in hand — e.g. "what should I build", "give me startup ideas", "ideas for
-  [industry/market]", "what business could I start with [skill/budget]", "where are the opportunities",
-  "give me ideas where the money is", or "what's worth building right now". This is the upstream
-  idea-sourcing skill: it produces a ranked table of raw ideas and asks where to store/capture them.
-  Also use it for the immediate follow-up when the user answers that storage prompt and wants the
-  generated shortlist saved, merged into an ideas repo, or captured in an external notes vault. It is
-  NOT for refining an idea already in hand (use `ideakit-validate`) and NOT for feature brainstorming
-  on an existing product (use `ideakit-explore`).
+  Discover and invent fresh business or startup opportunities for a user who has constraints,
+  interests, skills, an audience, a domain, or a change in the world—but no specific venture yet.
+  Use for “what should I build”, “give me business ideas”, “ideas in this space”, “where are the
+  opportunities”, “what becomes possible because of X”, “give me unconventional ideas”, or “where is
+  the money moving”. Research signals, synthesize non-obvious opportunity theses, invent multiple
+  venture architectures, apply entrepreneurial judgment, and deliver a small evidence-aware portfolio
+  with wedges and learning tests. Route a true blank slate to ideakit-discover, a direction that still
+  needs expansion to ideakit-explore, and a mature chosen concept to ideakit-validate. Also handle the
+  immediate follow-up that stores or merges a generated portfolio.
 ---
 
-# Ideakit — Generate (idea sourcing)
+# Ideakit — Generate
 
-Generate fresh business/startup ideas for someone who does **not** yet have an idea, then
-rank the best ones and hand the winner off for deep validation. The user brings *constraints
-and direction* (an industry, their skills, a business model, a budget) — not an idea. The
-skill brings the ideas.
+Act as a venture-discovery partner, not an idea vending machine or market-report writer. Use research
+to notice changes and tensions, invention to create what does not exist yet, and entrepreneurial
+judgment to find a credible way to begin.
 
-## Why this skill exists (and what it must guard against)
+## North star
 
-Large language models are, per recent research, genuinely good at producing **novel** ideas —
-in a Stanford human study (Si, Yang & Hashimoto, 2024) LLM-generated research ideas were rated
-*more* novel than those of expert researchers. But the same body of work shows two consistent
-weaknesses this skill is explicitly designed to counter:
+Produce concepts that are **non-obvious but defensible**:
 
-1. **Weaker on feasibility.** LLM ideas score lower on "can this actually be done." → This skill
-   never claims an idea is validated. It scores feasibility honestly and routes the winner to
-   `ideakit-validate` for deep validation, with the human making the final go/kill call.
-2. **Low diversity at scale — ideas converge into near-duplicates.** Naively asking for "20
-   ideas" produces a cluster of variations on one theme. → This skill enforces diversity
-   structurally by partitioning the idea space *before* generating (see `references/diversity.md`).
-   Do not skip this; it is the single biggest quality lever.
+- fresh because they come from a change, contradiction, recombination, or contrarian bet;
+- grounded because facts and observations are sourced;
+- honest because inference and speculation are labeled;
+- entrepreneurial because each has a trigger, buyer, wedge, distribution path, and learning test;
+- personal because the portfolio uses the founder's edge, obsession, taste, and desired game.
 
-Keep these two facts in mind throughout. The skill's value is novel idea *sourcing*; rigor and
-feasibility come from the downstream steps and the human.
+Research is raw material, not a veto. A market report stops at what is true today; venture discovery
+asks what could become true next and how to earn the right to find out.
 
-## The governing principle (read first)
+Read `../ideakit-craft.md` now. Read `references/venture-invention.md` before Step 4.
 
-Every blind spot this skill has ever had — suppressing desire markets, ignoring non-Western signal,
-chasing fads, judging on one criterion — is the same failure: **a fixed frame**. Two counters, applied
-at every stage:
+## Routing and handoffs
 
-1. **Variety** — vary your inputs (sources), lenses (generation), and criteria (scoring). A generator
-   with less internal variety than the opportunity space has guaranteed blind spots. ("To a man with
-   a hammer, everything is a nail.")
-2. **Reflexivity** — the frame is always provisional. Make it explicit, deliberately scan *against*
-   it, and treat your own scores as estimates, not verdicts.
+- No domain, skill, audience, obsession, or direction at all → `ideakit-discover` first.
+- Has constraints or an edge but no venture → run this skill.
+- Has a rough thesis/seed and wants alternatives or pressure-testing → `ideakit-explore`.
+- Has a concept with actor + job/desire + mechanism + why-now + initial wedge → `ideakit-validate`.
+- Arrives with an edge map → use its hypotheses, contradictions, no-gos, and candidate playing fields;
+  do not repeat the interview.
 
-**When a new blind spot appears, don't add a special-case rule** — ask which of the two was thin
-(input variety? lens variety? a missing criterion? mistook the frame for the territory?) and
-strengthen that general mechanism instead. That ends the patch chase.
+## Capability mapping
 
-And one warning the two counters don't cover: process guards prevent *narrow* output, not *bad*
-output. The deliverable itself must clear the bar in `../ideakit-craft.md` — surprise, specificity,
-no centroid, no quota-filling.
-
-## The pipeline this skill sits in
-
-```
-ideakit-discover  →  [user: constraints]  →  ideakit-generate (THIS)  →  ideakit-explore  →  ideakit-validate  →  ideakit-present/build
-(blank slate → edge map)                      generate + rank        expand + challenge        validate + PRD
-```
-
-`ideakit-generate` turns *constraints* into ranked ideas. Its job ends when it produces the saved
-shortlist and asks or handles where that idea set should live next.
-
-**Intake — make sure the user actually has constraints to work from:**
-
-- If the user **has any direction at all** — a domain, a skill to lean on, an audience, a business
-  model preference — proceed; that's all this skill needs.
-- If the user is at a **true blank slate** ("I don't even know what I want to do", no domain, no
-  skill named), don't just default-frame and produce generic market ideas. Point them to
-  `ideakit-discover` first — it excavates the person and returns an **edge map** that makes the ideas
-  here personal instead of generic.
-- If the user **arrives with an edge map** from `ideakit-discover`, use it directly as the Step 1
-  frame: its candidate directions become your diversity partitions (Step 3) and its no-gos become
-  hard filters. Don't re-interview what discover already established.
-
-## Host capability mapping
-
-Use capabilities by intent, not by product-specific tool name:
-
-- **User input**: ask one concise question; if the host supports structured question UI, use it,
-  otherwise ask in plain text.
-- **Research**: use the host's available web/search/browser/connected-knowledge capability. Batch or
-  parallelize searches when the host supports it.
-- **No live research available**: ask the user for sources or continue only as a clearly labeled
-  "non-current draft"; mark market, trend, and platform claims as assumptions.
-- **Output**: return a concise ranked shortlist in chat and, if the host supports artifacts/files, also
-  write the durable shortlist with full scores, reasoning, sources, and killed ideas as a real
-  file/table. If no file/artifact mechanism exists, include the complete table in chat, say no durable
-  file could be written, and do not pretend Step 6 captured it anywhere.
+- **Research**: use current web/search/browser, connected knowledge, local files, and user-provided
+  material. Search in parallel where supported.
+- **First-party signal**: prefer real analytics, support, CRM, sales notes, communities, or user
+  behavior when the user authorizes access.
+- **No live research**: continue only as a labeled speculative workshop. Mark external claims
+  `[needs current evidence]`; never make “the market is moving” assertions from memory.
+- **Output**: write the full venture portfolio as a durable artifact when possible and return a concise
+  decision-oriented summary in chat.
 
 ## Workflow
 
-Six steps: **Frame → Scan (+ coverage audit) → Generate → Score → Synthesize & Hand off → Storage
-prompt.** Do not skip the force-brief consequence map inside Frame, the coverage audit inside Scan, the
-diversity partition inside Generate, or the storage prompt at the end — those guards are what separate
-this from a generic brainstorm and what keep it from quietly missing whole markets or losing useful
-ideas in chat history.
+Run seven stages: **Playing field → Change signals → Openings → Theses → Venture studio → Entrepreneur
+pass → Portfolio & storage.** Preserve freedom in invention; apply hard gates only to truthfulness,
+reasoning integrity, and final quality.
 
-**Money-first framing (optional).** If the user asks for "ideas where the money is" (most lucrative /
-follow the money), read `references/money-first.md` first. It doesn't change the core generation steps — it
-re-points Scan toward money evidence (funding flows, budgets, pricing, WTP), re-weights scoring toward
-Market/Starving Crowd + solo-reachability, and binds you to one hard rule: **every "the money is here"
-claim must cite real evidence fetched this run — never vibes; if you can't source it, it's a hypothesis,
-not a fact.** It rests on named principles (Hormozi's Starving Crowd, Profit Pools, Value Migration,
-painkiller-vs-vitamin) and carries the solo correction: money is *reachable, fast-paying* buyers, not
-the biggest TAM.
+### 1. Define the playing field
 
-### Step 1 — Frame (gather constraints, not ideas)
+Ask only for missing information, one concise question at a time:
 
-**If an `ideakit-discover` edge map is in hand, the frame is already built** — adopt it: the edge map's
-"who you are" and no-gos fill the fields below, and its candidate directions seed Step 3's partitions.
-Confirm it in a line and move to Step 2 rather than re-interviewing.
+- founder means: skills, access, credibility, relationships, audience, lived experience;
+- obsessions, taste, recurring irritations, and contrarian beliefs;
+- desired game: fast cash, calm solo business, category-scale venture, cultural product, public impact;
+- resource envelope and affordable loss;
+- no-gos and work the founder refuses to build a life around.
 
-Otherwise, ask one concise question at a time to pin down direction. Use the host's structured question
-UI if available; otherwise ask in plain text. Ask only what's missing; infer the rest from context. Cover:
+State a compact brief and the decision this run should enable. If an edge map exists, adopt it as
+provisional evidence rather than a personality verdict.
 
-- **Domain / industry** the user knows or cares about (their "edge" — where they live closer to
-  the future than most people).
-- **Unfair advantage**: specific skills, audience, network, or experience they already have.
-- **Business model preference**: SaaS, AI-native service, marketplace, SMB/local, content, etc.
-- **Resource envelope**: rough budget, time, solo vs. team, technical or not.
-- **Constraints / no-gos**: things they will not do (industries, models, geographies).
+Classify whether the brief contains a **force**: a technology, regulation, cost curve, demographic
+shift, event, or cultural change acting on the world. For a force, do not ideate “solutions for X”.
+Trace how it changes behavior, bottlenecks, power, spend, rituals, and what becomes newly possible.
 
-**Classify the brief: domain or force.** A *domain* brief names an industry, skill, or audience
-("fintech", "my Python skills") — proceed as below. A *force* brief names an event, shock, or trend
-acting ON the world (a heatwave, a new regulation, a new model capability, a demographic shift). A
-brief can be both ("fintech after the EU AI Act") — if any force is present, treat it as a force.
-**When unsure, treat it as a force too**: the cost of an unneeded map is one quick sketch, while
-misreading a force as a domain silently caps the whole run at ring 1.
+### 2. Gather change signals
 
-For a force brief, do NOT treat the force as a domain to scan "solutions for" — that traps every
-idea at ring 1 (direct mitigation). The required move is **Force -> Consequence -> Opportunity**:
-translate the force into changed behaviors, new constraints, rearranged structures, and changed
-spending/jobs before ideating. A heatwave is not "the cooling market"; it is a world where water use,
-sleep, work hours, food, care, insurance, retail foot traffic, city operations, and home routines may
-all shift.
+Search for a useful mix selected for this brief—not a fixed quota:
 
-Before Step 2, produce a compact **consequence map** using the ripple lens in
-`references/frameworks.md`. It is a working artifact, not optional scratch:
+- behavior and transactions: what people do, buy, abandon, or repeatedly improvise;
+- workarounds: spreadsheets, chat coordination, agencies, manual expert work, hacks, waiting;
+- desire and culture: identity, belonging, status, taste, fandom, ritual, aspiration;
+- cost/capability shifts: what became cheaper, faster, abundant, regulated, or accessible;
+- value migration: who gains/loses bargaining power or budget;
+- non-consumption: who wants the outcome but cannot use current solutions;
+- incumbent constraints: what established players rationally ignore or cannot offer.
 
-| Ring | Domain | Consequence | Who changes behavior? | What changes? | New spend / unmet job |
-|---|---|---|---|---|---|
-| 1 Direct | [domain] | [direct effect] | [actor] | [behavior/constraint] | [spend/job] |
-| 2 Behavior | [domain] | [knock-on behavior] | [actor] | [behavior/constraint] | [spend/job] |
-| 3 Structural | [domain] | [structure rearranges] | [actor] | [behavior/constraint] | [spend/job] |
-
-Ring 1 = direct effects/mitigation, ring 2 = behaviors people change because of the force, ring 3 =
-structures that rearrange once behaviors shift. Sweep the rings across life domains (work, home,
-health & body, food, water, energy, mobility, leisure & social ritual, retail/consumption, pets &
-elderly care, education, insurance, real estate, local government, agriculture, environment,
-migration, politics & regulation — an open list: name whichever domains this force actually touches,
-not only tech/business). Minimum for a force brief: **8-12 consequences across at least 6 domains,
-including at least 3 ring-2/3 consequences**. If the map stays literal ("heat -> cooling" only),
-stop and widen it before scanning.
-
-While mapping, name the **critical uncertainty fork** the consequences hinge on (the
-scenario-robustness sharpener in the ripple lens); Step 5 uses it to mark which shortlisted ideas
-survive both branches. The consequence map becomes Step 2 scan targets and Step 3 partition inputs, so
-depth and breadth arrive in the first pass instead of after the user pushes back.
-
-If the user gives almost nothing ("just give me ideas") but *does* have a domain or skill, pick a
-sensible default frame, state it in one line, and proceed — don't stall. You can widen later. But if
-the user is at a true blank slate with no domain, skill, or direction to name, that's the signal to
-route them to `ideakit-discover` first (see Intake above) rather than default-framing into generic ideas.
-
-### Step 2 — Scan (build raw signal)
-
-Generate ideas *from evidence*, not from thin air. Pull current signal with the host's available
-research capability: web/search/browser, connected knowledge bases, local files, or user-provided
-sources. See `references/trend-sources.md` for the source list and ready-made query patterns. At
-minimum, run several batched/parallel searches when the host supports it across:
-
-- Trend/authority sources (YC Requests for Startups, a16z Big Ideas, etc.) for where the puck
-  is going.
-- Problem/complaint sources (Reddit, Hacker News, GitHub issues, review sites, niche forums)
-  for pain people express in their own words.
-- Culture/desire sources (TikTok, X, Wattpad/Webtoon, streaming & app-store charts, fandom subs,
-  Google Trends) for what people *want, love, and rally around* — the desire-driven markets the
-  first two source types are blind to. Don't skip this; it's how the skill historically missed
-  whole categories like the BL/Y-series boom.
-- The user's specific domain, to ground ideas in their edge.
-- For a **force brief**: the consequence map's ring-2/3 consequences (the changed behaviors and the
-  rearranging structures), searched as topics in their own right — not only the force itself. Search
-  changed spending and substitute behavior too: "who now spends more / less / differently because of
-  this force?", "what job became harder?", "what routine moved to a different time/place/channel?",
-  and "which institution now has a new obligation?"
-
-Capture raw problems and signals verbatim before interpreting. Quantify pain or desire where you can
-("47 GitHub issues asking for X", "top complaint in r/foo", "12k fan works around Y"). Keep source
-links beside each signal.
-
-**Then run the coverage self-audit before generating.** The source list above still has a horizon —
-any fixed list does. Read `references/coverage-audit.md` and walk the *axes of blindness* (value
-type, geography/culture, who-pays, buyer sophistication, trend trigger, maturity, time horizon,
-causal depth):
-locate where your scan is skewed, then deliberately run 1–2 extra searches at the opposite ends most
-relevant to the brief. This is the general mechanism that catches *unknown* unknowns — not just the
-desire/fandom gap we already named, but whatever this particular brief is blind to. Note in one line
-what you additionally scanned (recording "found nothing" is fine — it proves the axis was checked).
-
-### Step 3 — Generate (with enforced diversity)
-
-**Before generating, partition the idea space.** Read `references/diversity.md` and lay out the
-dimensions you'll vary across (market segment, mechanism, business model, route-to-market archetype,
-wedge, who-you-replace — plus the order-of-effect ring and domain for force briefs). For a force
-brief, target cells from the consequence map, not from the literal force word. At least half the raw
-ideas should originate from ring-2/3 consequences or changed-spending jobs, even if ring-1 ideas look
-easier.
-Then generate **10–20 raw ideas that deliberately spread across those partitions** (target ~12–15
-across the cells you pick — one or more per cell is fine), applying the
-generation lenses in `references/frameworks.md` (Live-in-the-future, Jobs-to-be-Done + Forces of
-Progress, First-Principles, SCAMPER, Inversion, the Desire/Fandom lens, and Blue Ocean/ERRC +
-Category Creation for net-new demand). Aim for genuine spread — if three ideas are variations on
-one theme, collapse them to one and generate a structurally different one.
-
-Each raw idea is one or two sentences: *who* has *what* pain **or want**, and the *shape* of the
-solution. Don't polish yet — but do make it *specific* from the start; vagueness at this stage is
-what turns into interchangeable slop at Step 5. The bar:
-
-- Slop: *"An AI platform that helps restaurants optimize operations."* (no who, no evidence, any
-  generator produces this)
-- Sharp: *"Bangkok street-food vendors lose their best hours to raw-ingredient runs — a pooled
-  dawn-delivery co-op app, seeded from the 3 wholesale LINE groups found in the scan."* (a who, a
-  found signal, a mechanism)
-
-An idea sentence that cites nothing from Step 2 is a guess wearing an idea's clothes.
-
-**Spread gate — do not proceed to Step 4 until all are true** (this is the main guard against
-regressing to a B2B/painkiller monoculture; full detail in `references/diversity.md` §5):
-
-- [ ] at least **two different customer types**, AND
-- [ ] at least **two different mechanisms/wedges**, AND
-- [ ] at least **three different route-to-market archetypes** across the raw set (e.g. B2B SaaS,
-  consumer/DTC, prosumer/creator, community/media/IP, marketplace, public/NGO/grant, services), AND
-- [ ] if the prompt is broad or asks for "big" / "million-scale" ideas, at least **one non-B2B idea**
-  must stay in the scored set even if it is riskier — otherwise B2B budget logic will silently
-  monoculture the portfolio, AND
-- [ ] at least one **"works today"** idea and one **"bets on a near-future capability"** idea, AND
-- [ ] at least one **desire/identity-driven** idea (not only painkiller/utility) — *unless* the brief
-  is explicitly a pure-utility domain, AND
-- [ ] **for force/event briefs only:** the set escapes the literal force — at least one **ring-2**
-  and one **ring-3** idea, at least **two ideas that don't name the force or its direct mitigation
-  in the sentence**, at least **three consequence-map domains** represented, and at least **one idea
-  that follows changed spending or a newly created job** rather than a newly painful condition.
-
-If any box fails, regenerate the missing kind — don't proceed. A set can pass customer/mechanism
-diversity and still fail if every route to market is B2B SaaS or enterprise sales; in that case,
-regenerate from consumer, community/media, marketplace, prosumer, public/NGO, or service-first cells.
-For force briefs, a literal/direct set almost always means the consequence map was too shallow or Step
-2 searched the force itself instead of its consequences; go back to the map/scan and widen before
-scoring. An all-utility set almost always means the culture/desire sources or the coverage audit were
-skipped; go back to Step 2.
-
-**But the gate guarantees spread, not quality.** An idea generated only to tick a box — "one consumer
-idea because the checklist demands it" — is exactly as dead as a converged one. Regenerate until the
-filler cell holds an idea you'd defend on its own merits (see `../ideakit-craft.md`, "Quota-filling is
-still slop"); if its best candidate stays weak after honest effort, say so instead of dressing it up.
-
-### Step 4 — Score
-
-Score every idea against the rubric in `references/scoring.md`. The six dimensions:
-
-1. **Pull — Pain *or* Desire** (urgent problem? OR intense, identity-driven want?) — Paul Graham, expanded
-2. **Market / Starving Crowd** (hungry, able to pay, reachable, growing?) — Hormozi
-3. **Secret** (what do you see that others don't yet believe?) — Thiel
-4. **Job** (what is the customer hiring this to do?) — Christensen
-5. **Survivability / Power** (if ChatGPT/Claude ships this natively tomorrow, why do you still win?) — name the durable power behind the moat using Helmer's *Seven Powers*
-6. **Feasibility** (riskiest assumption, and how cheaply it can be tested?) — Lean Startup
-
-Be honest on feasibility and survivability especially — that's where LLM-generated ideas tend to
-be over-optimistic. A low score is useful information, not a failure.
-
-### Step 5 — Synthesize as a portfolio, then rank & hand off
-
-Ranking is *synthesis*, not just sorting — apply the governing principle one last time so the
-shortlist has requisite variety and you stay reflexive about the mix. Before writing the table:
-
-- **Declare the mix.** State the shortlist's spread on three independent axes: **value type**
-  (painkiller ↔ desire), **durability of demand** (durable ↔ emerging/fad), and
-  **route-to-market archetype** (B2B, consumer/DTC, prosumer/creator, community/media/IP, marketplace,
-  public/NGO/grant, services). These are *different* axes — a desire market can be
-  centuries-durable (fandom, pets, faith) and a painkiller can be a fad. Don't conflate "desire" with
-  "risky", and don't let "money-first" collapse the set into enterprise/B2B only. For a **force
-  brief**, also declare the **ring spread** (direct mitigation ↔ changed behaviors ↔ rearranged
-  structures), **domain spread**, and **literal-vs-adjacent spread**. Ring-2/3 ideas naturally score
-  lower on Feasibility, so an all-ring-1 or all-literal shortlist after a diverse generation is a
-  *synthesis failure*, not a scoring verdict — keep at least one ring-2/3 adjacent idea on the table
-  with its longer clock stated honestly. If a critical-uncertainty fork was named on the consequence
-  map, mark the ideas that survive both branches as *robust* — robustness breaks ties.
-- **Balance, don't monoculture — but don't force 50/50.** Weight the mix by the *evidence* and the
-  user's *edge*, and justify the weighting in one line. The rule is only: no axis should be all-one
-  unless the brief explicitly demands it. An all-painkiller *or* all-desire shortlist is a frame
-  failure; so is an all-fad one.
-- **Flag fads explicitly (Painkiller / Vitamin / Candy + Lindy).** Tag each idea: *Painkiller*
-  (needed), *Vitamin* (good, habitual, recurring), or *Candy* (instant but fleeting). Candy is the
-  fad risk — keep it only if its demand is rooted in an enduring human drive (status, belonging,
-  care, meaning, health, safety → Lindy-durable), otherwise discount it or pair it with a durability
-  plan. This governs against trend-chasing without suppressing desire.
-
-- **Run the craft bar (`../ideakit-craft.md`) on the shortlist itself.** The #1 idea must pass the
-  surprise test (contain something the user couldn't have written before the run). Find the
-  most-expected idea in the set — the one 50 other AI runs on this brief would also produce — and
-  either cut it or defend it in one line. Every idea sentence passes the specificity test (a who +
-  a found signal), and the write-up leads with the run's most surprising finding, not with the table.
-
-Produce a ranked table of the top 3–5 ideas. **Produce it in the user's language** — the template
-below is illustrative (shown in Thai). The template is a floor, not a mold: keep the fields, don't
-clone the shape. The table is a *summary*; the full six sub-scores and the
-one-line justification per dimension (required by `scoring.md`) live in the per-idea reasoning below
-the table, not in the table itself.
+Capture concise **signal cards**:
 
 ```
-## ไอเดียที่คัดมาแล้ว (Ranked shortlist)
-
-**สมดุลของพอร์ต:** painkiller:desire = [x:y] · durable:emerging = [x:y] — ถ่วงแบบนี้เพราะ [เหตุผลตาม brief/edge].
-
-| # | ไอเดีย (1 ประโยค) | ชนิด (P/V/C) | ตลาด/ฝูงชน | Evidence signal + source | คะแนนรวม | สมมติฐานเสี่ยงสุด |
-|---|---|---|---|---|---|---|
-| 1 | ... | P/V/C | ... | [signal](url) | X/30 | ... |
-...
-
-### เหตุผลของอันดับ 1–3 (ต้องมี sub-scores ครบ 6 มิติ)
-- **#1 [name]** — Pull x/5, Market x/5, Secret x/5, Job x/5, Survivability x/5, Feasibility x/5.
-  ทำไมนำ; source หลัก; สมมติฐานเสี่ยงสุด; วิธีเทสต์ที่ถูกที่สุด.
-- ...
-
-### ตัวที่ตัดทิ้งและเหตุผล
-- [idea] — killed because [reason] (e.g. "Candy — demand was a platform-specific spike, not Lindy-durable").
+[Observed] What happened or was said — actor/context — source/date
+Why it may matter: [Inferred] ...
+Uncertainty or counter-signal: ...
 ```
 
-Then offer the hand-off explicitly: *"อยากให้ส่งอันดับ 1 (หรือตัวที่คุณเลือก) ต่อให้ `ideakit-validate`
-ทำ deep validation แล้วออกมาเป็น PRD ไหม? หรืออยากเอาเข้า `ideakit-explore` เพื่อขยาย/ท้าทายก่อน?"*
+Quotes and numbers must be fetched and cited. Do not write fictional “sharp” examples.
 
-The human chooses what advances. This skill recommends but never decides go/kill.
+### 3. Synthesize entrepreneurial openings
 
-### Step 6 — Ask where to store the ideas
+Do not jump from search results to products. Cluster signals and look for:
 
-After producing the shortlist artifact and chat summary, ask one concise storage question before
-ending the run. Read `references/storage.md` for choices, formats, and external-repo merge rules.
+- contradictions between what people say, do, and pay for;
+- anomalies that the category's standard story cannot explain;
+- newly scarce complements after something becomes abundant;
+- second-order behavior and structural effects;
+- coordination failures and costly handoffs;
+- valuable work hidden inside an existing product or service;
+- shared assumptions that may have expired;
+- founder-specific access or taste that changes what is reachable.
 
-Default wording:
+Write 3–7 **openings**, each as a causal observation rather than a solution. Include the strongest
+counter-signal. A large source count does not substitute for a sharp tension.
 
-> อยากให้เก็บชุดไอเดียนี้ไว้ที่ไหนต่อ? เลือกได้ เช่น `ideas/` ใน repo นี้, repo/vault อื่น,
-> path ที่คุณระบุ, หรือเก็บขั้นต่ำไว้ที่ `outputs/`
+### 4. Form opportunity theses and invent venture architectures
 
-The storage question is mandatory. When the host can write files/artifacts, the run must leave a saved
-artifact somewhere; do not offer a "don't save" option. If the user chooses a destination, write/update
-the files for real. If the user names an external repo/vault/path, inspect it first and merge into its
-existing convention when one is visible. Ask only one follow-up if the destination is ambiguous.
+Read `references/venture-invention.md`. Form theses before naming products:
 
-## Operating principles
+```
+Because [Observed change], [actor] can/must now [new behavior], while [old assumption/system]
+still [gap]. We infer [opportunity]. We bet that [falsifiable future belief]. This is wrong if [...].
+```
 
-**Requisite Variety** — hold enough variety to match a varied world:
-- **Diversity is a feature, not noise.** A spread of structurally different ideas beats five polished
-  variations of one theme.
-- **Vary every stage, not just one.** Variety of inputs (sources), of lenses (generation), and of
-  criteria (scoring) — a single rich stage can't compensate for a narrow one.
-- **Desire ranks with pain; durability is a separate axis.** Score the intensity of the *want*, not
-  only the depth of the *problem*; then ask separately whether that demand is durable or a fad.
+Generate multiple **venture architectures** from the strongest theses—not merely feature variants:
 
-**Reflexivity** — never mistake your frame for the territory:
-- **Audit your own blind spots, generically.** Every run, ask what your sources *and* rubric can't
-  see and scan against that bias (`coverage-audit.md`) — catch unknown unknowns, don't re-list known
-  ones.
-- **Don't silently filter by profile.** The user's background is a *preference to surface against*,
-  not a pre-filter. Put options on the table and let the user cut them.
-- **Honest, provisional scoring.** Don't inflate feasibility/survivability; treat totals as a sort
-  key, not a verdict. The human makes the go/kill call.
+- product or workflow infrastructure;
+- service-first path that discovers the product;
+- marketplace/network/coordination layer;
+- media/community → transaction or commerce;
+- data asset or standard;
+- unbundled/rebundled offering;
+- category-creating experience or business model.
 
-**Operating constraints** (unchanged):
-- **Constraints in, ideas out.** If the user already has a specific idea, hand off to
-  `ideakit-validate` and stop.
-- **Evidence beats cleverness.** Every idea traces to a real signal from Step 2; cite it.
-- **Hand off, don't hoard.** Output is a shortlist + recommendation to advance, not a finished plan.
-- **Capture before the trail goes cold.** End every run by asking where the generated idea set should
-  live next; a shortlist that cannot be found later has not really entered the pipeline.
+Choose 2–4 useful invention moves from the reference (inversion, removal, recombination,
+non-consumption, new bottleneck, ERRC, identity/desire). Do not fill every framework. Collapse concepts
+that share actor + job + mechanism + business architecture.
+
+### 5. Run the venture-quality pass
+
+For each serious concept, make the chain explicit:
+
+```
+Observed → Inferred → Bet → Venture mechanism
+Trigger/first user → Buyer/budget → Wedge → First-10 distribution
+Expansion path → What may compound → Affordable-loss learning test
+```
+
+Then attack it:
+
+- Is this an ordinary category with AI pasted on?
+- Is it a feature rather than a venture?
+- What behavior change does adoption require?
+- Why has nobody done it—or why did prior attempts fail?
+- How would an incumbent respond?
+- What is the strongest evidence against the thesis?
+- Does the founder have a credible right to start?
+- Can the wedge begin manually before building the grand vision?
+
+Kill, merge, or reframe weak concepts. Preserve a bold concept when the reasoning is strong but the
+evidence is early; label it a bet rather than lowering its score until it disappears.
+
+### 6. Select a portfolio with entrepreneurial judgment
+
+Do not sort by one total score. Use a compact decision table with separate dimensions:
+
+- **Originality** — non-obvious thesis and mechanism;
+- **Pull** — pain, desire, identity, obligation, or spending trigger;
+- **Founder leverage** — means, taste, access, credibility;
+- **Reachability** — credible first-10 path;
+- **Asymmetry** — learning cost/downside versus upside;
+- **Power path** — plausible compounding advantage if it works;
+- **Critical uncertainty** — what must be learned next.
+
+Use qualitative judgments or dimension scores, but do not sum them. Select 3–5 finalists by portfolio
+role only where a candidate earns it: asymmetric, contrarian, fast-cash, compounding, wildcard. Leave a
+role empty rather than quota-fill. Explain why a riskier concept advances over a safer one.
+
+Run `../ideakit-craft.md` on **every finalist**. If the nouns can be swapped into another brief, return
+to the thesis or mechanism.
+
+### 7. Deliver, hand off, and store
+
+Lead with the most important tension or opportunity—not “I ran six steps.” For each finalist include:
+
+- one-sentence concept with actor, trigger, and mechanism;
+- Observed / Inferred / Bet chain with citations near observations;
+- why now and founder fit;
+- wedge, first buyer, and first-10 distribution;
+- expansion and possible compounding power;
+- strongest counter-case;
+- affordable-loss learning test.
+
+Recommend a portfolio role or next experiment, not a fake certainty. The user chooses what advances.
+
+Read `references/storage.md` when the user wants durable capture. Ask one concise storage question if
+no destination is known. Store the portfolio, evidence links, killed concepts, decision notes, and
+next tests; never claim storage succeeded without writing it. Then offer:
+
+- expand or recombine a thesis → `ideakit-explore`;
+- validate a mature chosen concept → `ideakit-validate`;
+- name only after its point of view is stable → `ideakit-name`.
 
 ## Execution
 
-**Don't stop at advice — produce the deliverable.** Actually *run* the searches (don't describe the
-scan), then build the ranked shortlist with cited evidence as a real file/table. Do the research for
-real under the grounding rule (cite or mark as assumption; never invent market data). Full contract:
-`../ideakit-execution.md`. Quality bar for the deliverable itself: `../ideakit-craft.md`.
+Actually run the research and write the venture portfolio. Cite observations, label inference and
+bets, and preserve the user's approval over direction. Follow `../ideakit-execution.md`; do not perform
+external, identity-bearing, paid, or irreversible actions without explicit confirmation.
 
-## Reference files
+## References
 
-- `references/trend-sources.md` — *input variety*: where to scan + copy-ready query patterns.
-- `references/money-first.md` — *optional "where the money is" framing*: re-points Scan/Score toward
-  cited money evidence (Starving Crowd, Profit Pools, Value Migration), with the hard no-fabrication
-  rule and the solo correction (reachable fast-paying buyers, not biggest TAM). Read when the user
-  asks for the most lucrative ideas / to follow the money.
-- `references/coverage-audit.md` — *reflexivity on inputs*: scan against your own source/rubric bias
-  to catch unknown unknowns (run inside Step 2, every run).
-- `references/diversity.md` — *lens variety*: partition the idea space so ideas don't converge
-  (read every run before Step 3); now includes the value-type and order-of-effect axes and portfolio
-  synthesis.
-- `references/frameworks.md` — the actual generation lenses and scoring foundations (the
-  "latticework"), including the ripple lens for force briefs.
-- `references/scoring.md` — *criteria variety + reflexivity*: the six-dimension rubric (0–5 each) plus
-  the fad/Lindy and balance flags.
-- `references/storage.md` — *idea memory*: the end-of-run storage prompt, default portfolio folders,
-  idea-card fields, index rows, and decision/evidence capture rules. Read at Step 6 when the user wants
-  generated ideas stored beyond the shortlist artifact.
+- `references/venture-invention.md` — opportunity recognition, invention moves, Effectuation,
+  entrepreneur pass, Seven Powers, and portfolio roles. Read before Step 4.
+- `references/trend-sources.md` — source and query ideas; choose what fits rather than scanning all.
+- `references/coverage-audit.md` — use when the signal set appears culturally, geographically, or
+  economically narrow.
+- `references/frameworks.md` — deeper mechanics for JTBD, inversion, ERRC, and force ripples; consult
+  selectively.
+- `references/money-first.md` — use when the user explicitly prioritizes reachable money.
+- `references/scoring.md` — use dimension definitions as prompts for judgment; do not create a total.
+- `references/storage.md` — durable idea-memory formats and storage flow.
+- `references/diversity.md` — consult only when concepts converge; structural diversity is diagnostic,
+  not a quota.

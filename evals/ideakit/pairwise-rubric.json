@@ -1,0 +1,45 @@
+{
+  "purpose": "Blindly compare two temporary Ideakit artifacts without treating either as factual truth.",
+  "scoring": "Score each dimension 1-5, cite artifact passages, then choose A, B, or tie. Verify cited claims separately.",
+  "dimensions": [
+    {
+      "name": "venture_originality",
+      "question": "Does the work contain a non-obvious thesis and value mechanism rather than category nouns with technology pasted on?"
+    },
+    {
+      "name": "reasoning_provenance",
+      "question": "Can consequential concepts be traced through Observed, Inferred, and Bet without laundering inference into fact?"
+    },
+    {
+      "name": "structural_diversity",
+      "question": "Do finalists differ in actor, mechanism, payer, wedge, or venture architecture rather than wording?"
+    },
+    {
+      "name": "entrepreneurial_quality",
+      "question": "Are trigger, buyer, wedge, first-user distribution, affordable loss, expansion, and possible compounding power credible?"
+    },
+    {
+      "name": "counter_case",
+      "question": "Does the work steelman disconfirming evidence, adoption friction, incumbent response, and what would make the bet wrong?"
+    },
+    {
+      "name": "founder_specificity",
+      "question": "Could this work only have come from this founder's means, taste, obsession, constraints, and desired game?"
+    },
+    {
+      "name": "editorial_quality",
+      "question": "Is the prose direct, specific, varied, and free of generator dialect or template theater?"
+    },
+    {
+      "name": "actionable_learning",
+      "question": "Does the output enable a concrete directional choice or cheap informative test without pretending certainty?"
+    }
+  ],
+  "hard_failures": [
+    "invented number, quote, customer, source, or result",
+    "unlabeled speculation presented as observed fact",
+    "interchangeable AI-platform concept",
+    "generic distribution such as do marketing, content, partnerships, or go viral",
+    "portfolio filler included only to satisfy a framework"
+  ]
+}

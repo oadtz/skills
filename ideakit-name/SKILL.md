@@ -77,31 +77,35 @@ missing): the product/what it does, the brand values/personality, the target aud
 should *evoke*, any name-type preference, and the **hard requirements** (which TLD matters — `.com`?
 `.ai`? — and which handles are non-negotiable). Note any words/associations to avoid.
 
-### Step 2 — Generate across name types (and *escape the AI centroid*)
+### Step 2 — Generate across name types (and escape the AI centroid)
 
 Read `references/naming-and-clearance.md` **and `references/anti-cliche.md`** — the second is what keeps
 output from reading as generic AI slop, which is the #1 complaint about machine-generated names.
 
-The trap: a model defaults to the **centroid** — the average startup name every AI tool also produces
-(Nexus, Vertex, -ly/-ify suffixes, Cloud+X mash-ups, Apollo/Atlas, Spark/Forge/Pulse…). So:
+The trap is two centroids: generic startup compounds and the newer “random simple noun” response to
+anti-slop prompting. Avoid both. A distinctive name must express tension or a point of view specific
+to this venture, not merely look unlike a SaaS name.
 
-1. **Generate the obvious batch first — then throw it away.** The first ~10–15 names are the warm-up,
-   not the answer. State that you're discarding them as the centroid and move on.
-2. **Ban the tells.** Reject the slop suffixes, "epic" abstract words, buzzword mash-ups, god-names-on-
-   autopilot, and Get/Try/i-/[X]AI gimmicks listed in `anti-cliche.md`.
+1. **Generate an obvious batch as a negative baseline.** Do not advance a name merely because it is
+   familiar, and do not discard a strong contextual name solely because it appeared early. Record why
+   each baseline name is generic, collided, or unusually earned.
+2. **Flag tells contextually.** Treat slop suffixes, epic abstractions, buzzword mash-ups, god names,
+   and Get/Try/i-/[X]AI patterns as strong warnings, not lexical law. A deliberate exception needs a
+   venture-specific story and category-distance rationale.
 3. **Use real technique to get distinctiveness** — empty-vessel real words used as unexpected metaphors
    (Stripe/Slack/Nest), the random-word trigger, deliberate category-*tension* (a name slightly "wrong"
    for the space), **borrowing a simple word from another language** (Volvo, Audi), and sound symbolism.
-4. **Stay globally legible (overrides the rest).** The audience is global and mostly second-language
-   English — bias hard toward names a non-native speaker can **read, say, and spell after hearing once**.
+4. **Stay legible in the actual target markets.** When the venture is cross-border, bias toward names
+   a non-native speaker can **read, say, and spell after hearing once**.
    Distinctiveness should come from the *unexpected use of a simple word*, NOT from a harder/obscure or
    archaic word. Simple-but-surprising beats clever-but-obscure. If a borrowed word is used, plan to run
    the linguistic check in Step 4.
 5. **Still mix name types** — Descriptive, Suggestive/Metaphorical, Coined/Neologism, Compound/Hybrid,
    Lexical-tweak. Variety is where the gettable winner hides (descriptive `.com`s are all taken anyway).
 
-Apply the smell test to every candidate: *"Would 50 other AI generators also output this?"* If yes, cut
-it before it reaches the shortlist. Aim ~15–30 *after* discarding the centroid batch.
+Apply two tests to every candidate: *“Would 50 other generators output this?”* and *“Could this random
+noun name 50 unrelated ventures?”* Cut either failure unless the naming brief supplies a specific,
+defensible reason. Aim for ~15–30 serious candidates after the baseline.
 
 ### Step 3 — Filter with SMILE / SCRATCH
 
@@ -113,7 +117,7 @@ Score candidates with Alexandra Watkins' test (detail in the reference):
 
 Cut the SCRATCH failures and the dead ones; carry the strongest ~8–12 into the gauntlet (checking all 30
 is wasteful). **Treat any leftover centroid/AI-slop name as an automatic SCRATCH** (it fails Tame and
-usually Copycat) — if a name would make a sharp human namer shrug, it doesn't advance.
+usually Copycat) and treat arbitrary-word cleverness with no venture connection as Tame too.
 
 ### Step 4 — The availability gauntlet (the real work — check, don't assume)
 

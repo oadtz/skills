@@ -1,6 +1,6 @@
 # Idea storage handoff
 
-Use this at Step 6 of `ideakit-generate`, after the ranked shortlist artifact exists.
+Use this after the venture portfolio exists.
 
 ## Contents
 
@@ -24,10 +24,10 @@ If the host supports structured choices, offer:
 1. `ideas/ portfolio here` — create/update idea cards, index, evidence, and decision notes in this repo.
 2. `external repo/vault` — store in another repository, Obsidian vault, notes folder, or user-specified
    path.
-3. `outputs/ minimum` — keep the generated shortlist as the saved record, marked unfiled.
+3. `outputs/ minimum` — keep the generated portfolio artifact as the saved record, marked unfiled.
 
 When the host can write files/artifacts, do not offer "skip", "do not save", or "chat only". The
-minimum acceptable save is the generated shortlist artifact in `outputs/`, labelled unfiled if it has
+minimum acceptable save is the generated portfolio artifact in `outputs/`, labelled unfiled if it has
 not entered a portfolio. If the host truly has no writable destination, say that no durable storage
 mechanism is available instead of pretending to save.
 
@@ -72,8 +72,9 @@ Generated: YYYY-MM-DD
 ## Evidence
 - [signal](url) — [what it supports]
 
-## Score
-[total]/30 — Pull [x], Market [x], Secret [x], Job [x], Survivability [x], Feasibility [x]
+## Venture judgment
+Originality [judgment] · Pull [judgment] · Founder leverage [judgment] · Reachability [judgment] ·
+Asymmetry [judgment] · Power path [judgment]
 
 ## Riskiest assumption
 [single riskiest assumption]
@@ -85,7 +86,7 @@ Generated: YYYY-MM-DD
 [optional nuance, killed/parked reason, links to related ideas]
 ```
 
-Default `Stage` is `shaped` for shortlisted ideas and `raw` for unranked/raw-pool ideas if they are
+Default `Stage` is `shaped` for portfolio finalists and `raw` for unselected concepts if they are
 stored.
 
 ## Index row
@@ -93,9 +94,9 @@ stored.
 Append or update `ideas/index.md` with one row per stored idea:
 
 ```md
-| Idea | Stage | Domain | Route | Score | Source run | Next action |
-|---|---|---|---|---:|---|---|
-| [Idea](cards/idea-slug.md) | shaped | climate/city | consumer/media/data | 26 | [run](../outputs/run.md) | publish ranking test |
+| Idea | Stage | Playing field | Architecture | Portfolio role | Source | Next action |
+|---|---|---|---|---|---|---|
+| [Idea](cards/idea-slug.md) | shaped | [playing field] | [venture architecture] | [portfolio role] | [portfolio artifact] | [learning test] |
 ```
 
 Keep the index compact. It is for retrieval and portfolio review, not full reasoning.

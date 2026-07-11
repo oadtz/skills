@@ -1,4 +1,4 @@
-# Coverage self-audit — run inside Step 2, every run
+# Coverage self-audit — use when the signal set looks narrow
 
 This is the governing principle (*reflexivity*, plus *requisite variety* of inputs) applied to
 **scanning**: make your frame explicit and deliberately gather signal from outside it.
@@ -14,15 +14,14 @@ its own coverage and deliberately scan against its own bias* before generating �
 
 This is the difference between widening one door and installing a window that finds new doors.
 
-## How to run it (2 minutes, before Step 3)
+## How to run it
 
 After your first pass of scanning, **stop and ask: "Given the sources and lens I just used, what
 kinds of markets am I structurally unable to see right now?"** Walk the axes of blindness below.
-For each axis, locate where your current scan sits, name the opposite end, and **deliberately run at
-least one extra search at the 1–2 opposite ends most relevant to the brief.** Then proceed to
-generate.
+Locate where the scan sits, name an opposite it may be unable to see, and run a counter-bias search
+where the missing view could change the opportunity thesis. Then proceed.
 
-## Axes of blindness (the checklist)
+## Axes of blindness (diagnostic prompts)
 
 Run each as "where am I sitting → what's the opposite I haven't scanned?"
 
@@ -42,8 +41,7 @@ Run each as "where am I sitting → what's the opposite I haven't scanned?"
   that change, then structures that rearrange). A scan pointed only at the trigger itself sees
   products, not consequences; the consequences are usually the bigger market.
 
-You will not scan every opposite every time. Pick the axes where your scan is most lopsided for
-*this* brief, and cover at least two opposite-ends you'd otherwise have skipped.
+Do not scan every opposite. Pick only axes where the current frame may hide a material opening.
 
 ## Optional lens: Wardley mapping (for "what others can't see yet")
 
@@ -58,7 +56,7 @@ trends that pure complaint-mining and trend-list-reading both miss.
 
 A one-line note in your working pass: *"Default scan was skewed toward [X]; I additionally scanned
 [opposite-1] and [opposite-2], which surfaced [signal/none]."* Recording "none" is fine and useful —
-it shows the axis was checked, not assumed. The deliberate counter-bias searches then feed Step 3
+it shows the axis was checked, not assumed. The deliberate counter-bias searches then feed synthesis
 exactly like the primary scan does.
 
 ## Anti-patterns
@@ -68,4 +66,4 @@ exactly like the primary scan does.
 - Running the audit but generating only from the comfortable (default) signal anyway. The point is
   to let the counter-bias scans actually change the idea set.
 - Auditing sources but not the *rubric*: a painkiller-only rubric will still suppress desire ideas
-  even if you scanned for them. Coverage spans both what you look at and how you score it.
+  even if you scanned for them. Coverage spans both what you look at and how you judge it.

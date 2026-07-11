@@ -4,8 +4,9 @@ description: >
   Help a person discover what they actually want to build when they have NO idea and NO direction
   yet — not even an industry, skill, audience, or seed. Use for blank-slate prompts like "I want to
   build something but have no idea", "help me find my direction", "what should I do with my skills",
-  or "I want to start a business but don't know in what". It elicits the person's edge, interests,
-  frustrations, constraints, and desired life shape, then outputs an edge map for `ideakit-generate`.
+  or "I want to start a business but don't know in what". It elicits evidence-backed edge,
+  obsessions, taste, contrarian beliefs, frustrations, constraints, ambition, and desired life shape,
+  then outputs provisional edge hypotheses and playing fields for `ideakit-generate`.
   It is NOT for users who already know their domain/skills and just want idea options (use
   `ideakit-generate`), NOT for expanding a direction (use `ideakit-explore`), and NOT for validating a
   chosen idea (use `ideakit-validate`).
@@ -15,10 +16,10 @@ description: >
 
 Take a person who has **nothing yet** — no idea, and often not even a domain or a stated skill — and
 help them discover what they actually want to build. The output is not a list of market ideas (that's
-`ideakit-generate`'s job). The output is a **portrait of the person**: their edge, what energizes
-them, the problems they can't stop noticing, their real constraints, and what "good" looks like for
-*them* — captured as an **edge map** that hands forward as a rich frame so the ideas sourced next are
-*theirs*, not generic.
+`ideakit-generate`'s job). The output is not a flattering personality verdict. It is a set of
+**provisional edge hypotheses**: what the person notices, has access to, has unusual taste in, is
+willing to work on, and may believe before others—plus contradictions and open questions. The edge
+map gives venture discovery a personal starting position without locking the person into an identity.
 
 ## The governing principle (read first — everything below derives from this)
 
@@ -123,6 +124,12 @@ lights up — you do not need all of them; follow the energy:
 - **Unfair advantage they undervalue.** Skills, access, audiences, lived experience, or domain
   knowledge they have that most people don't — *especially* the ones they wave off as "everyone can
   do that." People are blind to their own edge; name it back to them.
+- **Obsession and taste.** What do they study past the point of utility? Where can they distinguish
+  excellent from average when most people cannot?
+- **Contrarian experience.** What do they believe about a field or customer that peers disagree with,
+  and what experience produced that belief? Record it as a hypothesis, not truth.
+- **Desired game.** Fast cash, calm solo business, category-scale company, cultural product, public
+  impact, or craft? Avoid a game whose daily work they would hate.
 
 Capture answers in the person's own words. Quantify where natural ("spent 200 hours modding X", "been
 in this Discord 3 years"). Don't interpret yet — collect.
@@ -153,6 +160,10 @@ audience/creator path, a tool, a community). Then read the reaction:
 
 - What do they lean toward, recoil from, or immediately want to modify? The *recoil* is as
   informative as the attraction.
+- Always offer “none of these / combine them / tell me what is missing.” Do not make the choice set
+  feel exhaustive or reveal a preferred answer.
+- Include one evidence-connected wildcard outside the dominant pattern. When revisiting the exercise,
+  change option order so order does not masquerade as preference.
 - Use a projective prompt to loosen latent wants: *"If you had a fully funded year and couldn't fail,
   what would you secretly try?"* or *"What would you build just for yourself, even if no one paid?"*
 - Their edits ("that, but for ___ instead") are gold — they're the person designing the direction
@@ -163,30 +174,34 @@ self-report.
 
 ### Step 5 — Synthesize the edge map & hand off
 
-Read `references/edge-map-template.md`. Reflect everything back as a tight **edge map** — a portrait
-of the person plus the 2–3 candidate *directions* (not finished ideas) that fit them, each traced to
-the evidence that points there. Then confirm it's right before handing off.
+Read `references/edge-map-template.md`. Reflect everything back as a tight **edge map** of provisional
+hypotheses plus 2–3 candidate playing fields (not finished ideas), each traced to evidence and paired
+with what may disprove it. Then confirm or correct it before handoff.
 
 ```
 ## Edge map — [name/handle]
 
-**Who you are (the edge):** [skills, unfair advantages, domain knowledge — incl. the ones they undervalue]
+**Edge hypotheses:** [means, access, taste, obsessions, lived experience — evidence + confidence]
 **What energizes you:** [the lose-track-of-time work] · **What drains you:** [avoid building around this]
 **Problems you can't stop noticing:** [the rants, in their words]
-**What "good" looks like for you:** [life-shape: calm income / full-time / fund a life / learn] · **Risk/time/money you can put in:** [...]
+**Contrarian beliefs worth testing:** [belief — experience behind it — what changes your mind]
+**Desired game:** [fast cash / calm solo / category-scale / cultural / public impact / craft]
+**What "good" looks like:** [life-shape] · **Affordable loss:** [time/money/reputation]
 **Core values driving this (laddered):** [autonomy / mastery / helping group X / freedom / ...]
 **No-gos:** [...]
+**Contradictions:** [e.g. skilled at X but drained by it]
 
-### Candidate directions (not ideas yet — frames for sourcing)
-1. **[direction]** — fits because [evidence from Steps 2–4]. Shape: [maker / service / audience / tool / community].
+### Candidate playing fields (not ideas yet)
+1. **[field]** — fits because [evidence]. Opportunity lens: [access/taste/change/belief]. Wrong if [...].
 2. ...
 3. ...
 
-**Riskiest thing we're still guessing about you:** [the open question]
+**Riskiest hypotheses about you:** [open question + how to learn]
 ```
 
 Then offer the hand-off explicitly: *"This is the frame. Want me to send it to `ideakit-generate` to
-source concrete, ranked ideas aimed at *these* directions — so what comes back is yours, not generic?
+discover opportunity theses and venture architectures in *these* playing fields—so what comes back is
+yours, not generic?
 Or sit with one direction in `ideakit-explore` first?"*
 
 The person confirms the edge map before anything advances. This skill discovers and recommends; it
@@ -203,10 +218,10 @@ never decides what they should do.
   concretes to react to and read the reaction.
 
 **Person before market:**
-- **Fit is the whole point.** A direction must sit on their energy, their edge, and the life they want,
+- **Fit is the whole point.** A direction must sit on their energy, edge, taste, and desired game,
   or they won't sustain it. Optimize for founder–direction fit, not for the biggest market.
-- **Name the edge they can't see.** People dismiss their own advantages as ordinary. Reflect them back
-  explicitly — that's often the single most valuable moment in the session.
+- **Name the edge they can't see—provisionally.** Reflect undervalued advantages with evidence and
+  confidence; do not turn a short interview into identity certainty.
 - **Hand off a frame, don't hoard.** Output is an edge map that *feeds* generate, not a finished idea.
   Resist jumping ahead to solutions; that's a later stage's job.
 
@@ -224,7 +239,7 @@ never decides what they should do.
 real artifact this skill is for (here, the **edge map** as a file) with the right tool, and run any
 react-to-concretes research for real (cited, never invented). Stage anything that publishes or acts from
 the user's identity for their approval. Full contract: `../ideakit-execution.md`. Quality bar for the
-edge map itself (its surprise: naming at least one edge the person waved off as ordinary):
+edge map itself (including evidence, contradictions, and provisional confidence):
 `../ideakit-craft.md`.
 
 ## Reference files

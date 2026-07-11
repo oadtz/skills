@@ -60,8 +60,8 @@ consumer niche ask: "What do these people love, identify with, and rally around 
 (fan-fic, edits, communities, collecting) and where they hit walls. Desire-driven markets
 (BL/Y-series, K-pop, anime, games, fashion, IP, creators) are huge and recurring because the pull is
 identity and belonging, not relief. Output shapes: content/IP, community/platform, merch/commerce,
-creator tooling, fandom infrastructure. Run this lens whenever the domain is consumer/cultural — and
-at least once per run so the set isn't a painkiller monoculture.
+creator tooling, fandom infrastructure. Use this lens when utility thinking may hide a stronger
+identity, ritual, belonging, taste, or aspiration job.
 
 ### Blue Ocean / ERRC + Category Creation (Kim & Mauborgne; Play Bigger)
 Most lenses above improve on an *existing* market. This one *creates new demand* so you compete with
@@ -74,8 +74,8 @@ the new category, frame the problem it solves, and become its default. High-risk
 especially relevant for desire-driven and net-new ideas.
 
 ### The ripple lens — Futures Wheel + second-level thinking (Glenn; Marks)
-Use whenever the brief is a *force* (an event, shock, or trend acting on the world), not a domain —
-and at least once whenever a big external trigger is in play. Place the force at the center and ask
+Use when the brief is a *force* (an event, shock, or trend acting on the world), not a domain. Place
+the force at the center and ask
 "and then what?" at least three times (Marks' second-level thinking): **ring 1** = direct effects and
 mitigation; **ring 2** = behaviors people change under the force; **ring 3** = structures that
 rearrange once behaviors shift. Sweep each ring across life domains (PESTLE-style: work, home,
@@ -90,7 +90,7 @@ domains will volunteer themselves, so spend the sweep on the ones that don't. Tw
    "society adapts by engineering vs. by lifestyle change"), and mark ideas that survive both
    branches as *robust*; prefer them at synthesis (Step 5).
 
-The required output of this lens in `SKILL.md` is the **consequence map**:
+A useful optional output is the **consequence map**:
 
 | Ring | Domain | Consequence | Who changes behavior? | What changes? | New spend / unmet job |
 |---|---|---|---|---|---|
@@ -98,16 +98,16 @@ The required output of this lens in `SKILL.md` is the **consequence map**:
 | 2 Behavior | [domain] | [knock-on behavior] | [actor] | [behavior/constraint] | [spend/job] |
 | 3 Structural | [domain] | [structure rearranges] | [actor] | [behavior/constraint] | [spend/job] |
 
-Do not generate from the center word until the map exists. The center word is just the trigger; the
+Do not generate from the center word before tracing meaningful consequences. The center word is just the trigger; the
 opportunities usually live in the columns to the right. A heatwave run that only creates cooling,
 shade, and heat-alert ideas has stayed inside the trigger. A stronger run follows consequences into
 water allocation, sleep, shifted work hours, food choices, elderly/pet care, insurance risk, city
 operations, retail patterns, and housing preferences.
 
-## Scoring foundations (Step 4 — detail in scoring.md)
+## Judgment foundations (use selectively with `scoring.md`)
 
 ### Pull — Pain *or* Desire (Paul Graham, expanded)
-Pull has two forms and the rubric scores whichever is stronger. *Painkiller pull:* problems that are
+Pull has two forms. *Painkiller pull:* problems that are
 urgent, deep, and genuinely painful — beware "schlep blindness", the most valuable problems are
 often the boring ones everyone avoids. *Desire pull:* wants that are intense, frequent, and
 identity-driven — entertainment, fandom, status, belonging, beauty, play. A crowded market is a
@@ -125,16 +125,12 @@ reachable, and growing.
 true belief most don't yet hold. Build 0→1 (something new), not 1→n (a copy). Win a small specific
 market first, then expand.
 
-### Survivability / Power (current platform reality; Hamilton Helmer, *7 Powers*)
-The dominant AI platforms (ChatGPT/OpenAI, Claude/Anthropic, Google, Microsoft) ship adjacent
-features fast. For every idea, force the statement: "If [platform] launches this natively tomorrow,
-this still wins because [specific power]." Don't settle for "we have a moat" — name *which* of
-Helmer's **Seven Powers** applies: **Scale Economies**, **Network Economies**, **Counter-Positioning**
-(a model the incumbent won't copy because it would cannibalize their own business — often the solo
-founder's best weapon against a giant), **Switching Costs**, **Branding**, **Cornered Resource**
-(exclusive access to IP, data, talent, or supply), **Process Power**. If you can't name the power,
-the idea is fragile. Note: durable power is usually *built over time*, so at idea stage score the
-*credible path* to a power, and pair it with the cheapest early move that starts compounding it.
+### Compounding power (Hamilton Helmer, *7 Powers*)
+Ask which dependency or incumbent actually threatens this venture. Then examine whether the wedge can
+plausibly grow toward **Scale Economies**, **Network Economies**, **Counter-Positioning**, **Switching
+Costs**, **Branding**, **Cornered Resource**, or **Process Power**. Do not demand a day-one moat or
+default every venture to an AI-platform threat; name the credible path and the early action that begins
+compounding it.
 
 ### Feasibility & validated learning (Eric Ries)
 Convert each idea to its riskiest assumption and the cheapest test of it (Build–Measure–Learn).
@@ -146,6 +142,5 @@ Pull tells you how strong the demand is; this tells you how long it lasts — ju
 *Painkiller* = needed; *Vitamin* = good, habitual, recurring; *Candy* = instant but fleeting (the fad
 risk). The **Lindy effect**: demand rooted in enduring human drives (status, belonging, care,
 meaning, health, safety, play) tends to persist; demand that exists only because of a current
-platform moment tends to evaporate. Desire is *not* the same as fad — fandom, pets, and faith are
-desire markets that are intensely Lindy-durable. Used at synthesis (Step 5) to keep the shortlist
-from over-indexing on hype.
+platform moment tends to evaporate. Desire is *not* the same as fad—fandom, pets, and faith can be
+Lindy-durable. Use this as judgment, not a required portfolio balance.

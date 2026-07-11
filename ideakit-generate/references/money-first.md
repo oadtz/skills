@@ -1,8 +1,8 @@
 # Money-first framing — "give me ideas where the money is"
 
 Optional framing for when the user wants ideas sourced *from where the money concentrates*, rather than
-from a fixed domain or their edge. It does not replace the normal workflow — it **re-points Step 2
-(Scan) and re-weights Step 4 (Score)** toward money signals, and it is bound by one hard rule below.
+from a fixed domain or their edge. It does not replace the normal workflow—it points change-signal
+research and entrepreneurial judgment toward money movement, and it is bound by one hard rule below.
 
 ## The hard rule (this is non-negotiable — "stand on principle, don't make it up")
 
@@ -20,9 +20,8 @@ isn't. So:
 
 ## The principles this framing stands on (all real, named)
 
-1. **Starving Crowd (Hormozi)** — the *market* beats the offer: a hungry crowd that is **able to pay,
-   reachable, and growing** is where money is. Already the "Market" axis in `references/scoring.md`;
-   money-first weights it hardest.
+1. **Starving Crowd (Hormozi)** — a group that is **able to pay, reachable, and motivated to act** is
+   more useful than an abstract large market. Treat this as a lens, not a numerical override.
 2. **Profit Pools (Gadiesh & Gilbert, HBR 1998)** — look past revenue/TAM to where **profit actually
    concentrates** along the value chain; a big-revenue space can be a *thin* profit pool, and a small
    one can be deep. Chase the deep pool, not the big number. ([HBR](https://hbr.org/1998/05/profit-pools-a-fresh-look-at-strategy))
@@ -45,16 +44,14 @@ pool. Hold both Profit Pools (depth, not size) and the solo lens (reachable + fa
 
 ## How it changes the workflow
 
-- **Step 2 — Scan (lead with money evidence).** In addition to the normal sources, lead with:
+- **Change signals (lead with money evidence).** In addition to the normal sources, lead with:
   *funding flows* (YC RFS, a16z Big Ideas, what's getting funded in RBF/VC), *budget/spend signals*
   (job postings, software spend, procurement/RFPs), *pricing pages* (what buyers already pay), and
   *complaint + WTP* signals. Map the **profit pool** (where margin is deep) and **value migration**
   (where it's moving). Cite every signal; record "couldn't source it → hypothesis."
-- **Step 4 — Score (re-weight).** Weight **Market / Starving Crowd** and **Survivability** hardest, and
-  add an explicit check: *is this money reachable by a solo, and does it pay fast?* Apply the existing
-  fad/Lindy flag — hyped money that's a fad (Candy) is a trap, not a pool.
-- **Step 5 — Synthesize (declare the money axis).** Alongside value-type and durability, declare each
-  shortlisted idea's **profit-pool depth** and **solo-reachability**, and explicitly flag any
+- **Entrepreneur pass.** Ask whether this money is reachable by this founder, how fast commitments can
+  be tested, and what affordable loss buys the learning. A funded category can still be inaccessible.
+- **Portfolio judgment.** State each finalist's **profit-pool depth** and **founder reachability** and flag any
   "big-TAM-but-thin-or-unreachable" idea as the trap to avoid.
 
 ## Hand-off
