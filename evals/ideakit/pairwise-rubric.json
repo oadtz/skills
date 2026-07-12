@@ -1,6 +1,6 @@
 {
   "purpose": "Blindly compare two temporary Ideakit artifacts without treating either as factual truth.",
-  "scoring": "Score each dimension 1-5, cite artifact passages, then choose A, B, or tie. Verify cited claims separately.",
+  "scoring": "Score each dimension 1-5, cite artifact passages, then choose A, B, or tie. Verify cited claims separately. For breakthrough work, compare canonical idea cores before surface wording and judge surprise, inevitability in hindsight, solo enterability, and value capture independently; do not collapse them into one total.",
   "dimensions": [
     {
       "name": "venture_originality",
@@ -12,7 +12,7 @@
     },
     {
       "name": "structural_diversity",
-      "question": "Do finalists differ in actor, mechanism, payer, wedge, or venture architecture rather than wording?"
+      "question": "Do finalists differ in causal thesis, scarce asset, proof loop, and value mechanism rather than wording? A different actor, payer, vertical, trigger, or channel alone is insufficient."
     },
     {
       "name": "entrepreneurial_quality",
@@ -49,6 +49,26 @@
     {
       "name": "centroid_distance",
       "question": "Does the portfolio move beyond the first direct categories most generators would associate with the force while keeping a defensible causal chain?"
+    },
+    {
+      "name": "revelation_surprise",
+      "question": "Does each breakthrough finalist overturn a specific default assumption with a crisp revelation, rather than merely using provocative language?"
+    },
+    {
+      "name": "inevitable_in_hindsight",
+      "question": "After the causal thesis and mechanism are explained, does the opportunity feel coherent and hard to unsee rather than arbitrary or contrarian for effect?"
+    },
+    {
+      "name": "solo_enterability",
+      "question": "Can this founder reach a first paid value test within the stated time, money, access, support, coordination-dependency, and affordable-loss constraints without shrinking the thesis into a generic service?"
+    },
+    {
+      "name": "value_capture",
+      "question": "Is there a named payer and buying occasion, a clear exchange for the mechanism, viable solo capacity economics, and a credible leverage path if founder hours cap growth?"
+    },
+    {
+      "name": "collision_resistance",
+      "question": "After canonicalizing actor, trigger/job, causal thesis, mechanism, payer, architecture, and wedge, are finalists distinct from one another and from obvious cliché or prior-art categories? Candidates matching on any three of buyer relationship, input corpus, operating workflow, and compounding asset are one venture family and must be merged."
     }
   ],
   "mode_dimensions": {
@@ -62,7 +82,11 @@
       "opportunity thesis originality",
       "causal depth and query escape for force briefs",
       "venture mechanics and first-user reachability",
-      "portfolio-level thesis diversity"
+      "portfolio-level thesis diversity",
+      "revelation surprise and inevitable-in-hindsight coherence for breakthrough mode",
+      "solo enterability after divergent invention, not as an early creativity constraint",
+      "payer, capacity economics, and value capture as a non-compensating gate",
+      "canonical-core collision resistance against duplicate and cliché ideas"
     ],
     "explore": [
       "Known/Inferred/Imagined separation",
@@ -101,6 +125,16 @@
     "desk research described as validated demand",
     "name described as available or trademark-clear without a timestamped authoritative check",
     "pitch uses inevitability, FOMO, winners/losers, or a promised land without decision-relevant evidence",
-    "founder identity claim presented as settled from a short discovery interview"
+    "founder identity claim presented as settled from a short discovery interview",
+    "breakthrough finalist is surprising only because its causal chain, buyer, or value mechanism is missing",
+    "breakthrough portfolio repeats one canonical idea core under different names, buyers, or business models",
+    "generic cliché survives as a finalist because marker-complete prose is mistaken for novelty",
+    "solo entry requires capital, access, operating hours, multi-party commitments, or obligations that violate the founder brief without an explicit workaround",
+    "revelation uses an unverified first, only, nobody, or global novelty claim to manufacture surprise",
+    "different buyer, vertical, or buying occasion is used to preserve the same scarce asset and proof mechanism as a separate finalist",
+    "one venture is presented as several finalists even though the same company would sell them as modules using the same buyer relationship, inputs, operating workflow, and compounding asset",
+    "pilot price times sustainable solo capacity cannot support the desired game and no credible leverage path is stated",
+    "capacity math treats every available founder hour as billable and leaves no explicit room for sales, administration, learning, or variance",
+    "learning test lacks either a paid commitment before work or an observable delivered-value decision or outcome after delivery"
   ]
 }

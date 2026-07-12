@@ -54,6 +54,37 @@ MODE_MARKERS = {
     },
 }
 
+BREAKTHROUGH_MARKERS = {
+    "revelation": [
+        r"(?m)^\s*(?:[-*]\s*)?(?:\*\*|`)?revelation(?:\*\*|`)?\s*:\s*(?:\*\*|`)?",
+        r"(?m)^\s*(?:[-*]\s*)?(?:\*\*|`)?why others miss it(?:\*\*|`)?\s*:\s*(?:\*\*|`)?",
+    ],
+    "solo_entry": [
+        r"(?m)^\s*(?:[-*]\s*)?(?:\*\*|`)?solo entry(?:\*\*|`)?\s*:\s*(?:\*\*|`)?",
+        r"paid|pilot|manual|founder hours|hours per week|affordable[- ]loss|cheapest.*test",
+    ],
+    "value_capture": [
+        r"(?m)^\s*(?:[-*]\s*)?(?:\*\*|`)?value capture(?:\*\*|`)?\s*:\s*(?:\*\*|`)?",
+        r"pay|price|fee|budget|revenue|margin|contribution|retainer|subscription",
+    ],
+    "paid_and_delivered": [
+        r"(?m)^\s*(?:[-*]\s*)?(?:\*\*|`)?paid commitment(?:\*\*|`)?\s*:\s*(?:\*\*|`)?",
+        r"(?m)^\s*(?:[-*]\s*)?(?:\*\*|`)?delivered value(?:\*\*|`)?\s*:\s*(?:\*\*|`)?",
+    ],
+    "killer_risk": [
+        r"(?m)^\s*(?:[-*]\s*)?(?:\*\*|`)?killer (?:risk|objection)(?:\*\*|`)?\s*:\s*(?:\*\*|`)?",
+        r"wrong if|disconfirm|kill signal|would fail|failure",
+    ],
+}
+
+# These catch only explicit generic shells. They are not a novelty metric; a semantically
+# derivative idea can easily avoid the phrases, and a strong idea can still use a category noun.
+GENERIC_BREAKTHROUGH_PATTERNS = [
+    r"\bAI[- ]powered\s+(?:platform|marketplace|dashboard|assistant|app|solution)\b",
+    r"\b(?:all[- ]in[- ]one|one[- ]stop)\s+(?:platform|solution|app)\b",
+    r"\b(?:uber|airbnb|tinder)\s+for\s+[a-z0-9-]+",
+]
+
 
 def group_passes(text: str, patterns: list[str]) -> bool:
     return all(re.search(pattern, text, re.IGNORECASE) for pattern in patterns)
@@ -64,10 +95,16 @@ def main() -> int:
     parser.add_argument("mode", choices=sorted(MODE_MARKERS))
     parser.add_argument("artifact", type=Path)
     parser.add_argument("--force", action="store_true", help="Apply force-brief causal-depth gates")
+    parser.add_argument("--breakthrough", action="store_true", help="Apply breakthrough-output contract gates")
     args = parser.parse_args()
+
+    if args.breakthrough and args.mode != "generate":
+        parser.error("--breakthrough is only valid for generate artifacts")
 
     text = args.artifact.read_text(encoding="utf-8")
     groups = {name: group_passes(text, patterns) for name, patterns in MODE_MARKERS[args.mode].items()}
+    if args.breakthrough:
+        groups.update({name: group_passes(text, patterns) for name, patterns in BREAKTHROUGH_MARKERS.items()})
     if args.force:
         groups.update({
             "causal_map": group_passes(text, [r"ring 1|1 direct", r"ring 2|2 behavioral", r"ring 3|3 structural"]),
@@ -78,6 +115,13 @@ def main() -> int:
     # legitimately contain terms such as "unlocking" without the author using generator dialect.
     editorial_text = re.sub(r"\]\(https?://[^)]+\)", "]", text)
     slop_hits = [term for term in SLOP if term.lower() in editorial_text.lower()]
+    generic_wrapper_hits = []
+    if args.breakthrough:
+        generic_wrapper_hits = [
+            match.group(0)
+            for pattern in GENERIC_BREAKTHROUGH_PATTERNS
+            if (match := re.search(pattern, editorial_text, re.IGNORECASE))
+        ]
     unsupported_precision = len(re.findall(r"\b\d+(?:\.\d+)?%\b|\b\d{2,}\+? (?:users|customers|complaints|people)\b", text, re.IGNORECASE))
     cited_links = len(re.findall(r"\[[^\]]+\]\(https?://[^)]+\)", text))
     labeled_observations = len(re.findall(r"\bObserved\b", text, re.IGNORECASE))
@@ -92,6 +136,11 @@ def main() -> int:
     if not labeled_observations and args.mode in {"generate", "validate"}:
         integrity = 0
         warnings.append("no Observed labels found")
+    if generic_wrapper_hits:
+        warnings.append(
+            "breakthrough artifact uses an obvious generic wrapper phrase; inspect the canonical idea core "
+            "and collision set manually"
+        )
     if args.mode == "validate":
         levels = {int(x) for x in re.findall(r"\bE([0-4])\b", text)}
         recommends_go = bool(re.search(r"recommend(?:ation)?\s*[:|]\s*go\b", text, re.IGNORECASE))
@@ -139,15 +188,20 @@ def main() -> int:
     result = {
         "mode": args.mode,
         "force_brief": args.force,
+        "breakthrough_mode": args.breakthrough,
         "score_100": score,
         "structural_score_100": structural_score,
         "passed": score >= 80 and not warnings,
         "contract_groups": groups,
         "slop_hits": slop_hits,
+        "generic_wrapper_hits": generic_wrapper_hits,
         "cited_links": cited_links,
         "labeled_observations": labeled_observations,
         "warnings": warnings,
-        "note": "Heuristic screen only; use blind human/agent pairwise review for originality and truth.",
+        "note": (
+            "Heuristic contract screen only. Marker and cliché regex cannot measure true novelty, "
+            "inevitability in hindsight, or venture truth; use blind pairwise review and verify claims."
+        ),
     }
     print(json.dumps(result, indent=2, ensure_ascii=False))
     return 0 if score >= 80 and not warnings else 1

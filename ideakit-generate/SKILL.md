@@ -1,15 +1,17 @@
 ---
 name: ideakit-generate
 description: >
-  Discover and invent fresh business or startup opportunities for a user who has constraints,
-  interests, skills, an audience, a domain, or a change in the world—but no specific venture yet.
+  Discover and invent fresh business opportunities for a user with constraints, interests, skills,
+  access, an audience, a domain, or a world change—but no venture yet.
   Use for “what should I build”, “give me business ideas”, “ideas in this space”, “where are the
   opportunities”, “what becomes possible because of X”, “give me unconventional ideas”, or “where is
-  the money moving”. Research signals, synthesize non-obvious opportunity theses, invent multiple
-  venture architectures, apply entrepreneurial judgment, and deliver a small evidence-aware portfolio
-  with wedges and learning tests. Route a true blank slate to ideakit-discover, a direction that still
-  needs expansion to ideakit-explore, and a mature chosen concept to ideakit-validate. Also handle the
-  immediate follow-up that stores or merges a generated portfolio.
+  the money moving”, including “wow-worthy”, “visionary”, or “first-principles” requests and retries
+  after generic ideas. Run breakthrough search by default; use the lighter standard mode only when the
+  user explicitly wants a quick rough pass. Research signals, synthesize non-obvious theses, invent
+  venture architectures, apply entrepreneurial judgment, and deliver a small
+  evidence-aware portfolio with wedges and learning tests. Route a true blank slate to ideakit-discover,
+  a direction that still needs expansion to ideakit-explore, and a mature chosen concept to
+  ideakit-validate. Also handle the follow-up that stores or merges a generated portfolio.
 ---
 
 # Ideakit — Generate
@@ -32,6 +34,19 @@ Research is raw material, not a veto. A market report stops at what is true toda
 asks what could become true next and how to earn the right to find out.
 
 Read `../ideakit-craft.md` now. Read `references/venture-invention.md` before Step 4.
+
+## Choose invention intensity
+
+Use **breakthrough mode by default** for every request routed to this skill, including an ordinary
+opportunity search. Use **standard mode only** when the user explicitly requests a quick, lightweight,
+low-search-cost rough pass or declines the deeper search. Standard mode is an opt-out, not an automatic
+classification; do not ask the user to choose when their intent is already clear. If a standard pass
+collides with obvious categories, rerun in breakthrough mode.
+
+Treat a request to think like a famous founder as an intensity and reasoning signal. Translate it into
+explicit operators such as assumption deletion, cost-curve reconstruction, second-order consequences,
+counter-positioning, and bold but testable bets. Do not impersonate a real person or claim their
+judgment. Read `references/breakthrough-mode.md` now unless the user explicitly selected standard mode.
 
 ## Routing and handoffs
 
@@ -114,6 +129,11 @@ Quotes and numbers must be fetched and cited. Do not write fictional “sharp”
 For force briefs, record a short query-escape note: which ring-2/3 consequences were researched without
 the force vocabulary, what surfaced, and which branches found no support.
 
+In breakthrough mode, turn the research into a **neutral signal pack**: Observed facts, causal
+openings, counter-signals, and founder-specific access or lived evidence, but no product suggestions,
+candidate ideas, or obvious baseline. Record time, budget, support burden, and other operating
+constraints separately; apply them after divergence rather than using them to shrink the search space.
+
 ### 3. Synthesize entrepreneurial openings
 
 Do not jump from search results to products. Cluster signals and look for:
@@ -144,7 +164,8 @@ Because [Observed change], [actor] can/must now [new behavior], while [old assum
 still [gap]. We infer [opportunity]. We bet that [falsifiable future belief]. This is wrong if [...].
 ```
 
-Generate multiple **venture architectures** from the strongest theses—not merely feature variants:
+In standard mode, generate multiple **venture architectures** from the strongest theses—not merely
+feature variants:
 
 - product or workflow infrastructure;
 - service-first path that discovers the product;
@@ -157,6 +178,13 @@ Generate multiple **venture architectures** from the strongest theses—not mere
 Choose 2–4 useful invention moves from the reference (inversion, removal, recombination,
 non-consumption, new bottleneck, ERRC, identity/desire). Do not fill every framework. Collapse concepts
 that share actor + job + mechanism + business architecture.
+
+In breakthrough mode, follow `references/breakthrough-mode.md`. Run **independent invention** lanes in
+fresh contexts or subagents when available. Give each only the brief and neutral signal pack—not other
+lanes, the previous portfolio, an obvious baseline, or the founder's feasibility filters. Each lane
+must form terse seeds, force material differentiation, then expand only its strongest mechanisms.
+Synthesize and recombine after all lanes return; only then collapse structural duplicates. These lanes
+are search mechanisms, not portfolio quotas.
 
 ### 5. Run the venture-quality pass
 
@@ -182,6 +210,34 @@ Then attack it:
 Kill, merge, or reframe weak concepts. Preserve a bold concept when the reasoning is strong but the
 evidence is early; label it a bet rather than lowering its score until it disappears.
 
+In breakthrough mode, run an evaluator-only collision pass after generation, preferably in a fresh
+context. Canonicalize each survivor as `actor | trigger/job | causal thesis | scarce asset | mechanism |
+proof/feedback loop | payer | architecture | wedge`. Generate the obvious baseline only now, then
+compare against it, current offerings or prior art, and saved or killed ideas when available. Search by
+mechanism, actor, trigger, and architecture—not only by product name. Also compare the scarce asset and
+proof or feedback loop:
+a different vertical, actor, payer, buying occasion, or channel does not rescue the same underlying
+idea. Apply the **venture-family test**: if one company would sell both candidates as modules using the
+same buyer relationship, input corpus, operating workflow, and compounding asset, merge them into one
+venture with multiple buying occasions. Make the comparison mechanical: matching on any three of those
+four family fields means one family; a different name, trigger, or claimed thesis cannot override it.
+Merge or kill a collision unless its causal or value mechanism is materially different; never claim
+global novelty from a clean search. A Revelation or “Why others miss it” must not say “first”, “only”,
+“nobody”, or make another universal behavior or novelty claim unless current evidence supports it;
+surprise should come from the causal reframe, not an unverifiable superlative.
+
+Only after that pass, translate survivors through the founder's real operating envelope: first paid
+proof, first-10 access, affordable loss, available hours, support and liability load, and external
+dependencies. Narrow the wedge, change the route to market, or begin service-first before discarding a
+strong thesis. Count the independent commitments needed before value can be demonstrated; every
+essential party—not only the payer—must pre-commit, or Enterable fails. Check capacity economics as well
+as pilot cost: price times a sustainable solo caseload must fit the founder's desired game, or the
+expansion must contain a credible route away from founder hours. Capacity math must reserve explicit
+time for selling, administration, learning, and delivery variance rather than treating every available
+hour as billable. A deposit tests willingness to pay, not delivered value: require a **Paid commitment**
+before work and a separate observable **Delivered value** decision or outcome after delivery. A bold
+concept may survive as a wildcard only when it has an enterable learning wedge.
+
 ### 6. Select a portfolio with entrepreneurial judgment
 
 Do not sort by one total score. Use a compact decision table with separate dimensions:
@@ -194,9 +250,26 @@ Do not sort by one total score. Use a compact decision table with separate dimen
 - **Power path** — plausible compounding advantage if it works;
 - **Critical uncertainty** — what must be learned next.
 
-Use qualitative judgments or dimension scores, but do not sum them. Select 3–5 finalists by portfolio
-role only where a candidate earns it: asymmetric, contrarian, fast-cash, compounding, wildcard. Leave a
-role empty rather than quota-fill. Explain why a riskier concept advances over a safer one.
+Use qualitative judgments or dimension scores, but do not sum them. In standard mode, select 3–5
+finalists by portfolio role only where a candidate earns it: asymmetric, contrarian, fast-cash,
+compounding, wildcard. Leave a role empty rather than quota-fill. Explain why a riskier concept advances
+over a safer one.
+
+For breakthrough mode, add four non-compensating judgments:
+
+- **Surprise** — the causal thesis or value mechanism escapes the obvious category;
+- **Inevitable in hindsight** — once revealed, the evidence chain makes it click rather than merely
+  sounding strange;
+- **Enterable** — this founder has a credible, affordable first move despite the larger vision;
+- **Value capture** — a named payer exchanges money for the mechanism, and the capacity economics or
+  leverage path can support the founder's desired game.
+
+Treat pursuable wow as a bottleneck: strength on one dimension cannot hide failure on another. For each
+finalist, articulate one **Revelation**, **Why others miss it**, and the **killer risk**. When fresh
+contexts are available, let an independent evaluator select from anonymous canonical cards; do not show
+it lane labels or persona framing. Give each card a venture-family ID before selection and keep at most
+one finalist per family. Breakthrough mode has no target count: return however many clear every gate,
+even one or two, rather than preserving a near-duplicate or a concept with broken solo economics.
 
 For a force brief, attach **causal ring, source consequence, domain, distance from the literal force,
 and time horizon** to every finalist. If all finalists come from direct mitigation, one consequence,
@@ -222,6 +295,17 @@ Lead with the most important tension or opportunity—not “I ran six steps.”
 - strongest counter-case;
 - affordable-loss learning test.
 
+For every breakthrough finalist, also include explicit labeled lines:
+
+- `Revelation:` — the surprising claim and mechanism in one sentence;
+- `Why it feels inevitable:` — the shortest causal chain that earns the reveal;
+- `Why others miss it:` — the stale assumption, incentive, or framing that hides it;
+- `Solo entry:` — the smallest paid proof, reachable first buyer, and bounded operating load;
+- `Value capture:` — payer, buying occasion, exchange, and viable capacity or leverage path;
+- `Paid commitment:` — the money or signed commercial commitment required before work starts;
+- `Delivered value:` — the observable buyer decision or outcome required after delivery;
+- `Killer risk:` — the fact or dependency most likely to break the thesis.
+
 Recommend a portfolio role or next experiment, not a fake certainty. The user chooses what advances.
 
 Read `references/storage.md` when the user wants durable capture. Ask one concise storage question if
@@ -242,6 +326,8 @@ external, identity-bearing, paid, or irreversible actions without explicit confi
 
 - `references/venture-invention.md` — opportunity recognition, invention moves, Effectuation,
   entrepreneur pass, Seven Powers, and portfolio roles. Read before Step 4.
+- `references/breakthrough-mode.md` — isolated invention, post-generation collision checks, and
+  founder-scale translation; read by default and skip only for explicit standard mode.
 - `references/trend-sources.md` — source and query ideas; choose what fits rather than scanning all.
 - `references/coverage-audit.md` — use when the signal set appears culturally, geographically, or
   economically narrow.

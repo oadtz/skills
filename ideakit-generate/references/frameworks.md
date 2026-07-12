@@ -34,7 +34,7 @@ design for that. (Note: this JTBD micro-force is the demand-side *attraction* wi
 is **not** the scoring dimension "Pull" in `scoring.md`, which is the overall strength of demand for
 the idea. Different scope; don't conflate them.)
 
-### First principles (Elon Musk)
+### First-principles cost/process rebuild
 Strip a problem to physical/economic truths and rebuild, instead of copying how it's done today.
 Prompt: "What is irreducibly true about this cost/process, and what becomes possible if we build
 up only from that?" Especially powerful where an industry assumes "that's just how it works."
