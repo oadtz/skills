@@ -6,15 +6,17 @@ forge-architect.
 
 ## Default: modular monolith
 
-For an MVP, or any team under ~10 developers, default to a **modular monolith** — a single deployable,
-divided internally into modules with well-defined boundaries.
+Default to a **modular monolith** when one deployable can satisfy the product's domain, security,
+reliability, scaling, and release requirements. Product breadth, AI-agent count, or the human team a
+conventional company would assign are not reasons to introduce distributed systems.
 
 - **Why not microservices first:** "Almost all the successful microservice stories started with a
   monolith that got too big and was broken up. Almost all the cases where a system was built as a
   microservice system from scratch ended up in serious trouble." (Martin Fowler, *MonolithFirst*.)
   Microservices carry a premium — network calls, deployment, observability, distributed data
-  consistency — that only pays off past ~10 developers. **You discover the correct service boundaries
-  by building the monolith first.**
+  consistency—that pays off only when a concrete deployment, security, reliability, scaling, or
+  ownership boundary requires it. **You usually discover correct service boundaries by building the
+  modular system first.**
 - **Modular, though.** A monolith is not a mud ball: enforce module boundaries internally (clear
   public interfaces per module, no reaching into another module's internals). When a boundary proves
   stable *and* you have a real scaling reason, you can extract it.
@@ -57,8 +59,10 @@ Source: https://devblogs.microsoft.com/ise/design-api-first-with-typespec/
 
 ## What to NOT over-build (YAGNI, with the carve-out)
 
-- **Defer presumptive features.** Don't build for hypothetical future needs — Microsoft research found
+- **Defer presumptive features, not credible ambition.** Don't build for hypothetical future needs — Microsoft research found
   only ~⅓ of built features improved their target metric. Build/delay/carry/repair are all real costs.
+  A broad product thesis remains valid when customer value and AI engineering control make the breadth
+  intentional; YAGNI is not a proxy for one human's implementation capacity.
 - **"Design for 10×, expect to rewrite before 100×."** Building for 1000 tps instead of 10 costs more
   to build and operate with zero benefit until you near that scale. Premature scaling is the #1
   startup killer.
@@ -77,8 +81,8 @@ https://startupgenome.com/insights/a-deep-dive-into-the-anatomy-of-premature-sca
   Skip the Code level — it drifts the instant you write code and duplicates the source.
 - **Diagrams-as-code** (e.g. Mermaid) in-repo, so the diagram versions and diffs with the code and
   renders natively in markdown.
-- Heavier options (arc42, all four C4 levels, full UML) are over-engineering for a solo/MVP build —
-  reach for them only when comprehensive docs are genuinely warranted.
+- Heavier options (arc42, all four C4 levels, full UML) are over-engineering unless integration,
+  compliance, operational risk, or agent coordination genuinely warrants comprehensive docs.
 
 Source: https://c4model.com/
 

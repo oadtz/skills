@@ -14,6 +14,9 @@ description: >
 
 # Forge — Design (foundation → design system + flows)
 
+Read `../ai-engineering-foundation.md` now. Design a system that an AI engineering team can implement
+consistently without implying that the shipped product needs runtime or customer-facing AI.
+
 Take the PRD and the technical foundation and produce the **design system and user flows the build
 will inherit** — so every screen is consistent, accessible, and distinctive instead of the median of
 every Tailwind tutorial. Output is a token system, a flow map, and an accessible component foundation

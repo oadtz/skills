@@ -48,16 +48,18 @@ ideakit-generate → explore → validate → │ → forge-architect → design
 
 ## The one idea behind the whole family
 
-**For a solo founder the binding constraint is not ideas or even capital — it is the founder's own
-finite time, leverage, and stamina.** So every solo decision is chosen to maximize leverage per
-founder-hour and to avoid irreversible commitments (dilution, headcount, burnout). Two recurring
-failure modes anchor the whole track: **a product nobody finds or buys**, and **a founder whose
-operating load becomes unsustainable**. Re-fetch current survey figures before quoting them. Each skill
-is one application of that idea:
+**One founder can direct an AI engineering team; the binding human constraint is consequential
+attention, judgment, and external operating load—not personal coding throughput.** Every `solo-*`
+skill reads [ai-engineering-foundation.md](ai-engineering-foundation.md). Software scope is not capped
+by what the founder can type or by missing human headcount, and the product need not contain runtime
+AI. Solo decisions still protect cash, stamina, customer trust, and obligations that generated code
+cannot remove. Two recurring failure modes anchor the track: **a product nobody finds or buys**, and
+**a founder whose unresolved operating load becomes unsustainable**. Re-fetch current survey figures
+before quoting them. Each skill is one application of that idea:
 
 | Stage | The failure it guards against | The governing principle |
 |---|---|---|
-| solo-model | building something that's slow to pay or impossible to run solo | *Pick the model that pays the soonest with the least to build and operate.* |
+| solo-model | choosing a model by human build limits instead of value and sustainable control | *Capture value early; budget founder attention, not personal implementation throughput.* |
 | solo-fund | giving up control/cash you didn't need to, for money you didn't need | *Keep the cap table and obligations as empty as the business allows.* |
 | solo-distribute | a great product no one ever finds | *Distribution is the product's twin; one channel deep beats five shallow.* |
 | solo-sell | attention that never converts to paying customers | *Selling is learning sold one conversation at a time; chase repeatability, not one-off revenue.* |

@@ -27,8 +27,12 @@ slice* (Jimmy Bogard).
 - **Why slices, for agents specifically — locality of reference:** a slice lets the agent ingest a
   feature's complete context in one pass, "without needing to hallucinate dependencies." Horizontal
   layers scatter a feature across the codebase and force the agent to guess.
-- **Each slice must be:** independently demoable/verifiable, small (≈≤2–3 days), and dependency-ordered
-  so finishing it *unblocks* the next without needing other features first.
+- **Each slice must be:** independently demoable/verifiable, bounded enough for one agent context plus
+  one review/integration cycle, and dependency-ordered so finishing it *unblocks* the next without
+  hidden prerequisites. Do not translate human developer-days into the scope ceiling.
+- **Mark parallel safety:** record owned files/components, stable interfaces, dependencies, verifier,
+  and integration order. Separate agents may execute independent slices concurrently in isolated
+  worktrees; shared boundaries or unresolved contracts keep work sequential.
 - **Tag each slice HITL or AFK:** HITL (human-in-the-loop) slices touch auth, data access, money,
   irreversible actions, or anything subtle — a human reviews the diff before merge. AFK ("away from
   keyboard") slices are low-risk enough for the agent to complete and the gate to verify unattended.
@@ -50,7 +54,7 @@ Source: https://kiro.dev/docs/specs/feature-specs/
 
 ## The slice loop (Step 3 — test-first)
 
-For each slice, in dependency order:
+For each ready slice, in dependency order—or concurrently with other interface-independent slices:
 
 1. **Write the tests first** from the acceptance criteria — no implementation yet.
 2. **Run them; confirm they fail (red).** A test that passes before implementation tests nothing.

@@ -15,22 +15,24 @@ SCORER = EVAL / "score_artifact.py"
 FIXTURES = EVAL / "fixtures"
 
 CASES = [
-    ("discover-pass", "discover", "contract-pass-discover.md", False, False, True),
-    ("discover-flattery-fail", "discover", "contract-fail-discover-flattery.md", False, False, False),
-    ("generate-pass", "generate", "contract-pass-generate.md", False, False, True),
-    ("generate-fail", "generate", "contract-fail-generate.md", False, False, False),
-    ("generate-force-pass", "generate", "contract-pass-force-generate.md", True, False, True),
-    ("generate-force-direct-fail", "generate", "contract-fail-force-direct-only.md", True, False, False),
-    ("generate-breakthrough-pass", "generate", "contract-pass-breakthrough-generate.md", False, True, True),
-    ("generate-breakthrough-generic-fail", "generate", "contract-fail-breakthrough-generic.md", False, True, False),
-    ("explore-force-pass", "explore", "contract-pass-force-explore.md", True, False, True),
-    ("explore-force-flattened-fail", "explore", "contract-fail-force-explore-flattened.md", True, False, False),
-    ("validate-pass", "validate", "contract-pass-validate.md", False, False, True),
-    ("validate-desk-go-fail", "validate", "contract-fail-validate-desk-go.md", False, False, False),
-    ("name-pass", "name", "contract-pass-name.md", False, False, True),
-    ("name-overclaim-fail", "name", "contract-fail-name-overclaim.md", False, False, False),
-    ("present-pass", "present", "contract-pass-present.md", False, False, True),
-    ("present-theater-fail", "present", "contract-fail-present-theater.md", False, False, False),
+    ("discover-pass", "discover", "contract-pass-discover.md", False, False, False, True),
+    ("discover-flattery-fail", "discover", "contract-fail-discover-flattery.md", False, False, False, False),
+    ("generate-pass", "generate", "contract-pass-generate.md", False, False, False, True),
+    ("generate-fail", "generate", "contract-fail-generate.md", False, False, False, False),
+    ("generate-force-pass", "generate", "contract-pass-force-generate.md", True, False, False, True),
+    ("generate-force-direct-fail", "generate", "contract-fail-force-direct-only.md", True, False, False, False),
+    ("generate-breakthrough-pass", "generate", "contract-pass-breakthrough-generate.md", False, True, False, True),
+    ("generate-breakthrough-generic-fail", "generate", "contract-fail-breakthrough-generic.md", False, True, False, False),
+    ("generate-ai-engineering-pass", "generate", "contract-pass-ai-engineering-team.md", False, True, True, True),
+    ("generate-ai-human-ceiling-fail", "generate", "contract-fail-ai-engineering-human-ceiling.md", False, True, True, False),
+    ("explore-force-pass", "explore", "contract-pass-force-explore.md", True, False, False, True),
+    ("explore-force-flattened-fail", "explore", "contract-fail-force-explore-flattened.md", True, False, False, False),
+    ("validate-pass", "validate", "contract-pass-validate.md", False, False, False, True),
+    ("validate-desk-go-fail", "validate", "contract-fail-validate-desk-go.md", False, False, False, False),
+    ("name-pass", "name", "contract-pass-name.md", False, False, False, True),
+    ("name-overclaim-fail", "name", "contract-fail-name-overclaim.md", False, False, False, False),
+    ("present-pass", "present", "contract-pass-present.md", False, False, False, True),
+    ("present-theater-fail", "present", "contract-fail-present-theater.md", False, False, False, False),
 ]
 
 
@@ -40,17 +42,22 @@ def run(command: list[str]) -> subprocess.CompletedProcess[str]:
 
 def main() -> int:
     failures: list[dict[str, object]] = []
+    foundation = run([sys.executable, str(ROOT / "evals/check_ai_engineering_foundation.py")])
+    if foundation.returncode:
+        failures.append({"case": "ai-engineering-foundation", "output": foundation.stdout, "stderr": foundation.stderr})
     contract = run([sys.executable, str(EVAL / "check_contracts.py")])
     if contract.returncode:
         failures.append({"case": "contracts", "output": contract.stdout, "stderr": contract.stderr})
 
     results: list[dict[str, object]] = []
-    for case_id, mode, filename, force, breakthrough, should_pass in CASES:
+    for case_id, mode, filename, force, breakthrough, ai_engineering_foundation, should_pass in CASES:
         command = [sys.executable, str(SCORER), mode, str(FIXTURES / filename)]
         if force:
             command.append("--force")
         if breakthrough:
             command.append("--breakthrough")
+        if ai_engineering_foundation:
+            command.append("--ai-engineering-foundation")
         completed = run(command)
         passed = completed.returncode == 0
         try:
@@ -70,6 +77,7 @@ def main() -> int:
 
     summary = {
         "passed": not failures,
+        "ai_engineering_foundation": "pass" if foundation.returncode == 0 else "fail",
         "contract_check": "pass" if contract.returncode == 0 else "fail",
         "artifact_cases": len(CASES),
         "routing_predictions_tested": 0,

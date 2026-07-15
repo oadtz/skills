@@ -15,6 +15,9 @@ description: >
 
 # Solo — Distribute (get the first customers, build a channel)
 
+Read `../ai-engineering-foundation.md` now. Do not market a product as AI-native or AI-built unless
+that fact changes customer value, trust, or risk.
+
 Take a chosen model (from `solo-model`) and turn "I built it / I'm building it" into **a repeatable
 way for the right people to find it and pay.** Output is a concrete go-to-market plan: one primary
 channel, the audience-building motion that runs alongside the product, a first-customers play, and a

@@ -37,8 +37,10 @@ step into forge — so it's omitted from the build line above.)
 
 ## The one idea behind the whole family
 
-**AI makes code cheap to produce but quietly raises duplication, churn, and insecurity — and the
-human reviewing it is measurably overconfident.** (Stanford CCS 2023: people with an AI assistant
+**One founder directs an AI engineering team by default; Forge is the control plane that makes this
+capacity directable, parallelizable, verifiable, integrable, and safe to operate.** The product may be
+ordinary deterministic software with no runtime AI. Cheap code still raises duplication, churn, and
+insecurity—and the human reviewing it can be overconfident. (Stanford CCS 2023: people with an AI assistant
 wrote *less* secure code yet believed it was *more* secure.) So forge's real job is not "prompt the
 agent to build it" — it's to be the **harness that makes the known failure modes hard to reach**:
 under-specified architecture, generic UI, agents that stop at "looks done," tests the agent quietly

@@ -1,8 +1,9 @@
-# Context engineering — one thing per loop, state on disk
+# Context engineering — one bounded packet per agent, state on disk
 
-This is the governing principle applied to memory and attention: **one thing per loop, state on disk.**
-Drift over a long build is mostly a context-hygiene failure, not a model failure. Use throughout
-forge-build.
+This is the governing principle applied to memory and attention: **one bounded packet per agent,
+state on disk.** Drift over a long build is mostly a context-hygiene failure, not a model failure.
+Several agents may work in parallel when packets have stable interfaces, isolated worktrees, explicit
+verification, and a declared integration order. Use throughout forge-build.
 
 ## Why context rots
 
@@ -31,7 +32,7 @@ https://simonwillison.net/2025/Jun/29/how-to-fix-your-context/
 Sources: https://code.claude.com/docs/en/memory , https://cursor.com/blog/agent-best-practices ,
 https://aider.chat/docs/repomap.html
 
-## One thing per loop; fresh context
+## One bounded packet per agent; fresh context
 
 - **Build one slice per loop.** The "Ralph" pattern (Geoffrey Huntley): re-feed a stable prompt into a
   *fresh-context* agent each iteration, with the rule "only one thing per loop." Fresh context each
@@ -41,6 +42,9 @@ https://aider.chat/docs/repomap.html
 - **Isolate sub-tasks.** Run research, planning, and building as separate sessions/subagents; only a
   condensed summary returns to the orchestrator, so detailed search context never pollutes higher-level
   reasoning. This is the single most effective structural defense against drift.
+- **Parallelize through contracts, not optimism.** The orchestrator may run several fresh-context
+  agents concurrently only when each packet declares owned files/components, stable interfaces,
+  acceptance criteria, verifier, dependencies, and integration order. Otherwise serialize the work.
 
 Caveat on the Ralph loop: it's for **greenfield** builds ("there's no way I'd use Ralph in an existing
 code base"), and known failure modes include placeholder/stub implementations and duplicate
@@ -59,8 +63,11 @@ compaction, and restarts. Maintain:
 - **`decisions.md`** — deviations from the plan and *why* (promote anything irreversible to an ADR).
 - **A per-slice todo list** with item status, which continuously re-injects the current goal and
   counters distraction.
+- **An integration queue** — verified packet, dependency state, merge order, conflicts, and required
+  founder decisions. This is the orchestrator's view of the AI engineering team.
 
-Persisting state + running one thing per loop is what lets the build survive context resets without
-losing the thread. Fresh context each iteration beats a rotting marathon session.
+Persisting state plus one bounded packet per agent is what lets the build survive context resets and
+safe parallel execution without losing the thread. Fresh context each iteration beats a rotting
+marathon session.
 
 Source: https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents

@@ -93,6 +93,36 @@ def main() -> int:
         failures,
     )
 
+    ai_engineering_path = ROOT / "ideakit-generate/references/ai-engineering-team.md"
+    ai_engineering = ""
+    if not ai_engineering_path.exists():
+        failures.append("generate AI engineering team routing: missing references/ai-engineering-team.md")
+    else:
+        ai_engineering = ai_engineering_path.read_text(encoding="utf-8")
+    require(
+        texts.get("generate", "") + "\n" + breakthrough + "\n" + ai_engineering,
+        [
+            "one founder directing an AI engineering team",
+            "product does **not** need to be AI-native",
+            "no model or agent at runtime",
+            "product AI dependency",
+            "engineering cost curve",
+            "organizational-compression",
+            "founder control surface",
+            "delegation architecture",
+            "verification loop",
+            "AI engineering work absorbed",
+            "scope made feasible",
+            "human attention budget",
+            "external bottleneck",
+            "failure containment",
+            "founder-directed entry",
+            "do not cap product scope",
+        ],
+        "generate AI engineering team contract",
+        failures,
+    )
+
     cases = json.loads((ROOT / "evals/ideakit/cases.json").read_text(encoding="utf-8"))
     rubric = json.loads((ROOT / "evals/ideakit/pairwise-rubric.json").read_text(encoding="utf-8"))
     expected = {f"ideakit-{name}" for name in SKILLS}
@@ -117,6 +147,22 @@ def main() -> int:
         "cliche and duplicate collision",
     }.issubset(set(breakthrough_cases[0].get("quality_focus", []))):
         failures.append("cases: breakthrough-retry is missing quality-focus contracts")
+    ai_engineering_cases = [case for case in cases if case.get("id") == "ai-engineering-default"]
+    if len(ai_engineering_cases) != 1 or ai_engineering_cases[0].get("expected_skill") != "ideakit-generate":
+        failures.append("cases: expected one ai-engineering-default route to ideakit-generate")
+    elif not {
+        "engineering cost-curve reconstruction",
+        "organizational compression",
+        "founder-directed entry",
+        "directability",
+        "verification loop",
+        "human attention budget",
+        "failure containment",
+        "external bottleneck",
+        "no human-labor ceiling",
+        "product need not be AI-native",
+    }.issubset(set(ai_engineering_cases[0].get("quality_focus", []))):
+        failures.append("cases: ai-engineering-default is missing quality-focus contracts")
     if len(rubric.get("dimensions", [])) < 12 or not rubric.get("hard_failures"):
         failures.append("pairwise rubric: expected at least 12 dimensions and explicit hard failures")
     rubric_dimensions = {item.get("name") for item in rubric.get("dimensions", [])}
@@ -132,12 +178,24 @@ def main() -> int:
             "pairwise rubric: missing breakthrough dimensions "
             f"{sorted(required_breakthrough_dimensions - rubric_dimensions)}"
         )
+    required_ai_engineering_dimensions = {
+        "engineering_cost_curve_reconstruction",
+        "founder_directability",
+        "verification_and_operational_control",
+    }
+    if not required_ai_engineering_dimensions.issubset(rubric_dimensions):
+        failures.append(
+            "pairwise rubric: missing AI engineering team dimensions "
+            f"{sorted(required_ai_engineering_dimensions - rubric_dimensions)}"
+        )
     if set(rubric.get("mode_dimensions", {})) != set(SKILLS):
         failures.append("pairwise rubric: expected mode-specific dimensions for every skill")
 
     required_fixtures = {
         "contract-pass-breakthrough-generate.md",
         "contract-fail-breakthrough-generic.md",
+        "contract-pass-ai-engineering-team.md",
+        "contract-fail-ai-engineering-human-ceiling.md",
     }
     fixture_names = {path.name for path in (ROOT / "evals/ideakit/fixtures").glob("*.md")}
     if required_fixtures - fixture_names:

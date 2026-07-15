@@ -1,9 +1,9 @@
 ---
 name: solo-model
 description: >
-  Decide HOW a one-person (or very small) business makes money before building it — choose a
-  revenue model that pays the soonest with the least to build and operate solo, and set initial
-  pricing. Use this skill when a solopreneur, indie hacker, or bootstrapper asks "how should I make
+  Decide HOW a one-founder business makes money before building it — choose a revenue model that
+  captures value early and remains sustainable under founder-directed AI engineering, then set
+  initial pricing. Use this skill when a solopreneur, indie hacker, or bootstrapper asks "how should I make
   money from this", "what business model fits a solo founder", "should this be SaaS or a service or
   a product", "how do I price this", "how do I monetize my idea", "what's the smallest thing I can
   charge for", or hands off a validated idea / PRD from ideakit-validate and now needs a commercial
@@ -15,29 +15,33 @@ description: >
 
 # Solo — Model (idea → how it makes money)
 
+Read `../ai-engineering-foundation.md` now. Treat directed AI engineering capacity as the default for
+software and do not choose a business model by imposing a human implementation-hours ceiling.
+
 Take a validated idea — ideally a PRD/`PLAN.md` from `ideakit-validate`, or just a clear concept —
-and decide the **revenue model and starting price a single person can actually run.** Output is a
+and decide the **revenue model and starting price a founder-directed business can actually run.** Output is a
 short, concrete *business-model decision*: the model, the price, the path to first revenue, and the
 explicit trade-offs — not a 40-page business plan.
 
 ## The governing principle (read first)
 
-**Pick the model that pays the soonest with the least to build and operate solo.**
+**Pick the model that captures value soon and sustains founder attention; do not minimize the product
+merely to match human coding hours.**
 
-A solo founder's binding constraint is not ideas or even money — it is *their own finite time*, and
-the clock starts the day they stop earning elsewhere. So the model is not chosen for theoretical
-maximum size; it is chosen to reach paying customers with the least to build, the least to operate,
-and the shortest gap to cash. Three consequences, all the same principle:
+A founder's binding constraint is consequential attention, external access, and operating risk—not
+personal implementation throughput. For software, assume the founder directs an AI engineering team
+under `../ai-engineering-foundation.md`. Choose the model for value capture, time to evidence or cash,
+and sustainable operation while preserving credible ambition. Three consequences follow:
 
-1. **Cashflow before scale.** A service that bills next week beats a SaaS that *might* recur in a
-   year. You can always climb from service → product → recurring later (that's the Stairstep idea) —
-   but you cannot climb if you run out of runway first.
+1. **Evidence and cashflow before unsupported scale.** A paid proof beats a long speculative build,
+   but it need not become a permanent service or small product. A broad SaaS is valid when the AI
+   engineering control plane is credible and the external proof justifies the next tranche of scope.
 2. **Size to a reachable audience, not a TAM slide.** A small number of reachable buyers at a price
    supported by comparable products is a real solo business; "1% of a $10B market" is a fantasy a
    single person can't capture. Cite current comps before quoting buyer-count or price benchmarks.
-3. **Every operational burden is paid in founder-hours.** Support, fulfillment, onboarding, refunds,
-   and churn all land on one desk. A model that's 20% more lucrative but doubles operational load is
-   usually the wrong solo model. Favor high-margin, low-touch, asynchronous revenue.
+3. **Every unresolved operational burden consumes founder attention.** AI coders can absorb build and
+   maintenance work only where direction, verification, and escalation are explicit. Support,
+   fulfillment, onboarding, refunds, trust, and exceptions remain model costs until designed away.
 
 ## Where this sits in the pipeline
 
@@ -81,10 +85,12 @@ Pull from the PRD (don't re-derive what `ideakit-validate` already established):
 core value, the v1 scope, and any platform the product lives in. Then establish the three things the
 model actually turns on, asking only what's missing:
 
-- **Runway & time**: how many months can the user fund themselves? Full-time or nights/weekends? This
-  sets how fast the model *must* pay.
-- **What's already buildable**: is there something sellable in weeks, or is value gated behind months
-  of build? (Pushes toward service/product-first vs SaaS.)
+- **Runway & attention**: how many months can the user fund themselves, and how much consequential
+  review, customer work, and escalation can they sustain? This sets how fast the model must produce
+  evidence or cash.
+- **Directed engineering capacity**: what can the AI engineering team build and maintain under explicit
+  interfaces, verification, permissions, observability, and rollback? Do not convert nights/weekends
+  into a feature-count ceiling.
 - **Buyer & frequency**: who pays, how often is the problem felt, and is it a business expense
   (easier, higher price) or out of personal pocket (harder, price-sensitive)?
 
@@ -93,10 +99,11 @@ model actually turns on, asking only what's missing:
 Read `references/business-models.md`. Propose **one primary model** with a one-line rationale, and
 name the Stairstep path out of it. The main solo-viable models:
 
-- **Productized service** — fixed scope, fixed price, repeatable. Fastest to cash, validates demand
-  with real money, funds everything else. Often the right *first* step even if the dream is SaaS.
-- **MicroSaaS** — narrow recurring software for a niche. Best long-run solo economics (recurring,
-  low marginal cost) but slowest to first dollar and operationally heavier (support, uptime, churn).
+- **Productized service** — fixed scope, fixed price, repeatable. Useful when service delivery is the
+  fastest informative paid proof; do not make it the automatic precondition for software.
+- **SaaS / software product** — recurring or usage-based software from a narrow tool to a broad system.
+  Judge it by value capture, distribution, directability, verification, operational control, support,
+  uptime, and churn—not by what one human could code.
 - **One-off digital product** — template, course, tool, plugin, ebook. Near-zero marginal cost, but
   no recurring revenue — you resell to new buyers forever (a Stairstep "step 1").
 - **Marketplace / community / paid newsletter** — monetize an audience directly. Only viable if the
@@ -104,9 +111,10 @@ name the Stairstep path out of it. The main solo-viable models:
 - **Usage / API / "tool behind an API"** — sell a capability metered by use. Clean solo economics if
   the value is automatable and self-serve.
 
-**Apply the principle, don't just match a label:** if two models fit, pick the one that reaches paid
-soonest and operates with the least founder-touch. Explicitly recommend the Stairstep when the
-dream model (usually SaaS) is too slow to first revenue — start at a faster-paying step and climb.
+**Apply the principle, don't just match a label:** if two models fit, prefer the one that resolves the
+critical business uncertainty and captures value with sustainable founder attention. Recommend a
+Stairstep only when it is the best evidence or funding path, not because a solo founder is presumed
+unable to direct a large software build.
 
 ### Step 3 — Design the offer & set the starting price
 
@@ -145,15 +153,16 @@ The user picks the model and approves the trade-offs before moving on.
 
 ## Operating principles
 
-- **Cashflow is oxygen.** Bias every tie toward the option that bills sooner. A profitable small thing
-  beats an unprofitable big thing for a solo founder, always.
+- **Cashflow is oxygen; ambition is not the enemy.** Bias ties toward faster evidence and viable cash,
+  but retain a large architecture when its affordable-loss path and control plane are credible.
 - **Charge from day one.** "Free until it's perfect" is how solo products die — free users don't
   validate a business, and you learn the real price only by asking for money. The cost of building
   the wrong thing is low now (AI); the cost of *believing* the wrong thing for 6–18 months is not.
 - **Operational load is a cost, even when it doesn't show on the P&L.** It's paid in the founder's
   hours and attention — the scarcest resource. Prefer low-touch, asynchronous, high-margin revenue.
-- **Don't model for a team you don't have.** Choose what one person can run; revisit if/when that
-  changes. Headcount is the most expensive and least reversible "feature" — see `solo-sustain`.
+- **Model for directed capacity you control.** AI engineering capacity counts when it is directable,
+  verifiable, integrable, operable, and containable. Do not assume human headcount is required, and do
+  not pretend generated code removes customer, legal, support, or exception work.
 - **Honesty:** if the only viable model is operationally heavy or slow to pay, say so plainly — don't
   dress a hard model as an easy one. Flag willingness-to-pay as an assumption until real money proves it.
 

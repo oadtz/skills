@@ -12,6 +12,14 @@ necessarily related** — each is independent unless it explicitly belongs to a 
 - **Related skills that form a workflow share a name prefix** (e.g. `ideakit-*`) and get their own
   set-level README. Unrelated standalone skills just sit here as their own entries.
 
+## Shared default
+
+Every Ideakit, Solo, and Forge skill reads
+**[ai-engineering-foundation.md](ai-engineering-foundation.md)**. When software is in scope, assume one
+founder directs an AI engineering team; do not cap product scope by personal coding hours or missing
+human headcount. This is a production model, not a product requirement: the shipped product may contain
+no runtime or customer-facing AI.
+
 ## Index
 
 ### `ideakit-*` — business idea pipeline (a related set)

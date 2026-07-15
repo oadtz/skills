@@ -13,6 +13,9 @@ description: >
 
 # Solo — Fund (how to pay to build it, with minimal dilution)
 
+Read `../ai-engineering-foundation.md` now. Budget the AI engineering system, founder attention, and
+external dependencies; do not infer human engineering headcount from product scope.
+
 Take a chosen business model — ideally from `solo-model` — and decide **how to fund the build while
 keeping the cap table and the obligations as empty as the business allows.** Output is a concrete
 funding plan: the primary path, the amount and what it buys, the cost (equity / repayment / strings),

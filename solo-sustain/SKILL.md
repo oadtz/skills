@@ -14,6 +14,9 @@ description: >
 
 # Solo — Sustain (run it solo, for the long haul)
 
+Read `../ai-engineering-foundation.md` now. Treat AI coders as the default engineering team and manage
+the founder as the control, judgment, and escalation point—not the implementation workforce.
+
 Take a working (or soon-working) solo business and make it **something one person can run for years
 without breaking the person.** Output is a concrete operating plan: what to automate or systematize,
 the calm-company defaults to adopt, and the guardrails that protect the founder's time, energy, and
@@ -24,8 +27,9 @@ finances — so the business compounds instead of collapsing.
 **The founder is the single point of failure and the scarcest asset — protect the asset, and buy
 leverage through systems before headcount.**
 
-In a one-person business, the founder is simultaneously the product team, support, sales, ops, and
-finance — and the *only* irreplaceable component. Founder burnout is a major documented failure mode;
+In a one-founder business, AI coders can be the engineering team, while the founder remains the
+direction, judgment, support, sales, ops, finance, and escalation point—and the *only* irreplaceable
+component. Founder burnout is a major documented failure mode;
 re-fetch current survey figures before quoting rates. So longevity isn't a soft topic — it's the core
 operational risk. Three consequences, all the same principle:
 
@@ -127,7 +131,8 @@ removes it.
 
 Adopt explicit defaults that keep the business one-person-runnable: grow at the pace profit allows;
 default to *no* on work/customers/features that add disproportionate operational load; keep the
-product surface small (every feature is forever-support); prefer async, low-touch revenue; price so
+product surface controlled and expand it only when support, verification, and maintenance scale through
+the AI engineering control plane; prefer async, low-touch revenue; price so
 you serve *fewer, better* customers rather than many needy ones. Write these down as the business's
 operating stance so future decisions have a yardstick.
 
@@ -161,8 +166,9 @@ The user commits to the operating plan and guardrails before finishing.
   eliminate → self-serve → automate → template → delegate, in that order.
 - **Systems before headcount.** Hiring is the most expensive, least reversible move; exhaust systems
   and services first, and treat a first hire as deliberate and reversible-first.
-- **Small surface, low touch.** Every feature and every needy customer is permanent operational load.
-  Defend simplicity; saying no is an operations strategy.
+- **Controlled surface, low exception load.** Product breadth is valid when verification, maintenance,
+  and support scale without multiplying founder exceptions. Defend simplicity where complexity creates
+  recurring attention, not merely because the codebase is large.
 - **Calm and profitable beats big and brittle.** Durable profit + a sustainable founder compounds for
   years; a hyper-growth sprint that burns the founder out ends the business.
 - **Protect the person first.** Never trade the founder's health for output. A sustainability plan

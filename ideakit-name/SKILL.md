@@ -14,6 +14,9 @@ description: >
 
 # Ideakit — Name (brand/product naming + availability screening)
 
+Read `../ai-engineering-foundation.md` now. Do not introduce AI naming or positioning merely because
+AI coders are the product's engineering team.
+
 Produce names that are both **good** (memorable, on-brand, the right kind of name) and **usable** (the
 `.com` or key TLD is gettable, no glaring trademark conflict, handles are free, the market isn't already
 crowded with the name). A name that fails the availability gauntlet is not a shortlist candidate, no

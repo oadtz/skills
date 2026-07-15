@@ -14,6 +14,9 @@ description: >
 
 # Solo — Sell (founder-led, first paying customers)
 
+Read `../ai-engineering-foundation.md` now. Sell the customer outcome, not the AI production method,
+unless runtime AI or the engineering model materially changes value, trust, or risk.
+
 Take attention (from `solo-distribute`) and an offer + price (from `solo-model`) and **turn them into
 closed, paying deals by selling personally.** Output is not a theory of sales — it's a concrete sales
 motion the founder runs this week: who to talk to, what to say, how to run the conversation, how to

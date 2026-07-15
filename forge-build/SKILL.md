@@ -14,10 +14,14 @@ description: >
 
 # Forge — Build (foundation → working product)
 
-Drive the host's coding capability to build the product **incrementally and verifiably** — prove the
-architecture end-to-end with a thin skeleton, then add vertical slices, each built test-first and
-checked by a gate the building agent doesn't control. Output is working, tested code, plus a durable
-on-disk record of progress.
+Read `../ai-engineering-foundation.md` now. Operate as a directed AI engineering team by default;
+expand throughput through bounded work, explicit interfaces, external verification, and escalation.
+
+Direct the host's AI coding capabilities as an engineering team to build the product **incrementally
+and verifiably**—prove the architecture end-to-end with a thin skeleton, then execute bounded vertical
+work packets in dependency order and in parallel where interfaces permit. Each packet is test-first
+and checked by a gate its implementing agent does not control. Output is working, tested code plus a
+durable on-disk record of direction, progress, decisions, integration, and escalation.
 
 ## The governing principle (read first)
 
@@ -38,9 +42,10 @@ structured so failure modes are hard to reach:
    (test/build/lint/screenshot), and **the agent that wrote the code is not the agent that grades
    it** — a separate verifier or a stop condition the implementer can't modify. If you can't verify
    it, it isn't done.
-3. **One thing per loop; state on disk.** Build one slice per loop, with fresh-enough context. The
-   plan, progress, and decisions live in files — the agent's durable memory across resets and
-   compaction — not in a marathon session that rots.
+3. **One bounded packet per agent; state on disk.** Give each agent one coherent slice with fresh
+   context. Run independent packets in parallel only across stable interfaces and isolated worktrees.
+   Plans, progress, decisions, integration state, and escalation live in files—not a marathon context
+   or private agent memory.
 
 ## Where this sits in the pipeline
 
@@ -99,20 +104,25 @@ metrics are self-reported on one repo — use the discipline, treat the percenta
 
 ## Workflow
 
-Five steps: **Plan slices → Walking skeleton → Slice loop → Verify (externally) → Integrate & track.**
+Five steps: **Plan the work graph → Walking skeleton → Directed team loop → Verify externally → Integrate & track.**
 
 ### Step 1 — Decompose the PRD into dependency-ordered slices
 
 Read `references/build-loop.md`. Break the product into **vertical slices**, each:
 
 - spanning all layers (schema → logic → API → UI → tests) for one user-facing capability,
-- independently **demoable / verifiable**, and small (≈≤2–3 days of work),
+- independently **demoable / verifiable**, and bounded enough for one agent context plus one review
+  and integration cycle; do not estimate scope from human coding days,
 - sequenced so a finished slice **unblocks** the next without requiring other features first,
 - tagged **HITL** (needs human review before merge) or **AFK** (agent can complete unattended).
 
 Write the ordered slice list to `plan.md`. Each slice gets **testable acceptance criteria** in
 EARS-style `WHEN [condition] THE SYSTEM SHALL [behavior]` — concrete enough to write a test against.
 Vague criteria are the #1 cause of agent drift.
+
+Also record each slice's dependencies, owned files/components, interface contracts, required context,
+permission level, verifier, escalation conditions, and whether it is safe to run in parallel. Do not
+parallelize work merely because agents are available.
 
 ### Step 2 — Build the walking skeleton first
 
@@ -122,9 +132,11 @@ forces the hard integration and deployment problems while the codebase is almost
 every later slice a proven path to plug into. Confirm it builds, tests, and deploys green before
 proceeding.
 
-### Step 3 — The slice loop (test-first, one thing per loop)
+### Step 3 — The directed team loop (test-first, one bounded packet per agent)
 
-For each slice, in dependency order, run the loop in `references/build-loop.md`:
+For each ready slice, run the loop in `references/build-loop.md`. Execute independent, non-overlapping
+slices concurrently in isolated worktrees when their interfaces and integration order are stable;
+otherwise keep them sequential:
 
 1. **Write the tests first**, from the slice's acceptance criteria. No mock implementation yet.
 2. **Confirm the tests fail** (red) — proves they test something.
@@ -136,9 +148,10 @@ For each slice, in dependency order, run the loop in `references/build-loop.md`:
    where you pay down the copy-paste tax. If `ponytail` is installed, this is where it earns its keep —
    run `/ponytail-review` on the slice diff to catch over-engineering before the gate.
 
-Keep context curated per slice (see `references/context-engineering.md`): a tight rules file, a repo
+Keep context curated per agent and slice (see `references/context-engineering.md`): a tight rules file, a repo
 map for orientation, ADRs linked for the *why*, and clearing context / starting a fresh session (e.g.
-`/clear`) on task switches. One slice per loop beats a marathon session.
+`/clear`) on task switches. One bounded slice per agent context beats a marathon session; the
+orchestrator may run several interface-independent slices concurrently.
 
 ### Step 4 — Verify externally (the agent doesn't grade its own work)
 
@@ -163,7 +176,7 @@ A slice is done only when the external gate is green and (for HITL) a human has 
 
 ### Step 5 — Integrate & track
 
-- Merge the slice in a **small, reviewable** change (multiple small PRs beat one giant one — small
+- Integrate verified slices in dependency order as **small, reviewable** changes (multiple small PRs beat one giant one — small
   batches are what separate teams where AI *helps* delivery from teams where it hurts stability).
 - Update `progress.md` (what's done, what's next) and `decisions.md` (any deviation from the plan and
   why). These survive context resets and are how the next loop knows where it is.
@@ -186,9 +199,11 @@ When the slices that make up v1 are built and green, offer the handoff:
 - **Verify behavior, not claims.** Real output, screenshots, running processes — not "it works."
 - **Review test diffs, not just green checks.** Reward hacking hides in the test edits.
 
-**One thing per loop; state on disk:**
+**One bounded packet per agent; state on disk:**
 - **Context is a finite resource you curate.** Drift over a long build is mostly a context-hygiene
   failure.
+- **Parallelism follows interfaces.** Run independent slices concurrently only when ownership,
+  contracts, verification, and integration order are explicit.
 - **Persist plan/progress/decisions to files.** Fresh context each loop beats a rotting marathon.
 
 **Quality as you go:**
@@ -209,5 +224,5 @@ for the user's approval. Full contract: `../forge-execution.md`.
 
 - `references/build-loop.md` — *thin slice + verify*: walking skeleton, vertical-slice decomposition,
   EARS acceptance criteria, the test-first loop, and the external verification gate.
-- `references/context-engineering.md` — *one thing per loop, state on disk*: rules files, repo maps,
+- `references/context-engineering.md` — *one bounded packet per agent, state on disk*: rules files, repo maps,
   ADR linking, session isolation, and persisting progress to survive resets.

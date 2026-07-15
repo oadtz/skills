@@ -57,6 +57,11 @@ ideakit-discover  →  ideakit-generate  →  ideakit-explore  →  ideakit-vali
   never fabricate), while the invention phase uses selected lenses rather than a mandatory framework
   march. `ideakit-craft.md` rejects interchangeable concepts, unsupported novelty, quota-filling, and
   generator prose at every stage.
+- **AI engineering is the default production model for software.** Every `ideakit-*` skill reads the
+  shared foundation. `ideakit-generate` assumes one founder directs coding agents, reconstructs the
+  engineering cost curve, and judges scope by directability, verification, integration, operational
+  control, and founder attention—not manual coding hours or conventional engineering headcount. The
+  resulting product need not contain runtime or customer-facing AI.
 - **Persuasion is story-first.** `ideakit-present` builds the narrative and emotional core before
   choosing a format (deck/demo/one-pager), because a polished deck around a weak story convinces
   no one. It only sells what validation made true — never hype past the substance.

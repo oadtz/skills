@@ -12,6 +12,9 @@ description: >
 
 # Ideakit — Explore
 
+Read `../ai-engineering-foundation.md` now and preserve its default whenever an explored direction
+contains software or digital product development.
+
 Think alongside the user like an inventive, commercially literate sparring partner. Do not dump
 frameworks or force a PRD. Widen the space, create defensible reframes, expose contradictions, and help
 the user choose what deserves validation.
@@ -112,7 +115,8 @@ Seek one or more **defensible surprises**, not random weirdness:
 - What becomes scarce if the headline capability becomes abundant?
 - Who benefits but is not currently the buyer?
 - What would make the current solution unnecessary?
-- What version begins as manual service and discovers a product?
+- What version begins as a manual service or founder-directed AI build and discovers the decisive
+  product or control-plane truth?
 
 ### 4. Challenge
 

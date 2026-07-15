@@ -1,15 +1,15 @@
-# Solo-viable revenue models
+# One-founder revenue models
 
-The principle: *pick the model that pays the soonest with the least to build and operate solo.* Each
-model below is rated on the three things that matter to a one-person business — **time to first
-dollar**, **operational load** (founder-hours per customer after the sale), and **how income scales
-with the founder's time**.
+The principle: *pick the model that captures value with the strongest evidence path and sustainable
+founder attention.* Treat founder-directed AI engineering as available production capacity under the
+shared AI engineering foundation. Do not minimize software scope merely because one human could
+not implement it. Compare **time to evidence or first dollar**, **external and operational load**,
+**founder attention**, and **how income scales**.
 
 ## The Stairstep idea (Rob Walling) — read this first
 
-Most solo founders should not start with their dream model (usually recurring SaaS). The Stairstep
-Approach sequences the climb so you build the skill that actually kills solo businesses —
-**distribution** — *before* you take on the hardest-to-operate model:
+Stairstep is one evidence and funding path, not the default ceiling for a one-founder software
+business. Use it when distribution, cash, or customer understanding is the binding uncertainty:
 
 - **Step 1 — one product, one channel.** Sell a single simple thing (template, plugin, course, small
   tool) through one channel you can learn (a marketplace, your audience, SEO). Goal: learn to get
@@ -19,8 +19,9 @@ Approach sequences the climb so you build the skill that actually kills solo bus
 - **Step 3 — recurring.** Only now build the SaaS, funded by step 1–2 cashflow and de-risked because
   you already know how to reach buyers.
 
-Recommend starting at the *lowest step that reaches money fast*, then climbing — not jumping straight
-to step 3 on an empty bank account.
+Recommend the lowest step only when it resolves the critical uncertainty or funds the next step better
+than a direct software proof. A founder may start with a broad SaaS architecture when distribution,
+affordable loss, and the AI engineering control plane are credible.
 
 ## The models
 
@@ -30,17 +31,18 @@ turnaround"), sold repeatably like a product.
 - **Time to first dollar:** days–weeks (fastest). **Operational load:** high (you deliver each one),
   but bounded and predictable. **Scales with time:** weakly — capped by your hours until you template
   and partially automate delivery.
-- **Why it wins for solo:** validates demand with *real money* immediately, needs almost nothing
-  built, and the cashflow funds a product later. Frequently the correct Step 1 even when the dream is
-  SaaS. Raise price and tighten scope as demand proves out.
+- **When it wins:** it validates demand with real money and funds a product when service delivery is
+  the fastest informative proof. Do not require it before software when it tests a different job or
+  creates an operating model the founder does not want.
 
-### MicroSaaS
-Narrow recurring software for a specific niche larger players ignore.
-- **Time to first dollar:** slow (build first). **Operational load:** medium–high (support, uptime,
-  billing, churn — all on one desk). **Scales with time:** strongly — recurring revenue with near-zero
-  marginal cost is the best long-run solo economics.
-- **Watch-outs:** support and churn are the silent solo killers; keep scope brutally narrow; lean on
-  automation from day one (see `solo-sustain`). Best reached *via* steps 1–2, not from cold.
+### SaaS / software product
+Recurring or usage-based software ranging from a focused tool to a broad multi-module system.
+- **Time to first dollar:** depends on distribution, buyer commitment, and the right-to-build test—not
+  feature count alone. **Operational load:** support, uptime, billing, churn, permissions, and
+  exceptions; AI coders can absorb engineering only under a verified control plane. **Scales with
+  time:** strongly when marginal delivery and founder exception load stay bounded.
+- **Watch-outs:** generated scope is not customer value. Keep breadth that strengthens the job and
+  economics; remove breadth that multiplies support, trust, or integration exceptions without value.
 
 ### One-off digital product
 Template, course, ebook, plugin, design asset, desktop tool — built once, sold many times.
@@ -66,8 +68,10 @@ Sell an automatable capability metered by use or seats; self-serve.
 ## Quick chooser
 
 - **Runway is short / need cash now** → productized service (Step 1), then climb.
-- **Strong niche, patient, want best long-run economics** → MicroSaaS, ideally after a Step-1 product.
+- **Recurring software value + credible distribution/control plane** → SaaS directly or after the
+  right external proof; do not require a Step-1 product by default.
 - **Already have / will build an audience** → digital product, community, or newsletter.
 - **Value is automatable and self-serve** → usage/API.
 
-In every tie, apply the principle: which reaches paid soonest, with the least to operate per customer?
+In every tie, ask which resolves the critical business uncertainty, captures value, and preserves
+sustainable founder attention without imposing a human implementation ceiling.

@@ -1,6 +1,6 @@
 {
   "purpose": "Blindly compare two temporary Ideakit artifacts without treating either as factual truth.",
-  "scoring": "Score each dimension 1-5, cite artifact passages, then choose A, B, or tie. Verify cited claims separately. For breakthrough work, compare canonical idea cores before surface wording and judge surprise, inevitability in hindsight, solo enterability, and value capture independently; do not collapse them into one total.",
+  "scoring": "Score each dimension 1-5, cite artifact passages, then choose A, B, or tie. Verify cited claims separately. For breakthrough work, compare canonical idea cores before surface wording and judge surprise, inevitability in hindsight, solo enterability, and value capture independently; do not collapse them into one total. For every software or digital product brief, apply the default AI engineering foundation: judge changed engineering economics, founder directability, verification, and operational control without using human coding hours or conventional headcount as the scope ceiling.",
   "dimensions": [
     {
       "name": "venture_originality",
@@ -69,6 +69,18 @@
     {
       "name": "collision_resistance",
       "question": "After canonicalizing actor, trigger/job, causal thesis, mechanism, payer, architecture, and wedge, are finalists distinct from one another and from obvious cliché or prior-art categories? Candidates matching on any three of buyer relationship, input corpus, operating workflow, and compounding asset are one venture family and must be merged."
+    },
+    {
+      "name": "engineering_cost_curve_reconstruction",
+      "question": "Under the default AI engineering foundation for software, does the concept identify engineering work, coordination, customization, integration, or maintenance whose economics changed—and a product or business boundary that changes with it—rather than merely claiming faster coding? The product may contain no customer-facing or runtime AI."
+    },
+    {
+      "name": "founder_directability",
+      "question": "Can one founder direct the AI engineering organization through explicit intent, decomposition, interfaces, acceptance criteria, and escalation without becoming the implementation bottleneck?"
+    },
+    {
+      "name": "verification_and_operational_control",
+      "question": "Are tests, evals, integration gates, observability, permissions, rollback, failure containment, maintenance, and the recurring human-attention budget credible for the proposed product breadth?"
     }
   ],
   "mode_dimensions": {
@@ -86,7 +98,9 @@
       "revelation surprise and inevitable-in-hindsight coherence for breakthrough mode",
       "solo enterability after divergent invention, not as an early creativity constraint",
       "payer, capacity economics, and value capture as a non-compensating gate",
-      "canonical-core collision resistance against duplicate and cliché ideas"
+      "canonical-core collision resistance against duplicate and cliché ideas",
+      "engineering cost-curve reconstruction and organizational compression under the default AI engineering foundation",
+      "founder directability, verification, operational control, and bounded human attention without a human-labor ceiling"
     ],
     "explore": [
       "Known/Inferred/Imagined separation",
@@ -135,6 +149,9 @@
     "one venture is presented as several finalists even though the same company would sell them as modules using the same buyer relationship, inputs, operating workflow, and compounding asset",
     "pilot price times sustainable solo capacity cannot support the desired game and no credible leverage path is stated",
     "capacity math treats every available founder hour as billable and leaves no explicit room for sales, administration, learning, or variance",
-    "learning test lacks either a paid commitment before work or an observable delivered-value decision or outcome after delivery"
+    "learning test lacks either a paid commitment before work or an observable delivered-value decision or outcome after delivery",
+    "AI engineering team concept is rejected or reduced solely because one human could not code it after work or because a conventional company would need many engineers",
+    "AI engineering team is treated as unlimited autonomous labor without explicit decomposition, verification, integration, permissions, rollback, failure containment, and escalation",
+    "AI engineering process is incorrectly used to require an AI-native product, customer-facing AI feature, or runtime model when conventional software better serves the job"
   ]
 }

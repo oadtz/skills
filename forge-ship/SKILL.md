@@ -14,6 +14,9 @@ description: >
 
 # Forge — Ship (working product → production-ready release)
 
+Read `../ai-engineering-foundation.md` now. Ship AI-developed conventional software under ordinary
+quality gates; add AI-runtime evals only when the product actually contains runtime AI.
+
 Take a built, tested product and make it **safe to put in front of real users**, then release it. The
 work is the safety net: turn the quality and security checks into *blocking, external* CI gates, add
 the minimum observability and rollback to operate it, and deploy lean. Output is a hardened, monitored,

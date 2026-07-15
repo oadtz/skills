@@ -114,6 +114,13 @@ decision or outcome after delivery; both must pass.
 Do not shrink the long-term thesis merely to make it buildable. Separate the large architecture from
 the founder-scale entry. Park a concept when no credible translation exists.
 
+For every software or digital product brief, apply `ai-engineering-team.md`: interpret founder-scale
+entry as a **founder attention and control budget**, not as personal implementation hours or
+conventional engineering headcount. Use the AI engineering control plane as a valid translation; do
+not force a manual service or narrower product when the larger system is directable, verifiable,
+operable, and containable. Narrow only to resolve an external dependency or a control-plane
+uncertainty.
+
 ## 7. Apply the pursuable-wow finish line
 
 Judge these separately; do not total them:

@@ -14,6 +14,9 @@ description: >
 
 # Ideakit — Discover (blank slate → a direction that fits you)
 
+Read `../ai-engineering-foundation.md` now and treat it as the default operating model whenever
+software or digital product development enters the opportunity space.
+
 Take a person who has **nothing yet** — no idea, and often not even a domain or a stated skill — and
 help them discover what they actually want to build. The output is not a list of market ideas (that's
 `ideakit-generate`'s job). The output is not a flattering personality verdict. It is a set of

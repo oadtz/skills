@@ -1,20 +1,22 @@
 ---
 name: ideakit-generate
 description: >
-  Discover and invent fresh business opportunities for a user with constraints, interests, skills,
-  access, an audience, a domain, or a world change—but no venture yet.
-  Use for “what should I build”, “give me business ideas”, “ideas in this space”, “where are the
-  opportunities”, “what becomes possible because of X”, “give me unconventional ideas”, or “where is
-  the money moving”, including “wow-worthy”, “visionary”, or “first-principles” requests and retries
-  after generic ideas. Run breakthrough search by default; use the lighter standard mode only when the
-  user explicitly wants a quick rough pass. Research signals, synthesize non-obvious theses, invent
-  venture architectures, apply entrepreneurial judgment, and deliver a small
-  evidence-aware portfolio with wedges and learning tests. Route a true blank slate to ideakit-discover,
-  a direction that still needs expansion to ideakit-explore, and a mature chosen concept to
-  ideakit-validate. Also handle the follow-up that stores or merges a generated portfolio.
+  Discover and invent evidence-aware business opportunities from a user's constraints, skills,
+  access, audience, domain, or a world change. Use for “what should I build”, “give me business ideas”,
+  “where are the opportunities”, “what becomes possible because of X”, unconventional, visionary, or
+  first-principles searches, and retries after generic ideas. Run breakthrough search by default;
+  use standard mode only for an explicitly quick rough pass. Research signals, form non-obvious
+  theses, invent venture architectures, and deliver a small portfolio with wedges and learning tests.
+  Route a blank slate to ideakit-discover, a rough direction to ideakit-explore, and a mature concept
+  to ideakit-validate. For software opportunities, assume by default that one founder directs AI
+  coders and do not inherit a human-engineering-labor ceiling. Also store or merge a generated
+  portfolio when requested.
 ---
 
 # Ideakit — Generate
+
+Read `../ai-engineering-foundation.md` now. Treat one founder directing an AI engineering team as the
+default production model for software and digital product opportunities.
 
 Act as a venture-discovery partner, not an idea vending machine or market-report writer. Use research
 to notice changes and tensions, invention to create what does not exist yet, and entrepreneurial
@@ -48,6 +50,24 @@ explicit operators such as assumption deletion, cost-curve reconstruction, secon
 counter-positioning, and bold but testable bets. Do not impersonate a real person or claim their
 judgment. Read `references/breakthrough-mode.md` now unless the user explicitly selected standard mode.
 
+### Apply the default AI engineering model
+
+For every software or digital product brief, read `references/ai-engineering-team.md` now and keep
+breakthrough invention intensity unless the user explicitly opts out. Assume **one founder directing
+an AI engineering team**. Treat AI as engineering capacity—not a feature pasted onto the product and
+not an unlimited autonomous company.
+
+The resulting product does **not** need to be AI-native or expose AI to customers. It may contain no
+model or agent at runtime. Apply this model whenever AI coders change the production economics, feasible
+scope, customization, integration, or maintenance of otherwise ordinary software. Research and pitch
+the customer problem in its own language; mention AI only when it changes customer value or risk.
+
+Do not cap product scope by the founder's personal coding hours or by the headcount a conventional
+software organization would require. Reconstruct the changed engineering cost curve first. Judge the
+venture by whether the founder can direct, verify, integrate, operate, and contain the AI-produced
+system within an explicit attention and risk budget. Keep external bottlenecks—demand, distribution,
+data rights, trust, permissions, capital, and liability—fully visible.
+
 ## Routing and handoffs
 
 - No domain, skill, audience, obsession, or direction at all → `ideakit-discover` first.
@@ -79,6 +99,8 @@ reasoning integrity, and final quality.
 Ask only for missing information, one concise question at a time:
 
 - founder means: skills, access, credibility, relationships, audience, lived experience;
+- AI engineering leverage for software opportunities: agent/tool access, compute budget, technical direction,
+  repository and test infrastructure, delegation experience, and tolerance for production risk;
 - obsessions, taste, recurring irritations, and contrarian beliefs;
 - desired game: fast cash, calm solo business, category-scale venture, cultural product, public impact;
 - resource envelope and affordable loss;
@@ -134,6 +156,12 @@ openings, counter-signals, and founder-specific access or lived evidence, but no
 candidate ideas, or obvious baseline. Record time, budget, support burden, and other operating
 constraints separately; apply them after divergence rather than using them to shrink the search space.
 
+For every software or digital product brief, also gather current evidence about the relevant
+engineering work: what
+traditionally consumes specialist labor or coordination, which units can be delegated, how their
+outputs can be tested, where integration or maintenance dominates, and which failures still require
+human judgment. Do not infer practical autonomy from a model demo or benchmark alone.
+
 ### 3. Synthesize entrepreneurial openings
 
 Do not jump from search results to products. Cluster signals and look for:
@@ -146,6 +174,8 @@ Do not jump from search results to products. Cluster signals and look for:
 - valuable work hidden inside an existing product or service;
 - shared assumptions that may have expired;
 - founder-specific access or taste that changes what is reachable.
+- engineering fixed costs, coordination layers, customization, integration, maintenance, or long-tail
+  product breadth that may become newly economic under founder-directed AI execution.
 
 Write 3–7 **openings**, each as a causal observation rather than a solution. Include the strongest
 counter-signal. For a force brief, tag each opening with source consequence, causal ring, domain, and
@@ -186,6 +216,10 @@ must form terse seeds, force material differentiation, then expand only its stro
 Synthesize and recombine after all lanes return; only then collapse structural duplicates. These lanes
 are search mechanisms, not portfolio quotas.
 
+For software or digital product invention, run the additional organizational-compression and software-abundance
+lane in `references/ai-engineering-team.md`. Require a real change in feasible product or business
+architecture: generating the same ordinary SaaS faster is not enough.
+
 ### 5. Run the venture-quality pass
 
 For each serious concept, make the chain explicit:
@@ -205,7 +239,7 @@ Then attack it:
 - How would an incumbent respond?
 - What is the strongest evidence against the thesis?
 - Does the founder have a credible right to start?
-- Can the wedge begin manually before building the grand vision?
+- Can the wedge earn a bounded paid or control-plane proof before building the grand vision?
 
 Kill, merge, or reframe weak concepts. Preserve a bold concept when the reasoning is strong but the
 evidence is early; label it a bet rather than lowering its score until it disappears.
@@ -238,6 +272,14 @@ hour as billable. A deposit tests willingness to pay, not delivered value: requi
 before work and a separate observable **Delivered value** decision or outcome after delivery. A bold
 concept may survive as a wildcard only when it has an enterable learning wedge.
 
+For software or digital products, translate the founder envelope as an **attention and control budget**,
+not a human implementation-hours budget. Do not shrink the software merely because a conventional team
+would need many engineers or because the founder cannot code it manually after work. Narrow only when
+the founder cannot specify or verify the work, integration creates an unbounded exception load,
+production failure cannot be contained, or an external dependency must be learned first. A thin demand
+test may precede a large build, but it does not redefine the ambition or require a service-first end
+state.
+
 ### 6. Select a portfolio with entrepreneurial judgment
 
 Do not sort by one total score. Use a compact decision table with separate dimensions:
@@ -263,6 +305,15 @@ For breakthrough mode, add four non-compensating judgments:
 - **Enterable** — this founder has a credible, affordable first move despite the larger vision;
 - **Value capture** — a named payer exchanges money for the mechanism, and the capacity economics or
   leverage path can support the founder's desired game.
+
+For software or digital product finalists, add three more non-compensating judgments:
+
+- **Directability** — the founder can express intent, decompose work, set interfaces, and resolve the
+  consequential decisions without becoming the implementation bottleneck;
+- **Verifiability** — tests, evals, review gates, observability, and rollback can distinguish working
+  output from plausible-looking output;
+- **Operational control** — permissions, failure containment, escalation, maintenance, and human
+  attention remain bounded as the codebase and product surface expand.
 
 Treat pursuable wow as a bottleneck: strength on one dimension cannot hide failure on another. For each
 finalist, articulate one **Revelation**, **Why others miss it**, and the **killer risk**. When fresh
@@ -306,6 +357,22 @@ For every breakthrough finalist, also include explicit labeled lines:
 - `Delivered value:` — the observable buyer decision or outcome required after delivery;
 - `Killer risk:` — the fact or dependency most likely to break the thesis.
 
+For every software or digital product finalist, also include explicit labeled lines:
+
+- `Founder-directed entry:` — the first external or control-plane proof that earns more build scope;
+- `AI engineering work absorbed:` — engineering work and coordination the agent team absorbs;
+- `Product AI dependency:` — none, build-time only, optional runtime, or core runtime; never imply that
+  AI engineering requires customer-facing AI;
+- `Previously required organization:` — the conventional roles or team shape compressed;
+- `Founder control surface:` — decisions and boundaries the founder retains;
+- `Delegation architecture:` — how work is partitioned among agents and repositories or components;
+- `Verification loop:` — tests, evals, reviews, observability, and rollback;
+- `Human attention budget:` — recurring decisions, reviews, exceptions, and escalation load;
+- `External bottleneck:` — the scarcest constraint that more generated code cannot remove;
+- `Failure containment:` — permissions, blast-radius limits, and recovery path;
+- `Scope made feasible:` — the scope or business architecture newly feasible because engineering labor
+  is no longer the binding constraint.
+
 Recommend a portfolio role or next experiment, not a fake certainty. The user chooses what advances.
 
 Read `references/storage.md` when the user wants durable capture. Ask one concise storage question if
@@ -328,6 +395,9 @@ external, identity-bearing, paid, or irreversible actions without explicit confi
   entrepreneur pass, Seven Powers, and portfolio roles. Read before Step 4.
 - `references/breakthrough-mode.md` — isolated invention, post-generation collision checks, and
   founder-scale translation; read by default and skip only for explicit standard mode.
+- `references/ai-engineering-team.md` — one-founder control model, engineering cost-curve map,
+  organizational-compression invention, directability, verification, and failure-containment gates;
+  read for every software or digital product brief.
 - `references/trend-sources.md` — source and query ideas; choose what fits rather than scanning all.
 - `references/coverage-audit.md` — use when the signal set appears culturally, geographically, or
   economically narrow.

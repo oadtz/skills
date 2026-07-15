@@ -16,6 +16,9 @@ description: >
 
 # Ideakit — Present (make people act)
 
+Read `../ai-engineering-foundation.md` now. Present AI as customer value only when it is part of the
+product mechanism; an AI-developed conventional product does not need an AI narrative.
+
 Take a developed idea and turn it into communication that helps a specific audience make a consequential
 decision — buy, fund, join, approve, or test. The test is not “looks polished” or “sounds exciting.” It
 is: **does the audience understand the claim, trust the evidence, remember the distinction, and know

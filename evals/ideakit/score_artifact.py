@@ -77,6 +77,40 @@ BREAKTHROUGH_MARKERS = {
     ],
 }
 
+AI_ENGINEERING_TEAM_MARKERS = {
+    "engineering_capacity": [
+        r"(?m)^\s*(?:[-*]\s*)?(?:\*\*|`)?ai engineering work absorbed(?:\*\*|`)?\s*:\s*(?:\*\*|`)?",
+        r"(?m)^\s*(?:[-*]\s*)?(?:\*\*|`)?product ai dependency(?:\*\*|`)?\s*:\s*(?:\*\*|`)?",
+        r"(?m)^\s*(?:[-*]\s*)?(?:\*\*|`)?previously required organization(?:\*\*|`)?\s*:\s*(?:\*\*|`)?",
+    ],
+    "founder_control": [
+        r"(?m)^\s*(?:[-*]\s*)?(?:\*\*|`)?founder control surface(?:\*\*|`)?\s*:\s*(?:\*\*|`)?",
+        r"(?m)^\s*(?:[-*]\s*)?(?:\*\*|`)?delegation architecture(?:\*\*|`)?\s*:\s*(?:\*\*|`)?",
+    ],
+    "verification": [
+        r"(?m)^\s*(?:[-*]\s*)?(?:\*\*|`)?verification loop(?:\*\*|`)?\s*:\s*(?:\*\*|`)?",
+        r"test|eval|review|observability|rollback",
+    ],
+    "attention_and_bottleneck": [
+        r"(?m)^\s*(?:[-*]\s*)?(?:\*\*|`)?human attention budget(?:\*\*|`)?\s*:\s*(?:\*\*|`)?",
+        r"(?m)^\s*(?:[-*]\s*)?(?:\*\*|`)?external bottleneck(?:\*\*|`)?\s*:\s*(?:\*\*|`)?",
+    ],
+    "containment_and_expansion": [
+        r"(?m)^\s*(?:[-*]\s*)?(?:\*\*|`)?failure containment(?:\*\*|`)?\s*:\s*(?:\*\*|`)?",
+        r"(?m)^\s*(?:[-*]\s*)?(?:\*\*|`)?scope made feasible(?:\*\*|`)?\s*:\s*(?:\*\*|`)?",
+    ],
+    "founder_directed_entry": [
+        r"(?m)^\s*(?:[-*]\s*)?(?:\*\*|`)?founder[- ]directed entry(?:\*\*|`)?\s*:\s*(?:\*\*|`)?",
+        r"external|control[- ]plane|right[- ]to[- ]build|paid|commitment|proof",
+    ],
+}
+
+HUMAN_LABOR_CEILING_PATTERNS = [
+    r"because (?:you|the founder) (?:are|is) solo[^.\n]*(?:one feature|tiny|micro[- ]saas|manual service)",
+    r"(?:must|should) (?:only )?build what (?:you|one person|the founder) can code",
+    r"(?:limit|reduce|shrink)[^.\n]*(?:to|into) (?:one feature|a tiny app|a micro[- ]saas|a manual service)[^.\n]*(?:weekend|after work|solo founder|one person)",
+]
+
 # These catch only explicit generic shells. They are not a novelty metric; a semantically
 # derivative idea can easily avoid the phrases, and a strong idea can still use a category noun.
 GENERIC_BREAKTHROUGH_PATTERNS = [
@@ -96,15 +130,20 @@ def main() -> int:
     parser.add_argument("artifact", type=Path)
     parser.add_argument("--force", action="store_true", help="Apply force-brief causal-depth gates")
     parser.add_argument("--breakthrough", action="store_true", help="Apply breakthrough-output contract gates")
+    parser.add_argument("--ai-engineering-foundation", action="store_true", help="Apply the default one-founder-directed AI engineering gates for software")
     args = parser.parse_args()
 
     if args.breakthrough and args.mode != "generate":
         parser.error("--breakthrough is only valid for generate artifacts")
+    if args.ai_engineering_foundation and args.mode != "generate":
+        parser.error("--ai-engineering-foundation is only valid for generate artifacts")
 
     text = args.artifact.read_text(encoding="utf-8")
     groups = {name: group_passes(text, patterns) for name, patterns in MODE_MARKERS[args.mode].items()}
     if args.breakthrough:
         groups.update({name: group_passes(text, patterns) for name, patterns in BREAKTHROUGH_MARKERS.items()})
+    if args.ai_engineering_foundation:
+        groups.update({name: group_passes(text, patterns) for name, patterns in AI_ENGINEERING_TEAM_MARKERS.items()})
     if args.force:
         groups.update({
             "causal_map": group_passes(text, [r"ring 1|1 direct", r"ring 2|2 behavioral", r"ring 3|3 structural"]),
@@ -141,6 +180,17 @@ def main() -> int:
             "breakthrough artifact uses an obvious generic wrapper phrase; inspect the canonical idea core "
             "and collision set manually"
         )
+    if args.ai_engineering_foundation:
+        human_labor_ceiling_hits = [
+            match.group(0)
+            for pattern in HUMAN_LABOR_CEILING_PATTERNS
+            if (match := re.search(pattern, editorial_text, re.IGNORECASE))
+        ]
+        if human_labor_ceiling_hits:
+            warnings.append(
+                "software artifact violates the default AI engineering foundation with a human implementation-hours ceiling: "
+                + "; ".join(human_labor_ceiling_hits)
+            )
     if args.mode == "validate":
         levels = {int(x) for x in re.findall(r"\bE([0-4])\b", text)}
         recommends_go = bool(re.search(r"recommend(?:ation)?\s*[:|]\s*go\b", text, re.IGNORECASE))
@@ -189,6 +239,7 @@ def main() -> int:
         "mode": args.mode,
         "force_brief": args.force,
         "breakthrough_mode": args.breakthrough,
+        "ai_engineering_foundation": args.ai_engineering_foundation,
         "score_100": score,
         "structural_score_100": structural_score,
         "passed": score >= 80 and not warnings,

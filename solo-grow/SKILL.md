@@ -13,6 +13,9 @@ description: >
 
 # Solo — Grow (the automatic, scalable growth engine)
 
+Read `../ai-engineering-foundation.md` now. Treat AI engineering as default build capacity while
+keeping acquisition, retention, support, and exception load as real operating constraints.
+
 Take a product that already has *some* paying customers (won manually via `solo-sell`, or found via
 `solo-distribute`) and turn acquisition into **an engine that compounds without the founder in the
 loop**: a self-serve funnel, an activation experience that delivers value automatically, retention

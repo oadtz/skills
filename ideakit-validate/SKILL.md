@@ -12,6 +12,9 @@ description: >
 
 # Ideakit — Validate
 
+Read `../ai-engineering-foundation.md` now and apply its default to every software or digital product
+concept; validate founder control and external bottlenecks instead of human coding capacity.
+
 Turn a mature concept into an evidence-aware decision and executable plan. Validation is not a ritual
 that every idea passes; it should strengthen, reframe, park, or kill the venture.
 

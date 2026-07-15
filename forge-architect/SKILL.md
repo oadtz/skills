@@ -15,6 +15,9 @@ description: >
 
 # Forge — Architect (PRD → technical foundation)
 
+Read `../ai-engineering-foundation.md` now. Architect for one founder directing an AI engineering team:
+explicit boundaries, agent-readable context, verification, permissions, and escalation are defaults.
+
 Take a validated idea — usually a PRD or `PLAN.md` — and turn it into a **foundation an agent can
 build on without quietly inventing your architecture for you.** You decide the stack, the data model,
 the contracts, and the shape; you write the irreversible decisions down; you scaffold the repo so
@@ -75,8 +78,9 @@ Do not write feature code here — that's `forge-build`.
 ### Step 1 — Intake (read the PRD, extract the constraints)
 
 Read the PRD/`PLAN.md`. Pull out what constrains the architecture: the core entities and flows, the
-non-functional needs (scale, latency, compliance, offline), the team/resource envelope (solo vs
-team, technical depth, budget), any platform the product must live in, and the v1 scope vs explicit
+non-functional needs (scale, latency, compliance, offline), the founder control surface and AI
+engineering envelope (direction, verification, tool/compute budget, permissions, escalation), any
+platform the product must live in, and the initial scope vs explicit
 out-of-scope. If the PRD came from `ideakit-validate`, its "v1 scope", "kill criteria", and platform
 risk are gold — don't re-derive them. Ask only what's genuinely missing.
 
@@ -103,9 +107,9 @@ Read `references/architecture-patterns.md`. Design the structure in this order �
 machine-readable context that narrows the agent's search space in `forge-build`:
 
 1. **Architecture shape.** Default to a **modular monolith** — single deployable, clean internal
-   module boundaries. Actively resist microservices for an MVP or a team under ~10 people (you
-   discover correct boundaries by building the monolith first; microservices-first "almost all end up
-   in serious trouble"). Any deviation needs an ADR.
+   module boundaries. Do not infer microservices from product size, AI-agent count, or the human team
+   a conventional company would need. Use independent services only when deployment, security,
+   reliability, scaling, or ownership boundaries require them. Any deviation needs an ADR.
 2. **Domain model + ubiquitous language.** Name the core entities and their precise definitions so the
    agent and the humans share one vocabulary. Identify bounded contexts if the domain warrants it.
 3. **Data model / schema.** Design the data schema (e.g. one source-of-truth schema file). A
@@ -136,13 +140,16 @@ Produce the minimal scaffold the build stage will inherit:
   under 200. Include build/test/lint commands, conventions, the stack, "always/never" rules, and a
   *link* to `docs/adr/`. Reference canonical example files; do not paste code (prevents staleness).
   Document only what agents commonly get wrong — bloated rules files *lower* success and raise cost.
+- **AI engineering control plane**: record work-packet boundaries, stable interfaces, source-of-truth
+  context, acceptance and external-verification commands, permission limits, parallel-work rules,
+  integration order, stop conditions, and founder escalation triggers.
 - **An architecture sketch**: a C4 **Context + Container** diagram is enough for an MVP (skip the Code
   level — it drifts instantly). Diagrams-as-code (e.g. Mermaid) in-repo so it versions with the code.
 
 Then present the foundation and offer the handoff:
 
-> The foundation is set: [stack], [architecture], [N] ADRs, schema + contract, and a scaffolded repo
-> with agent rules. Want me to hand this to **forge-design** to build the design system and core
+> The foundation is set: [stack], [architecture], [N] ADRs, schema + contract, AI engineering control
+> plane, and a scaffolded repo with agent rules. Want me to hand this to **forge-design** to build the design system and core
 > flows, or straight to **forge-build** to start building?
 
 The user approves the foundation before any building begins.
