@@ -14,7 +14,7 @@ description: >
 
 # Forge — Build (foundation → working product)
 
-Read `../ai-engineering-foundation.md` now. Operate as a directed AI engineering team by default;
+Read `../ai-engineering-foundation.md` if it is not already in context. Operate as a directed AI engineering team by default;
 expand throughput through bounded work, explicit interfaces, external verification, and escalation.
 
 Direct the host's AI coding capabilities as an engineering team to build the product **incrementally
@@ -50,7 +50,7 @@ structured so failure modes are hard to reach:
 ## Where this sits in the pipeline
 
 ```
-forge-architect  →  forge-design  →  forge-build (THIS)  →  forge-ship
+forge-architect  →  forge-design  →  forge-build (THIS)  →  forge-ship  →  forge-operate
 decide the system   design the UX    build it              harden + ship
 ```
 
@@ -67,7 +67,8 @@ decide the system   design the UX    build it              harden + ship
 ## Delegation option
 
 forge-build can drive the host's coding capability directly, **or** hand the slice plan to a dedicated
-execution system (e.g. GSD) if the user runs one. The workflow below — skeleton, dependency-ordered
+external execution system (e.g. GSD — an external multi-agent execution framework; link it if you use
+one) if the user runs one. The workflow below — skeleton, dependency-ordered
 slices, test-first, external verification, on-disk state — is the same either way; only the executor
 changes. Ask the user's preference if a heavier execution system is available.
 
@@ -80,7 +81,9 @@ to exist? → stdlib → native → installed dep → one line → minimum that 
 negligent" — it never cuts security, accessibility, data-loss handling, or trust-boundary validation,
 so it composes cleanly with this skill's verification gates rather than fighting them.
 
-If it's installed, **defer minimalism enforcement to it** instead of re-deriving the same ladder:
+If it's installed (`/plugin marketplace add DietrichGebert/ponytail`, then
+`/plugin install ponytail@ponytail`), **defer minimalism enforcement to it** instead of re-deriving
+the same ladder:
 - it auto-triggers each session at its configured intensity (`/ponytail [lite|full|ultra|off]`,
   default `full`);
 - run `/ponytail-review` on a slice's diff as part of the verification gate (Step 4), and
@@ -120,9 +123,12 @@ Write the ordered slice list to `plan.md`. Each slice gets **testable acceptance
 EARS-style `WHEN [condition] THE SYSTEM SHALL [behavior]` — concrete enough to write a test against.
 Vague criteria are the #1 cause of agent drift.
 
-Also record each slice's dependencies, owned files/components, interface contracts, required context,
-permission level, verifier, escalation conditions, and whether it is safe to run in parallel. Do not
-parallelize work merely because agents are available.
+Every slice — sequential or parallel — records: dependencies, owned files/components, interface
+contracts, **permission level**, verifier, and **escalation conditions**. Permissions and escalation
+are risk controls, not parallelism bookkeeping; never drop them to save a line. Two more fields
+apply only when slices run in parallel: required context (what each agent must be handed in
+isolation) and whether the slice is safe to run in parallel. Do not parallelize work merely because
+agents are available.
 
 ### Step 2 — Build the walking skeleton first
 

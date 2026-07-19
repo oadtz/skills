@@ -1,41 +1,43 @@
-# Venture judgment dimensions
+# Venture judgment — gate definitions and the decision note
 
-Use these dimensions to make trade-offs visible. Do not sum them into a total or let apparent
-precision replace editorial judgment.
+Use these as prompts for judgment at Step 5. Judge each gate separately; never sum them into a
+total or let apparent precision replace editorial judgment. Strength on one gate cannot compensate
+for failure on another.
 
-## Originality
+## The four core gates
 
-Does the concept depend on a non-obvious thesis, changed assumption, recombination, or value mechanism?
-Could the nouns be swapped into an unrelated brief?
+**Surprise** — does the causal thesis or value mechanism escape the obvious category? Could the
+nouns be swapped into an unrelated brief? Would a competent generic generator produce this from the
+same signals? Surprise must come from the reframe, not a strange name or exotic technology.
 
-## Pull
+**Inevitable in hindsight** — once revealed, does the Observed → Inferred → Bet chain make the
+concept click rather than merely sound strange? Name the shortest causal chain that earns the
+reveal. Strangeness without a defensible chain is noise, not originality.
 
-What triggers action: costly pain, obligation, desire, identity, status, belonging, or a newly possible
-outcome? Distinguish attention from commitment and user from buyer.
+**Enterable** — does this founder have a credible, affordable first move despite the larger vision?
+Can the first 10 buyers be named and reached through a concrete path? What trust, behavior change,
+and sales friction stand between them and the first paid proof? What is the affordable loss, and
+how cheaply can the decisive uncertainty be tested?
 
-## Founder leverage
+**Value capture** — is there a named payer, a real buying occasion, and an exchange whose capacity
+economics (with explicit room for selling, admin, learning, and delivery variance) or leverage path
+can support the founder's desired game? A deposit tests willingness to pay; delivered value is a
+separate observable outcome.
 
-Which means, access, credibility, taste, obsession, relationships, or lived experience make this
-founder unusually able to start or learn?
+For software finalists, add the feasibility gates in `ai-engineering-team.md` (Directable through
+Externally enterable) — judged the same way: independently, non-compensating.
 
-## Reachability
+## Supporting lenses (use when they sharpen a close call)
 
-Can the first 10 users be named and reached through a concrete path? What trust, behavior change, and
-sales friction stand between them and adoption?
+**Founder leverage** — which means, access, credibility, taste, obsession, or lived experience make
+this founder unusually able to start or learn?
 
-## Asymmetry
+**Power path** — what may compound after the wedge works: network, scale, switching cost, brand,
+cornered resource, process power, or counter-positioning? "Data moat" without a collection and
+value loop is not a power.
 
-What is the affordable loss? How cheaply can the decisive uncertainty be tested? If correct, how large
-is the option it opens?
-
-## Power path
-
-What may compound after the wedge works: network, scale, switching cost, brand, cornered resource,
-process power, or counter-positioning? “Data moat” without a collection and value loop is not a power.
-
-## Critical uncertainty
-
-Which assumption destroys the thesis if false? What observed result would cause reframe, park, or kill?
+**Critical uncertainty** — which assumption destroys the thesis if false? What observed result
+would cause reframe, park, or kill?
 
 ## Decision note
 

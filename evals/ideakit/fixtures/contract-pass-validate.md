@@ -1,6 +1,6 @@
 # Clinic scheduling concierge — validation brief
 
-Observed: two clinic managers showed their existing night-shift handoff logs ([source](https://example.com/evidence)).
+Observed: two clinic managers showed their existing night-shift handoff logs ([source](https://fixture-corpus-x.test-source.co/evidence)).
 Inferred: the handoff, not message volume alone, creates missed bookings. Bet: a manager will delegate
 one shift if escalation remains under clinic control.
 

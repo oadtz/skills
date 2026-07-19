@@ -1,8 +1,9 @@
-# Solo — a 6-skill solopreneur business pipeline
+# Solo — a 7-skill solopreneur business pipeline
 
 A loosely-coupled set of skills that take a validated idea and turn it into a **one-person business
 that makes money and lasts** — by deciding how it earns, funding it with minimal dilution, getting
-attention, closing paying customers, automating growth, and running it solo without burning out.
+attention, closing paying customers, running the money/legal/feedback plumbing professionally,
+automating growth, and running it solo without burning out.
 
 Solo is the **commercial sibling** of [ideakit](ideakit-README.md) and [forge](forge-README.md).
 Where ideakit decides *what* to build and forge builds it *well*, solo answers the business
@@ -11,15 +12,17 @@ find it, and how do I run it alone for years?* It runs **alongside** the forge b
 it — you figure out the model and start distribution while the product is still being built.
 
 ```
-ideakit-generate → explore → validate → │ → forge-architect → design → build → ship   (build the product)
-                                         │
-                              PRD/PLAN.md │ → solo-model → solo-fund → solo-distribute → solo-sell → solo-grow → solo-sustain
-                                         │     how it       fund it      get             close       automate    run it
-                                         │     earns        (min         attention       deals       + scale     solo,
-                                         │                  dilution)                                             long-term
+ideakit-discover → generate → explore → validate → │ → forge-architect → design → build → ship   (build the product)
+                                                    │
+                                         PRD/PLAN.md │ → solo-model → solo-fund → solo-distribute → solo-sell → solo-grow → solo-sustain
+                                                    │     how it       fund it      get             close       automate    run it
+                                                    │     earns        (min         attention       deals       + scale     solo,
+                                                    │                  dilution)                                             long-term
+                                                    │     └── solo-operate runs underneath the whole track from first revenue
+                                                    │         (money rails, legal floor, feedback loop, churn ops, monthly review)
 ```
 
-## The six skills
+## The seven skills
 
 | Order | Skill | Use it when… | Output |
 |---|---|---|---|
@@ -29,6 +32,7 @@ ideakit-generate → explore → validate → │ → forge-architect → design
 | 4 | **solo-sell** | people see it but don't buy — you need to close the first paying deals by hand | founder-led sales motion + objection answers + a repeatable playbook |
 | 5 | **solo-grow** | you want acquisition to scale automatically, without selling each customer | a growth engine: loop + self-serve funnel + unit economics |
 | 6 | **solo-sustain** | running it alone is becoming (or will become) unsustainable | operating plan: leverage list, calm-company defaults, guardrails |
+| — | **solo-operate** *(runs underneath from first revenue)* | you need payments/legal/feedback/churn plumbing and a monthly business review | money rails (PSP vs merchant-of-record), legal floor (entity/ToS/privacy/PDPA), feedback loop, churn ops, one-page monthly truth |
 
 ## How to use
 
@@ -65,6 +69,7 @@ before quoting them. Each skill is one application of that idea:
 | solo-sell | attention that never converts to paying customers | *Selling is learning sold one conversation at a time; chase repeatability, not one-off revenue.* |
 | solo-grow | pouring acquisition into a leaky bucket / buying growth you can't afford | *Retention before acquisition; loops compound where funnels don't; paid only when LTV > CAC pays back fast.* |
 | solo-sustain | the founder burning out and taking the business with them | *The founder is the single point of failure — protect the asset; systems before headcount.* |
+| solo-operate | revenue on a personal account, no terms, no feedback loop — a hobby with income | *Professional is a floor, not a bureaucracy — and every rule is local to the founder's market.* |
 
 ## Design notes
 
@@ -76,15 +81,18 @@ before quoting them. Each skill is one application of that idea:
   burnout as an operating risk) and the human always makes the call. Funding terms and named programs
   change constantly, so `solo-fund` tells you to verify current terms rather than trusting a remembered
   fact.
-- **Shared anti-hallucination guard.** All six skills read **[solo-grounding.md](solo-grounding.md)**
+- **Shared anti-hallucination guard.** All seven skills read **[solo-grounding.md](solo-grounding.md)**
   before stating any external fact (prices, funding terms, channel/market stats, tool facts):
   source-or-tag every claim, re-fetch time-sensitive numbers, stay decisive. It's the family's own
-  guard — self-contained, not shared across other skillsets — so `solo-*` stays standalone.
+  guard, not shared across other skillsets — though the family is not fully standalone: every
+  `solo-*` skill also reads the cross-family `ai-engineering-foundation.md`.
 - **Shared craft bar for customer-facing words.** Grounding keeps the facts honest;
   **[solo-craft.md](solo-craft.md)** keeps the words human. The skills that draft copy a prospect
   will read (`solo-model`'s offer, `solo-distribute`'s posts, `solo-sell`'s outreach, `solo-grow`'s
   funnel/lifecycle emails) run it before delivering: no cold-email or marketing-copy centroid, real
   personalization or none, and the read-aloud test — copy the founder would actually say out loud.
+- **Localize by default:** channels, funding instruments, sales thresholds, currency, and law adapt
+  to the founder's market — US defaults are labeled, not assumed.
 - **Runtime-agnostic.** Skills name capabilities by intent — user input, research, file/artifact
   output, connector/registry lookups — not one agent's tool names. Host-specific tools are adapters.
 - **Care for the person.** `solo-sustain` treats founder wellbeing as a first-class operational
@@ -95,4 +103,5 @@ before quoting them. Each skill is one application of that idea:
 ## Optional next step
 
 If you want a single "validated idea → running solo business" entry point, add a thin orchestrator
-command (e.g. `/idea-to-solo-business`) that calls the six stages in sequence — without merging them.
+command (e.g. `/idea-to-solo-business`) that calls the six main stages in sequence (with
+`solo-operate` invoked at first revenue) — without merging them.

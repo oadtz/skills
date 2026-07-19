@@ -52,8 +52,8 @@ Adopt explicitly so they act as a yardstick for future decisions:
 
 ## Anti-burnout guardrails (humane and measurable)
 
-Burnout is the #1 documented predictor of solo-founder failure — these are uptime for the
-irreplaceable component, not indulgences. Make each concrete:
+Burnout is a heavily documented driver of solo-founder failure (verify current studies before quoting
+any ranking) — these are uptime for the irreplaceable component, not indulgences. Make each concrete:
 
 - **Sustainable hours + real time off.** Define the working week and protect it. Set up coverage /
   auto-responders / status pages so time off is *actually* off. Rest is maintenance, not reward.

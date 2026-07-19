@@ -50,7 +50,8 @@ Three complementary tiers (all have free/low-cost options):
 
 1. **Secret scanning.** Pre-commit (e.g. Gitleaks) + repo push protection. Confirm `.env` is
    git-ignored, no secrets in code or MCP config files (a known leak source), secrets in a
-   per-environment store. AI-assisted commits leak secrets at ~2× the baseline rate.
+   per-environment store. AI-assisted commits leak secrets at ~2× the baseline rate [re-verify
+   current figure before quoting — GitGuardian reporting].
 2. **SAST.** A fast scanner on every PR (e.g. Semgrep, ~seconds, org-specific rules) + a deep dataflow
    scan scheduled / pre-release (e.g. CodeQL). LinkedIn's published pattern: Semgrep per-PR + CodeQL
    scheduled.

@@ -63,3 +63,7 @@ the businesses swapped.
   emails read like a helpful human wrote them once, not like a drip tool generated them forever.
 - **solo-model** — the offer is stated in buyer-world outcomes ("get your evenings back") with real
   numbers, not category language ("a comprehensive booking solution").
+- **solo-operate** — dunning emails, cancellation/save-offer copy, and refund or policy notices read
+  as a human being writing to a customer, never as pressure or dark-pattern copy.
+- **solo-fund** — the pre-sale page and investor one-pager pass the marketing-tells list; traction and
+  the ask are stated in real numbers, not category hype.

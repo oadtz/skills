@@ -2,7 +2,11 @@
 
 ## Continuity escrow
 
-**Observed:** A placeholder operator repeats a brittle handoff after each software change. [Synthetic source](https://example.com/continuity)
+**Observed:** A placeholder operator repeats a brittle handoff after each software change. [Synthetic source](https://fixture-corpus-a.test-source.co/continuity)
+
+**Observed:** Placeholder agencies report recurring recovery work after vendor exits. [Synthetic trade report](https://fixture-corpus-b.test-source.co/vendor-exits)
+
+**Observed:** A placeholder buyer community discusses failed rebuild attempts in its own language. [Synthetic forum thread](https://fixture-corpus-c.test-source.co/local-forum)
 
 **Inferred:** When code production gets cheaper, continuity and accountable recovery can become the scarce complement.
 

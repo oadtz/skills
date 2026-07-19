@@ -25,6 +25,9 @@ artifacts real with the appropriate tool. Default to *doing*, not *describing wh
   CAC/LTV/retention tracking spec or a script to compute it from the founder's data.
 - **solo-sustain** → write the actual runbooks, SOPs, automation scripts, and templates that remove the
   recurring work — not a list of what to automate.
+- **solo-operate** → actually configure the payment rails (up to the founder's go-live click), draft
+  the terms/privacy files, set up the dunning and cancellation flows, and write the monthly review —
+  not a summary of what professional operations would involve.
 
 ## Pick the right tool for the job
 
@@ -32,7 +35,7 @@ artifacts real with the appropriate tool. Default to *doing*, not *describing wh
 - **Code / shell** — when the deliverable is a script, calculator, scraper, or data analysis (e.g.
   compute CAC/LTV, parse a CSV of customers), write and run it.
 - **Web research** — gather the current facts the deliverable needs (programs, prices, benchmarks),
-  under the grounding rule (`../solo-grounding.md`): cite or tag, never invent.
+  under the grounding rule (`solo-grounding.md`): cite or tag, never invent.
 - **Connectors / MCP** — if a relevant app is connected (CRM, email, analytics, ads, payments), use it
   to *read* data and to *prepare* actions — subject to the boundary below.
 - **Document skills** (docx/pptx/xlsx/pdf) — when the deliverable should be a polished document, deck,

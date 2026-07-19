@@ -171,18 +171,24 @@ business model, cost, or risk the user authorized. Otherwise write the plan and 
 
 ### 5. Write the executable plan
 
-Read `references/prd-template.md`. Adapt the template to software or general-project mode. Include:
+Read `references/prd-template.md`. Adapt the template to software or general-project mode.
 
-- decision context and epistemic labels;
-- target actor, trigger, job/desire, and alternatives;
-- v1 wedge and explicit non-goals;
+**Open the plan with the confirmed sharpened-concept block from Step 4, carried over verbatim.**
+That block is the plan's single canonical statement of actor, mechanism, why-now, wedge,
+Observed/Inferred/Bet, recommendation, and evidence level — later sections must add new
+information, never restate those fields. Then include only the sections that earn their place:
+
+- alternatives and the specific differentiation mechanism;
+- v1 wedge scope and explicit non-goals;
 - user journey or operating flow;
 - business/distribution hypothesis when this is a venture;
 - acceptance criteria or measurable outcomes;
 - critical assumptions, learning plan, and kill criteria;
-- current evidence level and the next costly signal required to advance it;
-- dependencies, risks, open questions, and evidence links;
-- expansion path as a hypothesis, not committed scope.
+- the next costly signal required to advance the evidence level;
+- evidence ledger (same columns as Step 3), dependencies, risks, open questions;
+- expansion path as a hypothesis, not committed scope;
+- **for any software concept, the AI engineering handoff block** (template's 8 fields) — this one is
+  not optional: `forge-architect` consumes it instead of re-interviewing the founder.
 
 Every section must contribute to execution or a decision. Do not fill irrelevant sections with “TBD”.
 Name actual technology only when the choice is needed at this stage and can be supported.

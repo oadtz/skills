@@ -15,13 +15,13 @@ description: >
 
 # Forge — Architect (PRD → technical foundation)
 
-Read `../ai-engineering-foundation.md` now. Architect for one founder directing an AI engineering team:
+Read `../ai-engineering-foundation.md` if it is not already in context. Architect for one founder directing an AI engineering team:
 explicit boundaries, agent-readable context, verification, permissions, and escalation are defaults.
 
 Take a validated idea — usually a PRD or `PLAN.md` — and turn it into a **foundation an agent can
 build on without quietly inventing your architecture for you.** You decide the stack, the data model,
 the contracts, and the shape; you write the irreversible decisions down; you scaffold the repo so
-every later slice inherits a consistent frame. Output is a small set of durable artifacts, not code.
+every later slice inherits a consistent frame. Output is a small set of durable artifacts, no feature code.
 
 ## The governing principle (read first)
 
@@ -49,7 +49,7 @@ does three things, and they are all this one principle:
 ## Where this sits in the pipeline
 
 ```
-ideakit-validate (PRD/PLAN.md)  →  forge-architect (THIS)  →  forge-design  →  forge-build  →  forge-ship
+ideakit-validate (PRD/PLAN.md)  →  forge-architect (THIS)  →  forge-design  →  forge-build  →  forge-ship  →  forge-operate
                                    decide the system          design the UX    build it       harden + ship
 ```
 
@@ -78,11 +78,17 @@ Do not write feature code here — that's `forge-build`.
 ### Step 1 — Intake (read the PRD, extract the constraints)
 
 Read the PRD/`PLAN.md`. Pull out what constrains the architecture: the core entities and flows, the
-non-functional needs (scale, latency, compliance, offline), the founder control surface and AI
-engineering envelope (direction, verification, tool/compute budget, permissions, escalation), any
-platform the product must live in, and the initial scope vs explicit
-out-of-scope. If the PRD came from `ideakit-validate`, its "v1 scope", "kill criteria", and platform
-risk are gold — don't re-derive them. Ask only what's genuinely missing.
+non-functional needs (scale, latency, compliance, offline), any platform the product must live in,
+and the initial scope vs explicit out-of-scope. If the PRD came from `ideakit-validate`, its
+"v1 scope and non-goals", "critical assumptions, tests, and kill criteria", and any dependency /
+platform risk it selected are gold — don't re-derive them.
+
+Its **AI engineering handoff block** defines the envelope you build inside — carry all eight fields
+forward: `Product AI dependency`, `Founder control surface`, `Verification loop`, `Human attention
+budget`, `External bottleneck`, `Failure containment`, `Delegation architecture`, and `Scope made
+feasible`. They set the control plane in Step 5, the verification commands, and the permission
+limits. If the PRD predates that block or omits it, reconstruct those eight with the founder — ask
+only what's genuinely missing.
 
 ### Step 2 — Decide the stack (boring on purpose)
 
@@ -135,14 +141,17 @@ Produce the minimal scaffold the build stage will inherit:
 
 - **Repo skeleton**: directory layout matching the architecture (organize toward *vertical slices* /
   features, not deep horizontal layers — see `forge-build`), config, lockfile, `.gitignore` with
-  `.env` ignored **before** the first commit.
+  `.env` ignored **before** the first commit. Initialize the stack's migration tooling at scaffold
+  time so schema changes are versioned from day one.
 - **Agent rules file** (`CLAUDE.md` / `AGENTS.md`): short — aim ~80–120 lines, hard ceiling well
   under 200. Include build/test/lint commands, conventions, the stack, "always/never" rules, and a
   *link* to `docs/adr/`. Reference canonical example files; do not paste code (prevents staleness).
   Document only what agents commonly get wrong — bloated rules files *lower* success and raise cost.
-- **AI engineering control plane**: record work-packet boundaries, stable interfaces, source-of-truth
-  context, acceptance and external-verification commands, permission limits, parallel-work rules,
-  integration order, stop conditions, and founder escalation triggers.
+- **AI engineering control plane**: always define work-packet boundaries, stable interfaces,
+  acceptance and external-verification commands, **permission limits**, stop conditions, and founder
+  **escalation triggers** — these are risk controls and apply to every build. Three more apply only
+  when running parallel agents: source-of-truth context per agent, parallel-work rules, and
+  integration order.
 - **An architecture sketch**: a C4 **Context + Container** diagram is enough for an MVP (skip the Code
   level — it drifts instantly). Diagrams-as-code (e.g. Mermaid) in-repo so it versions with the code.
 
@@ -168,10 +177,8 @@ The user approves the foundation before any building begins.
 **Record irreversibly:**
 - **ADRs for anything hard to reverse** — then link, don't inline.
 - **YAGNI, with the carve-out.** Defer features and scale; never defer code health or irreversible
-  architectural decisions. The optional [`ponytail`](https://github.com/DietrichGebert/ponytail)
-  companion enforces this YAGNI/minimalism discipline per edit through the build — if it's installed,
-  let it, and don't re-litigate the same ladder here. (Install and command details, plus the skeptical
-  note on its self-reported metrics, are in the forge-README and `forge-build`'s *Companion* section.)
+  architectural decisions. If the optional `ponytail` companion is installed it enforces this
+  minimalism discipline per edit — see `forge-build`'s *Companion* section (the canonical writeup).
 
 **Honesty:** flag where the stack is unproven for the host's model, where scale assumptions are
 guesses, and where a decision is reversible vs not. Don't present a guess as a finding.

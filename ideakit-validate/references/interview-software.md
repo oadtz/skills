@@ -1,10 +1,10 @@
 # Interview Question Bank — Software Product Mode
 
-Use this question bank during Phase 1 when the seed is a software product, feature, tool, or
-automation. Walk through themes in order. Adapt — drill down on vague answers, skip questions
-already answered, surface contradictions when you hear them.
-
-Aim for 6–12 total questions across the conversation. Quality over coverage.
+Use this question bank during Step 1 (the decision frame) when the concept is a software product,
+feature, tool, or automation — and **only for fields the decision frame leaves open**. Do not walk
+through themes in order or re-ask what upstream artifacts and the user's message already answer;
+the SKILL forbids re-running a long interview. Pick the fewest questions that close the real gaps,
+drill down on vague answers, and surface contradictions when you hear them.
 
 ## Theme 1 — The Problem (start here)
 
@@ -62,8 +62,8 @@ solution in search of one.
 
 ## Closing the Interview
 
-When you have enough material, write the **idea snapshot** (see SKILL.md Phase 1 for format) and
-ask the user to confirm or correct before moving to research.
+When you have enough material, complete the **decision frame** (SKILL.md Step 1 format) and ask
+the user to confirm or correct before moving to research.
 
 If the user said "I don't know" to anything important, list those as **open questions to research**
 and explicitly call them out — don't quietly drop them.

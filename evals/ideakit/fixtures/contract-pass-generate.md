@@ -2,7 +2,7 @@
 
 ## Tension
 
-**Observed:** A placeholder actor repeats a manual handoff. [Synthetic source](https://example.com/source)
+**Observed:** A placeholder actor repeats a manual handoff. [Synthetic source](https://fixture-corpus-x.test-source.co/source)
 
 **Inferred:** The scarce complement may be trusted coordination rather than the headline technology.
 

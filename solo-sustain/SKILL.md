@@ -14,7 +14,7 @@ description: >
 
 # Solo — Sustain (run it solo, for the long haul)
 
-Read `../ai-engineering-foundation.md` now. Treat AI coders as the default engineering team and manage
+Read `../ai-engineering-foundation.md` if it is not already in context. Treat AI coders as the default engineering team and manage
 the founder as the control, judgment, and escalation point—not the implementation workforce.
 
 Take a working (or soon-working) solo business and make it **something one person can run for years
@@ -52,6 +52,7 @@ operational risk. Three consequences, all the same principle:
 ```
 solo-model → solo-fund → solo-distribute → solo-sell → solo-grow → solo-sustain (THIS)
                                             close      automate    run it solo, long-term
+└── solo-operate runs underneath from first revenue (payments, legal floor, feedback loop, churn ops, monthly review)
 ```
 
 This is the stage you return to whenever operating the business starts to outpace the one person
@@ -88,10 +89,8 @@ This skill touches the founder's wellbeing. Hold these always:
   as "verify it still fits / is current."
 - **File output**: write the operating plan to a file/artifact if supported; else deliver it in chat.
 
-**Grounding:** before stating any external fact (what a specific tool/automation can do, its pricing
-or limits, burnout/market statistics), follow `../solo-grounding.md` if present — source-or-tag every
-claim and re-fetch tool capabilities and dated figures, never recall them as current. It does not
-soften the duty-of-care guidance above, which always takes precedence.
+**Grounding:** for any tool capability, pricing, or burnout/market statistic, follow
+`../solo-grounding.md`; the duty-of-care guidance above always takes precedence.
 
 ## Workflow
 
@@ -173,9 +172,9 @@ The user commits to the operating plan and guardrails before finishing.
   years; a hyper-growth sprint that burns the founder out ends the business.
 - **Protect the person first.** Never trade the founder's health for output. A sustainability plan
   that quietly assumes overwork isn't a plan — it's the failure mode with extra steps.
-- **Honesty:** if the business genuinely can't be run solo at its current shape, say so — the answer
-  may be to shrink scope, raise prices to serve fewer customers, or rethink the model, not to grind
-  harder.
+- **Honesty:** if the business genuinely can't be run solo at its current shape, say so — shrink
+  scope, raise prices, or rethink the model rather than grind harder — and ground external stats per
+  `../solo-grounding.md`.
 
 ## Execution
 

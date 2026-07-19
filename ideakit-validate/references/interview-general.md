@@ -1,10 +1,10 @@
 # Interview Question Bank — General Project Mode
 
-Use this question bank during Phase 1 when the seed is a non-software initiative — a marketing
-campaign, content series, business initiative, operational change, research project, event, etc.
-
-Walk through themes in order. Adapt — drill down on vague answers, skip questions already answered,
-surface contradictions when you hear them. Aim for 6–12 total questions.
+Use this question bank during Step 1 (the decision frame) when the concept is a non-software
+initiative — a marketing campaign, content series, business initiative, operational change,
+research project, event, etc. Use it **only for fields the decision frame leaves open**: do not
+walk through themes in order or re-ask what is already answered. Pick the fewest questions that
+close the real gaps, drill down on vague answers, and surface contradictions when you hear them.
 
 ## Theme 1 — The Outcome (start here)
 
@@ -53,8 +53,8 @@ surface contradictions when you hear them. Aim for 6–12 total questions.
 
 ## Closing the Interview
 
-When you have enough material, write the **idea snapshot** (see SKILL.md Phase 1 for format) and
-ask the user to confirm or correct before moving to research.
+When you have enough material, complete the **decision frame** (SKILL.md Step 1 format) and ask
+the user to confirm or correct before moving to research.
 
 If the user said "I don't know" to anything important, list those as **open questions to research**
 and explicitly call them out — don't quietly drop them.

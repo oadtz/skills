@@ -56,27 +56,33 @@ def main() -> int:
 
     require(texts.get("discover", ""), ["provisional", "contrarian", "desired game", "none of these", "contradictions", "minimum viable edge map", "3–5 useful questions"], "discover", failures)
     require(texts.get("generate", ""), ["observed", "inferred", "bet", "opportunity theses", "venture architectures", "affordable loss", "do not sort by one total score", "causal consequence map", "query-escape", "opportunity landscape", "source consequence", "causal ring"], "generate", failures)
-    require(texts.get("generate", ""), ["breakthrough mode by default", "standard mode only", "opt-out", "references/breakthrough-mode.md"], "generate breakthrough routing", failures)
+    require(texts.get("generate", ""), ["single generation path", "no-subagent fallback", "references/invention-procedure.md", "fetch, don't snippet", "market's own language"], "generate single-path contract", failures)
     require(texts.get("explore", ""), ["known", "inferred", "imagined", "maturity", "venture architecture", "counter-case", "source consequence", "causal ring"], "explore", failures)
     require(texts.get("validate", ""), ["maturity gate", "selected", "go / reframe / park / kill", "do not insert generic claude/chatgpt/mcp/quantum tables", "evidence level", "e0 thesis", "e4 repeatability"], "validate", failures)
     require(texts.get("name", ""), ["random simple noun", "negative baseline", "contextually", "unregistered at", "provisional shortlist", "handle appears unused"], "name", failures)
     require(texts.get("present", ""), ["fact", "inference", "ambition", "no startup theater", "decision-response check", "never use fomo"], "present", failures)
 
-    forbid(texts.get("generate", ""), [r"score every idea.*six dimensions", r"spread gate.*do not proceed", r"use \*\*standard mode\*\* for an ordinary opportunity search"], "generate", failures)
+    forbid(texts.get("generate", ""), [r"score every idea.*six dimensions", r"spread gate.*do not proceed", r"standard mode", r"invention intensity", r"breakthrough mode"], "generate", failures)
     forbid(texts.get("validate", ""), [r"platform replication risk.*mandatory", r"future trajectory.*mandatory"], "validate", failures)
     forbid(texts.get("name", ""), [r"first ~?10.?15 names.*discard", r"throw it away"], "name", failures)
 
     craft = (ROOT / "ideakit-craft.md").read_text(encoding="utf-8")
     require(craft, ["reasoning integrity", "venture originality", "editorial anti-slop", "never invent", "force/event brief", "institutional/economic/cultural rearrangement"], "craft", failures)
 
-    breakthrough_path = ROOT / "ideakit-generate/references/breakthrough-mode.md"
-    breakthrough = ""
-    if not breakthrough_path.exists():
-        failures.append("generate breakthrough routing: missing references/breakthrough-mode.md")
+    procedure_path = ROOT / "ideakit-generate/references/invention-procedure.md"
+    procedure = ""
+    if not procedure_path.exists():
+        failures.append("generate single-path contract: missing references/invention-procedure.md")
     else:
-        breakthrough = breakthrough_path.read_text(encoding="utf-8")
+        procedure = procedure_path.read_text(encoding="utf-8")
     require(
-        texts.get("generate", "") + "\n" + breakthrough,
+        procedure,
+        ["no-subagent fallback", "neutral", "packet-steering", "obvious baseline"],
+        "generate invention procedure",
+        failures,
+    )
+    require(
+        texts.get("generate", "") + "\n" + procedure,
         [
             "independent invention",
             "obvious baseline",
@@ -100,7 +106,7 @@ def main() -> int:
     else:
         ai_engineering = ai_engineering_path.read_text(encoding="utf-8")
     require(
-        texts.get("generate", "") + "\n" + breakthrough + "\n" + ai_engineering,
+        texts.get("generate", "") + "\n" + procedure + "\n" + ai_engineering,
         [
             "one founder directing an AI engineering team",
             "product does **not** need to be AI-native",
@@ -130,8 +136,8 @@ def main() -> int:
     if expected - covered:
         failures.append(f"cases: missing routing coverage for {sorted(expected - covered)}")
     default_generate_cases = [case for case in cases if case.get("id") == "domain-opportunities"]
-    if len(default_generate_cases) != 1 or "breakthrough by default" not in default_generate_cases[0].get("quality_focus", []):
-        failures.append("cases: domain-opportunities must exercise default breakthrough generation")
+    if len(default_generate_cases) != 1 or "single-path invention" not in default_generate_cases[0].get("quality_focus", []):
+        failures.append("cases: domain-opportunities must exercise the single generation path")
     breakthrough_cases = [case for case in cases if case.get("id") == "breakthrough-retry"]
     if len(breakthrough_cases) != 1 or breakthrough_cases[0].get("expected_skill") != "ideakit-generate":
         failures.append("cases: expected one breakthrough-retry route to ideakit-generate")

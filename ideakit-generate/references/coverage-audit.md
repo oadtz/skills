@@ -1,7 +1,7 @@
 # Coverage self-audit — use when the signal set looks narrow
 
-This is the governing principle (*reflexivity*, plus *requisite variety* of inputs) applied to
-**scanning**: make your frame explicit and deliberately gather signal from outside it.
+The idea: *reflexivity* plus *requisite variety* of inputs, applied to **scanning** — make your
+frame explicit and deliberately gather signal from outside it.
 
 ## Why this exists
 

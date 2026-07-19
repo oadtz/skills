@@ -2,7 +2,7 @@
 
 The "how" behind `solo-grow`. Spine: **retention before acquisition; loops over funnels; and paid only
 when the unit economics clear.** Everything here rests on named, established frameworks — don't invent
-benchmarks or assert "this channel works" without evidence (see `../solo-grounding.md`).
+benchmarks or assert "this channel works" without evidence (see `../../solo-grounding.md`).
 
 ## Contents
 

@@ -15,7 +15,7 @@ description: >
 
 # Solo — Distribute (get the first customers, build a channel)
 
-Read `../ai-engineering-foundation.md` now. Do not market a product as AI-native or AI-built unless
+Read `../ai-engineering-foundation.md` if it is not already in context. Do not market a product as AI-native or AI-built unless
 that fact changes customer value, trust, or risk.
 
 Take a chosen model (from `solo-model`) and turn "I built it / I'm building it" into **a repeatable
@@ -50,6 +50,7 @@ principle:
 ```
 solo-model → solo-fund → solo-distribute (THIS) → solo-sell → solo-grow → solo-sustain
                           get attention             close      automate    run it solo
+└── solo-operate runs underneath from first revenue (payments, legal floor, feedback loop, churn ops, monthly review)
 ```
 
 The `solo-*` track runs alongside the `forge-*` build track — so this skill usually runs **in
@@ -72,11 +73,8 @@ there is — circle back to `solo-fund` to pre-sell to it.)
   hypothesis to test with a small real experiment.
 - **File output**: write the GTM plan to a file/artifact if supported; else deliver it in chat.
 
-**Grounding:** before stating any external fact (where the buyer gathers, channel/conversion
-benchmarks, "what's working now" tactics, tool/platform facts), follow `../solo-grounding.md` if
-present — source-or-tag every claim, re-fetch dated stats, and treat channel-fit and
-willingness-to-pay as behavior-backed hypotheses (Mom Test), not stated intent. It does not make you
-less decisive about the one channel you pick.
+**Grounding:** for any external fact (where the buyer gathers, channel/conversion benchmarks,
+tool/platform facts), follow `../solo-grounding.md`.
 
 ## Workflow
 
@@ -141,9 +139,10 @@ The user commits to the channel and cadence before moving on.
   teach you the real message — systematize *after* you've found what works, not before.
 - **Consistency over intensity.** A small cadence sustained for a year beats a launch-week sprint then
   silence. Set the bar where the founder won't quit (this is why `solo-sustain` is the next stage).
-- **Honesty:** if the chosen channel doesn't actually reach the buyer, or the cadence isn't realistic
-  for one person's hours, say so — a plausible-sounding plan the founder can't sustain is worse than a
-  smaller one they can. Treat channel-fit as a hypothesis until a small real test confirms it.
+- **Honesty:** say so plainly if the channel doesn't reach the buyer or the cadence isn't realistic
+  for one person's hours; treat channel-fit **and willingness to pay** as behavior-backed hypotheses
+  (Mom Test — what people actually did, not what they say they'd do) until a small real test
+  confirms them; and ground external claims per `../solo-grounding.md`.
 
 ## Execution
 

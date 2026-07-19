@@ -2,6 +2,9 @@
 
 Observed: The supplied brief describes operators whose internal procedures, forms, and integrations
 change often enough that conventional custom software becomes a backlog.
+[Synthetic source](https://fixture-corpus-a.test-source.co/procedures) ·
+[Synthetic operator survey](https://fixture-corpus-b.test-source.co/survey) ·
+[Synthetic backlog study](https://fixture-corpus-c.test-source.co/backlog)
 
 Inferred: The scarce capability is not another workflow editor. It is keeping executable software,
 tests, documentation, and migration logic synchronized with each operator's approved procedures.
@@ -38,38 +41,20 @@ promotion path after the agreed acceptance suite passes.
 Killer risk: Customer variation may hide judgment that cannot be represented as stable cases;
 disconfirm the bet when the second workflow cannot reuse the core interfaces and evaluation harness.
 
-AI engineering work absorbed: Agents convert approved procedures into modules, connectors, contract tests,
-migrations, documentation, regression analysis, and release candidates.
+Control-plane appendix:
 
-Product AI dependency: Build-time only. The shipped workflow runtime is deterministic conventional
-software; customers do not need an AI feature or AI branding.
-
-Previously required organization: Product engineers, integration engineers, QA, release engineering,
-technical writing, and project coordination for each customer variation.
-
-Founder control surface: Product boundary, shared architecture, data and permission policy, acceptance
-suite, irreversible migrations, release approval, and escalation decisions.
-
-Delegation architecture: Separate agents own specification normalization, module implementation,
-connector contracts, adversarial testing, documentation, and release inspection against versioned
-interfaces in isolated worktrees.
-
-Verification loop: Schema checks, deterministic unit and contract tests, behavioral evals from approved
-examples, security review, sandbox telemetry, human acceptance, staged release, and rollback.
-
-Human attention budget: The founder reviews architecture changes, failed eval clusters, permission
-exceptions, release candidates, and domain-owner disagreements; routine passing changes do not require
-line-by-line implementation.
-
-External bottleneck: Access to approved procedures, a responsible domain owner, trust to run a sandbox,
-and permission to integrate with an operator's systems.
-
-Failure containment: Agents have no direct production write access; customer data is isolated; releases
-are staged; migrations require explicit approval; failed health checks stop rollout and restore the
-prior version.
-
-Scope made feasible: The same control plane can support a broad product suite and maintained customer
-variants that conventional per-customer engineering economics would leave to consultancies.
+| Control-plane field | This venture |
+|---|---|
+| AI engineering work absorbed | Agents convert approved procedures into modules, connectors, contract tests, migrations, documentation, regression analysis, and release candidates. |
+| Product AI dependency | Build-time only. The shipped workflow runtime is deterministic conventional software; customers do not need an AI feature or AI branding. |
+| Previously required organization | Product engineers, integration engineers, QA, release engineering, technical writing, and project coordination for each customer variation. |
+| Founder control surface | Product boundary, shared architecture, data and permission policy, acceptance suite, irreversible migrations, release approval, and escalation decisions. |
+| Delegation architecture | Separate agents own specification normalization, module implementation, connector contracts, adversarial testing, documentation, and release inspection against versioned interfaces in isolated worktrees. |
+| Verification loop | Schema checks, deterministic unit and contract tests, behavioral evals from approved examples, security review, sandbox telemetry, human acceptance, staged release, and rollback. |
+| Human attention budget | The founder reviews architecture changes, failed eval clusters, permission exceptions, release candidates, and domain-owner disagreements; routine passing changes do not require line-by-line implementation. |
+| External bottleneck | Access to approved procedures, a responsible domain owner, trust to run a sandbox, and permission to integrate with an operator's systems. |
+| Failure containment | Agents have no direct production write access; customer data is isolated; releases are staged; migrations require explicit approval; failed health checks stop rollout and restore the prior version. |
+| Scope made feasible | The same control plane can support a broad product suite and maintained customer variants that conventional per-customer engineering economics would leave to consultancies. |
 
 First-10 distribution: Approach operators already paying for recurring workflow customization through
 specialist implementation partners and offer the bounded paid conversion, not a generic software demo.

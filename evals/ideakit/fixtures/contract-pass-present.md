@@ -4,7 +4,7 @@ Audience: seed investor. Decision: fund a three-clinic paid pilot. Belief shift:
 from broken escalation ownership, not merely slow replies. Ask: release $25,000 against three named
 milestones.
 
-Fact: two managers shared handoff logs ([evidence](https://example.com/logs)). Inference: a managed
+Fact: two managers shared handoff logs ([evidence](https://fixture-corpus-x.test-source.co/logs)). Inference: a managed
 shift may outperform another inbox tool. Ambition: become the operating layer for after-hours patient
 coordination.
 

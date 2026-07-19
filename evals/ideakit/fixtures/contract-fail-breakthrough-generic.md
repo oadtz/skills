@@ -2,7 +2,7 @@
 
 ## Business productivity hub
 
-**Observed:** A placeholder business performs repetitive work. [Synthetic source](https://example.com/productivity)
+**Observed:** A placeholder business performs repetitive work. [Synthetic source](https://fixture-corpus-x.test-source.co/productivity)
 
 **Inferred:** Businesses want easier workflows.
 

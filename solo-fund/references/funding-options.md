@@ -32,8 +32,9 @@ Presell the product, lifetime/founding-member deals, Kickstarter/Indiegogo, paid
 ## Rung 2 — Grants, competitions & platform/AI credits (non-dilutive cash + free runway)
 Government, foundation, university, and platform startup funds; pitch competitions. In Thailand, for
 example: **depa** (digital economy), **NIA** (innovation), **NSTDA** programs. In the US, the big one is
-**SBIR/STTR** — federal non-dilutive R&D grants (reported ~$4B+/yr, reauthorized through 2031 per
-[spectup](https://www.spectup.com/resource-hub/non-dilutive-funding)) — plus state innovation grants.
+**SBIR/STTR** — federal non-dilutive R&D grants (reported ~$4B+/yr per
+[spectup](https://www.spectup.com/resource-hub/non-dilutive-funding); authorization status changes —
+verify before relying on it) — plus state innovation grants.
 - **Cost:** no equity, but real *time* — applications, reporting, eligibility criteria, sometimes
   matching-fund or local-entity requirements. **Requires:** fitting the program's theme/eligibility.
 - **Watch-out:** slow; don't let grant-chasing become procrastination disguised as funding.
@@ -76,7 +77,8 @@ Capital — reportedly up to ~70% of ARR, funded in days), or, for already-funde
   *Point-in-time; verify current terms.*
 
 ## Rung 6 — Shared-earnings agreements (SEAL) (bootstrapper-designed)
-Pioneered for bootstrappers (e.g. Earnest-Capital-style). Investor puts in capital (historically on
+Pioneered for bootstrappers (e.g. Earnest-Capital-style; note Earnest Capital became Calm Company
+Fund, which has paused new investments — verify current status). Investor puts in capital (historically on
 the order of low-to-mid six figures) repaid as a share of **profit before founder salary**, with a
 capped buy-back that converts to a small residual equity stake if you never pay it all back.
 - **Cost:** between debt and equity — you share upside but can buy most of it back; no forced exit.
@@ -93,7 +95,9 @@ plus a year-ish of mentorship and a peer cohort.
 
 ## Rung 8 — Equity crowdfunding (Reg CF / Reg A+) (dilutive, from the crowd)
 Sell equity to many small investors via a regulated platform — **Reg CF** (up to $5M) or **Reg A+**
-(larger); WeFunder / StartEngine / DealMaker / Republic. The combined Reg CF + Reg A+ market raised
+(larger); WeFunder / StartEngine / DealMaker / Republic. Reg CF / Reg A+ are **US-specific regimes** —
+use your country's equivalent or a US entity (e.g. Thai founders need Thai SEC-licensed funding
+portals). The combined Reg CF + Reg A+ market raised
 ~$925M in 2025 ([Kingscrowd](https://kingscrowd.com/regulation-crowdfunding-through-april-2025/)).
 - **Cost:** real dilution — *but* no single VC gatekeeper or board control. The downside is a cap table
   of many small shareholders + compliance, and the raise *is itself a marketing campaign* you must run.
@@ -125,7 +129,7 @@ avoid the cap table:
   early, grants/credits where eligible, RBF once revenue is steady, equity only if genuinely
   venture-scale ([spectup non-dilutive guide](https://www.spectup.com/resource-hub/non-dilutive-funding)).
 - *These figures are point-in-time from this research; re-check before relying on them, and never
-  present a remembered rate or program as a current fact (see `../solo-grounding.md`).*
+  present a remembered rate or program as a current fact (see `../../solo-grounding.md`).*
 
 ## Choosing
 1. Can you bootstrap it? Then do (and stop here).

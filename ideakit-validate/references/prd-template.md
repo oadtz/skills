@@ -9,16 +9,10 @@ Observed / Inferred / Bet distinctions visible where they affect decisions.
 # [Name] — Plan
 
 ## Decision and venture thesis
-- Actor + trigger:
-- Job/desire:
-- Mechanism:
-- Why now:
-- Initial wedge:
-- Observed:
-- Inferred:
-- Bet — wrong if:
-- Recommendation:
-- Evidence level: E0 / E1 / E2 / E3 / E4 — evidence that earned it
+Carry over the confirmed sharpened-concept block from Step 4 **verbatim** (it already contains
+actor/trigger, mechanism, why now, wedge, Observed/Inferred/Bet, recommendation, and evidence
+level). It is the plan's single canonical statement — every later section must add new
+information, never restate these fields.
 
 ## Alternatives and differentiation
 What users do today, why switching may happen, and the specific mechanism that differs.
@@ -39,8 +33,20 @@ Testable behavior plus leading learning signals and lagging business outcomes.
 Only concrete stack, dependency, data, privacy, build-vs-buy, or integration choices necessary for
 handoff. Defer architecture decisions that belong in forge-architect.
 
+## AI engineering handoff (software concepts — fill what the validation learned)
+The fields `forge-architect` consumes so it never re-interviews (see
+`../../ai-engineering-foundation.md`):
+- Product AI dependency: none / build-time only / optional runtime / core runtime
+- Founder control surface: [decisions and boundaries the founder retains]
+- Verification loop: [how correct work will be distinguished from plausible work]
+- Human attention budget: [recurring decisions/reviews/exceptions the founder can afford]
+- External bottleneck: [the constraint more generated code cannot remove]
+- Failure containment: [permissions, blast-radius limits, recovery expectations]
+- Delegation architecture: [how work splits across agents/components, if already known]
+- Scope made feasible: [what the AI engineering model unlocks for this concept]
+
 ## Evidence ledger
-| Claim | Label | Evidence/source | Confidence | Counter-signal |
+| Claim | Label | Evidence/source | Freshness | Confidence | Counter-signal |
 
 ## Critical assumptions, tests, and kill criteria
 | Assumption | Confidence | Cheapest informative test | Kill/reframe signal |
@@ -63,14 +69,9 @@ change the decision.
 # [Name] — Plan
 
 ## Decision and thesis
-- Beneficiary/actor + trigger:
-- Desired change:
-- Mechanism/approach:
-- Why now:
-- Initial pilot:
-- Observed / Inferred / Bet:
-- Recommendation:
-- Evidence level: E0 / E1 / E2 / E3 / E4 — evidence that earned it
+Carry over the confirmed sharpened-concept block from Step 4 verbatim (beneficiary/actor + trigger,
+desired change, mechanism/approach, why now, initial pilot, Observed/Inferred/Bet, recommendation,
+evidence level). Later sections add new information only.
 
 ## Current behavior and alternatives
 
@@ -82,7 +83,7 @@ Who must participate, how they are reached, dependencies, owners, and sequence.
 ## Activities and resources
 
 ## Evidence ledger
-| Claim | Label | Evidence/source | Confidence | Counter-signal |
+| Claim | Label | Evidence/source | Freshness | Confidence | Counter-signal |
 
 ## Success signals
 Leading learning indicators and measurable outcomes.

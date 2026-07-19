@@ -67,6 +67,9 @@ https://startupgenome.com/insights/a-deep-dive-into-the-anatomy-of-premature-sca
 - [ ] Error tracking live; health check responding.
 - [ ] LLM tracing live (if AI is core).
 - [ ] Immutable deploy + verified one-click rollback path.
+- [ ] Backups: confirm PITR/daily backups on the managed DB and run one restore test (forge-operate
+      drills this periodically).
+- [ ] Migrations tooling initialized; deploys run migrations.
 - [ ] Staging gate passed; behavior verified on a preview with an available app-verification capability.
 - [ ] Residual risk reported to the user — what's covered, what's deferred, what they're accepting by
       shipping. The user makes the final ship/no-ship call.

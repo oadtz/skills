@@ -38,8 +38,9 @@ works standalone and hands off to the next. Full details in **[ideakit-README.md
 
 ### `forge-*` — PRD → product pipeline (a related set)
 
-A 4-stage, loosely-coupled pipeline that turns a validated PRD into a running, production-worthy
-product: architect → design → build → ship. Full details in **[forge-README.md](forge-README.md)**.
+A 5-stage, loosely-coupled pipeline that turns a validated PRD into a running, production-worthy
+product that stays alive: architect → design → build → ship → operate (then features loop back
+through build). Full details in **[forge-README.md](forge-README.md)**.
 
 | Skill | Role |
 |---|---|
@@ -47,12 +48,14 @@ product: architect → design → build → ship. Full details in **[forge-READM
 | `forge-design` | build a real design system + core user flows, not generic "AI slop" |
 | `forge-build` | write the product skeleton-first then slice-by-slice, with verified tests |
 | `forge-ship` | harden + release: CI guardrails, security/eval gates, deploy with rollback |
+| `forge-operate` | run the live system: triage + fixes, safe migrations, backups/restore drills, incidents, cost guards, analytics + monthly learning review |
 
 ### `solo-*` — solopreneur business pipeline (a related set)
 
-A 6-stage, loosely-coupled pipeline that turns a validated idea into a one-person business that makes
-money and lasts: model → fund → distribute → sell → grow → sustain. It's the *commercial* sibling of
-ideakit/forge and runs alongside the forge build track. Full details in **[solo-README.md](solo-README.md)**.
+A 7-skill, loosely-coupled pipeline that turns a validated idea into a one-person business that makes
+money and lasts: model → fund → distribute → sell → grow → sustain, with `solo-operate` running
+underneath from first revenue. It's the *commercial* sibling of ideakit/forge and runs alongside the
+forge build track. Full details in **[solo-README.md](solo-README.md)**.
 
 | Skill | Role |
 |---|---|
@@ -62,6 +65,7 @@ ideakit/forge and runs alongside the forge build track. Full details in **[solo-
 | `solo-sell` | close the first paying customers by hand via founder-led sales + a repeatable playbook |
 | `solo-grow` | scale acquisition automatically: growth loop + self-serve funnel + unit economics (CAC/LTV) |
 | `solo-sustain` | run it solo long-term: automation/systems, calm-company defaults, anti-burnout guardrails |
+| `solo-operate` | the professional floor from first revenue: payment rails (PSP vs merchant-of-record), entity/ToS/privacy (PDPA/GDPR), feedback loop, churn ops, monthly business review |
 
 ### Other skills
 

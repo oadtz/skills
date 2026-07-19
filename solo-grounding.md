@@ -1,7 +1,8 @@
 # Solo — Grounding & anti-hallucination contract
 
 Read this before stating any external fact in `solo-model`, `solo-fund`, `solo-distribute`,
-`solo-sell`, `solo-grow`, or `solo-sustain`. It is the family-level guard that keeps the commercial
+`solo-sell`, `solo-grow`, `solo-sustain`, or `solo-operate` — the last most of all, since payment
+fees, tax thresholds, and data-protection duties change constantly and vary by country. It is the family-level guard that keeps the commercial
 advice honest: the `solo-*`
 skills hand founders **numbers that move money** — prices, funding terms, channel benchmarks, tool
 features, program eligibility — and those are exactly the claims a model is most likely to invent or
@@ -23,7 +24,9 @@ guard and does not depend on any other skillset.
 
 **Every external factual claim is either backed by a source you fetched this run, or it is visibly
 tagged as an assumption. There is no third category.** A confident sentence with no source and no tag
-is the failure mode this contract exists to kill.
+is the failure mode this contract exists to kill. Reference files may carry point-in-time citations,
+but a citation in a reference file is not a source from this run — re-fetch any such figure before
+presenting it as current.
 
 ## Grounding is not hedging — stay decisive
 

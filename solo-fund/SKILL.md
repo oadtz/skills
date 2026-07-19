@@ -13,7 +13,7 @@ description: >
 
 # Solo — Fund (how to pay to build it, with minimal dilution)
 
-Read `../ai-engineering-foundation.md` now. Budget the AI engineering system, founder attention, and
+Read `../ai-engineering-foundation.md` if it is not already in context. Budget the AI engineering system, founder attention, and
 external dependencies; do not infer human engineering headcount from product scope.
 
 Take a chosen business model — ideally from `solo-model` — and decide **how to fund the build while
@@ -52,6 +52,7 @@ hyper-scale. Three consequences, all the same principle:
 ```
 solo-model (model + price)  →  solo-fund (THIS)  →  solo-distribute  →  solo-sell  →  solo-grow  →  solo-sustain
                                how to fund it        get attention       close deals   automate     run it solo
+└── solo-operate runs underneath from first revenue (payments, legal floor, feedback loop, churn ops, monthly review)
 ```
 
 - If the user hasn't chosen a **revenue model** yet, send them to `solo-model` first — the model
@@ -70,11 +71,8 @@ solo-model (model + price)  →  solo-fund (THIS)  →  solo-distribute  →  so
   user to verify current terms and availability before acting.
 - **File output**: write the funding plan to a file/artifact if supported; else deliver it in chat.
 
-**Grounding:** before stating any funding term, rate, equity stake, or program (RBF %, SEAL cap,
-accelerator equity, grant eligibility, whether a named program still exists), follow
-`../solo-grounding.md` if present — source-or-tag every claim and re-fetch these constantly-changing
-facts, never assert a remembered term as current. It generalizes the "verify current terms" rule this
-skill already holds; it does not make you less decisive about the primary path you recommend.
+**Grounding:** for any funding term, rate, equity stake, or program claim, follow
+`../solo-grounding.md`.
 
 ## Workflow
 
@@ -97,33 +95,24 @@ a funding need.
 
 ### Step 2 — Map options to the model
 
-Read `references/funding-options.md`. Walk the cost ladder from cheapest to most expensive and keep
-only the options that *fit the model and stage*:
+Read `references/funding-options.md` — the single source of detail (the full 0–9 ladder with costs,
+requirements, watch-outs, and the niche web3/RetroPGF route). Walk the cost ladder from cheapest to
+most expensive and keep only the options that *fit the model and stage*. In summary (rung numbers
+match the reference):
 
-- **Bootstrapping** (founder runway + reinvested revenue) — cheapest, zero strings; the default.
-- **Pre-sales / crowdfunding** (presell, lifetime deals, Kickstarter) — funding + validation at once,
-  no dilution; best when there's something concrete to promise. Often the smartest first "raise."
-- **Grants / competitions + platform/AI credits** (gov, foundation, platform funds; in Thailand e.g.
-  depa, NIA, NSTDA; US SBIR/STTR) — non-dilutive cash; and **stack free AI/cloud credits** (AWS/Google/
-  Azure/NVIDIA) for runway, which in an AI-heavy build can beat a small raise.
-- **Invoice financing / factoring** — borrow against unpaid B2B invoices; non-dilutive cashflow bridge
-  for slow-paying (enterprise/gov) clients. Not growth capital.
-- **Revenue-based financing (RBF)** — capital repaid as a % of revenue; no equity. Needs *existing,
-  fairly steady* revenue, so it's an accelerant, not a starter. Mismatched to one-off products.
-- **MRR/ARR-backed credit facilities & venture debt** — borrow against recurring revenue at scale
-  (cheaper than RBF, more institutional); needs steady MRR. Debt, not equity (venture debt adds warrants).
-- **Shared-earnings (SEAL, e.g. Earnest-Capital-style)** — investor capital repaid from profit before
-  founder pay, with a capped buy-back; designed for bootstrappers who don't plan a classic exit.
-- **Bootstrapper accelerators (TinySeed-style)** — modest capital for a small permanent equity stake,
-  built for SaaS aiming at 7–8 figures (not lifestyle-scale businesses).
-- **Equity crowdfunding (Reg CF / Reg A+)** — sell equity to the crowd via a platform (WeFunder/
-  StartEngine); dilutive but no single VC gatekeeper. Needs a consumer-relatable story + an audience.
-- **Priced equity (angel/VC)** — most expensive in control and expectations; imports a growth/exit
-  mandate. Rarely the right fit for a true solo/lifestyle business; appropriate only when the plan is
-  genuinely venture-scale and the founder wants that path.
-
-(See `references/funding-options.md` for the full 0–9 ladder with costs, requirements, and watch-outs,
-including the niche web3/RetroPGF route.)
+- **Rung 0 — Bootstrapping** (founder runway + reinvested revenue): cheapest, zero strings; the default.
+- **Rung 1 — Pre-sales / crowdfunding**: funding + validation at once, no dilution; often the
+  smartest first "raise."
+- **Rung 2 — Grants, competitions & platform/AI credits** (in Thailand e.g. depa/NIA/NSTDA; US
+  SBIR/STTR): non-dilutive cash, plus stackable free AI/cloud credits for runway.
+- **Rungs 3–5 — Revenue-secured money** (invoice financing → RBF → MRR/ARR credit facilities /
+  venture debt): no or mild dilution, but obligations serviced from real revenue — accelerants, not
+  starters.
+- **Rung 6 — Shared-earnings (SEAL)**: bootstrapper-designed capital repaid from profit with a capped
+  buy-back; no forced exit.
+- **Rungs 7–9 — Equity** (bootstrapper accelerators → equity crowdfunding → angels/VC): permanent
+  dilution and, at the top, an imported growth/exit mandate — the most expensive rungs, chosen only
+  deliberately.
 
 ### Step 3 — Recommend a primary path (+ a backup)
 
@@ -159,15 +148,15 @@ The user approves the funding path before moving on.
   "record irreversibly"): cheap to defer, expensive to undo.
 - **Investor money imports a mandate.** Equity (and to a degree accelerators) expect growth and an
   exit. If the user wants a calm solo business, that mandate is a hidden cost — name it.
-- **Honesty:** terms, eligibility, and even the existence of specific programs change constantly —
-  verify current details, never present a remembered term as a current fact, and don't dress a costly
-  instrument as "free money." Flag clearly that this is general information, not tailored advice.
+- **Honesty:** don't dress a costly instrument as "free money," flag clearly that this is general
+  information, not tailored advice, and ground every term or program claim per `../solo-grounding.md`.
 
 ## Execution
 
 **Don't stop at the plan — execute it.** Once the founder has made the decisions this skill is built
 around, build the real deliverables with the right tool (write the actual copy/spec/script/doc/asset,
-run the analysis, do the research) instead of handing back advice. Stage anything that spends money,
+run the analysis, do the research) instead of handing back advice. Read `../solo-craft.md` before
+drafting the pre-sale page or investor one-pager — funding artifacts are customer-facing words too. Stage anything that spends money,
 acts from the founder's accounts, or is irreversible for their one-click approval. Full contract:
 `../solo-execution.md`.
 

@@ -5,16 +5,18 @@ description: >
   dependency-integrity checks, evals for any AI features, observability, and a deployment with
   rollback. Use this skill whenever a product is built and the user is preparing for production, or
   says things like "is this production-ready", "harden this", "add security", "set up CI/CD", "review
-  for vulnerabilities", "add tests/evals", "deploy this", "ship it", "set up monitoring", "prepare for
-  launch", or hands off from forge-build. It is the FINAL stage of the forge pipeline: it makes the
-  guardrails blocking and gets the product out the door safely. It is NOT for choosing the architecture
+  for vulnerabilities", "add tests/evals", "deploy this", "ship it", "prepare for
+  launch", or hands off from forge-build. It is the RELEASE stage of the forge pipeline: it makes the
+  guardrails blocking and gets the product out the door safely, then hands the running system to
+  forge-operate. It is NOT for running/fixing/iterating an already-live product, ongoing monitoring
+  and cost management, migrations, backups, or incidents (use forge-operate), NOT for choosing the architecture
   (use forge-architect), the design system (use forge-design), or writing the feature code itself (use
   forge-build).
 ---
 
 # Forge — Ship (working product → production-ready release)
 
-Read `../ai-engineering-foundation.md` now. Ship AI-developed conventional software under ordinary
+Read `../ai-engineering-foundation.md` if it is not already in context. Ship AI-developed conventional software under ordinary
 quality gates; add AI-runtime evals only when the product actually contains runtime AI.
 
 Take a built, tested product and make it **safe to put in front of real users**, then release it. The
@@ -89,15 +91,18 @@ Read `references/security-gates.md`. Stand up the CI pipeline and turn discretio
 
 - On every PR: **lint → type-check → test → build**; on merge: deploy. Pin CI actions to a commit SHA,
   use OIDC not long-lived credentials, least-privilege permissions.
-- **Design/UX quality gate (blocking, equal to the test gate).** For any product with a UI, a release
-  is **not shippable if it looks/feels like generic AI slop or breaks the design system** — this gates
-  the same way a failing test does. On the preview deploy, drive the real UI and screenshot across
+- **Design/UX quality gate (blocking, but a *review* gate).** Unlike lint/tests, this check is run by
+  the agent and/or a human against a checklist — the pipeline can't execute it; it blocks release the
+  way a failing review does. For any product with a UI, a release is **not shippable if it looks/feels
+  like generic AI slop or breaks the design system**. On the preview deploy, drive the real UI and screenshot across
   breakpoints, then run the **look-and-feel + anti-slop checklist** in
   `forge-design/references/visual-craft.md`: system fidelity, hierarchy/spacing, all states, interaction
   feel (Nielsen heuristics), responsive, accessibility (WCAG 2.2 AA), and **none of the AI-slop tells**
   (purple/cyan gradients, Inter default, stock-shadcn look, glassmorphism, gradient text, generic SaaS
   copy). Use the available accessibility/UX review capability (e.g. `web-design-guidelines`) as part of
-  this gate. A fail blocks release until fixed.
+  this gate. A fail blocks release until fixed. The floor is scoped: the gate passes when every
+  visual-craft checklist item passes or carries a documented waiver — not on a subjective "still looks
+  generic" feeling, so the review can't loop forever.
 - **Branch protection on main** — every change (including every agent change) goes through review +
   passing checks. This is the highest-leverage single control.
 - **Preview/PR deployments** so reviewers check *behavior and look-and-feel*, not just diffs.
@@ -146,6 +151,8 @@ evaluating AI *features* at runtime (non-deterministic). If the product uses an 
 - If AI is core to the product, add **LLM tracing** at launch (e.g. Langfuse/Helicone) — prompt→
   response, tokens, cost, latency, tool calls — anchored on OpenTelemetry GenAI conventions to avoid
   lock-in.
+- **Instrument the PRD's success signals** (product analytics, e.g. PostHog) so the idea's evidence
+  level can advance post-launch; `forge-operate` owns the events afterward.
 
 ### Step 5 — Deploy (lean, with a rollback path)
 
@@ -154,6 +161,10 @@ Read `references/ci-deploy.md`. Ship on the lightest infra that fits:
 - **Managed PaaS** (e.g. Vercel/Netlify/Cloudflare for frontend-heavy; Render/Railway/Fly for
   full-stack-with-DB). AWS/Kubernetes only when a specific compliance or scale need demands it.
 - **Immutable deploys + one-click rollback** as the MVP minimum; feature flags for risky features.
+  For the incident path, compose with an installed incident-response capability if present;
+  `forge-operate` keeps the runbook.
+- **Billing/spend alerts before launch** on the PaaS, the database, and any LLM API —
+  `forge-operate` maintains the ceilings.
 - **Per-environment secret isolation** — staging gets *test* keys; prod fetches from a secret store; a
   staging gate before prod.
 - **Skip** Kubernetes, canary, blue-green, multi-region until scale actually demands it — that's
@@ -162,14 +173,18 @@ Read `references/ci-deploy.md`. Ship on the lightest infra that fits:
 Then confirm the release and the rollback path, and report what's gated, what's monitored, and what
 was deliberately deferred. The user makes the final ship/no-ship call.
 
-Shipping is the end of the *build* track, not the journey — point to the **commercial track** next:
+Shipping is the start of Day 2, not the end of the journey — hand off in both directions:
 
-> The product is live. Want me to hand this to the `solo-*` track to make it earn? — `solo-distribute`
-> to get attention, `solo-sell` to close the first paying customers, or `solo-sustain` to keep a live
-> product runnable solo without burning out. (If the revenue model isn't settled yet, start at
+> The product is live. **Engineering loop:** `forge-operate` now owns the running system — bug
+> triage, safe migrations, backups + restore drill, incidents, cost guards, and the analytics that
+> let the idea's evidence level advance; v1.1 features and fixes flow operate → `forge-build` →
+> back through these gates. **Commercial track:** `solo-distribute` to get attention, `solo-sell`
+> to close the first paying customers, `solo-operate` for payments/legal/feedback plumbing,
+> `solo-sustain` to keep it runnable solo. (If the revenue model isn't settled yet, start at
 > `solo-model`.)
 
-A shipped product that nobody finds or buys isn't done — name the next move toward revenue.
+A shipped product that nobody finds, buys, or maintains isn't done — name the next move on both
+tracks.
 
 ## Operating principles
 

@@ -18,7 +18,7 @@ Causal ring: 2
 Domain: education and childcare  
 Time horizon: emerging
 
-**Observed:** A placeholder calendar changed. [Synthetic source](https://example.com/a)
+**Observed:** A placeholder calendar changed. [Synthetic source](https://fixture-corpus-a.test-source.co/a)
 **Inferred:** coordination becomes scarce.
 **Bet:** families will pay for a new scheduling mechanism. Wrong if existing institutions absorb it.
 The wedge is a manual pilot. First-10 distribution uses one named parent association. The counter-case
@@ -31,7 +31,7 @@ Causal ring: 3
 Domain: housing and municipal finance  
 Time horizon: long
 
-**Observed:** A placeholder receiving city grew. [Synthetic source](https://example.com/b)
+**Observed:** A placeholder receiving city grew. [Synthetic source](https://fixture-corpus-b.test-source.co/b)
 **Inferred:** infrastructure timing becomes the bottleneck.
 **Bet:** a buyer will fund capacity forecasting. Wrong if movement remains temporary.
 The wedge is a service-first report. First-10 customers come through a municipal-finance adviser; the

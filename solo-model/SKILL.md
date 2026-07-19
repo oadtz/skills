@@ -15,7 +15,7 @@ description: >
 
 # Solo — Model (idea → how it makes money)
 
-Read `../ai-engineering-foundation.md` now. Treat directed AI engineering capacity as the default for
+Read `../ai-engineering-foundation.md` if it is not already in context. Treat directed AI engineering capacity as the default for
 software and do not choose a business model by imposing a human implementation-hours ceiling.
 
 Take a validated idea — ideally a PRD/`PLAN.md` from `ideakit-validate`, or just a clear concept —
@@ -48,6 +48,7 @@ and sustainable operation while preserving credible ambition. Three consequences
 ```
 ideakit-validate (PRD/PLAN.md)  →  solo-model (THIS)  →  solo-fund  →  solo-distribute  →  solo-sell  →  solo-grow  →  solo-sustain
                                    how it makes money     fund it       get attention       close deals    automate     run it solo
+└── solo-operate runs underneath from first revenue (payments, legal floor, feedback loop, churn ops, monthly review)
 ```
 
 The `solo-*` family is the **commercial track** — it runs alongside the `forge-*` build track, not
@@ -70,10 +71,8 @@ Use capabilities by intent, not by product-specific tool name:
 - **File output**: write the model decision to a file/artifact if supported; otherwise deliver it in
   chat and say no file was written.
 
-**Grounding:** before stating any external fact (price benchmarks, market rates, who-pays norms),
-follow `../solo-grounding.md` if present — source-or-tag every such claim and re-fetch time-sensitive
-numbers. It strengthens the honesty guards already here; it does not make you less decisive about the
-price you set.
+**Grounding:** for any external fact (price benchmarks, market rates, who-pays norms), follow
+`../solo-grounding.md`.
 
 ## Workflow
 
@@ -82,7 +81,11 @@ Four steps: **Intake → Choose the model → Set the starting price → Name th
 ### Step 1 — Intake (what constrains the model)
 
 Pull from the PRD (don't re-derive what `ideakit-validate` already established): the target user, the
-core value, the v1 scope, and any platform the product lives in. Then establish the three things the
+core value, the v1 scope, any platform the product lives in — **and the validation spine: the
+current evidence level (E0–E4), the critical assumptions, the kill criteria, and the
+business/distribution hypothesis**. The model must be designed to advance that evidence level (the
+first-revenue path is usually the E2→E3 test), and a model choice that ignores a kill criterion is
+a mistake. Then establish the three things the
 model actually turns on, asking only what's missing:
 
 - **Runway & attention**: how many months can the user fund themselves, and how much consequential
@@ -163,8 +166,8 @@ The user picks the model and approves the trade-offs before moving on.
 - **Model for directed capacity you control.** AI engineering capacity counts when it is directable,
   verifiable, integrable, operable, and containable. Do not assume human headcount is required, and do
   not pretend generated code removes customer, legal, support, or exception work.
-- **Honesty:** if the only viable model is operationally heavy or slow to pay, say so plainly — don't
-  dress a hard model as an easy one. Flag willingness-to-pay as an assumption until real money proves it.
+- **Honesty:** name an operationally heavy or slow-to-pay model as such, flag willingness-to-pay as
+  an assumption until real money proves it, and ground external claims per `../solo-grounding.md`.
 
 ## Execution
 

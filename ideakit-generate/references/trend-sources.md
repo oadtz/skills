@@ -43,8 +43,8 @@ least one of these every run, especially when the domain is consumer/cultural:
 - **Kickstarter / Gumroad / Patreon / Substack** — what fans pre-pay creators to make.
 
 When mining these, capture the *want* in the audience's own words and quantify the pull (views,
-followers, pre-orders, fan-work volume) — this is the evidence for the **Desire** side of the Pull
-score, the analogue of complaint quotes for painkiller ideas.
+followers, pre-orders, fan-work volume) — desire evidence is the analogue of complaint quotes for
+painkiller ideas, and it feeds the Value-capture judgment later.
 
 ## Connected tools (use if available)
 If the user has connected enterprise/data tools, mine them for first-party pain: support tickets,
@@ -69,6 +69,7 @@ Desire / culture patterns (swap `[fandom/niche]`):
 - `Kickstarter OR Patreon [niche] most funded`
 
 ## How much to gather
-Enough to ground 10–20 raw ideas across your diversity partitions — typically 5–8 searches. Capture
-the painful quotes and quantified signals verbatim before interpreting; they become the evidence
-trail behind each idea and the raw material for the "Secret" and "Job" scoring dimensions.
+Enough to ground the signal cards, openings, and neutral signal pack that feed the invention lanes —
+typically 5–8 searches plus the fetches the evidence discipline requires. Capture quotes and
+quantified signals verbatim (fetched, not snippeted) before interpreting; they become the evidence
+trail behind each opening and finalist.

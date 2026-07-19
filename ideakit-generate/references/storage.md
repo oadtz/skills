@@ -14,10 +14,10 @@ Use this after the venture portfolio exists.
 
 ## Ask
 
-Ask one concise question:
+Ask one concise question, in the user's language, shaped like:
 
-> อยากให้เก็บชุดไอเดียนี้ไว้ที่ไหนต่อ? เลือกได้ เช่น `ideas/` ใน repo นี้, repo/vault อื่น,
-> path ที่คุณระบุ, หรือเก็บขั้นต่ำไว้ที่ `outputs/`
+> Where should this idea set live? For example `ideas/` in this repo, another repo/vault, a path you
+> name, or the minimum save in `outputs/`.
 
 If the host supports structured choices, offer:
 
@@ -73,8 +73,11 @@ Generated: YYYY-MM-DD
 - [signal](url) — [what it supports]
 
 ## Venture judgment
-Originality [judgment] · Pull [judgment] · Founder leverage [judgment] · Reachability [judgment] ·
-Asymmetry [judgment] · Power path [judgment]
+Surprise [judgment] · Inevitable in hindsight [judgment] · Enterable [judgment] ·
+Value capture [judgment] · Power path [judgment]
+
+## Core labeled lines (carry from the portfolio)
+Revelation: · Why others miss it: · Solo entry: · Paid commitment: · Delivered value: · Killer risk:
 
 ## Riskiest assumption
 [single riskiest assumption]
@@ -129,25 +132,8 @@ When the user names a custom path, external repo, or vault:
 
 ## Scan and merge existing repositories
 
-Before writing to any non-empty destination, scan it enough to infer its storage convention:
-
-- list top-level files and likely idea folders with `rg --files` or the host's fastest file search
-- look for `ideas/`, `notes/`, `inbox/`, `cards/`, `evidence/`, `decisions/`, `index.md`, `README.md`,
-  frontmatter, tags, backlinks, or Dataview-style fields
-- read the smallest representative set: the index, 2-3 existing idea cards/notes, and any README or
-  template that explains the convention
-- if it is a git repo, check status before editing; do not stage, commit, or push unless the user
-  explicitly asks
-
-Merge behavior:
-
-- preserve the destination's naming, frontmatter, tag, backlink, and folder conventions when they are
-  clear
-- dedupe by normalized idea name, aliases, and concept overlap; if an existing note is the same idea,
-  append a dated "Generated update" or merge missing fields instead of creating a duplicate
-- if an existing note is adjacent but not the same, add `Related` links both ways when the convention
-  supports links
-- update existing index/table rows in place when possible; append only when there is no matching row
-- never overwrite or delete existing notes to make room for the new structure
-- if confidence is low after scanning, write to an `inbox/` or `ideas/inbox/` area and say the merge is
-  conservative
+Before writing to any non-empty destination, follow the Scan and Match protocol in
+`../../ideakit-memory.md` (list files, read the index plus a small sample, preserve the local
+convention, dedupe by concept, never overwrite existing notes, fall back to `inbox/` when the match
+is uncertain). That contract is the single source of truth for merge behavior; this file only adds
+the card and index formats above for destinations with no convention of their own.

@@ -53,8 +53,8 @@ def main() -> int:
         for path in ROOT.glob("*/SKILL.md")
         if path.parent.name.startswith(PREFIXES)
     )
-    if len(skills) != 16:
-        failures.append(f"expected 16 Ideakit/Solo/Forge skills, found {len(skills)}")
+    if len(skills) != 18:
+        failures.append(f"expected 18 Ideakit/Solo/Forge skills, found {len(skills)}")
 
     for path in skills:
         text = path.read_text(encoding="utf-8")
@@ -80,14 +80,25 @@ def main() -> int:
     require(
         generate,
         [
-            "Apply the default AI engineering model",
-            "For every software or digital product brief",
+            "apply the default AI engineering model",
+            "for every software or digital product brief",
+        ],
+        "ideakit-generate",
+        failures,
+    )
+    # The control-plane labels live in the appendix-table contract of the team reference.
+    team_path = ROOT / "ideakit-generate/references/ai-engineering-team.md"
+    team = team_path.read_text(encoding="utf-8") if team_path.exists() else ""
+    require(
+        generate + "\n" + team,
+        [
             "Product AI dependency",
             "Founder control surface",
             "Human attention budget",
             "Scope made feasible",
+            "control-plane appendix table",
         ],
-        "ideakit-generate",
+        "ideakit-generate + ai-engineering-team",
         failures,
     )
 

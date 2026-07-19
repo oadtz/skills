@@ -63,8 +63,9 @@ compaction, and restarts. Maintain:
 - **`decisions.md`** — deviations from the plan and *why* (promote anything irreversible to an ADR).
 - **A per-slice todo list** with item status, which continuously re-injects the current goal and
   counters distraction.
-- **An integration queue** — verified packet, dependency state, merge order, conflicts, and required
-  founder decisions. This is the orchestrator's view of the AI engineering team.
+- **An integration queue** (parallel execution only) — verified packet, dependency state, merge order,
+  conflicts, and required founder decisions. This is the orchestrator's view of the AI engineering
+  team. Sequential builds don't need a separate file — fold integration state into `progress.md`.
 
 Persisting state plus one bounded packet per agent is what lets the build survive context resets and
 safe parallel execution without losing the thread. Fresh context each iteration beats a rotting

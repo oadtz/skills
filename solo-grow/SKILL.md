@@ -13,7 +13,7 @@ description: >
 
 # Solo — Grow (the automatic, scalable growth engine)
 
-Read `../ai-engineering-foundation.md` now. Treat AI engineering as default build capacity while
+Read `../ai-engineering-foundation.md` if it is not already in context. Treat AI engineering as default build capacity while
 keeping acquisition, retention, support, and exception load as real operating constraints.
 
 Take a product that already has *some* paying customers (won manually via `solo-sell`, or found via
@@ -59,6 +59,7 @@ the wrong skill until one exists.
 ```
 solo-model → solo-fund → solo-distribute → solo-sell → solo-grow (THIS) → solo-sustain
                           get attention      close by hand   automate + scale     run it solo
+└── solo-operate runs underneath from first revenue (payments, legal floor, feedback loop, churn ops, monthly review)
 ```
 
 It follows `solo-sell` on purpose: **do things that don't scale first (sell by hand, learn the motion),
@@ -79,10 +80,8 @@ attention) and feeds `solo-sustain` (keep the engine runnable solo).
   as "verify current."
 - **File output**: write the growth-engine plan to a file/artifact if supported; else deliver in chat.
 
-**Grounding:** before stating any external fact (CAC/LTV benchmarks, channel/conversion stats, tool
-capabilities or pricing), follow `../solo-grounding.md` if present — source-or-tag every claim and
-re-fetch dated figures (these benchmarks drift). It does not make you less decisive about the loop you
-pick or the retention gate you enforce.
+**Grounding:** for any external fact (CAC/LTV benchmarks, channel/conversion stats, tool
+capabilities or pricing), follow `../solo-grounding.md`.
 
 ## Workflow
 
@@ -168,10 +167,9 @@ The founder owns the calls; this skill builds and instruments the engine.
   don't. Manual onboarding/selling at scale is `solo-sell`, not this.
 - **One loop, deep and instrumented.** Five half-built channels is five ways to leak. Master and
   measure one before adding another.
-- **Honesty:** if the retention curve decays, say so plainly and refuse to scale acquisition — scaling
-  a leaky product wastes the founder's scarcest resources. If the motion is genuinely high-touch, say
-  it isn't a self-serve growth problem and route to `solo-sell`. Mark CAC/LTV benchmarks and tool facts
-  as point-in-time until verified.
+- **Honesty:** if the retention curve decays, say so plainly and refuse to scale acquisition; if the
+  motion is genuinely high-touch, route to `solo-sell`; ground benchmarks and tool facts per
+  `../solo-grounding.md`.
 
 ## Execution
 

@@ -47,7 +47,7 @@ Not selling anything — would 15 minutes this week be worth it to compare notes
 
 - **Personalize a small batch; don't blast.** Reply rate *is* the test result — if a framing earns
   replies, that pain/buyer hypothesis is warm; if silence, change the hypothesis, not the volume.
-- **In 2025+, you can offload top-of-funnel grunt work** (list-building, research) to AI tools or a
+- **Today, you can offload top-of-funnel grunt work** (list-building, research) to AI tools or a
   freelance SDR — but the founder runs the actual conversations. Don't outsource the learning.
 
 ## 3. The discovery call — run it by the Mom Test

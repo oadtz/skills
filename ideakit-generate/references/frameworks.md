@@ -1,9 +1,9 @@
 # Frameworks: generation lenses + scoring foundations
 
-This file is the **latticework** that gives the skill its *requisite variety* (see the governing
-principle in SKILL.md): a stock of varied lenses so you don't reason through one frame ("to a man
+This file is the **latticework** that gives the skill its *requisite variety* (see the North star
+in SKILL.md): a stock of varied lenses so you don't reason through one frame ("to a man
 with a hammer, everything is a nail"). Two uses. **Generation lenses** (top) help you *produce* ideas
-in Step 3. **Scoring foundations** (bottom) explain the thinking behind the rubric in `scoring.md`.
+in Steps 3–4. **Judgment foundations** (bottom) deepen the gate definitions in `scoring.md`.
 Use them as thinking tools, not checklists — run the lenses that fit the brief, and reach for a
 different one whenever the set starts to converge.
 
@@ -11,10 +11,10 @@ different one whenever the set starts to converge.
 
 - Generation lenses
 - The ripple lens
-- Scoring foundations
+- Judgment foundations
 - Durability of demand
 
-## Generation lenses (Step 3)
+## Generation lenses (Steps 3–4)
 
 ### Live in the future (Paul Graham)
 Stand at the leading edge of the user's domain, treat what's "normal" there as the future, and
@@ -41,8 +41,8 @@ up only from that?" Especially powerful where an industry assumes "that's just h
 
 ### SCAMPER (systematic variation)
 Apply seven lenses to an existing product/process to spin off ideas: Substitute, Combine, Adapt,
-Modify (10x bigger/smaller/faster), Put-to-other-use, Eliminate, Reverse. Good for filling out a
-diversity partition quickly with structurally different shots.
+Modify (10x bigger/smaller/faster), Put-to-other-use, Eliminate, Reverse. Good for quickly creating
+structurally different shots when a lane's seeds converge.
 
 ### Inversion / reverse brainstorming
 Ask "how would we make this problem far worse?" then reverse each answer. People spot what's wrong
@@ -88,15 +88,10 @@ domains will volunteer themselves, so spend the sweep on the ones that don't. Tw
    this force's *suburbs*?"
 2. **Scenario robustness** — name the critical uncertainty fork the consequences hinge on (e.g.
    "society adapts by engineering vs. by lifestyle change"), and mark ideas that survive both
-   branches as *robust*; prefer them at synthesis (Step 5).
+   branches as *robust*; prefer them at synthesis and judgment (Steps 4–5).
 
-A **force brief requires** a consequence map before research or invention:
-
-| Ring | Domain | Consequence | Actor behavior | Institution/market change | New scarcity, spend, or job | Horizon |
-|---|---|---|---|---|---|---|
-| 1 Direct | [domain] | [physical/immediate effect] | [actor response] | [response] | [scarcity/spend/job] | now |
-| 2 Behavioral | [domain] | [adaptation/substitution] | [changed routine] | [response] | [scarcity/spend/job] | [time] |
-| 3 Structural | [domain] | [geography/market/institution/culture rearranges] | [behavior] | [new structure] | [scarcity/spend/job] | [time] |
+A **force brief requires** a consequence map before research or invention — use the table defined
+in SKILL.md Step 1 (single source of truth; do not maintain a second copy here).
 
 Do not research or generate from the center word before tracing meaningful consequences. The center
 word is just the trigger; opportunities usually live in the columns to the right. Search ring-2/3

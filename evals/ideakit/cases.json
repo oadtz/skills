@@ -9,7 +9,7 @@
     "id": "domain-opportunities",
     "prompt": "I know independent restaurants well. Find unconventional businesses I could start with $5k.",
     "expected_skill": "ideakit-generate",
-    "quality_focus": ["breakthrough by default", "change signals", "opportunity theses", "venture architectures", "affordable loss"]
+    "quality_focus": ["single-path invention", "change signals", "opportunity theses", "venture architectures", "affordable loss"]
   },
   {
     "id": "force-brief",
@@ -19,7 +19,7 @@
   },
   {
     "id": "breakthrough-retry",
-    "prompt": "Those business ideas are generic. Run the search again in breakthrough mode and find first-principles, wow-worthy opportunities that a solo founder could actually enter.",
+    "prompt": "Those business ideas are generic. Run the search again and find first-principles, wow-worthy opportunities that a solo founder could actually enter.",
     "expected_skill": "ideakit-generate",
     "quality_focus": ["revelation surprise", "inevitable in hindsight", "solo entry", "value capture", "paid commitment", "delivered value", "killer risk", "venture-family merge", "cliche and duplicate collision"]
   },

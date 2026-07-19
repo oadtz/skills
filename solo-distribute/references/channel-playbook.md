@@ -53,6 +53,13 @@ Get in front of another product's audience via integrations, co-marketing, affil
 - **Suits:** tools that complement a bigger product; later-stage. **Rewards:** relationship-building.
   **Traction:** slow to set up, strong once live. **Watch-out:** dependency on the partner.
 
+## Localize the channel map
+
+The list above skews to the global/US internet — re-map it to where *your* buyers actually gather.
+In Thailand, LINE OA and Facebook Groups dominate SMB/consumer reach; short-video (TikTok/Reels/
+Shorts) is a first-class channel, not an afterthought; and classic SEO is being eroded by
+AI-search/zero-click answers (re-verify the current state before betting on it).
+
 ## Picking one (founder-strength × buyer-location)
 
 | If the founder is strongest at… | and buyers gather at… | start with |

@@ -21,6 +21,9 @@ the appropriate tool and verify externally, rather than handing back a plan.
   slice by slice, verifying each externally. The deliverable is working software, not a slice list.
 - **forge-ship** → actually set up the CI gates, the security/eval checks, and the deploy/rollback
   configuration as real files/config — not a checklist of what to configure.
+- **forge-operate** → actually wire the monitoring/analytics, write and run the migration, run the
+  restore test, add the smoke suite, and record it in `operations.md` — not a description of the
+  Day-2 loop.
 
 ## Pick the right tool for the job
 

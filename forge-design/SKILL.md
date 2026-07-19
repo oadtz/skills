@@ -14,7 +14,7 @@ description: >
 
 # Forge — Design (foundation → design system + flows)
 
-Read `../ai-engineering-foundation.md` now. Design a system that an AI engineering team can implement
+Read `../ai-engineering-foundation.md` if it is not already in context. Design a system that an AI engineering team can implement
 consistently without implying that the shipped product needs runtime or customer-facing AI.
 
 Take the PRD and the technical foundation and produce the **design system and user flows the build
@@ -51,7 +51,7 @@ equal to the test/security gates (see `references/visual-craft.md`).
 ## Where this sits in the pipeline
 
 ```
-forge-architect  →  forge-design (THIS)  →  forge-build  →  forge-ship
+forge-architect  →  forge-design (THIS)  →  forge-build  →  forge-ship  →  forge-operate
 decide the system   design the experience   build it       harden + ship
 ```
 
@@ -92,7 +92,8 @@ Tokens before screens — don't jump to generating pages.
 
 ### Step 1 — Brand & anti-slop brief
 
-Read `references/anti-slop-brief.md`. Pin down the visual intent and write the reusable brief:
+Read `references/anti-slop-brief.md` and `references/visual-craft.md` (the craft bar and slop tells the
+brief must encode). Pin down the visual intent and write the reusable brief:
 
 - **Audience & feeling**: who uses this and what should it feel like (trustworthy, playful, premium,
   utilitarian)? This shifts every later choice.
@@ -127,7 +128,8 @@ Establish the primitive component layer before composing screens. Default stack:
 (or Base UI) + Tailwind** — you *own* the source (copy-paste, not a black-box dependency), the
 primitives are accessible by default (ARIA, focus management, keyboard nav handled), and the markup is
 predictable for an LLM to extend. Wire the components to the semantic tokens from Step 2 so styling is
-centralized.
+centralized. Note: the stock shadcn/ui look is itself an auto-flagged slop tell — re-theme the
+primitives through the Step 2 tokens so they diverge from the defaults.
 
 ### Step 4 — Flows & screen inventory (jobs, not features)
 

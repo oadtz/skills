@@ -14,7 +14,8 @@ through every architectural layer, plus a real (even if empty) deployment and CI
   time and the code base is almost empty." Integration and deployment are the expensive, surprising
   parts — pay them down before complexity accumulates, not after.
 - **Done when:** the skeleton builds, its one test passes, and it deploys green through CI. Every later
-  slice now has a proven path to plug into.
+  slice now has a proven path to plug into. If the deploy target isn't ready yet, prove the skeleton
+  end-to-end locally/in CI and defer the deploy half to `forge-ship` — don't block building on it.
 
 Source: https://www.mattblodgett.com/2020/09/start-with-walking-skeleton.html
 
@@ -36,6 +37,8 @@ slice* (Jimmy Bogard).
 - **Tag each slice HITL or AFK:** HITL (human-in-the-loop) slices touch auth, data access, money,
   irreversible actions, or anything subtle — a human reviews the diff before merge. AFK ("away from
   keyboard") slices are low-risk enough for the agent to complete and the gate to verify unattended.
+  AFK means *implement + verify* unattended — every merge still gets the human's (batched) confirmation
+  per `../../forge-execution.md`.
 
 Sources: https://www.jimmybogard.com/vertical-slice-architecture/ ,
 https://explainx.ai/skills/mattpocock/skills/prd-to-issues

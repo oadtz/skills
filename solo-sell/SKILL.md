@@ -14,7 +14,7 @@ description: >
 
 # Solo — Sell (founder-led, first paying customers)
 
-Read `../ai-engineering-foundation.md` now. Sell the customer outcome, not the AI production method,
+Read `../ai-engineering-foundation.md` if it is not already in context. Sell the customer outcome, not the AI production method,
 unless runtime AI or the engineering model materially changes value, trust, or risk.
 
 Take attention (from `solo-distribute`) and an offer + price (from `solo-model`) and **turn them into
@@ -47,6 +47,7 @@ to people with the problem. Two truths shape everything here, and they're two ha
 ```
 solo-model → solo-fund → solo-distribute → solo-sell (THIS) → solo-grow → solo-sustain
             offer+price      get attention      close the deal      automate    run it solo
+└── solo-operate runs underneath from first revenue (payments, legal floor, feedback loop, churn ops, monthly review)
 ```
 
 `solo-sell` is the **conversion** step — it closes the buyers `solo-distribute` attracts using the
@@ -57,16 +58,27 @@ the offer/price itself is wrong (not just the pitch) → back to `solo-model`.
   can't sell into an empty room.
 - If the user hasn't **decided the offer or price**, send them to `solo-model` — sell needs something
   concrete to sell.
+- If money is about to change hands for the first time, set up the rails **before** the invoice —
+  `solo-operate` (payment provider vs merchant-of-record, invoices/receipts, the legal floor).
 - This stage ends when the user has closed (or pre-sold) their first customers **and** has the start of
   a repeatable sales motion written down.
 
 ## When founder-led sales is the right motion
 
-This skill assumes the founder should be doing sales personally. That's correct when: it's B2B (or
-high-consideration B2C), the deal is worth roughly **$5K+ in annual value**, the business is **below
-~$1M ARR**, and there's **no established playbook** for the wedge yet. If the product is low-price,
-high-volume, self-serve (e.g. a $9/mo app), the motion is *distribution + self-serve checkout*, not
-sales calls — route back to `solo-distribute` and keep `solo-model`'s self-serve pricing.
+This skill assumes the founder should be doing sales personally. That's correct when the deal is
+**high-touch relative to volume**: B2B (or high-consideration B2C), no established playbook for the
+wedge yet, and deal value that justifies founder hours *in the founder's market* — the often-quoted
+"$5K+/yr below ~$1M ARR" is a US SaaS benchmark, not a law; a ฿60k/yr deal to a Thai SMB can
+absolutely warrant founder-led sales. If the product is low-price, high-volume, self-serve (e.g. a
+$9/mo app), the motion is *distribution + self-serve conversion*, not sales calls — route to
+`solo-distribute` for attention and `solo-grow` for the self-serve funnel, keeping `solo-model`'s
+self-serve pricing.
+
+**Evidence mapping:** the commitment ladder here *is* the ideakit evidence ladder in sales
+clothing — an LOI/scheduled next step ≈ **E2 Commitment**, cash up front or a paid pilot ≈
+**E3 Transaction**, repeat purchases across independent buyers ≈ **E4**. When the idea has a stored
+memory/PLAN, record closed commitments there so the evidence level reflects reality
+(`../ideakit-memory.md` when installed).
 
 ## Host capability mapping
 
@@ -79,9 +91,8 @@ sales calls — route back to `solo-distribute` and keep `solo-model`'s self-ser
   offer — concrete and ready to send, in the user's voice.
 - **File output**: write the sales motion / playbook to a file/artifact if supported; else deliver in chat.
 
-**Grounding:** before stating any external fact (comparable deal sizes, "what buyers pay", market
-benchmarks), follow `../solo-grounding.md` if present — source-or-tag every claim and re-fetch
-time-sensitive numbers. It does not make you less decisive about the ask you tell the founder to make.
+**Grounding:** for any external fact (comparable deal sizes, "what buyers pay", market benchmarks),
+follow `../solo-grounding.md`.
 
 ## Workflow
 
@@ -157,10 +168,10 @@ The user owns the relationships and the calls; this skill arms them and keeps th
   the right skill — instead of reflexively discounting (which trains the market to wait for a discount).
 - **Don't hire sales to escape selling.** The founder must close the first ~10–20 deals and write the
   playbook before anyone else can sell; outsourcing this too early buys noise, not revenue.
-- **Honesty:** never oversell or manufacture urgency that isn't real — it wins a bad-fit customer who
-  churns and costs founder-hours later (see `solo-sustain`). If the honest answer is "this isn't a fit
-  for them," say so and move to the next prospect. Mark willingness-to-pay as a hypothesis until real
-  money confirms it.
+- **Honesty:** never oversell or manufacture urgency that isn't real (a bad-fit customer churns and
+  costs founder-hours — see `solo-sustain`), say "this isn't a fit" when it's true, mark
+  willingness-to-pay as a hypothesis until real money confirms it, and ground external claims per
+  `../solo-grounding.md`.
 
 ## Execution
 

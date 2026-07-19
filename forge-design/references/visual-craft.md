@@ -49,7 +49,9 @@ horizontal scroll, no overlap.
 AI tools interpolate the median, so they often converge on the same recognizable look. These patterns
 are not banned in every context, but when they appear by default they read as AI slop — **flag and fix**
 (sources: [Developers Digest](https://www.developersdigest.tech/blog/ai-design-slop-and-how-to-spot-it),
-[925 Studios](https://www.925studios.co/blog/ai-slop-web-design-guide)):
+[925 Studios](https://www.925studios.co/blog/ai-slop-web-design-guide)). These tells are a
+point-in-time snapshot — re-check what current AI-generated design looks like before applying them,
+and note that suggested escapes drift too (Geist is itself becoming a default):
 
 **Color / surface:**
 - Blue→purple / violet gradients; cyan-on-dark; dark background with colored box-shadow *glows*; the

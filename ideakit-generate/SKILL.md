@@ -4,30 +4,36 @@ description: >
   Discover and invent evidence-aware business opportunities from a user's constraints, skills,
   access, audience, domain, or a world change. Use for “what should I build”, “give me business ideas”,
   “where are the opportunities”, “what becomes possible because of X”, unconventional, visionary, or
-  first-principles searches, and retries after generic ideas. Run breakthrough search by default;
-  use standard mode only for an explicitly quick rough pass. Research signals, form non-obvious
-  theses, invent venture architectures, and deliver a small portfolio with wedges and learning tests.
-  Route a blank slate to ideakit-discover, a rough direction to ideakit-explore, and a mature concept
-  to ideakit-validate. For software opportunities, assume by default that one founder directs AI
-  coders and do not inherit a human-engineering-labor ceiling. Also store or merge a generated
-  portfolio when requested.
+  first-principles searches, and retries after generic ideas. One generation path: research real
+  signals, form non-obvious theses, invent venture architectures in isolated lanes, and deliver a
+  small portfolio with wedges and learning tests. Route a blank slate to ideakit-discover, a rough
+  direction to ideakit-explore, and a mature concept to ideakit-validate. For software opportunities,
+  assume by default that one founder directs AI coders and do not inherit a human-engineering-labor
+  ceiling. Also store or merge a generated portfolio when requested.
 ---
 
 # Ideakit — Generate
-
-Read `../ai-engineering-foundation.md` now. Treat one founder directing an AI engineering team as the
-default production model for software and digital product opportunities.
 
 Act as a venture-discovery partner, not an idea vending machine or market-report writer. Use research
 to notice changes and tensions, invention to create what does not exist yet, and entrepreneurial
 judgment to find a credible way to begin.
 
+Read `../ideakit-craft.md` now. When software or a digital product is plausibly in scope, also read
+`../ai-engineering-foundation.md` and treat one founder directing an AI engineering team as the
+default production model. The resulting product does **not** need to be AI-native: it may ship with
+no model or agent at runtime. Do not cap product scope by the founder's personal coding hours.
+
 ## North star
+
+There is one **single generation path** — no modes, no intensity choice. Every request routed here
+gets the full procedure: real research, isolated invention, collision-checked judgment. If the user
+asks for something quick, shrink the *scope* (fewer lanes, fewer finalists, say so plainly) — never
+switch to a cheaper procedure that skips isolation or evidence.
 
 Produce concepts that are **non-obvious but defensible**:
 
 - fresh because they come from a change, contradiction, recombination, or contrarian bet;
-- grounded because facts and observations are sourced;
+- grounded because facts and observations are fetched and cited;
 - honest because inference and speculation are labeled;
 - entrepreneurial because each has a trigger, buyer, wedge, distribution path, and learning test;
 - personal because the portfolio uses the founder's edge, obsession, taste, and desired game.
@@ -35,38 +41,9 @@ Produce concepts that are **non-obvious but defensible**:
 Research is raw material, not a veto. A market report stops at what is true today; venture discovery
 asks what could become true next and how to earn the right to find out.
 
-Read `../ideakit-craft.md` now. Read `references/venture-invention.md` before Step 4.
-
-## Choose invention intensity
-
-Use **breakthrough mode by default** for every request routed to this skill, including an ordinary
-opportunity search. Use **standard mode only** when the user explicitly requests a quick, lightweight,
-low-search-cost rough pass or declines the deeper search. Standard mode is an opt-out, not an automatic
-classification; do not ask the user to choose when their intent is already clear. If a standard pass
-collides with obvious categories, rerun in breakthrough mode.
-
-Treat a request to think like a famous founder as an intensity and reasoning signal. Translate it into
-explicit operators such as assumption deletion, cost-curve reconstruction, second-order consequences,
-counter-positioning, and bold but testable bets. Do not impersonate a real person or claim their
-judgment. Read `references/breakthrough-mode.md` now unless the user explicitly selected standard mode.
-
-### Apply the default AI engineering model
-
-For every software or digital product brief, read `references/ai-engineering-team.md` now and keep
-breakthrough invention intensity unless the user explicitly opts out. Assume **one founder directing
-an AI engineering team**. Treat AI as engineering capacity—not a feature pasted onto the product and
-not an unlimited autonomous company.
-
-The resulting product does **not** need to be AI-native or expose AI to customers. It may contain no
-model or agent at runtime. Apply this model whenever AI coders change the production economics, feasible
-scope, customization, integration, or maintenance of otherwise ordinary software. Research and pitch
-the customer problem in its own language; mention AI only when it changes customer value or risk.
-
-Do not cap product scope by the founder's personal coding hours or by the headcount a conventional
-software organization would require. Reconstruct the changed engineering cost curve first. Judge the
-venture by whether the founder can direct, verify, integrate, operate, and contain the AI-produced
-system within an explicit attention and risk budget. Keep external bottlenecks—demand, distribution,
-data rights, trust, permissions, capital, and liability—fully visible.
+A request to think like a famous founder is a reasoning signal, not a persona: translate it into
+operators such as assumption deletion, cost-curve reconstruction, second-order consequences, and
+counter-positioning. Never impersonate a real person.
 
 ## Routing and handoffs
 
@@ -85,33 +62,44 @@ data rights, trust, permissions, capital, and liability—fully visible.
   behavior when the user authorizes access.
 - **No live research**: continue only as a labeled speculative workshop. Mark external claims
   `[needs current evidence]`; never make “the market is moving” assertions from memory.
-- **Output**: write the full venture portfolio as a durable artifact when possible and return a concise
-  decision-oriented summary in chat.
+- **No subagents / fresh contexts**: still run the full path — use the no-subagent fallback in
+  `references/invention-procedure.md`. Never silently degrade to a single brainstorm.
+- **Output**: write the full venture portfolio as a durable artifact when possible and return a
+  concise decision-oriented summary in chat.
+
+## Evidence discipline (read before searching — this outranks procedure)
+
+The most common real-world failure is executing the procedure faithfully on a thin evidence base.
+When budget forces a trade, cut procedure, not evidence.
+
+1. **Fetch, don't snippet.** Any number, quote, or claim that a finalist's thesis or economics rests
+   on must be verified against the fetched page body, not a search-result summary. Cite it inline.
+   A claim you could not fetch stays labeled `[needs current evidence]`.
+2. **Search the market's own language.** For any brief tied to a place or community, run part of the
+   scan in that market's language (Thai brief → Thai queries; German market → German queries) and in
+   its native venues (local forums, Facebook/LINE groups, marketplaces) — the sharpest signals rarely
+   appear in English business press.
+3. **Inline coverage check.** Before synthesis, ask: are these signals narrow in language, geography,
+   class, or channel? Name the blind spot in the artifact. Read `references/coverage-audit.md` when
+   the narrowness looks load-bearing.
 
 ## Workflow
 
-Run seven stages: **Playing field → Change signals → Openings → Theses → Venture studio → Entrepreneur
-pass → Portfolio & storage.** Preserve freedom in invention; apply hard gates only to truthfulness,
-reasoning integrity, and final quality.
+Run six stages: **Playing field → Change signals → Openings → Invention → Judgment → Deliver &
+store.** Preserve freedom in invention; apply hard gates only to truthfulness, reasoning integrity,
+and final quality.
 
 ### 1. Define the playing field
 
-Ask only for missing information, one concise question at a time:
-
-- founder means: skills, access, credibility, relationships, audience, lived experience;
-- AI engineering leverage for software opportunities: agent/tool access, compute budget, technical direction,
-  repository and test infrastructure, delegation experience, and tolerance for production risk;
-- obsessions, taste, recurring irritations, and contrarian beliefs;
-- desired game: fast cash, calm solo business, category-scale venture, cultural product, public impact;
-- resource envelope and affordable loss;
-- no-gos and work the founder refuses to build a life around.
-
-State a compact brief and the decision this run should enable. If an edge map exists, adopt it as
-provisional evidence rather than a personality verdict.
+Ask only for missing information, one concise question at a time: founder means (skills, access,
+credibility, audience, lived experience); obsessions, taste, irritations, contrarian beliefs; desired
+game (fast cash, calm solo, category-scale, cultural, public impact); resource envelope and
+affordable loss; no-gos. For software scope, also: agent/tool access, delegation experience, and
+tolerance for production risk. State a compact brief and the decision this run should enable.
 
 Classify whether the brief contains a **force**: a technology, regulation, cost curve, demographic
 shift, event, or cultural change acting on the world. For a force, do not ideate “solutions for X”.
-Before research, build a causal consequence map:
+Build a causal consequence map first:
 
 | Ring | Domain | Consequence | Actor behavior | Institution/market change | New scarcity, spend, or job | Horizon |
 |---|---|---|---|---|---|---|
@@ -119,292 +107,147 @@ Before research, build a causal consequence map:
 | 2 Behavioral | ... | adaptation or substitution | ... | ... | ... | ... |
 | 3 Structural | ... | geography, market, institution, power, or culture rearranges | ... | ... | ... | ... |
 
-The map is mandatory for a force brief, but domain counts are not. Do not advance until at least one
-defensible chain reaches behavioral change and one reaches structural rearrangement. Ask “and then
-what?” until the actor, changed behavior, institutional response, and economic consequence are clear.
-Weak speculative branches may be labeled and retained as bets; do not invent certainty to fill rings.
+Do not advance until at least one defensible chain reaches behavioral change and one reaches
+structural rearrangement. Ask “and then what?” until actor, changed behavior, institutional response,
+and economic consequence are clear. Weak branches may be labeled and retained as bets.
 
 ### 2. Gather change signals
 
-Search for a useful mix selected for this brief—not a fixed quota. For a force brief, search the
-consequences as independent domains. Deliberately run queries that do **not** contain the force word:
-use the language of the changed behavior, institution, geography, substitute, or new bottleneck. If
-most queries still repeat the force term, stop: the scan is anchored at the center.
-
-- behavior and transactions: what people do, buy, abandon, or repeatedly improvise;
-- workarounds: spreadsheets, chat coordination, agencies, manual expert work, hacks, waiting;
-- desire and culture: identity, belonging, status, taste, fandom, ritual, aspiration;
-- cost/capability shifts: what became cheaper, faster, abundant, regulated, or accessible;
-- value migration: who gains/loses bargaining power or budget;
-- non-consumption: who wants the outcome but cannot use current solutions;
-- incumbent constraints: what established players rationally ignore or cannot offer.
+Search a useful mix selected for this brief — behavior and transactions, workarounds, desire and
+culture, cost/capability shifts, value migration, non-consumption, incumbent constraints — under the
+evidence discipline above. For a force brief, search consequences as independent domains and
+deliberately run queries that do **not** contain the force word; record a short query-escape note.
+If most queries still repeat the force term, stop: the scan is anchored at the center.
 
 Capture concise **signal cards**:
 
 ```
-[Observed] What happened or was said — actor/context — source/date
+[Observed] What happened or was said — actor/context — source/date (fetched)
 Why it may matter: [Inferred] ...
 Uncertainty or counter-signal: ...
 ```
 
-Quotes and numbers must be fetched and cited. Do not write fictional “sharp” examples.
-For force briefs, record a short query-escape note: which ring-2/3 consequences were researched without
-the force vocabulary, what surfaced, and which branches found no support.
+Then freeze the research into a **neutral signal pack**: Observed facts, causal openings,
+counter-signals, and founder-specific access — worded as raw material, with no product suggestions,
+no candidate ideas, and no interpretive framing that pre-picks a winner. Record the founder's time,
+budget, and support constraints separately; they apply after divergence, not before.
 
-In breakthrough mode, turn the research into a **neutral signal pack**: Observed facts, causal
-openings, counter-signals, and founder-specific access or lived evidence, but no product suggestions,
-candidate ideas, or obvious baseline. Record time, budget, support burden, and other operating
-constraints separately; apply them after divergence rather than using them to shrink the search space.
-
-For every software or digital product brief, also gather current evidence about the relevant
-engineering work: what
-traditionally consumes specialist labor or coordination, which units can be delegated, how their
-outputs can be tested, where integration or maintenance dominates, and which failures still require
-human judgment. Do not infer practical autonomy from a model demo or benchmark alone.
+For software scope, also gather current evidence on what the relevant engineering work costs today
+and which parts are delegable and verifiable (see `references/ai-engineering-team.md`).
 
 ### 3. Synthesize entrepreneurial openings
 
-Do not jump from search results to products. Cluster signals and look for:
+Do not jump from search results to products. Cluster signals and look for: contradictions between
+what people say, do, and pay for; anomalies the category's standard story cannot explain; newly
+scarce complements; second-order effects; coordination failures; valuable work hidden inside an
+existing product; expired shared assumptions; founder-specific access that changes what is reachable.
 
-- contradictions between what people say, do, and pay for;
-- anomalies that the category's standard story cannot explain;
-- newly scarce complements after something becomes abundant;
-- second-order behavior and structural effects;
-- coordination failures and costly handoffs;
-- valuable work hidden inside an existing product or service;
-- shared assumptions that may have expired;
-- founder-specific access or taste that changes what is reachable.
-- engineering fixed costs, coordination layers, customization, integration, maintenance, or long-tail
-  product breadth that may become newly economic under founder-directed AI execution.
+Write 3–7 **openings**, each a causal observation rather than a solution, with its strongest
+counter-signal. Build the **opportunity landscape** without requiring a visible buyer today; preserve
+credible long-horizon openings as labeled bets. For a force brief, tag each opening with source
+consequence, causal ring, domain, and horizon.
 
-Write 3–7 **openings**, each as a causal observation rather than a solution. Include the strongest
-counter-signal. For a force brief, tag each opening with source consequence, causal ring, domain, and
-horizon. A large source count does not substitute for a sharp tension.
+### 4. Invent in isolation
 
-First build an **opportunity landscape** without requiring a visible buyer today. Preserve credible
-ring-3 openings as long-horizon or contrarian theses when the causal chain is strong. Only after the
-landscape is visible should the entrepreneur pass judge which openings are currently reachable.
+Read `references/invention-procedure.md` and run it: independent invention lanes over the neutral
+signal pack (subagents when available; the no-subagent fallback otherwise), structural
+differentiation inside each lane, synthesis without averaging, venture-family merge, then the
+evaluator-only collision pass against the obvious baseline and prior art.
 
-### 4. Form opportunity theses and invent venture architectures
+If lanes converge on the same seeds, treat that as possible packet-steering, not confirmation:
+re-check the pack for interpretive framing and rerun one lane with the suspect framing removed
+(`references/diversity.md` has the deeper diagnostics).
 
-Read `references/venture-invention.md`. Form theses before naming products:
+Form opportunity theses before naming products — make each surviving thesis explicit:
 
 ```
 Because [Observed change], [actor] can/must now [new behavior], while [old assumption/system]
-still [gap]. We infer [opportunity]. We bet that [falsifiable future belief]. This is wrong if [...].
+still [gap]. We infer [opportunity]. We bet that [falsifiable belief]. This is wrong if [...].
 ```
 
-In standard mode, generate multiple **venture architectures** from the strongest theses—not merely
-feature variants:
+Consider distinct venture architectures per thesis (product, service-first, marketplace/network,
+media/community → commerce, data asset, unbundle/rebundle, category creation) — different ventures,
+not feature variants. `references/venture-invention.md` has the invention moves; use 2–4 that fit.
 
-- product or workflow infrastructure;
-- service-first path that discovers the product;
-- marketplace/network/coordination layer;
-- media/community → transaction or commerce;
-- data asset or standard;
-- unbundled/rebundled offering;
-- category-creating experience or business model.
+### 5. Judge with entrepreneurial judgment
 
-Choose 2–4 useful invention moves from the reference (inversion, removal, recombination,
-non-consumption, new bottleneck, ERRC, identity/desire). Do not fill every framework. Collapse concepts
-that share actor + job + mechanism + business architecture.
+For each survivor of the collision pass, attack it: ordinary category with AI pasted on? feature,
+not a venture? what behavior change does adoption require? why has nobody done it — or why did prior
+attempts fail? how would an incumbent respond? strongest evidence against? does the founder have a
+credible right to start? Kill, merge, or reframe weak concepts. Preserve a bold concept whose
+reasoning is strong but evidence early — label it a bet rather than scoring it into oblivion.
 
-In breakthrough mode, follow `references/breakthrough-mode.md`. Run **independent invention** lanes in
-fresh contexts or subagents when available. Give each only the brief and neutral signal pack—not other
-lanes, the previous portfolio, an obvious baseline, or the founder's feasibility filters. Each lane
-must form terse seeds, force material differentiation, then expand only its strongest mechanisms.
-Synthesize and recombine after all lanes return; only then collapse structural duplicates. These lanes
-are search mechanisms, not portfolio quotas.
+Then translate survivors through the founder's real operating envelope: smallest paid proof,
+first-10 access, affordable loss, hours with explicit room for selling/admin/learning, support and
+liability load, external dependencies. Require a **Paid commitment** before work and a separate
+observable **Delivered value** after delivery. For software, apply the default AI engineering model:
+the envelope is an attention and control budget, not implementation hours
+(`references/ai-engineering-team.md`, gates section).
 
-For software or digital product invention, run the additional organizational-compression and software-abundance
-lane in `references/ai-engineering-team.md`. Require a real change in feasible product or business
-architecture: generating the same ordinary SaaS faster is not enough.
+Select finalists with separate judgments — **do not sort by one total score**: Surprise, Inevitable
+in hindsight, Enterable, Value capture (plus, for software, the eight feasibility gates in
+`references/ai-engineering-team.md`, Directable through Externally enterable). Strength on one
+cannot compensate for failure on another. There is no target count:
+return the few that clear every gate — even one or two — rather than padding with near-duplicates.
+Assign venture-family IDs before selection; keep at most one finalist per family. For a force brief,
+if all finalists come from direct mitigation or one consequence, treat it as an exploration failure
+unless the user's edge justifies the concentration.
 
-### 5. Run the venture-quality pass
-
-For each serious concept, make the chain explicit:
-
-```
-Observed → Inferred → Bet → Venture mechanism
-Trigger/first user → Buyer/budget → Wedge → First-10 distribution
-Expansion path → What may compound → Affordable-loss learning test
-```
-
-Then attack it:
-
-- Is this an ordinary category with AI pasted on?
-- Is it a feature rather than a venture?
-- What behavior change does adoption require?
-- Why has nobody done it—or why did prior attempts fail?
-- How would an incumbent respond?
-- What is the strongest evidence against the thesis?
-- Does the founder have a credible right to start?
-- Can the wedge earn a bounded paid or control-plane proof before building the grand vision?
-
-Kill, merge, or reframe weak concepts. Preserve a bold concept when the reasoning is strong but the
-evidence is early; label it a bet rather than lowering its score until it disappears.
-
-In breakthrough mode, run an evaluator-only collision pass after generation, preferably in a fresh
-context. Canonicalize each survivor as `actor | trigger/job | causal thesis | scarce asset | mechanism |
-proof/feedback loop | payer | architecture | wedge`. Generate the obvious baseline only now, then
-compare against it, current offerings or prior art, and saved or killed ideas when available. Search by
-mechanism, actor, trigger, and architecture—not only by product name. Also compare the scarce asset and
-proof or feedback loop:
-a different vertical, actor, payer, buying occasion, or channel does not rescue the same underlying
-idea. Apply the **venture-family test**: if one company would sell both candidates as modules using the
-same buyer relationship, input corpus, operating workflow, and compounding asset, merge them into one
-venture with multiple buying occasions. Make the comparison mechanical: matching on any three of those
-four family fields means one family; a different name, trigger, or claimed thesis cannot override it.
-Merge or kill a collision unless its causal or value mechanism is materially different; never claim
-global novelty from a clean search. A Revelation or “Why others miss it” must not say “first”, “only”,
-“nobody”, or make another universal behavior or novelty claim unless current evidence supports it;
-surprise should come from the causal reframe, not an unverifiable superlative.
-
-Only after that pass, translate survivors through the founder's real operating envelope: first paid
-proof, first-10 access, affordable loss, available hours, support and liability load, and external
-dependencies. Narrow the wedge, change the route to market, or begin service-first before discarding a
-strong thesis. Count the independent commitments needed before value can be demonstrated; every
-essential party—not only the payer—must pre-commit, or Enterable fails. Check capacity economics as well
-as pilot cost: price times a sustainable solo caseload must fit the founder's desired game, or the
-expansion must contain a credible route away from founder hours. Capacity math must reserve explicit
-time for selling, administration, learning, and delivery variance rather than treating every available
-hour as billable. A deposit tests willingness to pay, not delivered value: require a **Paid commitment**
-before work and a separate observable **Delivered value** decision or outcome after delivery. A bold
-concept may survive as a wildcard only when it has an enterable learning wedge.
-
-For software or digital products, translate the founder envelope as an **attention and control budget**,
-not a human implementation-hours budget. Do not shrink the software merely because a conventional team
-would need many engineers or because the founder cannot code it manually after work. Narrow only when
-the founder cannot specify or verify the work, integration creates an unbounded exception load,
-production failure cannot be contained, or an external dependency must be learned first. A thin demand
-test may precede a large build, but it does not redefine the ambition or require a service-first end
-state.
-
-### 6. Select a portfolio with entrepreneurial judgment
-
-Do not sort by one total score. Use a compact decision table with separate dimensions:
-
-- **Originality** — non-obvious thesis and mechanism;
-- **Pull** — pain, desire, identity, obligation, or spending trigger;
-- **Founder leverage** — means, taste, access, credibility;
-- **Reachability** — credible first-10 path;
-- **Asymmetry** — learning cost/downside versus upside;
-- **Power path** — plausible compounding advantage if it works;
-- **Critical uncertainty** — what must be learned next.
-
-Use qualitative judgments or dimension scores, but do not sum them. In standard mode, select 3–5
-finalists by portfolio role only where a candidate earns it: asymmetric, contrarian, fast-cash,
-compounding, wildcard. Leave a role empty rather than quota-fill. Explain why a riskier concept advances
-over a safer one.
-
-For breakthrough mode, add four non-compensating judgments:
-
-- **Surprise** — the causal thesis or value mechanism escapes the obvious category;
-- **Inevitable in hindsight** — once revealed, the evidence chain makes it click rather than merely
-  sounding strange;
-- **Enterable** — this founder has a credible, affordable first move despite the larger vision;
-- **Value capture** — a named payer exchanges money for the mechanism, and the capacity economics or
-  leverage path can support the founder's desired game.
-
-For software or digital product finalists, add three more non-compensating judgments:
-
-- **Directability** — the founder can express intent, decompose work, set interfaces, and resolve the
-  consequential decisions without becoming the implementation bottleneck;
-- **Verifiability** — tests, evals, review gates, observability, and rollback can distinguish working
-  output from plausible-looking output;
-- **Operational control** — permissions, failure containment, escalation, maintenance, and human
-  attention remain bounded as the codebase and product surface expand.
-
-Treat pursuable wow as a bottleneck: strength on one dimension cannot hide failure on another. For each
-finalist, articulate one **Revelation**, **Why others miss it**, and the **killer risk**. When fresh
-contexts are available, let an independent evaluator select from anonymous canonical cards; do not show
-it lane labels or persona framing. Give each card a venture-family ID before selection and keep at most
-one finalist per family. Breakthrough mode has no target count: return however many clear every gate,
-even one or two, rather than preserving a near-duplicate or a concept with broken solo economics.
-
-For a force brief, attach **causal ring, source consequence, domain, distance from the literal force,
-and time horizon** to every finalist. If all finalists come from direct mitigation, one consequence,
-or one domain, treat it as an exploration failure unless the user's edge or evidence clearly justifies
-the concentration. Different buyers or business models do not count as thesis diversity when the
-causal source is the same.
-
-Run `../ideakit-craft.md` on **every finalist**. If the nouns can be swapped into another brief, return
+Run `../ideakit-craft.md` on every finalist. If the nouns can be swapped into another brief, return
 to the thesis or mechanism.
 
-### 7. Deliver, hand off, and store
+### 6. Deliver, hand off, and store
 
-Lead with the most important tension or opportunity—not “I ran six steps.” For each finalist include:
+Lead with the most important tension or opportunity — not a process recap. **The body of each
+finalist is prose that carries the thinking**; the compliance detail lives in a compact appendix.
 
-- one-sentence concept with actor, trigger, and mechanism;
-- Observed / Inferred / Bet chain with citations near observations;
-- for a force brief: causal ring, source consequence, domain, literal-force distance, and horizon —
-  written as explicit labeled lines (`Source consequence:`, `Causal ring:`, `Domain:`,
-  `Time horizon:`) so the eval scorer and downstream skills can locate them;
-- why now and founder fit;
-- wedge, first buyer, and first-10 distribution;
-- expansion and possible compounding power;
-- strongest counter-case;
-- affordable-loss learning test.
+Per finalist, the body must contain: the one-sentence concept (actor, trigger, mechanism); the
+Observed → Inferred → Bet chain with citations beside observations; why now and founder fit; wedge,
+first buyer, and first-10 distribution; expansion and what compounds; the strongest counter-case;
+and the affordable-loss learning test. Plus these labeled lines (kept in English as terms of art):
 
-For every breakthrough finalist, also include explicit labeled lines:
-
-- `Revelation:` — the surprising claim and mechanism in one sentence;
-- `Why it feels inevitable:` — the shortest causal chain that earns the reveal;
-- `Why others miss it:` — the stale assumption, incentive, or framing that hides it;
-- `Solo entry:` — the smallest paid proof, reachable first buyer, and bounded operating load;
+- `Revelation:` — the surprising claim and mechanism in one sentence, with the shortest causal chain
+  that makes it feel inevitable in hindsight;
+- `Why others miss it:` — the stale assumption, incentive, or framing that hides it (labeled
+  inference, never an unverifiable “first/only/nobody”);
+- `Solo entry:` — smallest paid proof, reachable first buyer, bounded operating load;
 - `Value capture:` — payer, buying occasion, exchange, and viable capacity or leverage path;
-- `Paid commitment:` — the money or signed commercial commitment required before work starts;
-- `Delivered value:` — the observable buyer decision or outcome required after delivery;
+- `Paid commitment:` / `Delivered value:` — money or signed commitment before work; the observable
+  buyer decision or outcome after delivery;
 - `Killer risk:` — the fact or dependency most likely to break the thesis.
 
-For every software or digital product finalist, also include explicit labeled lines:
+For a force brief, add labeled lines: `Source consequence:`, `Causal ring:`, `Domain:`,
+`Time horizon:`. For each software finalist, append the **control-plane appendix table** defined in
+`references/ai-engineering-team.md` (one table, eleven rows) instead of eleven more inline lines.
 
-- `Founder-directed entry:` — the first external or control-plane proof that earns more build scope;
-- `AI engineering work absorbed:` — engineering work and coordination the agent team absorbs;
-- `Product AI dependency:` — none, build-time only, optional runtime, or core runtime; never imply that
-  AI engineering requires customer-facing AI;
-- `Previously required organization:` — the conventional roles or team shape compressed;
-- `Founder control surface:` — decisions and boundaries the founder retains;
-- `Delegation architecture:` — how work is partitioned among agents and repositories or components;
-- `Verification loop:` — tests, evals, reviews, observability, and rollback;
-- `Human attention budget:` — recurring decisions, reviews, exceptions, and escalation load;
-- `External bottleneck:` — the scarcest constraint that more generated code cannot remove;
-- `Failure containment:` — permissions, blast-radius limits, and recovery path;
-- `Scope made feasible:` — the scope or business architecture newly feasible because engineering labor
-  is no longer the binding constraint.
+Close with a portfolio recommendation (role or next experiment, not fake certainty), the killed
+concepts with reasons, and the coverage blind spot named in Step 2. The user chooses what advances.
 
-Recommend a portfolio role or next experiment, not a fake certainty. The user chooses what advances.
-
-Read `references/storage.md` when the user wants durable capture. Ask one concise storage question if
-no destination is known. Store the portfolio, evidence links, killed concepts, decision notes, and
-next tests; never claim storage succeeded without writing it. Then offer:
-
-- expand or recombine a thesis → `ideakit-explore`;
-- validate a mature chosen concept → `ideakit-validate`;
-- name only after its point of view is stable → `ideakit-name`.
+Read `references/storage.md` when the user wants durable capture; ask one concise storage question if
+no destination is known; never claim storage succeeded without writing it. Then offer: expand or
+recombine → `ideakit-explore`; validate a mature concept → `ideakit-validate`; name after the point
+of view is stable → `ideakit-name`.
 
 ## Execution
 
 Actually run the research and write the venture portfolio. Cite observations, label inference and
-bets, and preserve the user's approval over direction. Follow `../ideakit-execution.md`; do not perform
-external, identity-bearing, paid, or irreversible actions without explicit confirmation.
+bets, and preserve the user's approval over direction. Follow `../ideakit-execution.md`; do not
+perform external, identity-bearing, paid, or irreversible actions without explicit confirmation.
 
-## References
+## Reference files
 
-- `references/venture-invention.md` — opportunity recognition, invention moves, Effectuation,
-  entrepreneur pass, Seven Powers, and portfolio roles. Read before Step 4.
-- `references/breakthrough-mode.md` — isolated invention, post-generation collision checks, and
-  founder-scale translation; read by default and skip only for explicit standard mode.
-- `references/ai-engineering-team.md` — one-founder control model, engineering cost-curve map,
-  organizational-compression invention, directability, verification, and failure-containment gates;
-  read for every software or digital product brief.
-- `references/trend-sources.md` — source and query ideas; choose what fits rather than scanning all.
-- `references/coverage-audit.md` — use when the signal set appears culturally, geographically, or
-  economically narrow.
-- `references/frameworks.md` — deeper mechanics for JTBD, inversion, ERRC, and force ripples; consult
-  selectively.
-- `references/money-first.md` — use when the user explicitly prioritizes reachable money.
-- `references/scoring.md` — use dimension definitions as prompts for judgment; do not create a total.
+- `references/invention-procedure.md` — isolated lanes, no-subagent fallback, synthesis,
+  venture-family merge, evaluator-only collision pass, finish-line gates. Read before Step 4.
+- `references/ai-engineering-team.md` — the one-founder AI engineering model: cost-curve map,
+  organizational-compression lane, feasibility gates, control-plane appendix table.
+  Read for every software or digital product brief.
+- `references/venture-invention.md` — opportunity recognition, invention moves, Effectuation, Seven
+  Powers, portfolio roles. Consult in Step 4.
+- `references/trend-sources.md` — source and query ideas; choose what fits.
+- `references/coverage-audit.md` — deeper checks when the signal set looks narrow (Step 2 inline
+  check names the trigger).
+- `references/frameworks.md` — deeper mechanics for JTBD, inversion, ERRC, force ripples.
+- `references/money-first.md` — when the user explicitly prioritizes reachable money.
+- `references/scoring.md` — gate definitions and the per-finalist decision note; never a total.
 - `references/storage.md` — durable idea-memory formats and storage flow.
-- `references/diversity.md` — consult only when concepts converge; structural diversity is diagnostic,
-  not a quota.
+- `references/diversity.md` — convergence diagnostics for Step 4.

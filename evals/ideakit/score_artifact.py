@@ -77,30 +77,36 @@ BREAKTHROUGH_MARKERS = {
     ],
 }
 
+# Labels may appear as inline lines ("Label: ...") or as rows of the control-plane appendix
+# table ("| Label | ... |"), which is the preferred format.
+def _label(name: str) -> str:
+    return r"(?m)^\s*\|?\s*(?:[-*]\s*)?(?:\*\*|`)?" + name + r"(?:\*\*|`)?\s*[:|]\s*(?:\*\*|`)?"
+
+
 AI_ENGINEERING_TEAM_MARKERS = {
     "engineering_capacity": [
-        r"(?m)^\s*(?:[-*]\s*)?(?:\*\*|`)?ai engineering work absorbed(?:\*\*|`)?\s*:\s*(?:\*\*|`)?",
-        r"(?m)^\s*(?:[-*]\s*)?(?:\*\*|`)?product ai dependency(?:\*\*|`)?\s*:\s*(?:\*\*|`)?",
-        r"(?m)^\s*(?:[-*]\s*)?(?:\*\*|`)?previously required organization(?:\*\*|`)?\s*:\s*(?:\*\*|`)?",
+        _label("ai engineering work absorbed"),
+        _label("product ai dependency"),
+        _label("previously required organization"),
     ],
     "founder_control": [
-        r"(?m)^\s*(?:[-*]\s*)?(?:\*\*|`)?founder control surface(?:\*\*|`)?\s*:\s*(?:\*\*|`)?",
-        r"(?m)^\s*(?:[-*]\s*)?(?:\*\*|`)?delegation architecture(?:\*\*|`)?\s*:\s*(?:\*\*|`)?",
+        _label("founder control surface"),
+        _label("delegation architecture"),
     ],
     "verification": [
-        r"(?m)^\s*(?:[-*]\s*)?(?:\*\*|`)?verification loop(?:\*\*|`)?\s*:\s*(?:\*\*|`)?",
+        _label("verification loop"),
         r"test|eval|review|observability|rollback",
     ],
     "attention_and_bottleneck": [
-        r"(?m)^\s*(?:[-*]\s*)?(?:\*\*|`)?human attention budget(?:\*\*|`)?\s*:\s*(?:\*\*|`)?",
-        r"(?m)^\s*(?:[-*]\s*)?(?:\*\*|`)?external bottleneck(?:\*\*|`)?\s*:\s*(?:\*\*|`)?",
+        _label("human attention budget"),
+        _label("external bottleneck"),
     ],
     "containment_and_expansion": [
-        r"(?m)^\s*(?:[-*]\s*)?(?:\*\*|`)?failure containment(?:\*\*|`)?\s*:\s*(?:\*\*|`)?",
-        r"(?m)^\s*(?:[-*]\s*)?(?:\*\*|`)?scope made feasible(?:\*\*|`)?\s*:\s*(?:\*\*|`)?",
+        _label("failure containment"),
+        _label("scope made feasible"),
     ],
     "founder_directed_entry": [
-        r"(?m)^\s*(?:[-*]\s*)?(?:\*\*|`)?founder[- ]directed entry(?:\*\*|`)?\s*:\s*(?:\*\*|`)?",
+        _label("founder[- ]directed entry"),
         r"external|control[- ]plane|right[- ]to[- ]build|paid|commitment|proof",
     ],
 }
@@ -162,7 +168,18 @@ def main() -> int:
             if (match := re.search(pattern, editorial_text, re.IGNORECASE))
         ]
     unsupported_precision = len(re.findall(r"\b\d+(?:\.\d+)?%\b|\b\d{2,}\+? (?:users|customers|complaints|people)\b", text, re.IGNORECASE))
-    cited_links = len(re.findall(r"\[[^\]]+\]\(https?://[^)]+\)", text))
+    # Count distinct real registrable domains, whether markdown-linked or bare. Placeholder hosts
+    # (example.com, .invalid, localhost) must not satisfy the evidence floor.
+    PLACEHOLDER_HOSTS = re.compile(
+        r"^(?:localhost|(?:www\.)?example\.(?:com|org|net)|.*\.(?:invalid|test|local|example))$",
+        re.IGNORECASE,
+    )
+    hosts = set()
+    for url in re.findall(r"https?://([^\s/)\"'>\]]+)", text):
+        host = url.split("@")[-1].split(":")[0].lower()
+        if not PLACEHOLDER_HOSTS.match(host):
+            hosts.add(host)
+    cited_links = len(hosts)
     labeled_observations = len(re.findall(r"\bObserved\b", text, re.IGNORECASE))
 
     structural = sum(groups.values()) / max(len(groups), 1) * 70
@@ -179,6 +196,11 @@ def main() -> int:
         warnings.append(
             "breakthrough artifact uses an obvious generic wrapper phrase; inspect the canonical idea core "
             "and collision set manually"
+        )
+    if args.breakthrough and cited_links < 3:
+        warnings.append(
+            "portfolio has fewer than 3 fetched citations; complete labels over a thin evidence base "
+            "indicate form-filling — verify the evidence layer manually"
         )
     if args.ai_engineering_foundation:
         human_labor_ceiling_hits = [
