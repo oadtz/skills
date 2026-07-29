@@ -44,10 +44,26 @@ Lane operators (pick for the brief):
 - **Organizational compression** (software scope) — run the lane in
   `ai-engineering-team.md`.
 
-Within each lane: write several short seeds as `actor | trigger/job | causal thesis | scarce asset |
-mechanism | proof/feedback loop | payer | architecture`; replace any pair sharing actor + job +
-thesis + mechanism; expand only the strongest one or two into a falsifiable thesis, wedge, value
-capture, and why-now.
+Within each lane, use the two interventions that are measured to work — and skip the ones that are
+measured not to:
+
+- **Sample ordinary people, not geniuses.** Before generating, draw 3-5 *specific ordinary people*
+  from the brief's world — "a 24-year-old admin of a 3,000-member fanbase", "the owner of a
+  40-person extrusion shop in Samut Prakan" — and generate from each. Controlled comparison finds
+  everyday-persona sampling closes the human-LLM idea-diversity gap while "act as a visionary
+  founder" personas barely move it and can degrade factual accuracy
+  (arXiv:2602.20408; Wharton GAIL, *Playing Pretend*).
+- **Differentiate explicitly, in two passes.** Write short seed *titles* first, then revise the list
+  specifically to make each maximally unlike the others, and only then expand the survivors. Chain-
+  of-thought differentiation reduces fixation; raising temperature does not (temperature 2.0 tested
+  and rejected as garbled).
+- **Do not "generate more" as the fix.** In the largest published run, 4,000 seed ideas per topic
+  yielded roughly 200 non-duplicates and the duplicate rate rose with volume (arXiv:2409.04109).
+  Breadth comes from distinct sampling anchors, not sample count.
+
+Write each seed as `actor | trigger/job | causal thesis | scarce asset | mechanism | proof/feedback
+loop | payer | architecture`; replace any pair sharing actor + job + thesis + mechanism; expand only
+the strongest one or two into a falsifiable thesis, wedge, value capture, and why-now.
 
 ## 3. Synthesize without averaging
 
@@ -71,13 +87,39 @@ separated pass after writing the candidates down, and generate the **obvious bas
 the inventor must never see it beforehand. When a third context is available, have it canonicalize
 the candidates so the orchestrator's summarization cannot leak emphasis.
 
-Compare each candidate's canonical signature against: the obvious baseline; current offerings and
-failed or adjacent prior art, searched by mechanism as well as category; the user's saved and killed
-ideas when available; the other candidates. Compare the scarce asset and proof/feedback loop, not
-only the full signature — a different actor, payer, vertical, or channel is insufficient when the
-causal thesis and core mechanism are the same. Kill or merge structural collisions; state the
-material difference for anything retained. A clean search reveals no collision; it never proves
-global novelty.
+Run **two different comparisons**. Confusing them is the single most damaging error this procedure
+can make, and it silently destroys good candidates.
+
+**A. Against the other candidates and the obvious baseline — deduplicate.** Compare canonical
+signatures: actor, trigger/job, causal thesis, scarce asset, mechanism, payer, architecture. A
+different actor, payer, vertical, or channel is insufficient when the causal thesis and core
+mechanism are the same. Merge or drop duplicates; keep one representative per venture family.
+
+**B. Against the outside world — this is NOT a kill pass.** Search current offerings, failed
+attempts, and adjacent prior art by mechanism as well as category. Then apply the correct rule:
+
+> **An existing operator is demand evidence, not a wall.** It is the cheapest proof money can buy
+> that someone pays for this outcome. An empty landscape is the *worse* signal — it usually means
+> you will pay to prove demand yourself, and for a solo founder with no audience that is the most
+> expensive thing you can buy.
+
+So do not ask "does this exist?" Ask, and answer with evidence:
+
+1. **Who does the incumbent structurally fail to serve** — which segment, at which price tier, in
+   which language, geography, channel, or moment?
+2. **Why can they not fix it** without cannibalising their own revenue, breaking their channel,
+   taking on liability, or contradicting their cost floor? Name the mechanism. "They are slow" is
+   not an answer.
+3. **Can we take those customers**, and on which single dimension are we 10× better?
+4. **What did the failures actually die of?** A dead company usually proves a *business shape* was
+   wrong (burn rate, CAC, licensing), not that the demand was absent. Say which.
+
+Kill a candidate here only when the answer to (1) or (3) is genuinely nothing — not merely because a
+name came back in a search. Also kill it when the incumbent is free (see the substitute test in
+`substitutes-and-incumbents.md`) and the added value cannot clear that price.
+
+A clean search reveals no collision; it never proves global novelty — and it never proves an
+opportunity either.
 
 ## 5. Translate to a solo-founder entry
 

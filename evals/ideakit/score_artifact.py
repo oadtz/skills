@@ -202,6 +202,47 @@ def main() -> int:
             "portfolio has fewer than 3 fetched citations; complete labels over a thin evidence base "
             "indicate form-filling — verify the evidence layer manually"
         )
+    if args.mode == "generate":
+        # Gate zero: what does the target do today, and at what price? The competitor that kills a
+        # solo venture is usually free and informal, and leaves no trace in search results.
+        if not re.search(
+            r"substitute|do(?:es)? today|already (?:do|does|solve|handle|cover)|free (?:alternative|version|substitute|option)"
+            r"|status quo|informal|ทดแทน|ทำเองอยู่แล้ว",
+            text,
+            re.IGNORECASE,
+        ):
+            warnings.append(
+                "no substitute test found: the artifact never states what the target does today or at "
+                "what price, so free, informal, family, volunteer, or state-provided competitors are unexamined"
+            )
+        # Prior art must be reasoned about, not merely detected. A run that kills candidates because a
+        # competitor exists, without naming who that competitor fails, is applying the wrong rule.
+        mentions_prior_art = re.search(
+            r"prior art|incumbent|existing (?:player|operator|offering|solution)|competitor|already (?:exists|operating)",
+            text, re.IGNORECASE,
+        )
+        reasons_about_it = re.search(
+            r"fails? to serve|does not serve|cannot (?:serve|follow|fix|match)|structurally (?:cannot|can't)"
+            r"|underserved|cannibalis|cannibaliz|10x|10×|why (?:they|it) can(?:not|'t)",
+            text, re.IGNORECASE,
+        )
+        if mentions_prior_art and not reasons_about_it:
+            warnings.append(
+                "prior art is named but not reasoned about: state which segment the incumbent structurally "
+                "fails and why it cannot fix that, rather than treating existence as a kill signal"
+            )
+        # Template theater: many labeled lines over few fetched sources is the highest-fidelity slop
+        # this family produces, because it satisfies every structural marker check above.
+        label_lines = len(re.findall(
+            r"(?mi)^\s*\|?\s*(?:[-*]\s*)?(?:\*\*|`)?"
+            r"(?:revelation|why others miss it|solo entry|value capture|paid commitment|delivered value"
+            r"|killer risk|source consequence|causal ring|time horizon)"
+            r"(?:\*\*|`)?\s*[:|]", text))
+        if label_lines >= 6 and cited_links < label_lines / 3:
+            warnings.append(
+                f"template theater risk: {label_lines} labeled lines against {cited_links} distinct fetched "
+                "sources — labels are a floor for information, not a substitute for evidence or legibility"
+            )
     if args.ai_engineering_foundation:
         human_labor_ceiling_hits = [
             match.group(0)

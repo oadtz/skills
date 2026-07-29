@@ -60,6 +60,13 @@ interchangeable across finalists, return to invention rather than polishing.
   equivalents such as “ปลดล็อกศักยภาพ”, “ยกระดับอย่างไร้รอยต่อ”, or “ครบ จบ ในที่เดียว”.
 - Vary the shape of the deliverable when the thinking calls for it. Templates define required
   information, not mandatory prose order.
+- **Lead every concept with a plain-language scene**: a specific person, in a specific situation,
+  what happens, who pays what. If a reader outside the session cannot picture it, no amount of
+  labeled lines, citations, or appendix tables will rescue it — density reads as evasion.
+- **Emitting a label is not doing the work.** A complete set of labeled lines over a thin evidence
+  base is the highest-fidelity slop this family produces, because it passes every structural check.
+  When prose already carries the information, prefer the prose and drop the label.
+- Cut length that exists to demonstrate effort. Four finalists explained well beat five with tables.
 
 ## Stage-specific finish lines
 

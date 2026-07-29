@@ -81,6 +81,22 @@
     {
       "name": "verification_and_operational_control",
       "question": "Are tests, evals, integration gates, observability, permissions, rollback, failure containment, maintenance, and the recurring human-attention budget credible for the proposed product breadth?"
+    },
+    {
+      "name": "substitute_realism",
+      "question": "Does each finalist name what the target actually does today and at what price — including the free, informal, family, volunteer, state-provided, or spreadsheet substitute — and show what the venture adds beyond that gap? An unnamed substitute means the concept was described, not judged."
+    },
+    {
+      "name": "incumbent_reasoning",
+      "question": "Where an operator already exists, is it treated as demand evidence rather than disqualification — with a named failed segment, a structural reason the incumbent cannot fix it, and one dimension of 10x advantage? Conversely, is an empty landscape treated with suspicion rather than as an opportunity?"
+    },
+    {
+      "name": "post_execution_survival",
+      "question": "Would this concept still look good after 100 hours of execution, not just on the page? Prefer feasibility and a real payer over novelty when they conflict."
+    },
+    {
+      "name": "plain_language_legibility",
+      "question": "Can a reader outside the session picture the concept as a scene — specific person, specific situation, who pays what — before any mechanism vocabulary, labels, or metrics appear?"
     }
   ],
   "mode_dimensions": {
@@ -100,7 +116,10 @@
       "payer, capacity economics, and value capture as a non-compensating gate",
       "canonical-core collision resistance against duplicate and cliché ideas",
       "engineering cost-curve reconstruction and organizational compression under the default AI engineering foundation",
-      "founder directability, verification, operational control, and bounded human attention without a human-labor ceiling"
+      "founder directability, verification, operational control, and bounded human attention without a human-labor ceiling",
+      "named free or informal substitute for every finalist, with the price it already clears at",
+      "prior art used as demand evidence and incumbent-failure analysis, never as an automatic kill",
+      "plain-language scene before mechanism vocabulary"
     ],
     "explore": [
       "Known/Inferred/Imagined separation",
@@ -152,6 +171,11 @@
     "learning test lacks either a paid commitment before work or an observable delivered-value decision or outcome after delivery",
     "AI engineering team concept is rejected or reduced solely because one human could not code it after work or because a conventional company would need many engineers",
     "AI engineering team is treated as unlimited autonomous labor without explicit decomposition, verification, integration, permissions, rollback, failure containment, and escalation",
-    "AI engineering process is incorrectly used to require an AI-native product, customer-facing AI feature, or runtime model when conventional software better serves the job"
+    "AI engineering process is incorrectly used to require an AI-native product, customer-facing AI feature, or runtime model when conventional software better serves the job",
+    "finalist does not state what the target does today or at what price, so the free or informal substitute is unexamined",
+    "candidate killed solely because a competitor exists, without naming who that competitor fails to serve",
+    "empty competitive landscape presented as opportunity rather than as a retrieval artifact or a demand-proof problem",
+    "market size, competitor count, or regulatory status stated for a niche market without a fetched source, or a proposed rule described as being in force",
+    "complete labeled lines or appendix tables over a thin evidence base, used in place of a legible plain-language concept"
   ]
 }

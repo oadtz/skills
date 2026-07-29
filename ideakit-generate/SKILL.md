@@ -82,6 +82,12 @@ When budget forces a trade, cut procedure, not evidence.
 3. **Inline coverage check.** Before synthesis, ask: are these signals narrow in language, geography,
    class, or channel? Name the blind spot in the artifact. Read `references/coverage-audit.md` when
    the narrowness looks load-bearing.
+4. **Distrust yourself most in the niche.** Fabrication and citation error scale with how obscure the
+   topic is — the same failure mode that makes an underserved market attractive makes model output
+   about it least reliable. Never state a market size, competitor count, regulation, or price for a
+   niche market from priors. Fetch it or mark it `[needs current evidence]`. A regulation is the
+   highest-risk claim of all: check whether a rule is *in force* or merely *proposed* against a
+   primary or legal source, never a blog.
 
 ## Workflow
 
@@ -91,7 +97,15 @@ and final quality.
 
 ### 1. Define the playing field
 
-Ask only for missing information, one concise question at a time: founder means (skills, access,
+**Before generating anything, ask the founder for their own list.** One question: what problems have
+they personally hit, worked around, or watched someone pay to escape — from their own logs, inbox,
+past jobs, or the last month of their life? Three to five, unfiltered, in their words. Going to
+generation first measurably reduces a person's own original output, ownership, and creative
+self-efficacy (Lee et al., CHI 2025), and their raw list is first-party evidence no scan can
+produce. If they decline or the session is unattended, proceed and record that this input is
+missing — it is the most common reason a portfolio reads as generic.
+
+Then ask only for missing information, one concise question at a time: founder means (skills, access,
 credibility, audience, lived experience); obsessions, taste, irritations, contrarian beliefs; desired
 game (fast cash, calm solo, category-scale, cultural, public impact); resource envelope and
 affordable loss; no-gos. For software scope, also: agent/tool access, delegation experience, and
@@ -171,10 +185,22 @@ not feature variants. `references/venture-invention.md` has the invention moves;
 
 ### 5. Judge with entrepreneurial judgment
 
-For each survivor of the collision pass, attack it: ordinary category with AI pasted on? feature,
-not a venture? what behavior change does adoption require? why has nobody done it — or why did prior
-attempts fail? how would an incumbent respond? strongest evidence against? does the founder have a
-credible right to start? Kill, merge, or reframe weak concepts. Preserve a bold concept whose
+Read `references/substitutes-and-incumbents.md` and apply **both** of its tests to every survivor.
+They are the two failure modes this skill has actually shipped:
+
+- **Substitute test (mandatory, stated in the artifact).** What do these people do today, and at what
+  price? Name the free, informal, manual, family, community, volunteer, state-provided, or
+  spreadsheet version — the competitor desk research cannot see. What does this venture add that is
+  worth more than the gap between the two prices? A finalist with no named substitute has not been
+  judged; a finalist whose substitute is free and tolerable is usually dead.
+- **Incumbent test.** An existing operator is demand evidence, not disqualification. Name the segment
+  the incumbent structurally fails, the mechanism that stops them fixing it, and the one dimension on
+  which this venture is 10× better.
+
+Then attack it: ordinary category with AI pasted on? feature, not a venture? what behavior change
+does adoption require? why did prior attempts fail — which part of the business broke? how would an
+incumbent respond? strongest evidence against? does the founder have a credible right to start?
+Kill, merge, or reframe weak concepts. Preserve a bold concept whose
 reasoning is strong but evidence early — label it a bet rather than scoring it into oblivion.
 
 Then translate survivors through the founder's real operating envelope: smallest paid proof,
@@ -183,6 +209,13 @@ liability load, external dependencies. Require a **Paid commitment** before work
 observable **Delivered value** after delivery. For software, apply the default AI engineering model:
 the envelope is an attention and control budget, not implementation hours
 (`references/ai-engineering-team.md`, gates section).
+
+**Weight feasibility harder than surprise.** In the only study that followed ideas through to
+execution, AI-generated ideas were rated *more* novel and exciting than human ones at the proposal
+stage and significantly *worse* on every dimension after 100 hours of execution each — a 1.98-point
+overall drop versus 0.63 for human ideas (arXiv:2506.20803). The metric that reads best on the page
+is the one that inverts on contact with reality. When Surprise and Enterable conflict, Enterable
+wins; a portfolio that is merely surprising is the documented failure shape.
 
 Select finalists with separate judgments — **do not sort by one total score**: Surprise, Inevitable
 in hindsight, Enterable, Value capture (plus, for software, the eight feasibility gates in
@@ -203,8 +236,18 @@ finalist is prose that carries the thinking**; the compliance detail lives in a 
 
 Per finalist, the body must contain: the one-sentence concept (actor, trigger, mechanism); the
 Observed → Inferred → Bet chain with citations beside observations; why now and founder fit; wedge,
-first buyer, and first-10 distribution; expansion and what compounds; the strongest counter-case;
-and the affordable-loss learning test. Plus these labeled lines (kept in English as terms of art):
+first buyer, and first-10 distribution; what people do today and at what price; expansion and what
+compounds; the strongest counter-case; and the affordable-loss learning test.
+
+**Write the concept in plain language before anything else.** One short paragraph a reader outside
+the session can picture: a specific person, in a specific situation, what happens, who pays what.
+No jargon, no mechanism vocabulary, no metrics. If it cannot be told as a scene, it is not
+understood yet — and a reader who cannot picture it will not be persuaded by the labels below.
+
+The following are **required information, not a required layout**. Carry them as labeled lines when
+the portfolio is a handoff to another skill; fold them into prose when the prose says the same thing
+better. Never emit a label with nothing behind it — marker-complete prose over a thin evidence base
+is the exact shape of the slop this file exists to prevent.
 
 - `Revelation:` — the surprising claim and mechanism in one sentence, with the shortest causal chain
   that makes it feel inevitable in hindsight;
@@ -244,6 +287,8 @@ perform external, identity-bearing, paid, or irreversible actions without explic
 - `references/venture-invention.md` — opportunity recognition, invention moves, Effectuation, Seven
   Powers, portfolio roles. Consult in Step 4.
 - `references/trend-sources.md` — source and query ideas; choose what fits.
+- `references/substitutes-and-incumbents.md` — the free-substitute test and the correct use of prior
+  art. Read in Step 5 for every finalist.
 - `references/coverage-audit.md` — deeper checks when the signal set looks narrow (Step 2 inline
   check names the trigger).
 - `references/frameworks.md` — deeper mechanics for JTBD, inversion, ERRC, force ripples.

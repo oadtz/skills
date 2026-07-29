@@ -4,7 +4,27 @@ Use these as prompts for judgment at Step 5. Judge each gate separately; never s
 total or let apparent precision replace editorial judgment. Strength on one gate cannot compensate
 for failure on another.
 
+## Gate zero — the substitute test
+
+Before the four gates, answer in the artifact: **what do these people do today, and at what price?**
+Name the free, informal, manual, family, community, volunteer, state-provided, or spreadsheet
+version, and say what this venture adds that is worth more than the gap between the two prices.
+
+A finalist with no named substitute has not been judged — it has only been described. This is the
+most common way a concept that passes every other gate dies in the first month, because the
+competitor is a cousin with a pickup truck, a village health volunteer, a free government map, or a
+consultancy's lead-magnet PDF, and none of those appear in search results.
+
+Note the asymmetry: an existing *company* is demand evidence and often good news. An existing *free*
+substitute is usually fatal unless the venture delivers something the free version structurally
+cannot — availability at the moment of need, a record, a guarantee, a signature, or reach the payer
+does not have. See `substitutes-and-incumbents.md`.
+
 ## The four core gates
+
+Weighting note: when Surprise and Enterable conflict, Enterable wins. Ideas rated most novel and
+exciting before execution scored significantly *worst* after it in the only study that measured both
+(arXiv:2506.20803). Surprise is the metric most likely to be flattering you.
 
 **Surprise** — does the causal thesis or value mechanism escape the obvious category? Could the
 nouns be swapped into an unrelated brief? Would a competent generic generator produce this from the
