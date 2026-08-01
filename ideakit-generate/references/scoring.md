@@ -47,6 +47,21 @@ separate observable outcome.
 For software finalists, add the feasibility gates in `ai-engineering-team.md` (Directable through
 Externally enterable) — judged the same way: independently, non-compensating.
 
+## Who judges which gate
+
+The gates are not equally safe to self-assess. Split them:
+
+- **Checkable now — you run these.** Gate zero, incumbent reasoning, prior-art collision, evidence
+  labels, coverage. Each resolves against fetched material, so a wrong call is visible and fixable.
+- **A forecast — the user ranks these.** Surprise, Inevitable in hindsight, Enterable, Value capture.
+  They are predictions about what will matter and what this person can carry, which is exactly where
+  model judgment separates from expert judgment, and they are being made by the same model that wrote
+  the candidates. Present them as comparisons between survivors, not as scores you announce.
+
+Give the user the comparison and your recommendation with reasons. Take the ranking from them. When
+no one is there to rank, say the ordering is model-made and unconfirmed rather than presenting it as
+a finding.
+
 ## Supporting lenses (use when they sharpen a close call)
 
 **Founder leverage** — which means, access, credibility, taste, obsession, or lived experience make

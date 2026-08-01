@@ -4,3 +4,4 @@
 .agents/
 .ideakit-eval-runs/
 outputs/
+__pycache__/

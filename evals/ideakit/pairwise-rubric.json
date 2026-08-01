@@ -1,6 +1,13 @@
 {
   "purpose": "Blindly compare two temporary Ideakit artifacts without treating either as factual truth.",
   "scoring": "Score each dimension 1-5, cite artifact passages, then choose A, B, or tie. Verify cited claims separately. For breakthrough work, compare canonical idea cores before surface wording and judge surprise, inevitability in hindsight, solo enterability, and value capture independently; do not collapse them into one total. For every software or digital product brief, apply the default AI engineering foundation: judge changed engineering economics, founder directability, verification, and operational control without using human coding hours or conventional headcount as the scope ceiling.",
+  "protocol": {
+    "both_orderings": "Judge every pair twice, A/B then B/A, and keep the verdict only if it survives the swap. A verdict that flips with position is a tie, not a result.",
+    "judge_independence": "The judging model must not be from the same family as the model that produced either artifact. When no independent judge is available, run it anyway and record the verdict as provisional and self-preferring.",
+    "length_normalization": "Automated judges systematically reward longer answers. Before scoring, note each artifact's word count and distinct fetched sources, and compare evidence per claim rather than volume. A longer artifact with the same evidence base is the weaker one.",
+    "who_decides": "Dimensions that check what is already true (substitute_realism, incumbent_reasoning, reasoning_provenance, collision_resistance, plain_language_legibility, editorial_quality) can be settled by the judge against the artifacts. Dimensions that forecast (revelation_surprise, inevitable_in_hindsight, solo_enterability, value_capture, post_execution_survival) are advisory only; a human ranking overrides them and should be sought whenever the comparison decides what gets built.",
+    "calibration": "Whenever human rankings exist for a pair, keep them beside the judge's verdict. Disagreements are the calibration set; an uncalibrated judge is a screen, not a measurement."
+  },
   "dimensions": [
     {
       "name": "venture_originality",
@@ -95,6 +102,26 @@
       "question": "Would this concept still look good after 100 hours of execution, not just on the page? Prefer feasibility and a real payer over novelty when they conflict."
     },
     {
+      "name": "retrieval_divergence",
+      "question": "Do the finalists rest on materially different evidence, or does the whole portfolio trace back to one shared scan? Distinct theses drawn from an identical source set are correlated by construction, however separate the reasoning appeared."
+    },
+    {
+      "name": "verbatim_customer_language",
+      "question": "Where the brief has an identifiable group of people, does the work carry their own words from somewhere they speak unprompted — a quote, a workaround, a price mentioned in passing — or has everything been paraphrased into category vocabulary? Paraphrase is where a specific business becomes a generic one."
+    },
+    {
+      "name": "evolution_evidence",
+      "question": "Is there evidence that candidates were compared and improved against a specific exposed weakness, rather than generated once and selected? A portfolio that never changed after its first draft has taken the best concept available, not the best reachable."
+    },
+    {
+      "name": "evidence_scaling",
+      "question": "Does the evidence base grow with the artifact's length and claim count, or does a longer artifact rest on the same few sources as a shorter one?"
+    },
+    {
+      "name": "user_signal_and_ownership",
+      "question": "Did the user's own problems, corrections, and reactions to the openings enter the work as first-party signal, and is the ordering the user's rather than announced by the model? A portfolio the founder had no hand in shaping is one they are less likely to build."
+    },
+    {
       "name": "plain_language_legibility",
       "question": "Can a reader outside the session picture the concept as a scene — specific person, specific situation, who pays what — before any mechanism vocabulary, labels, or metrics appear?"
     }
@@ -119,7 +146,12 @@
       "founder directability, verification, operational control, and bounded human attention without a human-labor ceiling",
       "named free or informal substitute for every finalist, with the price it already clears at",
       "prior art used as demand evidence and incumbent-failure analysis, never as an automatic kill",
-      "plain-language scene before mechanism vocabulary"
+      "plain-language scene before mechanism vocabulary",
+      "invention lanes diverged in evidence retrieved, not only in prompt operator",
+      "the actor's own unprompted words carried through instead of paraphrased into category language",
+      "candidates compared in pairs and improved against a named weakness, not generated once and selected",
+      "evidence base scales with artifact length and claim count",
+      "user's own problems, corrections, and ranking visibly shaped the portfolio"
     ],
     "explore": [
       "Known/Inferred/Imagined separation",
@@ -176,6 +208,12 @@
     "candidate killed solely because a competitor exists, without naming who that competitor fails to serve",
     "empty competitive landscape presented as opportunity rather than as a retrieval artifact or a demand-proof problem",
     "market size, competitor count, or regulatory status stated for a niche market without a fetched source, or a proposed rule described as being in force",
-    "complete labeled lines or appendix tables over a thin evidence base, used in place of a legible plain-language concept"
+    "complete labeled lines or appendix tables over a thin evidence base, used in place of a legible plain-language concept",
+    "every invention lane reasoned over one identical evidence set and the resulting convergence is reported as signal gravity",
+    "portfolio ordering presented as a finding when no human ranked it, or a model verdict on a forecasting gate reported as settled",
+    "a longer artifact resting on the same evidence base as a shorter one, with the extra length carrying no additional sourced claim",
+    "a venture family already proposed to this user in an earlier run returned as a new finding under different wording",
+    "an evolved candidate kept although it never beat the version it came from, or the improvement loop pointed at appeal rather than checkable ground",
+    "a quote attributed to a customer, forum, or community that was composed rather than found, or a count of complaints asserted without the instances behind it"
   ]
 }

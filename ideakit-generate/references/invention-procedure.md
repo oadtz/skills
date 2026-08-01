@@ -16,6 +16,16 @@ lane returning the same seed. Include source URLs with the signals so lanes inhe
 not just claims. Record founder time, cash, and support capacity separately for the later solo
 translation; do not let feasibility filters collapse divergent search before a mechanism exists.
 
+The packet is a **shared floor, not the whole evidence base** — see the retrieval mandate in step 2.
+Isolating contexts while feeding them one identical evidence set produces correlated output no matter
+how well the contexts are separated, because the lanes are reasoning over the same facts.
+
+**Carry forward what this user has already been shown.** If idea memory or a prior portfolio exists
+for this person, list the venture families already proposed to them as an **exclusion set** in the
+packet — named as neighborhoods to avoid, never as examples to riff on. Individually sound runs
+converge across sessions when nothing remembers the last one; the exclusion set is what stops the
+same user receiving the same neighborhood under new wording.
+
 ## 2. Run independent invention lanes
 
 **With subagents / fresh contexts:** run 3–5 lanes in parallel. A lane sees only the neutral packet
@@ -27,6 +37,20 @@ strictly separated scratch passes. Before each lane, restate only the neutral pa
 operator; do not look back at, revise, or reuse the previous lane's seeds until synthesis. Write each
 lane's seeds immediately and move on. Fewer, honestly isolated lanes beat five contaminated ones —
 never skip isolation and brainstorm once in an open context.
+
+**Give each lane its own retrieval mandate.** Before it invents, a lane spends a small, bounded
+search budget on questions its *operator* asks — under the same evidence discipline as the main scan,
+and reported with the seeds so the evidence is auditable. A deletion lane asks what an input costs
+today and who supplies it; an expired-premise lane asks what incumbents publicly still assume; an
+analogy lane searches the remote domain it is transferring from, not the brief's domain at all. What
+each lane brings back stays inside that lane until synthesis.
+
+This is the intervention that separates lanes in *knowledge* rather than only in prompt. Planned,
+iterative retrieval interleaved with generation produced several times more distinct usable ideas
+than single-shot generation over a fixed corpus in the published comparison (arXiv:2410.14255;
+measured on research ideation, so treat the size of the effect as indicative, not transferred). When
+no live research is available, say so and expect narrower divergence — do not pretend a shared frozen
+pack delivers the same spread.
 
 Lane operators (pick for the brief):
 
@@ -71,8 +95,11 @@ Collect lane outputs only after divergence ends. Canonicalize, cluster duplicate
 representative; recombine two candidates only when their mechanisms reinforce each other — never a
 feature bundle or compromise concept.
 
-If lanes converged on the same seeds, suspect packet-steering before celebrating signal gravity:
-re-read the packet for interpretive framing and rerun one lane with it removed.
+If lanes converged on the same seeds, suspect the inputs before celebrating signal gravity, in this
+order: (1) did the lanes actually retrieve different material, or did they all reason over the frozen
+pack alone? (2) is there packet-steering — interpretive framing in the packet pushing them to one
+seed? Fix whichever holds and rerun one lane. Convergence between lanes that read the same facts is
+arithmetic, not evidence.
 
 Assign a **venture-family ID** before selection: if one company would serve the candidates as modules
 using the same buyer relationship, input corpus, operating workflow, and compounding asset, they are
@@ -121,7 +148,60 @@ name came back in a search. Also kill it when the incumbent is free (see the sub
 A clean search reveals no collision; it never proves global novelty — and it never proves an
 opportunity either.
 
-## 5. Translate to a solo-founder entry
+## 5. Compare in pairs, then evolve the survivors
+
+Everything before this point generates once and then selects. That is the largest structural gap a
+one-shot procedure has: the best candidate available is rarely the best candidate reachable. This
+step is a short improvement loop, taken from the multi-agent discovery system whose generate–debate–
+evolve architecture was validated in peer review, where ranking quality rose as more compute went
+into the loop rather than into the first generation
+([Co-Scientist, Nature 2026](https://www.nature.com/articles/s41586-026-10644-y)).
+
+**Compare in pairs, never score candidates alone.** Put two survivors side by side and ask one named
+question at a time, then record which won and *why in one line*. Pairwise comparison is more stable
+than assigning each candidate a score, for the same reason it is the standard in judge evaluation:
+an isolated score drifts, a direct comparison has to name a reason.
+
+Ask the comparison on **checkable ground only** — whose substitute is harder to beat, whose incumbent
+argument is better evidenced, whose wedge needs fewer independent parties to say yes, whose causal
+chain has fewer unsupported links. Never run the loop on "which is more exciting": that is the metric
+that inverted after execution in the one study that measured both, and an optimization loop pointed
+at it will reliably produce a more exciting and less real portfolio. The forecasting judgment stays
+with the user (`scoring.md`); this loop only sharpens what is already checkable.
+
+Keep it bounded. Compare each survivor against two or three others, not a full round robin — the aim
+is to expose each candidate's specific weakness, not to produce a precise ranking. A ranking produced
+here is the model's, and it is an input to the user's decision, never a substitute for it.
+
+**Then evolve.** For each candidate that lost on a specific point, produce one improved version using
+a named move, and say which move was used:
+
+- **repair** — fix the exact weakness the comparison exposed, changing nothing else;
+- **graft** — take the specific mechanism that beat it and rebuild around that, keeping the thesis;
+- **shrink** — cut to the smallest version that still carries the causal thesis intact;
+- **raise** — push to the version that would matter if the bet is right, to see what the cautious
+  version was giving away.
+
+Re-enter each evolved version against the version it came from. **An evolved candidate that does not
+beat its parent is discarded and the parent is carried forward** — otherwise the loop drifts toward
+whatever is easiest to argue for. Do not evolve a candidate that failed the substitute test; a free
+and tolerable substitute is not a weakness that revision fixes.
+
+**Meta-review before the next round.** Write down the *recurring* critique patterns — not the
+individual verdicts — and carry them into the next round as things to avoid. This is the only point
+in the procedure where a criticism improves later output instead of merely killing one candidate. If
+the same critique appears against most candidates, it is usually a fault in the packet or the
+openings, not in the candidates; go back rather than evolving around it.
+
+**Stop after one or two rounds**, or earlier when no evolved version beats its parent. More rounds
+raise quality against the comparison question, which is exactly why they also raise the risk of
+optimizing for what the judge likes. Record how many rounds ran, so a portfolio produced in one pass
+is not mistaken for one that survived several.
+
+In the no-subagent fallback, run the comparisons as their own separated pass with only the two
+candidates and the question in view, and write the verdict down before looking at the next pair.
+
+## 6. Translate to a solo-founder entry
 
 Reintroduce the operating envelope only now. For each survivor: smallest paid proof and exact first
 buying occasion; how the founder reaches the first 10 without a hypothetical audience; cash, hours,
@@ -136,23 +216,29 @@ founder-scale entry; park a concept with no credible translation. For software s
 a founder attention and control budget per `ai-engineering-team.md`; do not force a manual service
 when the larger system is directable, verifiable, operable, and containable.
 
-## 6. Finish line — pursuable wow
+## 7. Finish line — pursuable wow
 
 Judge separately, never totaled: **Surprise** (escapes the obvious category through thesis or
 mechanism), **Inevitable in hindsight** (the causal chain makes the reveal click), **Enterable**
 (a bounded first move earns the right to learn), **Value capture** (named payer, buying occasion,
 viable capacity economics or leverage path). A finalist cannot compensate for failing one with
-strength on another. Express its core through the labeled lines in the SKILL's Step 6. Return fewer
-finalists rather than admitting a near-duplicate or broken solo economics.
+strength on another. All four are forecasts, so they are the user's to rank — see the split in
+`scoring.md`. Express each finalist's core through the labeled lines in the SKILL's Step 6. Return
+fewer finalists rather than admitting a near-duplicate or broken solo economics.
 
 ## Anti-patterns
 
 - impersonating a famous founder, or treating biography as a method;
 - exposing the obvious baseline before invention, or letting lanes see each other;
+- running every lane over one identical evidence set and reading the convergence as signal gravity;
 - interpretive framing inside the "neutral" packet steering every lane to one seed;
 - pruning divergence with founder time/budget instead of translating the survivor;
 - unverified global novelty claims (“first”, “only”, “nobody”) to manufacture surprise;
 - presenting “Why others miss it” as observed universal behavior rather than labeled inference;
+- running the improvement loop on appeal ("which is more exciting") instead of checkable ground;
+- keeping an evolved version that never beat the version it came from;
+- evolving around a free and tolerable substitute instead of accepting that it kills the concept;
+- reporting a model-produced ranking from the comparison round as the portfolio's verdict;
 - one venture family kept as several finalists because it has several buying occasions;
 - a low pilot price treated as enterability when sustainable capacity economics do not work;
 - a familiar category called novel because its feature list or vertical changed.

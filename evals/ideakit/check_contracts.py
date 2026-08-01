@@ -99,6 +99,58 @@ def main() -> int:
         failures,
     )
 
+    # Lanes must diverge in evidence, not only in prompt: a shared frozen pack produces correlated
+    # output however well the contexts are isolated.
+    require(
+        texts.get("generate", "") + "\n" + procedure,
+        ["retrieval mandate", "per-lane", "shared floor", "exclusion set"],
+        "generate lane retrieval contract",
+        failures,
+    )
+    # The user reacts to openings before invention, and owns the ordering of forecasting gates.
+    require(
+        texts.get("generate", ""),
+        ["put the openings in front of the user", "the ordering is theirs", "model-made and unconfirmed"],
+        "generate human-in-the-loop contract",
+        failures,
+    )
+    # Generate-once-then-select leaves the best reachable concept unbuilt; the loop only sharpens
+    # checkable ground, never appeal.
+    require(
+        texts.get("generate", "") + "\n" + procedure,
+        ["compare-and-evolve", "beat its parent", "meta-review", "checkable ground"],
+        "generate evolution contract",
+        failures,
+    )
+    watering_path = ROOT / "ideakit-generate/references/watering-holes.md"
+    watering = watering_path.read_text(encoding="utf-8") if watering_path.exists() else ""
+    if not watering:
+        failures.append("generate watering-hole research: missing references/watering-holes.md")
+    require(
+        watering,
+        ["verbatim", "unprompted", "i ended up just", "no watering hole is itself a finding", "blind spot"],
+        "generate watering-hole research",
+        failures,
+    )
+    require(texts.get("generate", ""), ["references/watering-holes.md"], "generate watering-hole routing", failures)
+
+    scoring_path = ROOT / "ideakit-generate/references/scoring.md"
+    scoring = scoring_path.read_text(encoding="utf-8") if scoring_path.exists() else ""
+    if not scoring:
+        failures.append("generate judgment split: missing references/scoring.md")
+    require(scoring, ["who judges which gate", "the user ranks these"], "generate judgment split", failures)
+
+    memory_path = ROOT / "ideakit-memory.md"
+    memory = memory_path.read_text(encoding="utf-8") if memory_path.exists() else ""
+    if not memory:
+        failures.append("idea memory: missing ideakit-memory.md")
+    require(
+        memory,
+        ["already-proposed families", "record what actually happened", "outcome yyyy-mm-dd", "never infer an outcome"],
+        "idea memory outcome contract",
+        failures,
+    )
+
     ai_engineering_path = ROOT / "ideakit-generate/references/ai-engineering-team.md"
     ai_engineering = ""
     if not ai_engineering_path.exists():
@@ -193,6 +245,24 @@ def main() -> int:
         failures.append(
             "pairwise rubric: missing AI engineering team dimensions "
             f"{sorted(required_ai_engineering_dimensions - rubric_dimensions)}"
+        )
+    required_judging_dimensions = {
+        "retrieval_divergence",
+        "evidence_scaling",
+        "user_signal_and_ownership",
+        "verbatim_customer_language",
+        "evolution_evidence",
+    }
+    if not required_judging_dimensions.issubset(rubric_dimensions):
+        failures.append(
+            "pairwise rubric: missing judging-integrity dimensions "
+            f"{sorted(required_judging_dimensions - rubric_dimensions)}"
+        )
+    required_protocol = {"both_orderings", "judge_independence", "length_normalization", "who_decides"}
+    if not required_protocol.issubset(set(rubric.get("protocol", {}))):
+        failures.append(
+            "pairwise rubric: missing judging protocol keys "
+            f"{sorted(required_protocol - set(rubric.get('protocol', {})))}"
         )
     if set(rubric.get("mode_dimensions", {})) != set(SKILLS):
         failures.append("pairwise rubric: expected mode-specific dimensions for every skill")

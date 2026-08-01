@@ -50,9 +50,34 @@ ideakit-discover  →  ideakit-generate  →  ideakit-explore  →  ideakit-vali
 - **Runtime-agnostic.** Skills name capabilities by intent — research, user input, file/artifact
   output, deck/document creation — instead of hard-coding a single agent's tool names. Host-specific
   tools are adapters, not the core workflow.
-- **Idea memory is shared, not copied.** Once `ideakit-generate` stores an idea set, later skills use
-  `ideakit-memory.md` to update the same idea location with exploration notes, validation outcomes,
-  naming decisions, pitch artifacts, and next actions.
+- **Idea memory is shared, not copied — and it reads back.** Once `ideakit-generate` stores an idea
+  set, later skills use `ideakit-memory.md` to update the same idea location with exploration notes,
+  validation outcomes, naming decisions, pitch artifacts, and next actions. Memory is also an *input*:
+  a new run reads it for the venture families this person has already been shown (which become
+  exclusions, so successive runs explore different ground) and for recorded real-world outcomes, which
+  are the only feedback the family gets from reality and outrank any desk signal.
+- **Generate, compare, evolve — not generate once and select.** After the collision pass, survivors
+  are compared in pairs on checkable ground, each loser is rewritten once by a named move (repair,
+  graft, shrink, raise), and an evolved version is kept only when it beats the version it came from.
+  The architecture is borrowed from the peer-reviewed generate–debate–evolve discovery loop, where
+  quality rose with compute spent on the loop rather than on the first generation. The loop is never
+  pointed at appeal: optimizing for "more exciting" reliably produces the failure shape.
+- **Research where the actor talks, not where the market is written about.** `ideakit-generate`
+  excavates forums, groups, reviews, and support threads where the target speaks unprompted, and
+  records what they say verbatim rather than paraphrased into category language. This is the only
+  research that reliably surfaces the free substitute, the workaround, the abandoned prior attempt,
+  and the buyer's own vocabulary — the evidence that decides whether a concept is real.
+- **Lanes diverge in evidence, not just in prompt.** Invention lanes each carry their own retrieval
+  mandate driven by their operator, on top of the shared signal pack. Isolating contexts that all
+  reason over one identical evidence set yields correlated output no matter how clean the isolation —
+  convergence between lanes reading the same facts is arithmetic, not signal.
+- **The human holds the forecasting seat.** Backward-looking checks (what the substitute costs, who
+  the incumbent fails, what prior attempts died of) are settled against fetched evidence by the skill.
+  Forward-looking picks — which bet is worth taking, which venture to carry — are put to the user as
+  comparisons, because that is where model judgment diverges most from expert judgment and where a
+  model scoring its own output is least trustworthy. `ideakit-generate` also stops after forming
+  openings and asks the user to react to them before inventing: the mode where the model hands back a
+  finished rewrite raises rated quality while reducing idea diversity and the user's ownership of it.
 - **Invention freedom, evidence discipline.** Research claims are strict (Observed / Inferred / Bet;
   never fabricate), while the invention phase uses selected lenses rather than a mandatory framework
   march. `ideakit-craft.md` rejects interchangeable concepts, unsupported novelty, quota-filling, and

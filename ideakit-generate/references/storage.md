@@ -85,6 +85,11 @@ Revelation: · Why others miss it: · Solo entry: · Paid commitment: · Deliver
 ## Cheapest next test
 [one concrete test]
 
+## Outcome log
+[empty at generation. Append a dated observable event whenever one occurs — build started or
+abandoned, first paid customer or failure to find one, launch, shutdown, pivot — with what it
+confirmed or disconfirmed. See `../../ideakit-memory.md`.]
+
 ## Notes
 [optional nuance, killed/parked reason, links to related ideas]
 ```

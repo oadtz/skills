@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import re
 from pathlib import Path
 
@@ -192,6 +193,25 @@ def main() -> int:
     if not labeled_observations and args.mode in {"generate", "validate"}:
         integrity = 0
         warnings.append("no Observed labels found")
+    # Evidence must scale with the claim surface. An artifact that grows without gaining sources is
+    # the shape LLM judges systematically over-reward (length bias), so the floor rises with length
+    # instead of being a fixed count.
+    word_count = len(text.split())
+    # A run with no research capability is a legitimate labelled mode, not a thin artifact. It is
+    # exempt only while it stays honest: every external claim marked, and no precise figures asserted.
+    declared_speculative = bool(
+        re.search(r"speculative workshop|no live research|research (?:was )?unavailable", text, re.IGNORECASE)
+        and re.search(r"needs current evidence", text, re.IGNORECASE)
+        and not unsupported_precision
+    )
+    if args.mode in {"generate", "validate"} and not declared_speculative:
+        expected_hosts = min(6, max(1, math.ceil(word_count / 450)))
+        if cited_links < expected_hosts:
+            warnings.append(
+                f"evidence does not scale with length: {word_count} words rest on {cited_links} distinct "
+                f"fetched sources (expected at least {expected_hosts}) — added length without added "
+                "evidence is the failure shape automated judges reward and reality does not"
+            )
     if generic_wrapper_hits:
         warnings.append(
             "breakthrough artifact uses an obvious generic wrapper phrase; inspect the canonical idea core "
@@ -310,6 +330,8 @@ def main() -> int:
         "slop_hits": slop_hits,
         "generic_wrapper_hits": generic_wrapper_hits,
         "cited_links": cited_links,
+        "word_count": word_count,
+        "declared_speculative": declared_speculative,
         "labeled_observations": labeled_observations,
         "warnings": warnings,
         "note": (

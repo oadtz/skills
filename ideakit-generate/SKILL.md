@@ -57,7 +57,9 @@ counter-positioning. Never impersonate a real person.
 ## Capability mapping
 
 - **Research**: use current web/search/browser, connected knowledge, local files, and user-provided
-  material. Search in parallel where supported.
+  material. Search in parallel where supported. Budget research in two parts: the shared scan in
+  Step 2, and a smaller per-lane budget in Step 4 so invention lanes diverge in evidence, not only in
+  prompt.
 - **First-party signal**: prefer real analytics, support, CRM, sales notes, communities, or user
   behavior when the user authorizes access.
 - **No live research**: continue only as a labeled speculative workshop. Mark external claims
@@ -105,6 +107,12 @@ self-efficacy (Lee et al., CHI 2025), and their raw list is first-party evidence
 produce. If they decline or the session is unattended, proceed and record that this input is
 missing — it is the most common reason a portfolio reads as generic.
 
+**Check whether this person has been here before.** If idea memory exists (`../ideakit-memory.md`),
+read it before generating: which venture families were already proposed to them, which they killed
+and why, and what actually happened to anything that advanced. Already-proposed families become the
+exclusion set in Step 4's packet; recorded outcomes are the only feedback this family gets from
+reality, and they outrank any desk signal about the same question.
+
 Then ask only for missing information, one concise question at a time: founder means (skills, access,
 credibility, audience, lived experience); obsessions, taste, irritations, contrarian beliefs; desired
 game (fast cash, calm solo, category-scale, cultural, public impact); resource envelope and
@@ -133,6 +141,13 @@ evidence discipline above. For a force brief, search consequences as independent
 deliberately run queries that do **not** contain the force word; record a short query-escape note.
 If most queries still repeat the force term, stop: the scan is anchored at the center.
 
+**When the brief has an identifiable group of people, spend part of this budget where they talk to
+each other.** Read `references/watering-holes.md` and run it: find the forums, groups, review
+sections, and support threads where that actor speaks unprompted, and record what they say verbatim
+rather than paraphrased into category language. This is the only research that reliably surfaces the
+free and informal substitute, the workaround, the failed prior attempt with its reason attached, and
+the buyer's own vocabulary — none of which leave a trace in the articles written *about* a market.
+
 Capture concise **signal cards**:
 
 ```
@@ -145,6 +160,9 @@ Then freeze the research into a **neutral signal pack**: Observed facts, causal 
 counter-signals, and founder-specific access — worded as raw material, with no product suggestions,
 no candidate ideas, and no interpretive framing that pre-picks a winner. Record the founder's time,
 budget, and support constraints separately; they apply after divergence, not before.
+
+The pack is the **shared floor of evidence, not all of it**. Each invention lane in Step 4 extends it
+with its own targeted retrieval; do not spend the whole research budget here.
 
 For software scope, also gather current evidence on what the relevant engineering work costs today
 and which parts are delegable and verifiable (see `references/ai-engineering-team.md`).
@@ -161,12 +179,26 @@ counter-signal. Build the **opportunity landscape** without requiring a visible 
 credible long-horizon openings as labeled bets. For a force brief, tag each opening with source
 consequence, causal ring, domain, and horizon.
 
+**Then stop and put the openings in front of the user — as questions, before inventing anything.**
+Ask which ones match what they have actually seen, which read as wrong, and what the scan missed.
+This is one short turn, not an interview, and their corrections enter the packet as first-party
+signal. Two things make it worth the turn: the user knows things no scan reaches, and the mode where
+the model hands back a finished rewrite raises rated quality while measurably *reducing* idea
+diversity and the user's ownership of the result, whereas the mode where it asks and the human steers
+keeps all three (arXiv:2510.23324). A portfolio the founder does not feel is theirs does not get
+built. If the session is unattended or the user declines, proceed and record in the artifact that the
+openings were never reacted to.
+
 ### 4. Invent in isolation
 
 Read `references/invention-procedure.md` and run it: independent invention lanes over the neutral
 signal pack (subagents when available; the no-subagent fallback otherwise), structural
-differentiation inside each lane, synthesis without averaging, venture-family merge, then the
-evaluator-only collision pass against the obvious baseline and prior art.
+differentiation inside each lane, synthesis without averaging, venture-family merge, the
+evaluator-only collision pass against the obvious baseline and prior art, and then the
+**compare-and-evolve round**: survivors compared in pairs on checkable ground, each loser rewritten
+once by a named move (repair, graft, shrink, raise), and an evolved version kept only when it beats
+the version it came from. Generating once and selecting leaves the best reachable concept unbuilt;
+one or two short rounds is where it appears. Never point that loop at appeal — see Step 5.
 
 If lanes converge on the same seeds, treat that as possible packet-steering, not confirmation:
 re-check the pack for interpretive framing and rerun one lane with the suspect framing removed
@@ -217,6 +249,19 @@ overall drop versus 0.63 for human ideas (arXiv:2506.20803). The metric that rea
 is the one that inverts on contact with reality. When Surprise and Enterable conflict, Enterable
 wins; a portfolio that is merely surprising is the documented failure shape.
 
+**Separate the two kinds of judgment, because only one of them is yours to make.** Backward-looking
+checks — what people do today and at what price, who the incumbent fails and why it cannot fix that,
+what prior attempts died of, whether the evidence supports the claim — are verifiable against fetched
+material, and you run them. Forward-looking picks — which bet is worth taking, which opening will
+matter next, which venture this founder should carry — are where model judgment diverges most from
+expert judgment even when it tracks it closely on recognizing what already happened
+(arXiv:2602.03849), and where a model scoring its own output has a documented self-preference bias.
+So do not announce a winner. Put the survivors in front of the user as **direct comparisons on the
+prospective gates** — this one against that one, on Enterable, on Value capture, on which bet they
+would rather be wrong about — and let their ranking be the decision. Say what you would pick and why;
+the recommendation is yours, the ordering is theirs. Unattended, rank them yourself and label the
+ordering model-made and unconfirmed.
+
 Select finalists with separate judgments — **do not sort by one total score**: Surprise, Inevitable
 in hindsight, Enterable, Value capture (plus, for software, the eight feasibility gates in
 `references/ai-engineering-team.md`, Directable through Externally enterable). Strength on one
@@ -264,10 +309,13 @@ For a force brief, add labeled lines: `Source consequence:`, `Causal ring:`, `Do
 `references/ai-engineering-team.md` (one table, eleven rows) instead of eleven more inline lines.
 
 Close with a portfolio recommendation (role or next experiment, not fake certainty), the killed
-concepts with reasons, and the coverage blind spot named in Step 2. The user chooses what advances.
+concepts with reasons, the coverage blind spot named in Step 2, and how the ordering was reached —
+user-ranked, or model-ranked and unconfirmed. The user chooses what advances.
 
 Read `references/storage.md` when the user wants durable capture; ask one concise storage question if
-no destination is known; never claim storage succeeded without writing it. Then offer: expand or
+no destination is known; never claim storage succeeded without writing it. Storage is also what makes
+the next run better: it carries the already-proposed families forward as exclusions and leaves a
+place for what actually happened to be written back. Then offer: expand or
 recombine → `ideakit-explore`; validate a mature concept → `ideakit-validate`; name after the point
 of view is stable → `ideakit-name`.
 
@@ -279,8 +327,11 @@ perform external, identity-bearing, paid, or irreversible actions without explic
 
 ## Reference files
 
-- `references/invention-procedure.md` — isolated lanes, no-subagent fallback, synthesis,
-  venture-family merge, evaluator-only collision pass, finish-line gates. Read before Step 4.
+- `references/invention-procedure.md` — isolated lanes with their own retrieval mandates, no-subagent
+  fallback, synthesis, venture-family merge, evaluator-only collision pass, the compare-and-evolve
+  round, finish-line gates. Read before Step 4.
+- `references/watering-holes.md` — how to excavate what an actor says to other actors unprompted, and
+  record it verbatim. Read in Step 2 whenever the brief has an identifiable group of people.
 - `references/ai-engineering-team.md` — the one-founder AI engineering model: cost-curve map,
   organizational-compression lane, feasibility gates, control-plane appendix table.
   Read for every software or digital product brief.
