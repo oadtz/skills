@@ -16,7 +16,8 @@ deliverable real with the appropriate tool** and hand it over, rather than offer
   the react-to-concretes research live, fetching real examples to react to).
 - **ideakit-generate** → actually **run the searches** (don't describe the scan), synthesize openings
   and opportunity theses, then produce the venture portfolio with cited observations, labeled
-  inference/bets, wedges, and learning tests—as a file, not a verbal summary—and ask where it belongs.
+  inference/bets, wedges, and learning tests—as a file, not a verbal summary. Use the requested
+  destination, an existing convention, or `outputs/` by default; do not ask where it belongs.
 - **ideakit-explore** → capture the session's output (options, assumptions, the front-runner, next
   experiments) as a real artifact, not just talk; draw the tree/diagram when it helps; update idea
   memory when a stored idea/location is in play.
@@ -38,12 +39,14 @@ deliverable real with the appropriate tool** and hand it over, rather than offer
   real evidence instead of public proxies.
 - **Share the result** — deliver the finished file; don't bury the deliverable in chat prose.
 
-## Keep the human-judgment gates
+## Keep human authority without blocking execution
 
-These skills are collaborative by design — keep the moments where the user picks the direction, chooses
-the idea, approves the sharpened framing, or confirms the snapshot. Execution means: once they've
-steered, *build the artifact fully* rather than re-summarizing it. Never decide the user's idea *for*
-them; never fabricate evidence to make a deliverable look finished.
+`ideakit-discover` is the conversational elicitation stage. Once work is routed to
+`ideakit-generate`, do not pause for clarifications, reactions, ranking, or storage choices: infer
+missing details conservatively, disclose consequential assumptions, use best available judgment, and
+deliver the complete artifact plus an advisory recommendation. The user retains authority by
+accepting, rejecting, or redirecting the completed work afterward. Never fabricate evidence to make
+a deliverable look finished.
 
 ## The hard boundary (never cross without explicit, per-action confirmation)
 

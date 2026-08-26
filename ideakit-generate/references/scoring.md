@@ -49,18 +49,17 @@ Externally enterable) — judged the same way: independently, non-compensating.
 
 ## Who judges which gate
 
-The gates are not equally safe to self-assess. Split them:
+The gates are not equally certain. Split them, but complete both without a user checkpoint:
 
 - **Checkable now — you run these.** Gate zero, incumbent reasoning, prior-art collision, evidence
   labels, coverage. Each resolves against fetched material, so a wrong call is visible and fixable.
-- **A forecast — the user ranks these.** Surprise, Inevitable in hindsight, Enterable, Value capture.
-  They are predictions about what will matter and what this person can carry, which is exactly where
-  model judgment separates from expert judgment, and they are being made by the same model that wrote
-  the candidates. Present them as comparisons between survivors, not as scores you announce.
+- **A forecast — use best available judgment.** Surprise, Inevitable in hindsight, Enterable, Value
+  capture predict what may matter and what this founder can carry. Compare survivors directly,
+  account for self-preference, state the decisive assumptions and confidence, and make an advisory
+  ordering rather than presenting the forecast as fact.
 
-Give the user the comparison and your recommendation with reasons. Take the ranking from them. When
-no one is there to rank, say the ordering is model-made and unconfirmed rather than presenting it as
-a finding.
+Give the user the completed comparison and recommendation with reasons. Do not request a ranking or
+pause execution; the user may override the advisory ordering after seeing the full portfolio.
 
 ## Supporting lenses (use when they sharpen a close call)
 

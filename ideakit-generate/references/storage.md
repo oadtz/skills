@@ -4,7 +4,7 @@ Use this after the venture portfolio exists.
 
 ## Contents
 
-- Ask
+- Default destination
 - Default portfolio layout
 - Idea card fields
 - Index row
@@ -12,23 +12,16 @@ Use this after the venture portfolio exists.
 - Custom paths
 - Scan and merge existing repositories
 
-## Ask
+## Default destination
 
-Ask one concise question, in the user's language, shaped like:
+Do not ask where the idea set should live. Resolve the destination in this order:
 
-> Where should this idea set live? For example `ideas/` in this repo, another repo/vault, a path you
-> name, or the minimum save in `outputs/`.
+1. Use the path or repository the user already named.
+2. Otherwise follow a visible existing idea-storage convention in the current workspace.
+3. Otherwise save the minimum portfolio artifact under `outputs/`, marked `unfiled`.
 
-If the host supports structured choices, offer:
-
-1. `ideas/ portfolio here` — create/update idea cards, index, evidence, and decision notes in this repo.
-2. `external repo/vault` — store in another repository, Obsidian vault, notes folder, or user-specified
-   path.
-3. `outputs/ minimum` — keep the generated portfolio artifact as the saved record, marked unfiled.
-
-When the host can write files/artifacts, do not offer "skip", "do not save", or "chat only". The
-minimum acceptable save is the generated portfolio artifact in `outputs/`, labelled unfiled if it has
-not entered a portfolio. If the host truly has no writable destination, say that no durable storage
+When the host can write files/artifacts, the minimum acceptable save is the generated portfolio
+artifact in `outputs/`. If the host truly has no writable destination, say that no durable storage
 mechanism is available instead of pretending to save.
 
 ## Default portfolio layout

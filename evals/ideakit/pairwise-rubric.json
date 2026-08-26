@@ -5,7 +5,7 @@
     "both_orderings": "Judge every pair twice, A/B then B/A, and keep the verdict only if it survives the swap. A verdict that flips with position is a tie, not a result.",
     "judge_independence": "The judging model must not be from the same family as the model that produced either artifact. When no independent judge is available, run it anyway and record the verdict as provisional and self-preferring.",
     "length_normalization": "Automated judges systematically reward longer answers. Before scoring, note each artifact's word count and distinct fetched sources, and compare evidence per claim rather than volume. A longer artifact with the same evidence base is the weaker one.",
-    "who_decides": "Dimensions that check what is already true (substitute_realism, incumbent_reasoning, reasoning_provenance, collision_resistance, plain_language_legibility, editorial_quality) can be settled by the judge against the artifacts. Dimensions that forecast (revelation_surprise, inevitable_in_hindsight, solo_enterability, value_capture, post_execution_survival) are advisory only; a human ranking overrides them and should be sought whenever the comparison decides what gets built.",
+    "who_decides": "Dimensions that check what is already true (substitute_realism, incumbent_reasoning, reasoning_provenance, collision_resistance, plain_language_legibility, editorial_quality) can be settled by the judge against the artifacts. Dimensions that forecast (revelation_surprise, inevitable_in_hindsight, solo_enterability, value_capture, post_execution_survival) remain advisory: use best available judgment, expose decisive assumptions and confidence, and let the user override after the complete portfolio is delivered without inserting a ranking checkpoint.",
     "calibration": "Whenever human rankings exist for a pair, keep them beside the judge's verdict. Disagreements are the calibration set; an uncalibrated judge is a screen, not a measurement."
   },
   "dimensions": [
@@ -118,8 +118,8 @@
       "question": "Does the evidence base grow with the artifact's length and claim count, or does a longer artifact rest on the same few sources as a shorter one?"
     },
     {
-      "name": "user_signal_and_ownership",
-      "question": "Did the user's own problems, corrections, and reactions to the openings enter the work as first-party signal, and is the ordering the user's rather than announced by the model? A portfolio the founder had no hand in shaping is one they are less likely to build."
+      "name": "founder_context_and_assumptions",
+      "question": "Did the work use founder evidence already available, avoid inventing personal detail, and expose consequential missing context as assumptions? Is the ordering clearly an advisory recommendation rather than a factual verdict?"
     },
     {
       "name": "plain_language_legibility",
@@ -151,7 +151,7 @@
       "the actor's own unprompted words carried through instead of paraphrased into category language",
       "candidates compared in pairs and improved against a named weakness, not generated once and selected",
       "evidence base scales with artifact length and claim count",
-      "user's own problems, corrections, and ranking visibly shaped the portfolio"
+      "available founder context shaped the portfolio, while missing context was handled through explicit assumptions without an intake checkpoint"
     ],
     "explore": [
       "Known/Inferred/Imagined separation",
@@ -210,7 +210,7 @@
     "market size, competitor count, or regulatory status stated for a niche market without a fetched source, or a proposed rule described as being in force",
     "complete labeled lines or appendix tables over a thin evidence base, used in place of a legible plain-language concept",
     "every invention lane reasoned over one identical evidence set and the resulting convergence is reported as signal gravity",
-    "portfolio ordering presented as a finding when no human ranked it, or a model verdict on a forecasting gate reported as settled",
+    "portfolio ordering or a model verdict on a forecasting gate reported as settled fact rather than an advisory recommendation with assumptions and confidence",
     "a longer artifact resting on the same evidence base as a shorter one, with the extra length carrying no additional sourced claim",
     "a venture family already proposed to this user in an earlier run returned as a new finding under different wording",
     "an evolved candidate kept although it never beat the version it came from, or the improvement loop pointed at appeal rather than checkable ground",

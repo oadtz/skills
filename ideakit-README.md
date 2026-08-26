@@ -71,13 +71,12 @@ ideakit-discover  →  ideakit-generate  →  ideakit-explore  →  ideakit-vali
   mandate driven by their operator, on top of the shared signal pack. Isolating contexts that all
   reason over one identical evidence set yields correlated output no matter how clean the isolation —
   convergence between lanes reading the same facts is arithmetic, not signal.
-- **The human holds the forecasting seat.** Backward-looking checks (what the substitute costs, who
-  the incumbent fails, what prior attempts died of) are settled against fetched evidence by the skill.
-  Forward-looking picks — which bet is worth taking, which venture to carry — are put to the user as
-  comparisons, because that is where model judgment diverges most from expert judgment and where a
-  model scoring its own output is least trustworthy. `ideakit-generate` also stops after forming
-  openings and asks the user to react to them before inventing: the mode where the model hands back a
-  finished rewrite raises rated quality while reducing idea diversity and the user's ownership of it.
+- **Generate is autonomous; its forecast is advisory.** Backward-looking checks (what the substitute
+  costs, who the incumbent fails, what prior attempts died of) are settled against fetched evidence.
+  Forward-looking picks use the skill's best entrepreneurial judgment with assumptions and confidence
+  exposed. `ideakit-generate` does not stop for intake, opening reactions, ranking, or storage choices;
+  elicitation belongs to `ideakit-discover`. The user receives the complete portfolio quickly and can
+  accept, reject, or redirect the recommendation afterward.
 - **Invention freedom, evidence discipline.** Research claims are strict (Observed / Inferred / Bet;
   never fabricate), while the invention phase uses selected lenses rather than a mandatory framework
   march. `ideakit-craft.md` rejects interchangeable concepts, unsupported novelty, quota-filling, and

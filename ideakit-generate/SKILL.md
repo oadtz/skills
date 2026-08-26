@@ -54,6 +54,20 @@ counter-positioning. Never impersonate a real person.
 - Arrives with an edge map → use its hypotheses, contradictions, no-gos, and candidate playing fields;
   do not repeat the interview.
 
+## Autonomy and speed contract
+
+`ideakit-generate` is a **zero-question execution stage**. Once routed here, do not ask the user any
+clarifying, preference, reaction, ranking, confirmation, or storage questions. Use the
+context already present, inspect available artifacts and idea memory, research what can be learned,
+infer the rest with entrepreneurial judgment, and state consequential assumptions in the brief and
+portfolio. Missing founder detail lowers confidence; it does not block execution.
+
+Elicitation belongs to `ideakit-discover`. If a request is genuinely blank before routing, use that
+skill. If the user explicitly invokes `ideakit-generate` anyway, choose a broad, defensible playing
+field and proceed without pausing. Deliver the complete portfolio and an advisory recommendation;
+the user can override it afterward. This autonomy never bypasses confirmation required for external,
+identity-bearing, paid, or irreversible actions.
+
 ## Capability mapping
 
 - **Research**: use current web/search/browser, connected knowledge, local files, and user-provided
@@ -99,13 +113,10 @@ and final quality.
 
 ### 1. Define the playing field
 
-**Before generating anything, ask the founder for their own list.** One question: what problems have
-they personally hit, worked around, or watched someone pay to escape — from their own logs, inbox,
-past jobs, or the last month of their life? Three to five, unfiltered, in their words. Going to
-generation first measurably reduces a person's own original output, ownership, and creative
-self-efficacy (Lee et al., CHI 2025), and their raw list is first-party evidence no scan can
-produce. If they decline or the session is unattended, proceed and record that this input is
-missing — it is the most common reason a portfolio reads as generic.
+Use any founder problems, workarounds, spending, logs, inbox material, past-job evidence, or recent
+experience already present in the conversation or connected material. Do not request a new list.
+First-party evidence improves specificity when available; when absent, compensate with stronger
+market observation and label founder-fit claims as assumptions rather than inventing personal detail.
 
 **Check whether this person has been here before.** If idea memory exists (`../ideakit-memory.md`),
 read it before generating: which venture families were already proposed to them, which they killed
@@ -113,11 +124,12 @@ and why, and what actually happened to anything that advanced. Already-proposed 
 exclusion set in Step 4's packet; recorded outcomes are the only feedback this family gets from
 reality, and they outrank any desk signal about the same question.
 
-Then ask only for missing information, one concise question at a time: founder means (skills, access,
-credibility, audience, lived experience); obsessions, taste, irritations, contrarian beliefs; desired
-game (fast cash, calm solo, category-scale, cultural, public impact); resource envelope and
-affordable loss; no-gos. For software scope, also: agent/tool access, delegation experience, and
-tolerance for production risk. State a compact brief and the decision this run should enable.
+Build a compact brief from what is known: founder means (skills, access, credibility, audience,
+lived experience); obsessions, taste, irritations, contrarian beliefs; desired game (fast cash, calm
+solo, category-scale, cultural, public impact); resource envelope and affordable loss; no-gos. For
+software scope, include agent/tool access, delegation experience, and tolerance for production risk.
+Infer missing fields conservatively, name only the assumptions that materially affect selection,
+and state the decision this run should enable. Never turn incomplete fields into an interview.
 
 Classify whether the brief contains a **force**: a technology, regulation, cost curve, demographic
 shift, event, or cultural change acting on the world. For a force, do not ideate “solutions for X”.
@@ -179,15 +191,10 @@ counter-signal. Build the **opportunity landscape** without requiring a visible 
 credible long-horizon openings as labeled bets. For a force brief, tag each opening with source
 consequence, causal ring, domain, and horizon.
 
-**Then stop and put the openings in front of the user — as questions, before inventing anything.**
-Ask which ones match what they have actually seen, which read as wrong, and what the scan missed.
-This is one short turn, not an interview, and their corrections enter the packet as first-party
-signal. Two things make it worth the turn: the user knows things no scan reaches, and the mode where
-the model hands back a finished rewrite raises rated quality while measurably *reducing* idea
-diversity and the user's ownership of the result, whereas the mode where it asks and the human steers
-keeps all three (arXiv:2510.23324). A portfolio the founder does not feel is theirs does not get
-built. If the session is unattended or the user declines, proceed and record in the artifact that the
-openings were never reacted to.
+Audit the openings internally before invention: which are supported by the founder context, which
+depend on a weak assumption, which contradict observed behavior, and what the scan may have missed.
+Carry those notes into the neutral packet and proceed without pausing. Treat reactions the user has
+already volunteered as first-party signal, but never require a reaction turn to continue.
 
 ### 4. Invent in isolation
 
@@ -249,18 +256,14 @@ overall drop versus 0.63 for human ideas (arXiv:2506.20803). The metric that rea
 is the one that inverts on contact with reality. When Surprise and Enterable conflict, Enterable
 wins; a portfolio that is merely surprising is the documented failure shape.
 
-**Separate the two kinds of judgment, because only one of them is yours to make.** Backward-looking
-checks — what people do today and at what price, who the incumbent fails and why it cannot fix that,
-what prior attempts died of, whether the evidence supports the claim — are verifiable against fetched
-material, and you run them. Forward-looking picks — which bet is worth taking, which opening will
-matter next, which venture this founder should carry — are where model judgment diverges most from
-expert judgment even when it tracks it closely on recognizing what already happened
-(arXiv:2602.03849), and where a model scoring its own output has a documented self-preference bias.
-So do not announce a winner. Put the survivors in front of the user as **direct comparisons on the
-prospective gates** — this one against that one, on Enterable, on Value capture, on which bet they
-would rather be wrong about — and let their ranking be the decision. Say what you would pick and why;
-the recommendation is yours, the ordering is theirs. Unattended, rank them yourself and label the
-ordering model-made and unconfirmed.
+**Separate checkable judgment from forecasts, then make both.** Resolve backward-looking checks —
+what people do today and at what price, who the incumbent fails and why it cannot fix that, what
+prior attempts died of, whether evidence supports the claim — against fetched material. For
+forward-looking picks — which bet may matter, which opening is enterable, which venture best fits —
+use the best available entrepreneurial judgment while accounting for model self-preference and
+forecast uncertainty. Compare survivors directly on the prospective gates, choose and explain an
+advisory ordering, and label the decisive assumptions and confidence. Do not stop for the user to
+rank them; their authority is preserved by making the recommendation overridable after delivery.
 
 Select finalists with separate judgments — **do not sort by one total score**: Surprise, Inevitable
 in hindsight, Enterable, Value capture (plus, for software, the eight feasibility gates in
@@ -308,14 +311,15 @@ For a force brief, add labeled lines: `Source consequence:`, `Causal ring:`, `Do
 `Time horizon:`. For each software finalist, append the **control-plane appendix table** defined in
 `references/ai-engineering-team.md` (one table, eleven rows) instead of eleven more inline lines.
 
-Close with a portfolio recommendation (role or next experiment, not fake certainty), the killed
-concepts with reasons, the coverage blind spot named in Step 2, and how the ordering was reached —
-user-ranked, or model-ranked and unconfirmed. The user chooses what advances.
+Close with an advisory ranked recommendation (role or next experiment, not fake certainty), the
+decisive assumptions and confidence, the killed concepts with reasons, and the coverage blind spot
+named in Step 2. The user chooses what advances after receiving the complete portfolio.
 
-Read `references/storage.md` when the user wants durable capture; ask one concise storage question if
-no destination is known; never claim storage succeeded without writing it. Storage is also what makes
-the next run better: it carries the already-proposed families forward as exclusions and leaves a
-place for what actually happened to be written back. Then offer: expand or
+Read `references/storage.md` when the user wants durable capture. Use a named destination when given;
+otherwise follow an existing repository convention or save the minimum artifact under `outputs/`
+without asking. Never claim storage succeeded without writing it. Storage is also what makes the next
+run better: it carries the already-proposed families forward as exclusions and leaves a place for
+what actually happened to be written back. Then offer: expand or
 recombine → `ideakit-explore`; validate a mature concept → `ideakit-validate`; name after the point
 of view is stable → `ideakit-name`.
 

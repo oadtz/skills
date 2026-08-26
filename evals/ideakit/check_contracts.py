@@ -107,11 +107,22 @@ def main() -> int:
         "generate lane retrieval contract",
         failures,
     )
-    # The user reacts to openings before invention, and owns the ordering of forecasting gates.
+    # Generate is the zero-question execution stage; elicitation belongs to discover.
     require(
         texts.get("generate", ""),
-        ["put the openings in front of the user", "the ordering is theirs", "model-made and unconfirmed"],
-        "generate human-in-the-loop contract",
+        ["zero-question execution stage", "do not ask the user", "proceed without pausing", "advisory recommendation"],
+        "generate autonomous execution contract",
+        failures,
+    )
+    forbid(
+        texts.get("generate", ""),
+        [
+            r"ask the founder",
+            r"put the openings in front of the user.*questions",
+            r"take the ranking from them",
+            r"ask one concise storage question",
+        ],
+        "generate zero-question regressions",
         failures,
     )
     # Generate-once-then-select leaves the best reachable concept unbuilt; the loop only sharpens
@@ -138,7 +149,7 @@ def main() -> int:
     scoring = scoring_path.read_text(encoding="utf-8") if scoring_path.exists() else ""
     if not scoring:
         failures.append("generate judgment split: missing references/scoring.md")
-    require(scoring, ["who judges which gate", "the user ranks these"], "generate judgment split", failures)
+    require(scoring, ["who judges which gate", "best available judgment", "do not request a ranking"], "generate judgment split", failures)
 
     memory_path = ROOT / "ideakit-memory.md"
     memory = memory_path.read_text(encoding="utf-8") if memory_path.exists() else ""
@@ -249,7 +260,7 @@ def main() -> int:
     required_judging_dimensions = {
         "retrieval_divergence",
         "evidence_scaling",
-        "user_signal_and_ownership",
+        "founder_context_and_assumptions",
         "verbatim_customer_language",
         "evolution_evidence",
     }

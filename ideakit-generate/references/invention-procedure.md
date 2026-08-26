@@ -157,8 +157,8 @@ evolve architecture was validated in peer review, where ranking quality rose as 
 into the loop rather than into the first generation
 ([Co-Scientist, Nature 2026](https://www.nature.com/articles/s41586-026-10644-y)).
 
-**Compare in pairs, never score candidates alone.** Put two survivors side by side and ask one named
-question at a time, then record which won and *why in one line*. Pairwise comparison is more stable
+**Compare in pairs, never score candidates alone.** Put two survivors side by side, apply one named
+criterion at a time, then record which won and *why in one line*. Pairwise comparison is more stable
 than assigning each candidate a score, for the same reason it is the standard in judge evaluation:
 an isolated score drifts, a direct comparison has to name a reason.
 
@@ -166,12 +166,12 @@ Ask the comparison on **checkable ground only** — whose substitute is harder t
 argument is better evidenced, whose wedge needs fewer independent parties to say yes, whose causal
 chain has fewer unsupported links. Never run the loop on "which is more exciting": that is the metric
 that inverted after execution in the one study that measured both, and an optimization loop pointed
-at it will reliably produce a more exciting and less real portfolio. The forecasting judgment stays
-with the user (`scoring.md`); this loop only sharpens what is already checkable.
+at it will reliably produce a more exciting and less real portfolio. Forecasting remains advisory
+(`scoring.md`); this loop only sharpens what is already checkable.
 
 Keep it bounded. Compare each survivor against two or three others, not a full round robin — the aim
 is to expose each candidate's specific weakness, not to produce a precise ranking. A ranking produced
-here is the model's, and it is an input to the user's decision, never a substitute for it.
+here is an input to the final advisory recommendation, never a factual verdict.
 
 **Then evolve.** For each candidate that lost on a specific point, produce one improved version using
 a named move, and say which move was used:
@@ -222,9 +222,10 @@ Judge separately, never totaled: **Surprise** (escapes the obvious category thro
 mechanism), **Inevitable in hindsight** (the causal chain makes the reveal click), **Enterable**
 (a bounded first move earns the right to learn), **Value capture** (named payer, buying occasion,
 viable capacity economics or leverage path). A finalist cannot compensate for failing one with
-strength on another. All four are forecasts, so they are the user's to rank — see the split in
-`scoring.md`. Express each finalist's core through the labeled lines in the SKILL's Step 6. Return
-fewer finalists rather than admitting a near-duplicate or broken solo economics.
+strength on another. All four are forecasts, so compare them with best available judgment, label the
+decisive assumptions and confidence, and keep the ordering advisory — see `scoring.md`. Express each
+finalist's core through the labeled lines in the SKILL's Step 6. Return fewer finalists rather than
+admitting a near-duplicate or broken solo economics.
 
 ## Anti-patterns
 
