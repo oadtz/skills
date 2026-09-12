@@ -1,0 +1,19 @@
+{
+  "engine_version": "0.2",
+  "taste_version": null,
+  "active_taste": null,
+  "desire_version": null,
+  "active_desire": null,
+  "active_campaign": null,
+  "campaign_id": null,
+  "campaign_status": "none",
+  "last_completed_scored_run": null,
+  "last_completed_run": null,
+  "latest_run": null,
+  "next_run": "001",
+  "next_phase": "Discovery",
+  "historical_ratings": null,
+  "pending_feedback": [],
+  "pending_unmapped_feedback": [],
+  "note": "Fresh portable state. Personal campaign history is intentionally not tracked in this public repository."
+}

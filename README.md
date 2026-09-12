@@ -69,7 +69,9 @@ forge build track. Full details in **[solo-README.md](solo-README.md)**.
 
 ### Other skills
 
-_(Add new, unrelated skills here as their own entries — one row or short section each.)_
+| Skill | Role |
+|---|---|
+| `idea-engine` | discover, evolve, validate, and turn surprising opportunities into bounded prototype definitions |
 
 ## Adding a new skill
 

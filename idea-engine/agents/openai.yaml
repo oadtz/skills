@@ -1,0 +1,4 @@
+interface:
+  display_name: "Idea Engine v0.2"
+  short_description: "Business discovery with separate taste and desire memory"
+  default_prompt: "Use $idea-engine to explore business opportunities and continue from my saved runs."
